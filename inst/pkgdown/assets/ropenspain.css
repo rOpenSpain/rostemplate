@@ -1,14 +1,16 @@
 @charset "utf-8";
 
-.label-default {
+.ROS-label-default {
   background-color: #986dbd;
 }
 
-
-.navbar-brand img {
-  height: 47px;
+.ROS-label-info {
+  background-color: #5a9ddb;
 }
 
+.ROS-label-warning {
+  background-color: #ff9800;
+}
 
 .pre, .code {
   font-family: 'Roboto Mono', monospace;
@@ -22,6 +24,10 @@
   color: black;
 }
 
+#ROS-logo-navbar {
+  height:47px;
+
+}
 
 #ROS-navbar-brand {
  padding-top: 10px; 
