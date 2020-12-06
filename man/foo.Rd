@@ -18,6 +18,6 @@ The sum of \code{x} and \code{y}.
 Example function
 }
 \examples{
-add(1, 1)
-add(10, 1)
+foo(1, 1)
+foo(10, 1)
 }
