@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.label-default {
+  background-color: #986dbd;
+}
+
+
+.navbar-brand img {
+  height: 47px;
+}
+
+
+.pre, .code {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.ROS-light {
+  font-weight:300;
+}
+
+.ROS-black {
+  color: black;
+}
+
+
+#ROS-navbar-brand {
+ padding-top: 10px; 
+ font-size: 28px;
+ font-weight:300;
+}
+
+#ROS-heading-breadcrumbs {
+  background: url('texture-bw.png') center center repeat;
+padding-top: 10px;
+  
+}
+
+#ROS-partof {
+  font-weight:300;
+  color: black;
+}
