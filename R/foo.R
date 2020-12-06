@@ -6,6 +6,7 @@
 #' @examples
 #' add(1, 1)
 #' add(10, 1)
+#' @export
 foo <- function(x, y) {
   x + y
 }
