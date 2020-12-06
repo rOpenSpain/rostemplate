@@ -1,0 +1,14 @@
+citHeader("To cite the 'pkgdowntemp' package in publications use:")
+
+year = format(Sys.time(), "%Y")
+vers = paste('R package version', meta$Version)
+url = 'pkgdowntempurl'
+citEntry(
+  entry = 'manual',
+  title = paste('pkgdowntemp:', meta$Title),
+  author = "Diego Hernangómez",
+  year = year,
+  note = vers,
+  url = url,
+  textVersion = paste0('Hernangomez, D. (', year, '). pkgdowntemp: ', meta$Title, '. ', vers, '. Package url: ', url)
+)

@@ -1,0 +1,11 @@
+template:
+  package: pkgdowntemp
+  params:
+    theme:
+
+development:
+  mode: auto
+
+authors:
+  Diego Hernangómez:
+    href: https://github.com/dieghernan/pkgdowntemp
