@@ -1,4 +1,16 @@
 @charset "utf-8";
+
+/* Modify default classes */
+.pre,
+.code {
+  font-family: 'Roboto Mono', monospace;
+}
+
+footer p {
+  margin-bottom: 14px;
+}
+
+/* Add custom classes */
 .ROS-label-default {
   background-color: #986dbd;
 }
@@ -11,11 +23,6 @@
   background-color: #9C27B0;
 }
 
-.pre,
-.code {
-  font-family: 'Roboto Mono', monospace;
-}
-
 .ROS-light {
   font-weight: 300;
 }
@@ -24,6 +31,7 @@
   color: black;
 }
 
+/* Id for specific items */
 #ROS-navbar-brand {
   padding-top: 10px;
   font-size: 28px;
