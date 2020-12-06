@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 .ROS-label-default {
   background-color: #986dbd;
 }
@@ -9,39 +8,34 @@
 }
 
 .ROS-label-warning {
-  background-color: #ff9800;
+  background-color: #9C27B0;
 }
 
-.pre, .code {
+.pre,
+.code {
   font-family: 'Roboto Mono', monospace;
 }
 
 .ROS-light {
-  font-weight:300;
+  font-weight: 300;
 }
 
 .ROS-black {
   color: black;
 }
 
-#ROS-logo-navbar {
-  height:47px;
-
-}
-
 #ROS-navbar-brand {
- padding-top: 10px; 
- font-size: 28px;
- font-weight:300;
+  padding-top: 10px;
+  font-size: 28px;
+  font-weight: 300;
 }
 
 #ROS-heading-breadcrumbs {
   background: url('texture-bw.png') center center repeat;
-padding-top: 10px;
-  
+  padding-top: 10px;
 }
 
 #ROS-partof {
-  font-weight:300;
+  font-weight: 300;
   color: black;
 }
