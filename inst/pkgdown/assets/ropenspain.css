@@ -33,8 +33,9 @@ footer p {
 
 /* Id for specific items */
 #ROS-navbar-brand {
-  padding-top: 10px;
-  font-size: 28px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 24px;
   font-weight: 300;
 }
 
