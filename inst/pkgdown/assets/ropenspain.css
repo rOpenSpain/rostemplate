@@ -49,6 +49,7 @@ footer p {
 #ROS-heading-breadcrumbs {
   background: url('texture-bw.png') center center repeat;
   padding-top: 10px;
+  padding-bottom: 1px;
 }
 
 #ROS-partof {
