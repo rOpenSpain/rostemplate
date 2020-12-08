@@ -2,19 +2,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {{{ head }}}
+  {{{ head }}}
   </head>
+
   <body data-spy="scroll" data-target="#toc">
-    <div id="all">
+    <div class="container template-{{template}}">
       <header>
-        {{{ navbar }}}
-        {{{ header }}}
+      {{{ navbar }}}
+      {{{ header }}}
       </header>
-      <div class="container template-{{template}}">
-        {{{ content }}}
-      </div>
+
+      {{{ content }}}
+
+   </div>
       {{{ footer }}}
-    </div>
-    {{{ docsearch }}}
+
+
+
+  {{{ docsearch }}}
+
   </body>
 </html>
+
