@@ -6,3 +6,6 @@
 ^\.Rproj\.user$
 ^\.github$
 ^LICENSE\.md$
+^pkgdowntemp\.Rcheck$
+^pkgdowntemp.*\.tar\.gz$
+^pkgdowntemp.*\.tgz$
