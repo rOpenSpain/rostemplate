@@ -10,17 +10,27 @@ footer p {
   margin-bottom: 14px;
 }
 
+.version {
+  font-weight: bold;
+  font-size: 10px;
+
+}
+
 /* Add custom classes */
 .ROS-label-default {
-  background-color: #986dbd;
+  color: #986dbd;
 }
 
 .ROS-label-info {
-  background-color: #5a9ddb;
+  color: #5a9ddb;
 }
 
 .ROS-label-warning {
-  background-color: #9C27B0;
+  color: #ff9800;
+}
+
+.ROS-label-danger {
+  color: #9C27B0;
 }
 
 .ROS-light {
