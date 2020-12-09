@@ -2,19 +2,17 @@
   <div class="contents col-md-9">
     <div class="page-header">
       <h1>Citation & Authorship</h1>
-      <h2>How to cite</h2>
-      {{#source}}<small class="dont-index">{{{.}}}</small>{{/source}}
     </div>
+    <h2>How to cite</h2>
+      {{#source}}<small class="dont-index">{{{.}}}</small>{{/source}}
 
     {{#citations}}
     {{{html}}}
     <pre>{{{bibtex}}}</pre>
     {{/citations}}
 
-    <div class="page-header">
-      <h2>Authors</h2>
-    </div>
 
+    <h2>Authors</h2>
     <ul class="list-unstyled">
       {{#authors}}
       <li>
