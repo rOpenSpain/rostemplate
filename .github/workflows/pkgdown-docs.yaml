@@ -1,3 +1,5 @@
+# When using this flow for the first time you need to create an empty "/docs" folder on the roor of the repo
+
 on:
   push:
     branches:
