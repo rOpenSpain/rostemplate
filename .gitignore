@@ -5,3 +5,5 @@
 pkgdowntemp.Rcheck/
 pkgdowntemp*.tar.gz
 pkgdowntemp*.tgz
+.github/R-version
+.github/depends.Rds
