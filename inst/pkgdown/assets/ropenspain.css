@@ -1,8 +1,22 @@
 @charset "utf-8";
 
+/* Port perldoc highlighter */
+
+pre a {color: inherit;font-weight:inherit;}
+.co, .cv {color: #228B22;font-style: italic} /* comment */
+.kw {font-weight: bold } /* Keyword */
+.er { color: #aa0000; font-weight: bold; } /* Error */
+.st, .an, .ch { color: #CD5555; } /* String */
+.cn {color: #228B22;} /* Constant */
+.fu { color: #008b45; font-weight: bold} /* Function */
+.fl { color: #B452CD; } /* Float */
+.op { color: #8B008B; } /* Operator */
+.va { color: #00688B; } /* Variable */
+
 /* Modify default classes */
-.pre,
-.code {
+
+pre,
+code {
   font-family: 'Roboto Mono', monospace;
 }
 
