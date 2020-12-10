@@ -1,4 +1,4 @@
-# When using this flow for the first time you need to create an "/docs" folder on the roor of the repo
+# When using this flow for the first time you need to create an "/docs" folder on the root of the repo
 
 on:
   push:
