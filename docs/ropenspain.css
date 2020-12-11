@@ -115,7 +115,7 @@ code {
   color: black;
 }
 
-h1 {
+.ROSh1 {
   background: url('texture-bw.png') center center repeat;
   padding: 20px 0;
   color: #333333;
@@ -126,7 +126,7 @@ h1 {
   text-align: center;
 }
 
-h1 img {
+.ROSh1 img {
   display: none;
 }
 
