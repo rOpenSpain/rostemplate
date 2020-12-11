@@ -33,6 +33,7 @@ knitr::knit_hooks$set(
 
 ## Instrucciones de uso
 
+![](man/figures/example2.png)
 ### Con GitHub actions - Automatico
 
 #### Branch gh-pages
