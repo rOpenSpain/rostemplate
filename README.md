@@ -1,5 +1,10 @@
 # WIP
 
+<!-- badges: start -->
+[![R build status](https://github.com/dieghernan/pkgdowntemp/workflows/R-CMD-check/badge.svg)](https://github.com/dieghernan/pkgdowntemp/actions)
+<!-- badges: end -->
+
+
 Testing a new pkgdown template.
 
 Code sample
