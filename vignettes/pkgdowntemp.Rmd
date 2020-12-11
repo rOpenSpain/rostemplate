@@ -25,10 +25,11 @@ knitr::knit_hooks$set(
 
 ## Introducción 
 
-
+![](example.png)
 
 ## Instalación 
 
+![](./vignettes/example.png)
 
 ## Instrucciones de uso
 
