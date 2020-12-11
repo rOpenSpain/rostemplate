@@ -7,6 +7,8 @@
 
 Testing a new pkgdown template.
 
+# Another h1
+
 Code sample
 
 ```r
