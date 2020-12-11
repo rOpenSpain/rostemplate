@@ -29,7 +29,7 @@ knitr::knit_hooks$set(
 
 ## Instalación 
 
-![](./vignettes/example.png)
+![](vignettes/example.png)
 
 ## Instrucciones de uso
 
