@@ -1,4 +1,4 @@
-Package: pkgdowntemp
+Package: rostemplate
 Type: Package
 Title: ‘pkgdown’ Templates for ‘rOpenSpain’ Packages
 Version: 0.0.0.9000

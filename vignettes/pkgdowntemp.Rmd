@@ -23,23 +23,32 @@ knitr::knit_hooks$set(
 ```
 
 
-## Introducción 
+# Introducción 
+
+Este paquete es un *proof of concept* sobre cómo crear una plantilla de `pkgdown` adaptada. En este paquete la plantilla base que se adaptará se basa en la empleada por la comunidad [rOpenSpain](https://ropenspain.es/), que a su vez es una adaptación de la plantilla [Universal](https://bootstrapious.com/p/universal-business-e-commerce-template) creada por Bootstrapius con la variación de color **violet**.
+
+## Limitaciones
+
+El diseño original de las plantillas que componen `pkgdown` es bastante rígido, en el sentido de que ligeras modificaciones (como el tipo de navbar o la localizaxion del footer) pueden provocar que el renderizado final no sea óptimo. Para solucionarlo se han empleado algunos *hacks* en el fichero `css` y pequeños fragmentos en `javascript`.
+
+Otra limitación es la diferencia de versiones Bootstrap, ya que `pkgdown` emplea la versión 3.4.1 mientras que Universal emplea la 3.3.7.
+  
+
+# Configuración
+
+ 
 
 
+# Instrucciones de uso
 
-## Instalación 
+## Con GitHub actions - Automatico
 
+### Branch gh-pages
 
-## Instrucciones de uso
+### Branch main/master
 
-### Con GitHub actions - Automatico
+## Con RStudio - Manual
 
-#### Branch gh-pages
+### Branch gh-pages
 
-#### Branch main/master
-
-### Con RStudio - Manual
-
-#### Branch gh-pages
-
-#### Branch main/master
+### Branch main/master
