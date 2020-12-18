@@ -36,19 +36,28 @@ Otra limitación es la diferencia de versiones Bootstrap, ya que `pkgdown` emple
 
 # Configuración
 
- 
+En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al menos las siguientes líneas:
 
+``` yaml
+template:
+  package: tidytemplate
+  # No pongas la siguiente línea!
+  default_assets: false
+
+```
+
+Puedes encontrar información sobre cómo configurar otras opciones en `_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
 # Instrucciones de uso
 
-## Con GitHub actions - Automatico
+## Con GitHub actions - Automático
 
 ### Branch gh-pages
+
+
 
 ### Branch main/master
 
 ## Con RStudio - Manual
-
-### Branch gh-pages
 
 ### Branch main/master
