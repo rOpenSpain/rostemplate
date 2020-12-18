@@ -1,69 +1,22 @@
 @charset "utf-8";
 
-/* Highlighter */
-
-pre {
-  color: #505050;
-}
-
-pre a {
-  color: inherit;
-  font-weight: inherit
-}
-
-/* Keyword */
-
-.kw {
-  font-weight: bold
-}
-
-/* String */
-
-.st,
-.an,
-.ch,
-.cn {
-  color: #800080;
-}
-
-.cn {
-  font-weight: bold
-}
-
-/* Function */
-
-.fu {
-  color: #008b45;
-  font-weight: bold
-}
-
-/* Float */
-
-.fl {
-  color: #B452CD;
-}
-
-/* comment */
-
-.co {
-  color: #888888;
-}
-
 /* Modify default classes */
-
-pre,
-code {
+.pre,
+.code {
   font-family: 'Roboto Mono', monospace;
+}
+
+footer p {
+  margin-bottom: 14px;
 }
 
 .version {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 10px;
+
 }
 
-
 /* Add custom classes */
-
 .ROS-label-default {
   color: #986dbd;
 }
@@ -88,23 +41,7 @@ code {
   color: black;
 }
 
-.ROSh1 {
-  background: url('texture-bw.png') center center repeat;
-  padding: 20px 0;
-  color: #333333;
-  text-transform: uppercase;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-align: center;
-}
-
-.ROSh1 img {
-  display: none;
-}
-
 /* Id for specific items */
-
 #ROS-navbar-brand {
   padding-top: 24px;
   padding-bottom: 20px;
@@ -116,6 +53,7 @@ code {
   margin-top: -4px;
   height: 32px;
   margin-right: 3px;
+
 }
 
 #ROS-heading-breadcrumbs {
@@ -127,26 +65,4 @@ code {
 #ROS-partof {
   font-weight: 300;
   color: black;
-}
-
-/* Position hack to get full width footer even though pkgdown puts it inside a container
- * See: https://css-tricks.com/full-width-containers-limited-width-parents/
- */
-
-#footer {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-
-#copyright {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
 }
