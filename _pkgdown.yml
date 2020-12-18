@@ -1,5 +1,5 @@
 template:
-  package: pkgdowntemp
+  package: rostemplate
   params:
     theme:
 
