@@ -1,8 +1,8 @@
 ---
-title: "Ejemplo viñeta"
+title: "Cómo usar esta plantilla"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Ejemplo viñeta}
+  %\VignetteIndexEntry{Cómo usar esta plantilla}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

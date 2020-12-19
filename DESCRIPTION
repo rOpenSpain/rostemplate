@@ -1,6 +1,6 @@
 Package: rostemplate
 Type: Package
-Title: ‘pkgdown’ Templates for ‘rOpenSpain’ Packages
+Title: 'pkgdown' Template for 'rOpenSpain' Packages
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Diego",
