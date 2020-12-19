@@ -52,14 +52,18 @@ template:
 
 Puedes encontrar información sobre cómo configurar otras opciones en `_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
-# Instrucciones de uso
+# Uso de la plantilla
 
 Esta sección detalla diferentes opciones para generar un sitio estático para el paquete deseado con el formato definido por esta plantilla. El resultado de este paso es la generación de un sitio estático compuesto de los archivos `html`, `css`, etc. basados en el paquete de R para el que se está generando el sitio.
 
 
-## Con GitHub actions - Automático
+## Con GitHub actions - CI
 
-GitHub Actions permite automatizar procesos cuando se activa un trigger. En este caso se han preparado dos acciones que actualizan el sitio estático cada vez que se añade un *commit* al repositorio.
+GitHub Actions permite automatizar procesos cuando se activa un trigger. En este caso se han preparado dos acciones que actualizan el sitio estático cada vez que se añade un *commit* al repositorio. 
+
+Los flujos de trabajo consisten en archivos con extensión `.yaml`. La acción [rostemplate-docs.yaml](https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml) crea el sitio estático en la carpeta `./docs` mientras que [rostemplate-gh-pages.yaml](https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml) crea el sitio estático en el branch `gh-pages`.
+
+Para configurar esta opción, es necesario disponer en el repositorio de una carpeta en la ruta `.github/workflows` y copiar la acción deseada en dicha carpeta.
 
 Es posible cambiar el evento que desencadena la actualización del sitio:
 
@@ -83,16 +87,24 @@ on:
 
 Más información [aquí](https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows).
 
-Los flujos de trabajo consisten en archivos con extensión `.yaml` 
+## RStudio - manual
 
-### Branch gh-pages
+El sitio estático se puede generar igualmente desde una sesión local en RStudio. Para ello, es necesario instalar este paquete en el ordenador y luego usar las funcionalidades propias de `pkgdown`:
 
-Se puede configurar una acción automática para que cada vez que se 
+```r
+install.packages('remotes')
+install.packages('pkgdown')
+
+remotes::install_github("dieghernan/rostemplate")
+
+pkgdown::build_site()
+
+```
+
+Es necesario actualizar el repositorio remoto en GitHub tras ejecutar el script anterior.
+
+# GitHub Pages
+
+Una vez generado el sitio estático y subido al repositorio en GitHub, el último paso es generar el sitio web a través de los Settings de nuestro repositorio, seleccionando el origen deseado (`gh-pages`, `main/docs`, etc.).
 
 
-
-### Branch main/master
-
-## Con RStudio - Manual
-
-### Branch main/master
