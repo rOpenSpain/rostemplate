@@ -1,8 +1,10 @@
 ---
 title: "Cómo usar esta plantilla"
 output: 
-  rmarkdown::html_vignette
-  toc: true
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: true 
+    toc_depth: 1
 vignette: >
   %\VignetteIndexEntry{Cómo usar esta plantilla}
   %\VignetteEngine{knitr::rmarkdown}
