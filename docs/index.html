@@ -77,112 +77,14 @@
 
       </header><div class="row">
   <div class="contents col-md-9" id="home">
-
-<div id="wip" class="section level1">
+<div id="rostemplate" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#wip" class="anchor"></a>WIP</h1></div>
+<a href="#rostemplate" class="anchor"></a>rostemplate</h1></div>
 <!-- badges: start -->
 
-<p>Testing a new pkgdown template.</p>
+<p>This package is <code>pkgdown</code> template adapted to <a href="https://ropenspain.es/">rOpenSpain</a> site.</p>
+<p>This package is a proof of concept. Guidelines on how to use this template package on <a href="https://dieghernan.github.io/rostemplate/articles/rostemplate.html">this vignette</a> (Spanish).</p>
 </div>
-<div id="another-h1" class="section level1">
-<h1 class="hasAnchor">
-<a href="#another-h1" class="anchor"></a>Another h1</h1>
-<p>Code sample</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">sf</span><span class="op">)</span>
-<span class="co">## Linking to GEOS 3.5.1, GDAL 2.2.2, PROJ 4.9.2</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://arxiv.org/abs/1403.2805">jsonlite</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">dplyr</span><span class="op">)</span>
-<span class="co">## </span>
-<span class="co">## Attaching package: 'dplyr'</span>
-<span class="co">## The following objects are masked from 'package:stats':</span>
-<span class="co">## </span>
-<span class="co">##     filter, lag</span>
-<span class="co">## The following objects are masked from 'package:base':</span>
-<span class="co">## </span>
-<span class="co">##     intersect, setdiff, setequal, union</span>
-
-<span class="co">#Shape</span>
-<span class="va">cntries</span> <span class="op">=</span> <span class="fu">st_read</span><span class="op">(</span><span class="st">"https://ec.europa.eu/eurostat/cache/GISCO/distribution/v2/countries/geojson/CNTR_RG_20M_2016_3035.geojson"</span>,
-                  stringsAsFactors <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
-<span class="co">## Reading layer `CNTR_RG_20M_2016_3035' from data source `https://ec.europa.eu/eurostat/cache/GISCO/distribution/v2/countries/geojson/CNTR_RG_20M_2016_3035.geojson' using driver `GeoJSON'</span>
-<span class="co">## Simple feature collection with 257 features and 6 fields</span>
-<span class="co">## geometry type:  MULTIPOLYGON</span>
-<span class="co">## dimension:      XY</span>
-<span class="co">## bbox:           xmin: -7142317 ymin: -9160665 xmax: 16932290 ymax: 15428010</span>
-<span class="co">## CRS:            3035</span>
-
-<span class="co"># Include trade blocks</span>
-<span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/jsonlite/man/fromJSON.html">fromJSON</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/dieghernan/Country-Codes-and-International-Organizations/master/outputs/Countrycodesfull.json"</span><span class="op">)</span>
-<span class="va">ISO_memcol</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span>,
-                       <span class="va">orgtosearch</span><span class="op">)</span> <span class="op">{</span>
-  <span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/match.html">match</a></span><span class="op">(</span><span class="va">orgtosearch</span>, <span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span><span class="fl">1</span>, <span class="st">"org_id"</span><span class="op">]</span><span class="op">)</span><span class="op">)</span>
-  <span class="va">or</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span>, <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
-    <span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span><span class="va">x</span>, <span class="st">"org_member"</span><span class="op">]</span><span class="op">)</span><span class="op">[</span><span class="va">ind</span><span class="op">]</span><span class="op">)</span>
-  <span class="va">or</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="va">or</span><span class="op">)</span><span class="op">)</span>, stringsAsFactors <span class="op">=</span> <span class="cn">F</span><span class="op">)</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">or</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">orgtosearch</span>
-  <span class="va">df2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">df</span>, <span class="va">or</span>, stringsAsFactors <span class="op">=</span> <span class="cn">F</span><span class="op">)</span><span class="op">)</span>
-  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">df2</span><span class="op">)</span>
-<span class="op">}</span>
-<span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">ISO_memcol</span><span class="op">(</span><span class="va">df</span>, <span class="st">"EU"</span><span class="op">)</span>
-<span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">ISO_memcol</span><span class="op">(</span><span class="va">df</span>, <span class="st">"EFTA"</span><span class="op">)</span>
-<span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">ISO_memcol</span><span class="op">(</span><span class="va">df</span>, <span class="st">"EuroArea"</span><span class="op">)</span>
-
-
-<span class="va">cntries</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/merge.html">merge</a></span><span class="op">(</span><span class="va">cntries</span>,
-                <span class="va">df</span>,
-                by.x <span class="op">=</span> <span class="st">"ISO3_CODE"</span>,
-                by.y <span class="op">=</span> <span class="st">"ISO_3166_3"</span>,
-                all.x <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">cartography</span><span class="op">)</span>
-
-
-<span class="co">#Limits EU</span>
-<span class="co">#Plot base map</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span>
-  <span class="fu">st_geometry</span><span class="op">(</span><span class="va">cntries</span><span class="op">)</span>,
-  xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2200000</span>, <span class="fl">7150000</span><span class="op">)</span>,
-  ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1380000</span>, <span class="fl">5500000</span><span class="op">)</span>,
-<span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">st_geometry</span><span class="op">(</span><span class="va">cntries</span><span class="op">)</span>, add <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">st_geometry</span><span class="op">(</span><span class="va">cntries</span><span class="op">[</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">cntries</span><span class="op">$</span><span class="va">EU</span><span class="op">)</span>,<span class="op">]</span><span class="op">)</span>, col <span class="op">=</span> <span class="st">"grey60"</span>, add <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">st_geometry</span><span class="op">(</span><span class="va">cntries</span><span class="op">[</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">cntries</span><span class="op">$</span><span class="va">EFTA</span><span class="op">)</span>,<span class="op">]</span><span class="op">)</span>, col <span class="op">=</span> <span class="st">"black"</span>, add <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="co">#Add hatching</span>
-<span class="fu">hatchedLayer</span><span class="op">(</span>
-  <span class="va">cntries</span><span class="op">[</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">cntries</span><span class="op">$</span><span class="va">EuroArea</span><span class="op">)</span>,<span class="op">]</span>,
-  pattern <span class="op">=</span> <span class="st">"right2left"</span>,
-  col <span class="op">=</span> <span class="st">"white"</span>,
-  density <span class="op">=</span> <span class="fl">3</span>,
-  add <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span>
-<span class="fu">legendTypo</span><span class="op">(</span>
-  <span class="st">"topright"</span>,
-  title.txt <span class="op">=</span> <span class="st">""</span>,
-  categ <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"EU"</span>, <span class="st">"EFTA"</span><span class="op">)</span>,
-  col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"grey60"</span>, <span class="st">"black"</span><span class="op">)</span>,
-  nodata <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span>
-
-<span class="fu">legendHatched</span><span class="op">(</span>
-  <span class="st">"right"</span>,
-  title.txt <span class="op">=</span> <span class="st">"Within EU"</span>,
-  categ <span class="op">=</span> <span class="st">"Euro\nArea"</span>,
-  patterns <span class="op">=</span> <span class="st">"right2left"</span>,
-  frame <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span>
-<span class="fu">layoutLayer</span><span class="op">(</span>
-  title <span class="op">=</span> <span class="st">"European Trade Blocks"</span>,
-  theme <span class="op">=</span> <span class="st">"grey.pal"</span>,
-  sources <span class="op">=</span> <span class="st">"© EuroGeographics for the administrative boundaries."</span>,
-  author <span class="op">=</span>  <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"cartography "</span>, <span class="fu"><a href="https://rdrr.io/r/utils/packageDescription.html">packageVersion</a></span><span class="op">(</span><span class="st">"cartography"</span><span class="op">)</span><span class="op">)</span>,
-  scale <span class="op">=</span> <span class="fl">500</span>,
-  frame <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
-</div>
-
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -220,6 +122,7 @@
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://github.com/dieghernan/pkgdowntemp/actions"><img src="https://github.com/dieghernan/pkgdowntemp/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="lifecycle"></a></li>
 </ul>
 </div>
 </div>
