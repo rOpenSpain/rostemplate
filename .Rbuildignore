@@ -9,3 +9,5 @@
 ^pkgdowntemp\.Rcheck$
 ^pkgdowntemp.*\.tar\.gz$
 ^pkgdowntemp.*\.tgz$
+^doc$
+^Meta$

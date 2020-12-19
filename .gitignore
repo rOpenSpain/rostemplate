@@ -7,3 +7,5 @@ pkgdowntemp*.tar.gz
 pkgdowntemp*.tgz
 .github/R-version
 .github/depends.Rds
+doc
+Meta
