@@ -108,14 +108,16 @@
 <span id="cb1-4"><a href="#cb1-4"></a><span class="at">  </span><span class="fu">default_assets</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code></pre></div>
 <p>Puedes encontrar información sobre cómo configurar otras opciones en <code>_pkgdown.yaml</code> <a href="https://pkgdown.r-lib.org/articles/pkgdown.html">aquí</a>.</p>
 </div>
-<div id="instrucciones-de-uso" class="section level1">
+<div id="uso-de-la-plantilla" class="section level1">
 <h1 class="hasAnchor">
-<a href="#instrucciones-de-uso" class="anchor"></a>Instrucciones de uso</h1>
+<a href="#uso-de-la-plantilla" class="anchor"></a>Uso de la plantilla</h1>
 <p>Esta sección detalla diferentes opciones para generar un sitio estático para el paquete deseado con el formato definido por esta plantilla. El resultado de este paso es la generación de un sitio estático compuesto de los archivos <code>html</code>, <code>css</code>, etc. basados en el paquete de R para el que se está generando el sitio.</p>
-<div id="con-github-actions---automático" class="section level2">
+<div id="con-github-actions---ci" class="section level2">
 <h2 class="hasAnchor">
-<a href="#con-github-actions---autom%C3%A1tico" class="anchor"></a>Con GitHub actions - Automático</h2>
+<a href="#con-github-actions---ci" class="anchor"></a>Con GitHub actions - CI</h2>
 <p>GitHub Actions permite automatizar procesos cuando se activa un trigger. En este caso se han preparado dos acciones que actualizan el sitio estático cada vez que se añade un <em>commit</em> al repositorio.</p>
+<p>Los flujos de trabajo consisten en archivos con extensión <code>.yaml</code>. La acción <a href="https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml">rostemplate-docs.yaml</a> crea el sitio estático en la carpeta <code>./docs</code> mientras que <a href="https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml">rostemplate-gh-pages.yaml</a> crea el sitio estático en el branch <code>gh-pages</code>.</p>
+<p>Para configurar esta opción, es necesario disponer en el repositorio de una carpeta en la ruta <code>.github/workflows</code> y copiar la acción deseada en dicha carpeta.</p>
 <p>Es posible cambiar el evento que desencadena la actualización del sitio:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a></span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="co"># Actualiza en cada commit - por defecto</span></span>
@@ -132,25 +134,25 @@
 <span id="cb2-13"><a href="#cb2-13"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
 <span id="cb2-14"><a href="#cb2-14"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">'_pkgdown.yaml'</span></span></code></pre></div>
 <p>Más información <a href="https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows">aquí</a>.</p>
-<p>Los flujos de trabajo consisten en archivos con extensión <code>.yaml</code></p>
-<div id="branch-gh-pages" class="section level3">
-<h3 class="hasAnchor">
-<a href="#branch-gh-pages" class="anchor"></a>Branch gh-pages</h3>
-<p>Se puede configurar una acción automática para que cada vez que se</p>
 </div>
-<div id="branch-mainmaster" class="section level3">
-<h3 class="hasAnchor">
-<a href="#branch-mainmaster" class="anchor"></a>Branch main/master</h3>
-</div>
-</div>
-<div id="con-rstudio---manual" class="section level2">
+<div id="rstudio---manual" class="section level2">
 <h2 class="hasAnchor">
-<a href="#con-rstudio---manual" class="anchor"></a>Con RStudio - Manual</h2>
-<div id="branch-mainmaster-1" class="section level3">
-<h3 class="hasAnchor">
-<a href="#branch-mainmaster-1" class="anchor"></a>Branch main/master</h3>
+<a href="#rstudio---manual" class="anchor"></a>RStudio - manual</h2>
+<p>El sitio estático se puede generar igualmente desde una sesión local en RStudio. Para ello, es necesario instalar este paquete en el ordenador y luego usar las funcionalidades propias de <code>pkgdown</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'remotes'</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'pkgdown'</span><span class="op">)</span>
+
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"dieghernan/rostemplate"</span><span class="op">)</span>
+
+<span class="fu">pkgdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgdown.r-lib.org/reference/build_site.html">build_site</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p>Es necesario actualizar el repositorio remoto en GitHub tras ejecutar el script anterior.</p>
 </div>
 </div>
+<div id="github-pages" class="section level1">
+<h1 class="hasAnchor">
+<a href="#github-pages" class="anchor"></a>GitHub Pages</h1>
+<p>Una vez generado el sitio estático y subido al repositorio en GitHub, el último paso es generar el sitio web a través de los Settings de nuestro repositorio, seleccionando el origen deseado (<code>gh-pages</code>, <code>main/docs</code>, etc.).</p>
 </div>
   </div>
 
