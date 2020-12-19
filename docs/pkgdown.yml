@@ -2,6 +2,6 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
-  pkgdowntemp: pkgdowntemp.html
-last_built: 2020-12-19T17:34Z
+  rostemplate: rostemplate.html
+last_built: 2020-12-19T17:39Z
 
