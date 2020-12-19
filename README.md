@@ -6,6 +6,6 @@
 <!-- badges: end -->
 
 
-This package is `pkgdown` template adapted to [rOpenSpain](https://ropenspain.es/) site.
+This package is a `pkgdown` template adapted to [rOpenSpain](https://ropenspain.es/) site.
 
 This package is a proof of concept. Guidelines on how to use this template package on [this vignette](https://dieghernan.github.io/rostemplate/articles/rostemplate.html) (Spanish).
