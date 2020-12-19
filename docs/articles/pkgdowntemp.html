@@ -120,12 +120,32 @@
 <div id="instrucciones-de-uso" class="section level1">
 <h1 class="hasAnchor">
 <a href="#instrucciones-de-uso" class="anchor"></a>Instrucciones de uso</h1>
+<p>Esta sección detalla diferentes opciones para generar un sitio estático para el paquete deseado con el formato definido por esta plantilla. El resultado de este paso es la generación de un sitio estático compuesto de los archivos <code>html</code>, <code>css</code>, etc. basados en el paquete de R para el que se está generando el sitio.</p>
 <div id="con-github-actions---automático" class="section level2">
 <h2 class="hasAnchor">
 <a href="#con-github-actions---autom%C3%A1tico" class="anchor"></a>Con GitHub actions - Automático</h2>
+<p>GitHub Actions permite automatizar procesos cuando se activa un trigger. En este caso se han preparado dos acciones que actualizan el sitio estático cada vez que se añade un <em>commit</em> al repositorio.</p>
+<p>Es posible cambiar el evento que desencadena la actualización del sitio:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="co"># Actualiza en cada commit - por defecto</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="at">      </span><span class="kw">-</span><span class="at"> main</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="at">      </span><span class="kw">-</span><span class="at"> master</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="at">      </span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co"># Actualiza cuando se modifica un archivo específico: _pkgdown.yaml</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">'_pkgdown.yaml'</span></span></code></pre></div>
+<p>Más información <a href="https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows">aquí</a>.</p>
+<p>Los flujos de trabajo consisten en archivos con extensión <code>.yaml</code></p>
 <div id="branch-gh-pages" class="section level3">
 <h3 class="hasAnchor">
 <a href="#branch-gh-pages" class="anchor"></a>Branch gh-pages</h3>
+<p>Se puede configurar una acción automática para que cada vez que se</p>
 </div>
 <div id="branch-mainmaster" class="section level3">
 <h3 class="hasAnchor">
