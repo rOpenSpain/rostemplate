@@ -44,7 +44,7 @@ En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al menos l
 
 ``` yaml
 template:
-  package: tidytemplate
+  package: rostemplate
   # No pongas la siguiente línea!
   default_assets: false
 
