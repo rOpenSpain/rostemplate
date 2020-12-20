@@ -1,11 +1,8 @@
 template:
   package: rostemplate
-  params:
-    theme:
 
-development:
-  mode: auto
 
+# Optional
 authors:
   Diego Hernangómez:
     href: https://github.com/dieghernan/pkgdowntemp

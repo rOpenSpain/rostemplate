@@ -105,6 +105,11 @@ code {
 
 /* Id for specific items */
 
+
+#ROS-search{
+  margin-right: 10px;
+}
+
 #ROS-navbar-brand {
   padding-top: 24px;
   padding-bottom: 20px;
