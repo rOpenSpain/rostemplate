@@ -2,6 +2,7 @@
 
 <!-- badges: start -->
 [![R build status](https://github.com/dieghernan/pkgdowntemp/workflows/R-CMD-check/badge.svg)](https://github.com/dieghernan/pkgdowntemp/actions)
+[![codecov](https://codecov.io/gh/dieghernan/rostemplate/branch/master/graph/badge.svg)](https://codecov.io/gh/dieghernan/rostemplate)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
