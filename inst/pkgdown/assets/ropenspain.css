@@ -83,6 +83,15 @@ code {
   background-color: #9C27B0;
 }
 
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+  background-color: transparent;
+}
+
 
 /* Add custom classes */
 
@@ -215,7 +224,7 @@ code {
   }
 }
 
-.navbar-nav .open .dropdown-menu > li > a {
+.navbar-nav .open .dropdown-menu>li>a {
   line-height: 20px;
 }
 
