@@ -38,7 +38,7 @@
       <i class="fa fa-align-justify"></i>
       </button>
       <span class="navbar-brand" id="ROS-navbar-brand">
-      <a class="navbar-link ROS-black" href="../index.html"><img src="../logo.png" alt="rostemplate-logo" id="ROS-navbar-logo">rostemplate</a> <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
+      <a class="navbar-link ROS-black" href="../index.html"><img src="../logo.png" alt="rostemplate-logo" id="ROS-navbar-logo">rostemplate</a> <span class="version label label-default hidden-xs" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
       </span>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
@@ -74,7 +74,7 @@
 
       
 
-      </header><script src="rostemplate_files/header-attrs-2.6/header-attrs.js"></script><div class="row">
+      </header><script src="rostemplate_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Cómo usar esta plantilla</h1>
@@ -102,10 +102,10 @@
 <h1 class="hasAnchor">
 <a href="#configuraci%C3%B3n-previa" class="anchor"></a>Configuración previa</h1>
 <p>En la raíz del proyecto ha de existir un archivo <code>_pkgdown.yaml</code> con al menos las siguientes líneas:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">template</span><span class="kw">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rostemplate</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">  # No pongas la siguiente línea!</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">default_assets</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">template</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rostemplate</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co">  # No pongas la siguiente línea!</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="at">  </span><span class="fu">default_assets</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code></pre></div>
 <p>Puedes encontrar información sobre cómo configurar otras opciones en <code>_pkgdown.yaml</code> <a href="https://pkgdown.r-lib.org/articles/pkgdown.html">aquí</a>.</p>
 <p>Adicionalmente, es necesario añadir al archivo <code>.Rbuildignore</code> las siguientes líneas:</p>
 <pre><code>^\.github$
@@ -145,20 +145,20 @@
   
 <span class="op">}</span></code></pre></div>
 <p>Es posible cambiar el evento que desencadena la actualización del sitio:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Actualiza en cada commit - por defecto</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> main</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> master</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Actualiza cuando se modifica un archivo específico: _pkgdown.yaml</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">'_pkgdown.yaml'</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="co"># Actualiza en cada commit - por defecto</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="at">      </span><span class="kw">-</span><span class="at"> main</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="at">      </span><span class="kw">-</span><span class="at"> master</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="at">      </span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co"># Actualiza cuando se modifica un archivo específico: _pkgdown.yaml</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">'_pkgdown.yaml'</span></span></code></pre></div>
 <p>Más información sobre cómo adaptar los <em>triggers</em> de la acción <a href="https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows">aquí</a>.</p>
 </div>
 </div>

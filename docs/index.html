@@ -84,26 +84,31 @@
 
 <p>This package is a <code>pkgdown</code> template adapted to <a href="https://ropenspain.es/">rOpenSpain</a> site.</p>
 <p>This package is a proof of concept. Guidelines on how to use this template package on <a href="https://dieghernan.github.io/rostemplate/articles/rostemplate.html">this vignette</a> (Spanish).</p>
-<div id="1-setup" class="section level2">
+<div id="setup" class="section level2">
 <h2 class="hasAnchor">
-<a href="#1-setup" class="anchor"></a>1. Setup</h2>
+<a href="#setup" class="anchor"></a>Setup</h2>
 <p>Add a <code>_pkgdown.yml</code> file that contains at least these lines:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">template</span><span class="kw">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rostemplate</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">template</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rostemplate</span></span></code></pre></div>
 <p>Also, add a <code>.Rbuildignore</code> file on the root of your repo with these lines:</p>
 <pre><code>^\.github$
 ^docs$
 ^_pkgdown\.yml$</code></pre>
 </div>
-<div id="2-deploy-using-github-actions" class="section level2">
+<div id="using-rostemplate" class="section level2">
 <h2 class="hasAnchor">
-<a href="#2-deploy-using-github-actions" class="anchor"></a>2. Deploy using GitHub Actions</h2>
+<a href="#using-rostemplate" class="anchor"></a>Using <code>rostemplate</code>
+</h2>
+<p>It is possible to deploy your <code>pkgdown</code> site along with <code>rostemplate</code> via CI (GitHub Actions) or locally, that provides more control but it is not automatic.</p>
+<div id="option-a-deploy-using-github-actions" class="section level3">
+<h3 class="hasAnchor">
+<a href="#option-a-deploy-using-github-actions" class="anchor"></a>Option A: Deploy using GitHub Actions</h3>
 <p>It is not necessary to install <code>rostemplate</code> itself. Just select the GitHub action that you want to use for deploy the <code>pkgdown</code> version of your page (<a href="https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml">rostemplate-docs.yaml</a> or <a href="https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml">rostemplate-gh-pages.yaml</a>) and copy the file into your <code>.github/workflows/</code> folder.</p>
 </div>
-<div id="3-deploy-installing-rostemplate" class="section level2">
-<h2 class="hasAnchor">
-<a href="#3-deploy-installing-rostemplate" class="anchor"></a>3. Deploy installing <code>rostemplate</code>
-</h2>
+<div id="option-b-deploy-installing-rostemplate" class="section level3">
+<h3 class="hasAnchor">
+<a href="#option-b-deploy-installing-rostemplate" class="anchor"></a>Option B: Deploy installing <code>rostemplate</code>
+</h3>
 <p>Install the package from the GitHub repo:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Deploy to gh-branch</span>
@@ -121,9 +126,10 @@
 
 <span class="fu">pkgdown</span><span class="fu">::</span><span class="va"><a href="https://pkgdown.r-lib.org/reference/build_site.html">build_site</a></span></code></pre></div>
 </div>
-<div id="4-commit-to-github-and-deploy" class="section level2">
+</div>
+<div id="commit-to-github-and-deploy" class="section level2">
 <h2 class="hasAnchor">
-<a href="#4-commit-to-github-and-deploy" class="anchor"></a>4. Commit to GitHub and deploy</h2>
+<a href="#commit-to-github-and-deploy" class="anchor"></a>Commit to GitHub and deploy</h2>
 <p>Last step is commit to GitHub, wait until the GitHub action ends (in the case you chose to deploy in that way) and deploy the website via <em>YOUR_GITHUB_REPO&gt;Settings&gt;GitHub Pages</em>.</p>
 </div>
 </div>
