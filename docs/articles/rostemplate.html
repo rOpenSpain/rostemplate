@@ -38,7 +38,7 @@
       <i class="fa fa-align-justify"></i>
       </button>
       <span class="navbar-brand" id="ROS-navbar-brand">
-      <a class="navbar-link ROS-black" href="../index.html"><img src="../logo.png" alt="rostemplate-logo" id="ROS-navbar-logo">rostemplate</a> <span class="version label label-default hidden-xs" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
+      <a class="navbar-link ROS-black" href="../index.html"><img src="../logo.png" alt="rostemplate-logo" id="ROS-navbar-logo">rostemplate</a> <span class="version label label-default hidden-xs" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
       </span>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
@@ -59,7 +59,7 @@
   <a href="../news/index.html">Changelog</a>
 </li>
         <li>
-  <a href="https://github.com/dieghernan/rostemplate/">
+  <a href="https://github.com/ropenspain/rostemplate/">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -80,7 +80,7 @@
       <h1 data-toc-skip>Cómo usar esta plantilla</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/dieghernan/rostemplate/blob/master/vignettes/rostemplate.Rmd"><code>vignettes/rostemplate.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/ropenspain/rostemplate/blob/master/vignettes/rostemplate.Rmd"><code>vignettes/rostemplate.Rmd</code></a></small>
       <div class="hidden name"><code>rostemplate.Rmd</code></div>
 
     </div>
@@ -121,7 +121,7 @@
 <h2 class="hasAnchor">
 <a href="#con-github-actions---ci" class="anchor"></a>Con GitHub actions - CI</h2>
 <p>GitHub Actions permite automatizar procesos cuando se activa un <em>trigger</em>. En este caso se han preparado dos acciones que actualizan el sitio estático cada vez que se añade un <em>commit</em> al repositorio.</p>
-<p>Los flujos de trabajo consisten en archivos con extensión <code>.yaml</code>. La acción <a href="https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml">rostemplate-docs.yaml</a> crea el sitio estático en la carpeta <code>./docs</code> mientras que <a href="https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml">rostemplate-gh-pages.yaml</a> crea el sitio estático en el branch <code>gh-pages</code>.</p>
+<p>Los flujos de trabajo consisten en archivos con extensión <code>.yaml</code>. La acción <a href="https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml">rostemplate-docs.yaml</a> crea el sitio estático en la carpeta <code>./docs</code> mientras que <a href="https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml">rostemplate-gh-pages.yaml</a> crea el sitio estático en el branch <code>gh-pages</code>.</p>
 <p>Para configurar esta opción, es necesario disponer en el repositorio de una carpeta en la ruta <code>.github/workflows</code> y copiar la acción deseada en dicha carpeta.</p>
 <div id="alternativa-usando-las-funciones-de-rostemplate" class="section level3">
 <h3 class="hasAnchor">
@@ -131,7 +131,7 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Deploy to gh-branch</span>
 <span class="kw">if</span> <span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://remotes.r-lib.org">"remotes"</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
-  <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"dieghernan/rostemplate"</span>,
+  <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"ropenspain/rostemplate"</span>,
                           build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
   <span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_gh_actions_branch.html">ros_gh_actions_branch</a></span><span class="op">(</span><span class="op">)</span>
   
@@ -139,7 +139,7 @@
 
 <span class="co"># Deploy to docs folder</span>
 <span class="kw">if</span> <span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://remotes.r-lib.org">"remotes"</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
-  <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"dieghernan/rostemplate"</span>,
+  <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"ropenspain/rostemplate"</span>,
                           build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
   <span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_gh_actions_docs_folder.html">ros_gh_actions_docs_folder</a></span><span class="op">(</span><span class="op">)</span>
   
@@ -168,7 +168,7 @@
 <p>El sitio estático se puede generar igualmente desde una sesión local en RStudio. Para ello, es necesario instalar este paquete usando <code>remotes</code>:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://remotes.r-lib.org">"remotes"</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
-  <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"dieghernan/rostemplate"</span>,
+  <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"ropenspain/rostemplate"</span>,
                           build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
   <span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_build.html">ros_build</a></span><span class="op">(</span><span class="op">)</span>
   
@@ -198,7 +198,7 @@
       <footer id="footer"><div class="container">
 		<div class="col-md-3 col-sm-6 col-md-offset-1">
 			<h4 data-toc-skip>About rostemplate</h4>
-			Developed by <a href="https://github.com/dieghernan/pkgdowntemp">Diego Hernangómez</a>, part of the <span class="ROS-light">rOpenSpain</span> project.
+			Developed by <a href="https://github.com/dieghernan/">Diego Hernangómez</a>, part of the <span class="ROS-light">rOpenSpain</span> project.
 			<hr class="hidden-md hidden-lg hidden-sm">
 </div>
 		<div class="col-md-3 col-sm-6 col-md-offset-4">
