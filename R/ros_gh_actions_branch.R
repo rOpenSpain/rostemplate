@@ -15,6 +15,20 @@ ros_gh_actions_branch <-  function(pkg = ".", overwrite = TRUE) {
     dir.create(destdir, recursive = TRUE)
   }
 
+  # Check .Rbuildignore
+
+  Rbuildignore <- file.path(pkg, ".Rbuildignore")
+  if (!file.exists(Rbuildignore)) {
+    file.create(Rbuildignore)
+  }
+
+  # Add lines to gitignore
+  linesRbuild <- readLines(Rbuildignore)
+  newlinesRbuild <-
+    unique(c(linesRbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))
+  newlinesRbuild <- newlinesRbuild[newlinesRbuild != ""]
+  writeLines(newlinesRbuild, Rbuildignore)
+
   # Check gitignore
 
   gitignore <- file.path(pkg, ".github", ".gitignore")

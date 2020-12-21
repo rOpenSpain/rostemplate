@@ -63,6 +63,15 @@ template:
 Puedes encontrar información sobre cómo configurar otras opciones en 
 `_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
+Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las siguientes líneas:
+
+```
+^\.github$
+^docs$
+^_pkgdown\.yml$
+
+```
+
 # Uso de la plantilla
 
 Esta sección detalla diferentes opciones para generar un sitio estático para el 
@@ -88,7 +97,9 @@ Aunque el uso del paquete `rostemplate` en si no es necesario con
 GitHub actions, se han desarrollado dos funciones que automatizan 
 esta configuración de manera automática. Estas funciones simplemente crean el 
 directorio `.github/workflows` si no existiera previamente y copian 
-los archivos solicitados en la ruta correspondiente:
+los archivos solicitados en la ruta correspondiente. Adicionalmente, crean los
+archivos `.Rbuildignore` y `.github/.gitignore`, que ignoran ciertos archivos
+cuando se compila el paquete:
 
 ```{r eval=FALSE}
 # Deploy to gh-branch

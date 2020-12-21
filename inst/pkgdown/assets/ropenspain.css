@@ -67,24 +67,24 @@ code {
   font-size: 12px;
 }
 
+.label-default {
+  background-color: #986dbd;
+}
+
+.label-info {
+  background-color: #5a9ddb;
+}
+
+.label-warning {
+  background-color: #ff9800;
+}
+
+.label-danger {
+  background-color: #9C27B0;
+}
+
 
 /* Add custom classes */
-
-.ROS-label-default {
-  color: #986dbd;
-}
-
-.ROS-label-info {
-  color: #5a9ddb;
-}
-
-.ROS-label-warning {
-  color: #ff9800;
-}
-
-.ROS-label-danger {
-  color: #9C27B0;
-}
 
 .ROS-light {
   font-weight: 300;

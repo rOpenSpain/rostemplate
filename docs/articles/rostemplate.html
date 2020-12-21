@@ -38,7 +38,7 @@
       <i class="fa fa-align-justify"></i>
       </button>
       <span class="navbar-brand" id="ROS-navbar-brand">
-      <a class="navbar-link ROS-black" href="../index.html"><img src="../logo.png" alt="rostemplate-logo" id="ROS-navbar-logo">rostemplate</a> <span class="version ROS-label-default hidden-xs hidden-sm" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
+      <a class="navbar-link ROS-black" href="../index.html"><img src="../logo.png" alt="rostemplate-logo" id="ROS-navbar-logo">rostemplate</a> <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
       </span>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
@@ -74,7 +74,7 @@
 
       
 
-      </header><script src="rostemplate_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="rostemplate_files/header-attrs-2.6/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Cómo usar esta plantilla</h1>
@@ -102,11 +102,16 @@
 <h1 class="hasAnchor">
 <a href="#configuraci%C3%B3n-previa" class="anchor"></a>Configuración previa</h1>
 <p>En la raíz del proyecto ha de existir un archivo <code>_pkgdown.yaml</code> con al menos las siguientes líneas:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">template</span><span class="kw">:</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rostemplate</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co">  # No pongas la siguiente línea!</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="at">  </span><span class="fu">default_assets</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">template</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rostemplate</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">  # No pongas la siguiente línea!</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">default_assets</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code></pre></div>
 <p>Puedes encontrar información sobre cómo configurar otras opciones en <code>_pkgdown.yaml</code> <a href="https://pkgdown.r-lib.org/articles/pkgdown.html">aquí</a>.</p>
+<p>Adicionalmente, es necesario añadir al archivo <code>.Rbuildignore</code> las siguientes líneas:</p>
+<pre><code>^\.github$
+^docs$
+^_pkgdown\.yml$
+</code></pre>
 </div>
 <div id="uso-de-la-plantilla" class="section level1">
 <h1 class="hasAnchor">
@@ -122,8 +127,8 @@
 <h3 class="hasAnchor">
 <a href="#alternativa-usando-las-funciones-de-rostemplate" class="anchor"></a>Alternativa usando las funciones de <code>rostemplate</code>
 </h3>
-<p>Aunque el uso del paquete <code>rostemplate</code> en si no es necesario con GitHub actions, se han desarrollado dos funciones que automatizan esta configuración de manera automática. Estas funciones simplemente crean el directorio <code>.github/workflows</code> si no existiera previamente y copian los archivos solicitados en la ruta correspondiente:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<p>Aunque el uso del paquete <code>rostemplate</code> en si no es necesario con GitHub actions, se han desarrollado dos funciones que automatizan esta configuración de manera automática. Estas funciones simplemente crean el directorio <code>.github/workflows</code> si no existiera previamente y copian los archivos solicitados en la ruta correspondiente. Adicionalmente, crean los archivos <code>.Rbuildignore</code> y <code>.github/.gitignore</code>, que ignoran ciertos archivos cuando se compila el paquete:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Deploy to gh-branch</span>
 <span class="kw">if</span> <span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://remotes.r-lib.org">"remotes"</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
   <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"dieghernan/rostemplate"</span>,
@@ -140,20 +145,20 @@
   
 <span class="op">}</span></code></pre></div>
 <p>Es posible cambiar el evento que desencadena la actualización del sitio:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="co"># Actualiza en cada commit - por defecto</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">on</span><span class="kw">:</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="at">      </span><span class="kw">-</span><span class="at"> main</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="at">      </span><span class="kw">-</span><span class="at"> master</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="at">      </span></span>
-<span id="cb3-9"><a href="#cb3-9"></a><span class="co"># Actualiza cuando se modifica un archivo específico: _pkgdown.yaml</span></span>
-<span id="cb3-10"><a href="#cb3-10"></a></span>
-<span id="cb3-11"><a href="#cb3-11"></a><span class="fu">on</span><span class="kw">:</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
-<span id="cb3-13"><a href="#cb3-13"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">'_pkgdown.yaml'</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Actualiza en cada commit - por defecto</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> main</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> master</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Actualiza cuando se modifica un archivo específico: _pkgdown.yaml</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">'_pkgdown.yaml'</span></span></code></pre></div>
 <p>Más información sobre cómo adaptar los <em>triggers</em> de la acción <a href="https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows">aquí</a>.</p>
 </div>
 </div>
@@ -161,7 +166,7 @@
 <h2 class="hasAnchor">
 <a href="#rstudio---manual" class="anchor"></a>RStudio - manual</h2>
 <p>El sitio estático se puede generar igualmente desde una sesión local en RStudio. Para ello, es necesario instalar este paquete usando <code>remotes</code>:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://remotes.r-lib.org">"remotes"</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
   <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"dieghernan/rostemplate"</span>,
                           build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
