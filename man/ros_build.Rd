@@ -2,13 +2,25 @@
 % Please edit documentation in R/ros_build.R
 \name{ros_build}
 \alias{ros_build}
-\title{Build your pkgdown website}
+\title{Build your pkgdown website locally.}
 \usage{
 ros_build(pkg = ".", ...)
 }
 \arguments{
-\item{pkg, ...}{See \link[pkgdown]{build_site}.}
+\item{pkg, ...}{See \code{?pkgdown::build_site}.}
 }
 \description{
-A wrapper of \link[pkgdown]{build_site}
+A wrapper of \code{pkgdown::build_site}
+}
+\details{
+This function would ask for confirmation to check your
+\code{_pkgdown.yml} file and would create your pkgdown site on the /docs
+folder.
+
+Unlike \link{ros_gh_actions_branch}, the user would trigger the build and
+it is possible to control it via the parameters of
+\code{pkgdown::build_site}.
+}
+\seealso{
+\code{\link{ros_gh_actions_branch}}, \code{\link[pkgdown]{build_site}}
 }

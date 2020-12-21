@@ -29,18 +29,28 @@ knitr::knit_hooks$set(
 
 # Introducción 
 
-Este paquete es un *proof of concept* sobre cómo crear una plantilla de `pkgdown` adaptada. En este paquete la plantilla base que se adaptará se basa en la empleada por la comunidad [rOpenSpain](https://ropenspain.es/), que a su vez es una adaptación de la plantilla [Universal](https://bootstrapious.com/p/universal-business-e-commerce-template) creada por Bootstrapius con la variación de color **violet**.
+Este paquete es un *proof of concept* sobre cómo crear una plantilla de 
+`pkgdown` adaptada. En este paquete la plantilla base que se adaptará se basa 
+en la empleada por la comunidad [rOpenSpain](https://ropenspain.es/), que a su 
+vez es una adaptación de la plantilla [Universal](https://bootstrapious.com/p/universal-business-e-commerce-template) 
+creada por [Bootstrapius](https://bootstrapious.com/p/universal-business-e-commerce-template) con la variación de color **violet**.
 
 ## Limitaciones
 
-El diseño original de las plantillas que componen `pkgdown` es bastante rígido, en el sentido de que ligeras modificaciones (como el tipo de navbar o la localizaxion del footer) pueden provocar que el renderizado final no sea óptimo. Para solucionarlo se han empleado algunos *hacks* en el fichero `css` y pequeños fragmentos en `javascript`.
+El diseño original de las plantillas que componen `pkgdown` es bastante rígido, 
+en el sentido de que ligeras modificaciones (como el tipo de *navbar* o la 
+localización del *footer*) pueden provocar que el renderizado final no sea 
+óptimo. Para solucionarlo se han empleado algunos *hacks* en el fichero `css` 
+y pequeños fragmentos en `javascript`.
 
-Otra limitación es la diferencia de versiones Bootstrap, ya que `pkgdown` emplea la versión 3.4.1 mientras que Universal emplea la 3.3.7.
+Otra limitación es la diferencia de versiones Bootstrap, ya que `pkgdown` 
+emplea la versión 3.4.1 mientras que Universal emplea la 3.3.7.
   
 
-# Configuración
+# Configuración previa
 
-En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al menos las siguientes líneas:
+En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al menos 
+las siguientes líneas:
 
 ``` yaml
 template:
@@ -50,33 +60,53 @@ template:
 
 ```
 
-Puedes encontrar información sobre cómo configurar otras opciones en `_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
+Puedes encontrar información sobre cómo configurar otras opciones en 
+`_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
 # Uso de la plantilla
 
-Esta sección detalla diferentes opciones para generar un sitio estático para el paquete deseado con el formato definido por esta plantilla. El resultado de este paso es la generación de un sitio estático compuesto de los archivos `html`, `css`, etc. basados en el paquete de R para el que se está generando el sitio.
+Esta sección detalla diferentes opciones para generar un sitio estático para el 
+paquete deseado con el formato definido por esta plantilla. El resultado de 
+este paso es la generación de un sitio estático compuesto de los archivos 
+`html`, `css`, etc. basados en el paquete de R para el que se está generando 
+el sitio.
 
 
 ## Con GitHub actions - CI
 
-GitHub Actions permite automatizar procesos cuando se activa un trigger. En este caso se han preparado dos acciones que actualizan el sitio estático cada vez que se añade un *commit* al repositorio. 
+GitHub Actions permite automatizar procesos cuando se activa un *trigger*. 
+En este caso se han preparado dos acciones que actualizan el sitio estático 
+cada vez que se añade un *commit* al repositorio. 
 
 Los flujos de trabajo consisten en archivos con extensión `.yaml`. La acción [rostemplate-docs.yaml](https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml) crea el sitio estático en la carpeta `./docs` mientras que [rostemplate-gh-pages.yaml](https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml) crea el sitio estático en el branch `gh-pages`.
 
 Para configurar esta opción, es necesario disponer en el repositorio de una carpeta en la ruta `.github/workflows` y copiar la acción deseada en dicha carpeta.
 
-El paquete contiene dos funciones que realizan esta configuración:
+### Alternativa usando las funciones de `rostemplate`
+
+Aunque el uso del paquete `rostemplate` en si no es necesario con 
+GitHub actions, se han desarrollado dos funciones que automatizan 
+esta configuración de manera automática. Estas funciones simplemente crean el 
+directorio `.github/workflows` si no existiera previamente y copian 
+los archivos solicitados en la ruta correspondiente:
 
 ```{r eval=FALSE}
 # Deploy to gh-branch
-if(require("remotes")){
+if (require("remotes")) {
+  remotes::install_github("dieghernan/rostemplate",
+                          build_vignettes = TRUE)
+  rostemplate::ros_gh_actions_branch()
   
-  remotes::install_github("dieghernan/rostemplate")
-  rostemplate::ros_gh_branch()
+}
+
+# Deploy to docs folder
+if (require("remotes")) {
+  remotes::install_github("dieghernan/rostemplate",
+                          build_vignettes = TRUE)
+  rostemplate::ros_gh_actions_docs_folder()
   
 }
 ```
-
 
 
 Es posible cambiar el evento que desencadena la actualización del sitio:
@@ -99,28 +129,35 @@ on:
 
 ```
 
-Más información [aquí](https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows).
+Más información sobre cómo adaptar los *triggers* de la acción [aquí](https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows).
 
 ## RStudio - manual
 
-El sitio estático se puede generar igualmente desde una sesión local en RStudio. Para ello, es necesario instalar este paquete en el ordenador y luego usar las funcionalidades propias de `pkgdown`:
+El sitio estático se puede generar igualmente desde una sesión local en 
+RStudio. Para ello, es necesario instalar este paquete usando `remotes`:
 
 
 ```{r eval=FALSE}
-if(require("remotes")){
-  
-  remotes::install_github("dieghernan/rostemplate")
+if(require("remotes")) {
+  remotes::install_github("dieghernan/rostemplate",
+                          build_vignettes = TRUE)
   rostemplate::ros_build()
   
 }
 ```
 
+La función `rostemplate::ros_build()` no es más que un alias de 
+`pkgdown::build_site`, aportando únicamente un control sobre la configuración
+del archivo `_pkgdown.yml` 
 
-
-Es necesario actualizar el repositorio remoto en GitHub tras ejecutar el script anterior.
+Una vez generado el sitio, es necesario actualizar el repositorio remoto en 
+GitHub mediante un *commit*.
 
 # GitHub Pages
 
-Una vez generado el sitio estático y subido al repositorio en GitHub, el último paso es generar el sitio web a través de los Settings de nuestro repositorio, seleccionando el origen deseado (`gh-pages`, `main/docs`, etc.).
+Una vez generado el sitio estático y subido al repositorio en GitHub, 
+el último paso es activar el sitio web a través de los *Settings* de 
+nuestro repositorio (*Setting>GitHub Pages*), seleccionando el origen deseado 
+(`gh-pages`, `main/docs`, etc.).
 
 
