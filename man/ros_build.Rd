@@ -2,7 +2,7 @@
 % Please edit documentation in R/ros_build.R
 \name{ros_build}
 \alias{ros_build}
-\title{Build your pkgdown website locally.}
+\title{Build your pkgdown website locally}
 \usage{
 ros_build(pkg = ".", ...)
 }

@@ -2,7 +2,7 @@
 #' @importFrom utils menu
 NULL
 
-#' @title Build your pkgdown website locally.
+#' @title Build your pkgdown website locally
 #' @name ros_build
 #' @description A wrapper of \code{pkgdown::build_site}
 #' @details This function would ask for confirmation to check your
