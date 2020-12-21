@@ -19,6 +19,7 @@ NULL
 #' @param pkg,... See \code{?pkgdown::build_site}.
 ros_build <-  function(pkg = ".", ...) {
 
+  # nocov start
   # Check .Rbuildignore
 
   Rbuildignore <- file.path(pkg, ".Rbuildignore")
@@ -26,14 +27,13 @@ ros_build <-  function(pkg = ".", ...) {
     file.create(Rbuildignore)
   }
 
-  # Add lines to gitignore
+  # Add lines to Rbuildignore
   linesRbuild <- readLines(Rbuildignore)
   newlinesRbuild <-
     unique(c(linesRbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))
   newlinesRbuild <- newlinesRbuild[newlinesRbuild != ""]
   writeLines(newlinesRbuild, Rbuildignore)
 
-  # nocov start
   sel <-
     menu(c("Yes", "No"),
          title = "Have you included \n\ntemplate:\n  package: rostemplate\n\nin your _pkgdown.yml file?")

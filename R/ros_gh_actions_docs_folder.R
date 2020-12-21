@@ -27,7 +27,7 @@ ros_gh_actions_docs_folder <-
       file.create(Rbuildignore)
     }
 
-    # Add lines to gitignore
+    # Add lines to Rbuildignore
     linesRbuild <- readLines(Rbuildignore)
     newlinesRbuild <-
       unique(c(linesRbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))

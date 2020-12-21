@@ -22,7 +22,7 @@ ros_gh_actions_branch <-  function(pkg = ".", overwrite = TRUE) {
     file.create(Rbuildignore)
   }
 
-  # Add lines to gitignore
+  # Add lines to Rbuildignore
   linesRbuild <- readLines(Rbuildignore)
   newlinesRbuild <-
     unique(c(linesRbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))
