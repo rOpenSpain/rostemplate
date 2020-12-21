@@ -20,5 +20,5 @@ Depends:
     R (>= 3.6.0)
 Imports: 
     pkgdown (>= 1.1.0.9000)
-Suggests: knitr, rmarkdown
+Suggests: knitr, rmarkdown, tinytest
 VignetteBuilder: knitr

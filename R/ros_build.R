@@ -18,6 +18,7 @@ NULL
 #'
 #' @param pkg,... See \code{?pkgdown::build_site}.
 ros_build <-  function(pkg = ".", ...) {
+  # nocov start
   sel <-
     menu(c("Yes", "No"),
          title = "Have you included \n\ntemplate:\n  package: rostemplate\n\nin your _pkgdown.yml file?")
@@ -27,4 +28,5 @@ ros_build <-  function(pkg = ".", ...) {
 
   pkgdown::build_site(pkg = ".", ...)
   return(invisible())
+  # nocov end
 }
