@@ -65,6 +65,20 @@ Los flujos de trabajo consisten en archivos con extensión `.yaml`. La acción [
 
 Para configurar esta opción, es necesario disponer en el repositorio de una carpeta en la ruta `.github/workflows` y copiar la acción deseada en dicha carpeta.
 
+El paquete contiene dos funciones que realizan esta configuración:
+
+```{r eval=FALSE}
+# Deploy to gh-branch
+if(require("remotes")){
+  
+  remotes::install_github("dieghernan/rostemplate")
+  rostemplate::ros_gh_branch()
+  
+}
+```
+
+
+
 Es posible cambiar el evento que desencadena la actualización del sitio:
 
 ```yaml 
@@ -91,15 +105,17 @@ Más información [aquí](https://docs.github.com/es/free-pro-team@latest/action
 
 El sitio estático se puede generar igualmente desde una sesión local en RStudio. Para ello, es necesario instalar este paquete en el ordenador y luego usar las funcionalidades propias de `pkgdown`:
 
-```r
-install.packages('remotes')
-install.packages('pkgdown')
 
-remotes::install_github("dieghernan/rostemplate")
-
-pkgdown::build_site()
-
+```{r eval=FALSE}
+if(require("remotes")){
+  
+  remotes::install_github("dieghernan/rostemplate")
+  rostemplate::ros_build()
+  
+}
 ```
+
+
 
 Es necesario actualizar el repositorio remoto en GitHub tras ejecutar el script anterior.
 

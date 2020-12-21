@@ -11,11 +11,13 @@ pre a {
   font-weight: inherit
 }
 
+
 /* Keyword */
 
 .kw {
   font-weight: bold
 }
+
 
 /* String */
 
@@ -30,6 +32,7 @@ pre a {
   font-weight: bold
 }
 
+
 /* Function */
 
 .fu {
@@ -37,17 +40,20 @@ pre a {
   font-weight: bold
 }
 
+
 /* Float */
 
 .fl {
   color: #B452CD;
 }
 
+
 /* comment */
 
 .co {
   color: #888888;
 }
+
 
 /* Modify default classes */
 
@@ -103,10 +109,10 @@ code {
   display: none;
 }
 
+
 /* Id for specific items */
 
-
-#ROS-search{
+#ROS-search {
   margin-right: 10px;
 }
 
@@ -134,6 +140,7 @@ code {
   color: black;
 }
 
+
 /* Position hack to get full width footer even though pkgdown puts it inside a container
  * See: https://css-tricks.com/full-width-containers-limited-width-parents/
  */
@@ -156,55 +163,67 @@ code {
   margin-right: -50vw;
 }
 
+
 /* Hack to collapse navbar up to md https://stackoverflow.com/questions/18192082/bootstrap-3-navbar-collapse */
 
 @media (max-width: 991px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin: 7.5px -15px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .navbar-text {
-        float: none;
-        margin: 15px 0;
-    }
-    /* since 3.1.0 */
-    .navbar-collapse.collapse.in { 
-        display: block!important;
-    }
-    .collapsing {
-        overflow: hidden!important;
-    }
-    /* Dropdowns */
-    .navbar-nav .open .dropdown-menu { 
-       position: static; 
-       float: none; 
-       width: auto; 
-       margin-top: 0; 
-       background-color: transparent; 
-       border: 0; 
-       -webkit-box-shadow: none; 
-       box-shadow: none; 
-    }
+  .navbar-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin: 7.5px -15px;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-text {
+    float: none;
+    margin: 15px 0;
+  }
+  /* since 3.1.0 */
+  .navbar-collapse.collapse.in {
+    display: block!important;
+  }
+  .collapsing {
+    overflow: hidden!important;
+  }
+  /* Dropdowns */
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.navbar-nav .open .dropdown-menu > li > a {
+  line-height: 20px;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a,
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus {
+  color: #ffffff;
+  background-color: #986dbd;
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
