@@ -9,6 +9,8 @@ on:
     branches:
       - main
       - master
+  schedule:
+      - cron:  '30 06 1 * *'
 
 name: R-CMD-check
 
