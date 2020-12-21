@@ -1,8 +1,8 @@
 # rostemplate
 
 <!-- badges: start -->
-[![R build status](https://github.com/dieghernan/pkgdowntemp/workflows/R-CMD-check/badge.svg)](https://github.com/dieghernan/pkgdowntemp/actions)
-[![codecov](https://codecov.io/gh/dieghernan/rostemplate/branch/main/graph/badge.svg)](https://codecov.io/gh/dieghernan/rostemplate)
+[![R build status](https://github.com/ropenspain/rostemplate/workflows/R-CMD-check/badge.svg)](https://github.com/ropenspain/rostemplate/actions)
+[![codecov](https://codecov.io/gh/ropenspain/rostemplate/branch/main/graph/badge.svg)](https://codecov.io/gh/ropenspain/rostemplate)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
@@ -12,7 +12,7 @@ This package is a `pkgdown` template adapted to
 
 This package is a proof of concept. Guidelines on how to use this template 
 package on 
-[this vignette](https://dieghernan.github.io/rostemplate/articles/rostemplate.html) 
+[this vignette](https://ropenspain.github.io/rostemplate/articles/rostemplate.html) 
 (Spanish).
 
 ## Setup
@@ -42,7 +42,7 @@ not automatic.
 
 It is not necessary to install `rostemplate` itself. Just select the GitHub
 action that you want to use for deploy the `pkgdown` version of your page
-([rostemplate-docs.yaml](https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml) or [rostemplate-gh-pages.yaml](https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml)) and copy the file into your 
+([rostemplate-docs.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml) or [rostemplate-gh-pages.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml)) and copy the file into your 
 `.github/workflows/` folder.
 
 ### Option B: Deploy installing `rostemplate` 
@@ -52,7 +52,7 @@ Install the package from the GitHub repo:
 ```r
 # Deploy to gh-branch
 if (require("remotes")) {
-  remotes::install_github("dieghernan/rostemplate",
+  remotes::install_github("ropenspain/rostemplate",
                           build_vignettes = TRUE)
 }
 ```

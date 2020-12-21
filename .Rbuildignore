@@ -6,8 +6,8 @@
 ^\.Rproj\.user$
 ^\.github$
 ^LICENSE\.md$
-^pkgdowntemp\.Rcheck$
-^pkgdowntemp.*\.tar\.gz$
-^pkgdowntemp.*\.tgz$
+^rostemplate\.Rcheck$
+^rostemplate.*\.tar\.gz$
+^rostemplate.*\.tgz$
 ^doc$
 ^Meta$

@@ -2,9 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
-pkgdowntemp.Rcheck/
-pkgdowntemp*.tar.gz
-pkgdowntemp*.tgz
+rostemplate.Rcheck/
+rostemplate*.tar.gz
+rostemplate*.tgz
 .github/R-version
 .github/depends.Rds
 doc

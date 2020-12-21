@@ -1,7 +1,7 @@
 Package: rostemplate
 Type: Package
 Title: 'pkgdown' Template for 'rOpenSpain' Packages
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     person(given = "Diego",
            family = "Hernangómez",
@@ -14,8 +14,8 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
-BugReports: https://github.com/dieghernan/rostemplate/issues
-URL: https://dieghernan.github.io/rostemplate/, https://github.com/dieghernan/rostemplate
+BugReports: https://github.com/ropenspain/rostemplate/issues
+URL: https://ropenspain.github.io/rostemplate/, https://github.com/ropenspain/rostemplate
 Depends: 
     R (>= 3.6.0)
 Imports: 

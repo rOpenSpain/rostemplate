@@ -87,7 +87,7 @@ GitHub Actions permite automatizar procesos cuando se activa un *trigger*.
 En este caso se han preparado dos acciones que actualizan el sitio estático 
 cada vez que se añade un *commit* al repositorio. 
 
-Los flujos de trabajo consisten en archivos con extensión `.yaml`. La acción [rostemplate-docs.yaml](https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml) crea el sitio estático en la carpeta `./docs` mientras que [rostemplate-gh-pages.yaml](https://github.com/dieghernan/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml) crea el sitio estático en el branch `gh-pages`.
+Los flujos de trabajo consisten en archivos con extensión `.yaml`. La acción [rostemplate-docs.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml) crea el sitio estático en la carpeta `./docs` mientras que [rostemplate-gh-pages.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml) crea el sitio estático en el branch `gh-pages`.
 
 Para configurar esta opción, es necesario disponer en el repositorio de una carpeta en la ruta `.github/workflows` y copiar la acción deseada en dicha carpeta.
 
@@ -104,7 +104,7 @@ cuando se compila el paquete:
 ```{r eval=FALSE}
 # Deploy to gh-branch
 if (require("remotes")) {
-  remotes::install_github("dieghernan/rostemplate",
+  remotes::install_github("ropenspain/rostemplate",
                           build_vignettes = TRUE)
   rostemplate::ros_gh_actions_branch()
   
@@ -112,7 +112,7 @@ if (require("remotes")) {
 
 # Deploy to docs folder
 if (require("remotes")) {
-  remotes::install_github("dieghernan/rostemplate",
+  remotes::install_github("ropenspain/rostemplate",
                           build_vignettes = TRUE)
   rostemplate::ros_gh_actions_docs_folder()
   
@@ -150,7 +150,7 @@ RStudio. Para ello, es necesario instalar este paquete usando `remotes`:
 
 ```{r eval=FALSE}
 if(require("remotes")) {
-  remotes::install_github("dieghernan/rostemplate",
+  remotes::install_github("ropenspain/rostemplate",
                           build_vignettes = TRUE)
   rostemplate::ros_build()
   
