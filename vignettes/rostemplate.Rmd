@@ -29,10 +29,10 @@ knitr::knit_hooks$set(
 
 # Introducción 
 
-Este paquete es un *proof of concept* sobre cómo crear una plantilla de 
-`pkgdown` adaptada. En este paquete la plantilla base que se adaptará se basa 
-en la empleada por la comunidad [rOpenSpain](https://ropenspain.es/), que a su 
-vez es una adaptación de la plantilla [Universal](https://bootstrapious.com/p/universal-business-e-commerce-template) 
+Este paquete proporciona una plantilla de `pkgdown` adaptada a la empleada por 
+la comunidad [rOpenSpain](https://ropenspain.es/), que a su vez es una 
+adaptación de la plantilla 
+[Universal](https://bootstrapious.com/p/universal-business-e-commerce-template) 
 creada por [Bootstrapius](https://bootstrapious.com/p/universal-business-e-commerce-template) con la variación de color **violet**.
 
 ## Limitaciones
@@ -63,7 +63,8 @@ template:
 Puedes encontrar información sobre cómo configurar otras opciones en 
 `_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
-Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las siguientes líneas:
+Adicionalmente, es necesario añadir al archivo `.Rbuildignore` 
+las siguientes líneas:
 
 ```
 ^\.github$
@@ -89,7 +90,9 @@ cada vez que se añade un *commit* al repositorio.
 
 Los flujos de trabajo consisten en archivos con extensión `.yaml`. La acción [rostemplate-docs.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml) crea el sitio estático en la carpeta `./docs` mientras que [rostemplate-gh-pages.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml) crea el sitio estático en el branch `gh-pages`.
 
-Para configurar esta opción, es necesario disponer en el repositorio de una carpeta en la ruta `.github/workflows` y copiar la acción deseada en dicha carpeta.
+Para configurar esta opción, es necesario disponer en el repositorio de una 
+carpeta en la ruta `.github/workflows` y copiar la acción deseada en dicha 
+carpeta.
 
 ### Alternativa usando las funciones de `rostemplate`
 

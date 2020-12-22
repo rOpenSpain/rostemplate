@@ -10,7 +10,10 @@
 This package is a `pkgdown` template adapted to 
 [rOpenSpain](https://ropenspain.es/) site.
 
-This package is a proof of concept. Guidelines on how to use this template 
+This is a private template for use by core rOpenSpain packages. 
+Please don’t use it for your own code.
+
+Guidelines on how to use this template 
 package on 
 [this vignette](https://ropenspain.github.io/rostemplate/articles/rostemplate.html) 
 (Spanish).
