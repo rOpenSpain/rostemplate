@@ -6,6 +6,7 @@
 #' Add an rOpenSpain badge pointing to <https://ropenspain.es/> on your `README`
 #' file.
 #'
+#' @export
 #'
 #' @return A markdown badge and a message with the markdown value.
 #'
