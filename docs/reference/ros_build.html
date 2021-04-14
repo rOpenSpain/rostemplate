@@ -55,7 +55,7 @@
 <link href="../ropenspain.css" rel="stylesheet">
 
 <meta property="og:title" content="Build your pkgdown website locally — ros_build" />
-<meta property="og:description" content="A wrapper of pkgdown::build_site" />
+<meta property="og:description" content="A wrapper of pkgdown::build_site()" />
 
 
 
@@ -84,7 +84,7 @@
       <i class="fa fa-align-justify"></i>
       </button>
       <span class="navbar-brand" id="ROS-navbar-brand">
-      <a class="navbar-link ROS-black" href="../index.html"><img src="../logo.png" alt="rostemplate-logo" id="ROS-navbar-logo">rostemplate</a> <span class="version label label-default hidden-xs" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
+      <a class="navbar-link ROS-black" href="../index.html"><img src="../logo.png" alt="rostemplate-logo" id="ROS-navbar-logo">rostemplate</a> <span class="version label label-default hidden-xs" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3</span>
       </span>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
@@ -130,7 +130,7 @@
     </div>
 
     <div class="ref-description">
-    <p>A wrapper of <code><a href='https://pkgdown.r-lib.org/reference/build_site.html'>pkgdown::build_site</a></code></p>
+    <p>A wrapper of <code><a href='https://pkgdown.r-lib.org/reference/build_site.html'>pkgdown::build_site()</a></code></p>
     </div>
 
     <pre class="usage"><span class='fu'>ros_build</span><span class='op'>(</span>pkg <span class='op'>=</span> <span class='st'>"."</span>, <span class='va'>...</span><span class='op'>)</span></pre>
@@ -139,22 +139,50 @@
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>pkg, ...</th>
-      <td><p>See <code><a href='https://pkgdown.r-lib.org/reference/build_site.html'>?pkgdown::build_site</a></code>.</p></td>
+      <th>pkg</th>
+      <td><p>Path to package.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Arguments passed on to <code><a href='https://pkgdown.r-lib.org/reference/build_site.html'>pkgdown::build_site</a></code></p><dl>
+    <dt><code>examples</code></dt><dd><p>Run examples?</p></dd>
+    <dt><code>run_dont_run</code></dt><dd><p>Run examples that are surrounded in \dontrun?</p></dd>
+    <dt><code>seed</code></dt><dd><p>Seed used to initialize so that random examples are
+reproducible.</p></dd>
+    <dt><code>lazy</code></dt><dd><p>If <code>TRUE</code>, will only rebuild articles and reference pages
+if the source is newer than the destination.</p></dd>
+    <dt><code>override</code></dt><dd><p>An optional named list used to temporarily override
+values in <code>_pkgdown.yml</code></p></dd>
+    <dt><code>preview</code></dt><dd><p>If <code>TRUE</code>, or <code>is.na(preview) &amp;&amp; interactive()</code>, will preview
+freshly generated section in browser.</p></dd>
+    <dt><code>devel</code></dt><dd><p>Use development or deployment process?If <code>TRUE</code>, uses lighter-weight process suitable for rapid
+iteration; it will run examples and vignettes in the current process,
+and will load code with <code><a href='https://rdrr.io/pkg/pkgload/man/load_all.html'>pkgload::load_all()</a></code>.If <code>FALSE</code>, will first install the package to a temporary library,
+and will run all examples and vignettes in a new process.<code>build_site()</code> defaults to <code>devel = FALSE</code> so that you get high fidelity
+outputs when you building the complete site; <code>build_reference()</code>,
+<code>build_home()</code> and friends default to <code>devel = TRUE</code> so that you can
+rapidly iterate during development.</p></dd>
+    <dt><code>new_process</code></dt><dd><p>If <code>TRUE</code>, will run <code>build_site()</code> in a separate process.
+This enhances reproducibility by ensuring nothing that you have loaded
+in the current process affects the build process.</p></dd>
+    <dt><code>install</code></dt><dd><p>If <code>TRUE</code>, will install the package in a temporary library
+so it is available for vignettes.</p></dd>
+    <dt><code>document</code></dt><dd><p><strong>Deprecated</strong> Use <code>devel</code> instead.</p></dd>
+  
+</dl></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>This function would ask for confirmation to check your
-<code>_pkgdown.yml</code> file and would create your pkgdown site on the /docs
-folder.</p>
-<p>Unlike <a href='ros_gh_actions_branch.html'>ros_gh_actions_branch</a>, the user would trigger the build and
+    <p>This function would ask for confirmation to check your <code>_pkgdown.yml</code> file
+and would create your pkgdown site on the <code>docs/</code> folder.</p>
+<p>Unlike <code><a href='ros_gh_actions_branch.html'>ros_gh_actions_branch()</a></code>, the user would trigger the build and
 it is possible to control it via the parameters of
-<code><a href='https://pkgdown.r-lib.org/reference/build_site.html'>pkgdown::build_site</a></code>.</p>
+<code><a href='https://pkgdown.r-lib.org/reference/build_site.html'>pkgdown::build_site()</a></code>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='ros_gh_actions_branch.html'>ros_gh_actions_branch</a></code>, <code><a href='https://pkgdown.r-lib.org/reference/build_site.html'>build_site</a></code></p></div>
+    <div class='dont-index'><p><code><a href='ros_gh_actions_branch.html'>ros_gh_actions_branch()</a></code>, <code><a href='https://pkgdown.r-lib.org/reference/build_site.html'>pkgdown::build_site()</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
