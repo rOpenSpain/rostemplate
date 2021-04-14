@@ -7,20 +7,53 @@
 ros_build(pkg = ".", ...)
 }
 \arguments{
-\item{pkg, ...}{See \code{?pkgdown::build_site}.}
+\item{pkg}{Path to package.}
+
+\item{...}{
+  Arguments passed on to \code{\link[pkgdown:build_site]{pkgdown::build_site}}
+  \describe{
+    \item{\code{examples}}{Run examples?}
+    \item{\code{run_dont_run}}{Run examples that are surrounded in \\dontrun?}
+    \item{\code{seed}}{Seed used to initialize so that random examples are
+reproducible.}
+    \item{\code{lazy}}{If \code{TRUE}, will only rebuild articles and reference pages
+if the source is newer than the destination.}
+    \item{\code{override}}{An optional named list used to temporarily override
+values in \verb{_pkgdown.yml}}
+    \item{\code{preview}}{If \code{TRUE}, or \code{is.na(preview) && interactive()}, will preview
+freshly generated section in browser.}
+    \item{\code{devel}}{Use development or deployment process?
+
+If \code{TRUE}, uses lighter-weight process suitable for rapid
+iteration; it will run examples and vignettes in the current process,
+and will load code with \code{pkgload::load_all()}.
+
+If \code{FALSE}, will first install the package to a temporary library,
+and will run all examples and vignettes in a new process.
+
+\code{build_site()} defaults to \code{devel = FALSE} so that you get high fidelity
+outputs when you building the complete site; \code{build_reference()},
+\code{build_home()} and friends default to \code{devel = TRUE} so that you can
+rapidly iterate during development.}
+    \item{\code{new_process}}{If \code{TRUE}, will run \code{build_site()} in a separate process.
+This enhances reproducibility by ensuring nothing that you have loaded
+in the current process affects the build process.}
+    \item{\code{install}}{If \code{TRUE}, will install the package in a temporary library
+so it is available for vignettes.}
+    \item{\code{document}}{\strong{Deprecated} Use \code{devel} instead.}
+  }}
 }
 \description{
-A wrapper of \code{pkgdown::build_site}
+A wrapper of \code{\link[pkgdown:build_site]{pkgdown::build_site()}}
 }
 \details{
-This function would ask for confirmation to check your
-\code{_pkgdown.yml} file and would create your pkgdown site on the /docs
-folder.
+This function would ask for confirmation to check your \verb{_pkgdown.yml} file
+and would create your pkgdown site on the \verb{docs/} folder.
 
-Unlike \link{ros_gh_actions_branch}, the user would trigger the build and
+Unlike \code{\link[=ros_gh_actions_branch]{ros_gh_actions_branch()}}, the user would trigger the build and
 it is possible to control it via the parameters of
-\code{pkgdown::build_site}.
+\code{\link[pkgdown:build_site]{pkgdown::build_site()}}.
 }
 \seealso{
-\code{\link{ros_gh_actions_branch}}, \code{\link[pkgdown]{build_site}}
+\code{\link[=ros_gh_actions_branch]{ros_gh_actions_branch()}}, \code{\link[pkgdown:build_site]{pkgdown::build_site()}}
 }

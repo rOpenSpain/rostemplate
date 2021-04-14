@@ -1,15 +1,21 @@
-#' @title Create a GitHub action that deploys on \code{/docs} folder
-#' @name ros_gh_actions_docs_folder
-#' @description The GitHub action created would build a \code{pkgdown} of
-#' your package in the \code{docs} folder of your repo.
-#' @details The final result is the same than using \link{ros_build}, with
+#' Creates a GitHub action that deploys on `/docs` folder
+#'
+#' @description
+#' The GitHub action created would build a `pkgdown` of your package in the
+#' `docs` folder of your repo.
+#'
+#' @details
+#' The final result is the same than using [ros_build()], with
 #' the difference that with this action the build is performed by GitHub
 #' actions.
-#' @seealso \link{ros_build}
+#'
+#' @seealso [ros_build()], [ros_gh_actions_branch()]
+#'
 #' @export
 #'
 #' @param pkg Path to package.
 #' @param overwrite Overwrite the action if it was already present.
+#'
 ros_gh_actions_docs_folder <-
   function(pkg = ".", overwrite = TRUE) {
     # Check destdir

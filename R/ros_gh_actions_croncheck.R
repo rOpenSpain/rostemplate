@@ -1,21 +1,26 @@
-#' @title Create a GitHub action that checks regularly your package
-#' @name ros_gh_actions_croncheck
-#' @description The GitHub action created would run R CMD check on your package.
+#' Create a GitHub action that checks regularly your package
+#'
+#' @description
+#' The GitHub action created would run `R CMD check` on your package.
 #' The setup includes a regular check to be run monthly the first day of the
 #' month at 08:30 AM.
-#' @details Please see \url{https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule}
-#' to learn how cron works.
 #'
-#' The default configuration is  \code{'30 08 1 * *'}
-#' ("At 08:30 on day-of-month 1.").
+#' @details
+#' Please see
+#' <https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule> to learn how cron works.
 #'
-#' Use \href{https://crontab.guru/#30_08_1_*_*}{crontab.guru} to check and
+#' The default configuration is  `'30 08 1 * *'` ("At 08:30 on
+#' day-of-month 1.").
+#'
+#' Use [crontab.guru](https://crontab.guru/#30_08_1_*_*) to check and
 #' create your own cron tag.
-#' @source \url{https://github.com/r-lib/actions/blob/master/.github/workflows/check-standard.yaml}
+#'
+#' @source <https://github.com/r-lib/actions/blob/master/.github/workflows/check-standard.yaml>
+#'
 #' @export
 #'
-#' @param pkg Path to package.
-#' @param overwrite Overwrite the action if it was already present.
+#' @inheritParams ros_gh_actions_docs_folder
+#'
 ros_gh_actions_croncheck <-
   function(pkg = ".", overwrite = TRUE) {
     # Check destdir

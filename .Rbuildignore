@@ -11,3 +11,6 @@
 ^rostemplate.*\.tgz$
 ^doc$
 ^Meta$
+^project\.Rcheck$
+^project.*\.tar\.gz$
+^project.*\.tgz$

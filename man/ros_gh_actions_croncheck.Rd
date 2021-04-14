@@ -15,16 +15,16 @@ ros_gh_actions_croncheck(pkg = ".", overwrite = TRUE)
 \item{overwrite}{Overwrite the action if it was already present.}
 }
 \description{
-The GitHub action created would run R CMD check on your package.
+The GitHub action created would run \verb{R CMD check} on your package.
 The setup includes a regular check to be run monthly the first day of the
 month at 08:30 AM.
 }
 \details{
-Please see \url{https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule}
-to learn how cron works.
+Please see
+\url{https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule} to learn how cron works.
 
-The default configuration is  \code{'30 08 1 * *'}
-("At 08:30 on day-of-month 1.").
+The default configuration is  \code{'30 08 1 * *'} ("At 08:30 on
+day-of-month 1.").
 
 Use \href{https://crontab.guru/#30_08_1_*_*}{crontab.guru} to check and
 create your own cron tag.

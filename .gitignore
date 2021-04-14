@@ -9,3 +9,6 @@ rostemplate*.tgz
 .github/depends.Rds
 doc
 Meta
+project.Rcheck/
+project*.tar.gz
+project*.tgz

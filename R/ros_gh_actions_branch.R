@@ -1,12 +1,16 @@
-#' @title Create a GitHub action that deploys on \code{gh-pages} branch
-#' @name ros_gh_actions_branch
-#' @description The GitHub action created would build a \code{pkgdown} of
-#' your package in the \code{gh-pages} branch of your repo.
+#' Creates a GitHub action that deploys on `gh-pages` branch
+#'
+#' @description
+#'
+#' The GitHub action created would build a `pkgdown` of
+#' your package in the `gh-pages` branch of your repo.
+#'
+#' #' @seealso [ros_build()], [ros_gh_actions_docs_folder()]
 #' @export
 #'
-#' @param pkg Path to package.
-#' @param overwrite Overwrite the action if it was already present.
-ros_gh_actions_branch <-  function(pkg = ".", overwrite = TRUE) {
+#' @inheritParams ros_gh_actions_docs_folder
+#'
+ros_gh_actions_branch <- function(pkg = ".", overwrite = TRUE) {
   # Check destdir
 
   destdir <- file.path(pkg, ".github", "workflows")
