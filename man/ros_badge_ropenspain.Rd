@@ -4,19 +4,25 @@
 \alias{ros_badge_ropenspain}
 \title{Add a rOpenSpain badge to your \code{README} file}
 \usage{
-ros_badge_ropenspain(...)
+ros_badge_ropenspain(install = TRUE)
 }
 \arguments{
-\item{...}{ignored}
+\item{install}{TRUE/FALSE. On TRUE the badge would be installed on your
+README.md/.Rmd. On FALSE a message with the Rmarkdown code would be
+displayed.}
 }
 \value{
-A markdown badge and a message with the markdown value.
+A markdown badge or a message with the markdown code to be pasted.
 }
 \description{
 Add an rOpenSpain badge pointing to \url{https://ropenspain.es/} on your \code{README}
 file:
 
 \ifelse{html}{\href{https://ropenspain.es/}{\figure{ropenspain-badge.svg}{options: alt='rOpenSpain'}}}{\strong{rOpenSpain}}
+}
+\examples{
+
+ros_badge_ropenspain(install = FALSE)
 }
 \seealso{
 \code{\link[usethis:badges]{usethis::use_badge()}}
