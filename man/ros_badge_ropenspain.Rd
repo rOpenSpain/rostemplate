@@ -14,7 +14,7 @@ A markdown badge and a message with the markdown value.
 }
 \description{
 Add an rOpenSpain badge pointing to \url{https://ropenspain.es/} on your \code{README}
-file.
+file:\ifelse{html}{\href{https://ropenspain.es/}{\figure{ropenspain-badge.svg}{options: alt='rOpenSpain'}}}{\strong{rOpenSpain}}
 }
 \seealso{
 \code{\link[usethis:badges]{usethis::use_badge()}}
