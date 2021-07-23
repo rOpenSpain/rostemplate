@@ -55,13 +55,12 @@ action that you want to use for deploy the `pkgdown` version of your page
 Install the package from the GitHub repo. The easiest option is to use the [r-universe](https://ropenspain.r-universe.dev/ui#builds):
 
 ``` r
-# Enable this universe
 options(repos = c(
-    ropenspain = 'https://ropenspain.r-universe.dev',
-    CRAN = 'https://cloud.r-project.org'))
-    
-install.packages('rostemplate') 
+  ropenspain = "https://ropenspain.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
 
+install.packages("rostemplate")
 ```
 
 Another option is to use the `remotes` package:

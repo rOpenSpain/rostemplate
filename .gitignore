@@ -13,3 +13,5 @@ Meta
 project.Rcheck/
 project*.tar.gz
 project*.tgz
+/doc/
+/Meta/

@@ -6,8 +6,8 @@
 \alias{rostemplate-package}
 \title{rostemplate: 'pkgdown' Template for 'rOpenSpain' Packages}
 \description{
-This is a private template for use by core rOpenSpain packages. 
-             Please don’t use for your own code.
+This is a private template for use by core rOpenSpain
+    packages.  Please don’t use for your own code.
 }
 \seealso{
 Useful links:
