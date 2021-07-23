@@ -1,0 +1,156 @@
+{
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "http://schema.org"
+  ],
+  "@type": "SoftwareSourceCode",
+  "identifier": "rostemplate",
+  "description": "This is a private template for use by core rOpenSpain\n    packages.  Please don’t use for your own code.",
+  "name": "rostemplate: 'pkgdown' Template for 'rOpenSpain' Packages",
+  "codeRepository": "https://github.com/ropenspain/rostemplate",
+  "relatedLink": "https://ropenspain.github.io/rostemplate/",
+  "issueTracker": "https://github.com/ropenspain/rostemplate/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "0.0.3.9000",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 4.1.0 (2021-05-18)",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Diego",
+      "familyName": "Hernangómez",
+      "email": "diego.hernangomezherrero@gmail.com",
+      "@id": "https://orcid.org/0000-0001-8457-4658"
+    }
+  ],
+  "contributor": {},
+  "copyrightHolder": [
+    {
+      "@type": "Person",
+      "givenName": "Diego",
+      "familyName": "Hernangómez",
+      "email": "diego.hernangomezherrero@gmail.com",
+      "@id": "https://orcid.org/0000-0001-8457-4658"
+    }
+  ],
+  "funder": {},
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Diego",
+      "familyName": "Hernangómez",
+      "email": "diego.hernangomezherrero@gmail.com",
+      "@id": "https://orcid.org/0000-0001-8457-4658"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "knitr",
+      "name": "knitr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=knitr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rmarkdown",
+      "name": "rmarkdown",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rmarkdown"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "testthat",
+      "name": "testthat",
+      "version": ">= 3.0.0",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=testthat"
+    }
+  ],
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "R",
+      "name": "R",
+      "version": ">= 3.6"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "pkgdown",
+      "name": "pkgdown",
+      "version": ">= 1.1.0",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=pkgdown"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "usethis",
+      "name": "usethis",
+      "version": ">= 2.0.0",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=usethis"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "utils",
+      "name": "utils"
+    }
+  ],
+  "releaseNotes": "https://github.com/ropenspain/rostemplate/blob/master/NEWS.md",
+  "readme": "https://github.com/rOpenSpain/rostemplate/blob/main/README.md",
+  "fileSize": "0KB",
+  "contIntegration": "https://codecov.io/gh/ropenspain/rostemplate",
+  "developmentStatus": "https://lifecycle.r-lib.org/articles/stages.html",
+  "keywords": [
+    "r",
+    "template",
+    "pkgdown",
+    "ropenspain",
+    "yaml"
+  ],
+  "citation": [
+    {
+      "@type": "SoftwareSourceCode",
+      "datePublished": "2021",
+      "author": [
+        {
+          "@type": "Person",
+          "givenName": "Diego",
+          "familyName": "Hernangómez"
+        }
+      ],
+      "name": "rostemplate: ",
+      "url": "https://ropenspain.github.io/rostemplate/",
+      "description": "R package version "
+    }
+  ]
+}

@@ -105,21 +105,22 @@ archivos `.Rbuildignore` y `.github/.gitignore`, que ignoran ciertos archivos
 cuando se compila el paquete:
 
 ```{r eval=FALSE}
+
+# Instalación via r-universe
+options(repos = c(
+    ropenspain = 'https://ropenspain.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+    
+install.packages('rostemplate')
+
 # Deploy to gh-branch
-if (require("remotes")) {
-  remotes::install_github("ropenspain/rostemplate",
-                          build_vignettes = TRUE)
-  rostemplate::ros_gh_actions_branch()
+
+rostemplate::ros_gh_actions_branch()
   
-}
 
 # Deploy to docs folder
-if (require("remotes")) {
-  remotes::install_github("ropenspain/rostemplate",
-                          build_vignettes = TRUE)
   rostemplate::ros_gh_actions_docs_folder()
   
-}
 ```
 
 

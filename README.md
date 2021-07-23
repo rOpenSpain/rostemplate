@@ -2,6 +2,7 @@
 
 <!-- badges: start -->
 [![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
+[![r-universe](https://ropenspain.r-universe.dev/badges/rostemplate)](https://ropenspain.r-universe.dev/)
 [![R build status](https://github.com/ropenspain/rostemplate/workflows/R-CMD-check/badge.svg)](https://github.com/ropenspain/rostemplate/actions)
 [![codecov](https://codecov.io/gh/ropenspain/rostemplate/branch/main/graph/badge.svg)](https://codecov.io/gh/ropenspain/rostemplate)
 [![lifecycle](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html)
@@ -51,14 +52,22 @@ action that you want to use for deploy the `pkgdown` version of your page
 
 ### Option B: Deploy installing `rostemplate` 
 
-Install the package from the GitHub repo:
+Install the package from the GitHub repo. The easiest option is to use the [r-universe](https://ropenspain.r-universe.dev/ui#builds):
 
-```r
-# Deploy to gh-branch
-if (require("remotes")) {
-  remotes::install_github("ropenspain/rostemplate",
-                          build_vignettes = TRUE)
-}
+``` r
+options(repos = c(
+  ropenspain = "https://ropenspain.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
+
+install.packages("rostemplate")
+```
+
+Another option is to use the `remotes` package:
+
+``` r
+library(remotes)
+install_github("ropenspain/climaemet")
 ```
 
 You can use any of the three functions included. `ros_gh_actions_branch()` and 
@@ -73,7 +82,7 @@ rostemplate::ros_build()
 
 # or you can use also
 
-pkgdown::build_site
+pkgdown::build_site()
 
 ```
 
