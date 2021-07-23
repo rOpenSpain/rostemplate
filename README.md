@@ -67,7 +67,7 @@ Another option is to use the `remotes` package:
 
 ``` r
 library(remotes)
-install_github("ropenspain/climaemet")
+install_github("ropenspain/rostemplate")
 ```
 
 You can use any of the three functions included. `ros_gh_actions_branch()` and 
