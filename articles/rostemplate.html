@@ -132,19 +132,19 @@
 <code class="sourceCode R">
 <span class="co"># Instalación via r-universe</span>
 <span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
-    ropenspain <span class="op">=</span> <span class="st">'https://ropenspain.r-universe.dev'</span>,
-    CRAN <span class="op">=</span> <span class="st">'https://cloud.r-project.org'</span><span class="op">)</span><span class="op">)</span>
-    
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'rostemplate'</span><span class="op">)</span>
+  ropenspain <span class="op">=</span> <span class="st">"https://ropenspain.r-universe.dev"</span>,
+  CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span>
+<span class="op">)</span><span class="op">)</span>
+
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span><span class="op">)</span>
 
 <span class="co"># Deploy to gh-branch</span>
 
 <span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_gh_actions_branch.html">ros_gh_actions_branch</a></span><span class="op">(</span><span class="op">)</span>
-  
+
 
 <span class="co"># Deploy to docs folder</span>
-  <span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_gh_actions_docs_folder.html">ros_gh_actions_docs_folder</a></span><span class="op">(</span><span class="op">)</span>
-  </code></pre></div>
+<span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_gh_actions_docs_folder.html">ros_gh_actions_docs_folder</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>Es posible cambiar el evento que desencadena la actualización del sitio:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a></span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="co"># Actualiza en cada commit - por defecto</span></span>
@@ -168,12 +168,7 @@
 <a href="#rstudio---manual" class="anchor"></a>RStudio - manual</h2>
 <p>El sitio estático se puede generar igualmente desde una sesión local en RStudio. Para ello, es necesario instalar este paquete usando <code>remotes</code>:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://remotes.r-lib.org">"remotes"</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
-  <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"ropenspain/rostemplate"</span>,
-                          build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-  <span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_build.html">ros_build</a></span><span class="op">(</span><span class="op">)</span>
-  
-<span class="op">}</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_build.html">ros_build</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>La función <code><a href="../reference/ros_build.html">rostemplate::ros_build()</a></code> no es más que un alias de <code><a href="https://pkgdown.r-lib.org/reference/build_site.html">pkgdown::build_site</a></code>, aportando únicamente un control sobre la configuración del archivo <code>_pkgdown.yml</code></p>
 <p>Una vez generado el sitio, es necesario actualizar el repositorio remoto en GitHub mediante un <em>commit</em>.</p>
 </div>
