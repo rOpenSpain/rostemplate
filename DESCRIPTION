@@ -1,6 +1,6 @@
 Package: rostemplate
 Title: 'pkgdown' Template for 'rOpenSpain' Packages
-Version: 0.0.3.9000
+Version: 0.0.3.9001
 Authors@R: 
     person(given = "Diego",
            family = "Hernangómez",
