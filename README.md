@@ -1,4 +1,4 @@
-# rostemplate
+# rostemplate <img src="man/figures/logo.png" align="right" width="120"/>
 
 <!-- badges: start -->
 [![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)

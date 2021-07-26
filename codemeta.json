@@ -11,7 +11,7 @@
   "relatedLink": "https://ropenspain.github.io/rostemplate/",
   "issueTracker": "https://github.com/ropenspain/rostemplate/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.0.3.9000",
+  "version": "0.0.3.9001",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
