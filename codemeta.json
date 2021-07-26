@@ -127,15 +127,18 @@
   ],
   "releaseNotes": "https://github.com/ropenspain/rostemplate/blob/master/NEWS.md",
   "readme": "https://github.com/rOpenSpain/rostemplate/blob/main/README.md",
-  "fileSize": "0KB",
-  "contIntegration": "https://codecov.io/gh/ropenspain/rostemplate",
+  "fileSize": "349.251KB",
+  "contIntegration": ["https://github.com/ropenspain/rostemplate/actions", "https://codecov.io/gh/ropenspain/rostemplate"],
   "developmentStatus": "https://lifecycle.r-lib.org/articles/stages.html",
   "keywords": [
     "r",
     "template",
     "pkgdown",
     "ropenspain",
-    "yaml"
+    "yaml",
+    "github-actions",
+    "rstats",
+    "r-package"
   ],
   "citation": [
     {
