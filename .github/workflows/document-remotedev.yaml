@@ -15,7 +15,7 @@ jobs:
       
       - name: Query dependencies
         run: |
-          install.packages(c('remotes', 'devtools', 'urlchecker', 'styler', 'roxygen2', 'codemetar', 'jsonld', 'ragg', 'usethis', 'eurostat'))
+          install.packages(c('remotes', 'devtools', 'urlchecker', 'styler', 'roxygen2', 'codemetar', 'jsonld', 'ragg', 'usethis'))
           
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
@@ -31,8 +31,8 @@ jobs:
       - name: Install package
         run: Rscript -e 'devtools::install()'
         
-      - name: Url checker
-        run: Rscript -e 'urlchecker::url_update()'
+      #- name: Url checker
+      #  run: Rscript -e 'urlchecker::url_update()'
         
       - name: Description
         run: Rscript -e 'usethis::use_tidy_description()'
@@ -43,8 +43,8 @@ jobs:
       - name: Roxygenise
         run: Rscript -e 'roxygen2::roxygenise()'
         
-      - name: Render README
-        run: Rscript -e 'devtools::build_readme()'
+      #- name: Render README
+      #  run: Rscript -e 'devtools::build_readme()'
         
       - name: Codemetar
         run: |
