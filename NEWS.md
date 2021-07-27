@@ -1,6 +1,7 @@
 # rostemplate (development version)
 
 -   Use `testthat` package.
+-   Rename core functions.
 
 # rostemplate 0.0.3
 

@@ -19,9 +19,9 @@
 #'
 #' @export
 #'
-#' @inheritParams ros_gh_actions_docs_folder
+#' @inheritParams ros_actions_pkgdown_docs
 #'
-ros_gh_actions_croncheck <-
+ros_actions_check_cron <-
   function(pkg = ".", overwrite = TRUE) {
     # Check destdir
 

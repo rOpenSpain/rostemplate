@@ -70,8 +70,8 @@ library(remotes)
 install_github("ropenspain/rostemplate")
 ```
 
-You can use any of the three functions included. `ros_gh_actions_branch()` and 
-`ros_gh_actions_docs_folder()` would set up the actions described before but 
+You can use any of the three functions included. `ros_actions_pkgdown_branch()` and 
+`ros_actions_pkgdown_docs()` would set up the actions described before but 
 the deployment would be still performed by a GitHub action.
 
 For building locally your package into your `docs` folder use:

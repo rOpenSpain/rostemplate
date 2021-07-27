@@ -50,10 +50,10 @@ A wrapper of \code{\link[pkgdown:build_site]{pkgdown::build_site()}}
 This function would ask for confirmation to check your \verb{_pkgdown.yml} file
 and would create your pkgdown site on the \verb{docs/} folder.
 
-Unlike \code{\link[=ros_gh_actions_branch]{ros_gh_actions_branch()}}, the user would trigger the build and
+Unlike \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}, the user would trigger the build and
 it is possible to control it via the parameters of
 \code{\link[pkgdown:build_site]{pkgdown::build_site()}}.
 }
 \seealso{
-\code{\link[=ros_gh_actions_branch]{ros_gh_actions_branch()}}, \code{\link[pkgdown:build_site]{pkgdown::build_site()}}
+\code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}, \code{\link[pkgdown:build_site]{pkgdown::build_site()}}
 }

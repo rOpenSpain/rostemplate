@@ -6,11 +6,11 @@
 #' This function would ask for confirmation to check your `_pkgdown.yml` file
 #' and would create your pkgdown site on the `docs/` folder.
 #'
-#' Unlike [ros_gh_actions_branch()], the user would trigger the build and
+#' Unlike [ros_actions_pkgdown_branch()], the user would trigger the build and
 #' it is possible to control it via the parameters of
 #' [pkgdown::build_site()].
 #'
-#' @seealso [ros_gh_actions_branch()], [`pkgdown::build_site()`]
+#' @seealso [ros_actions_pkgdown_branch()], [`pkgdown::build_site()`]
 #'
 #' @export
 #'
