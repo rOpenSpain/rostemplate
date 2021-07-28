@@ -15,3 +15,4 @@
 ^project.*\.tar\.gz$
 ^project.*\.tgz$
 ^codemeta\.json$
+^_pkgdown\.yaml$

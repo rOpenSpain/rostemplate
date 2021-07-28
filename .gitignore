@@ -15,3 +15,17 @@ project*.tar.gz
 project*.tgz
 /doc/
 /Meta/
+.Rapp.history
+*-Ex.R
+/*.tar.gz
+/*.Rcheck/
+.Rproj.user/
+vignettes/*.html
+vignettes/*.pdf
+.httr-oauth
+*_cache/
+/cache/
+*.utf8.md
+*.knit.md
+.Renviron
+docs/

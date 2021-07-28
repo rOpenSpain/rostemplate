@@ -45,7 +45,7 @@ emplea la versión 3.4.1 mientras que Universal emplea la 3.3.7.
 En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al menos 
 las siguientes líneas:
 
-``` yaml
+```yaml
 template:
   package: rostemplate
   # No pongas la siguiente línea!
@@ -97,7 +97,7 @@ los archivos solicitados en la ruta correspondiente. Adicionalmente, crean los
 archivos `.Rbuildignore` y `.github/.gitignore`, que ignoran ciertos archivos
 cuando se compila el paquete:
 
-```{r eval=FALSE}
+```{r, eval=FALSE}
 
 # Instalación via r-universe
 options(repos = c(
@@ -145,7 +145,7 @@ El sitio estático se puede generar igualmente desde una sesión local en
 RStudio. Para ello, es necesario instalar este paquete usando `remotes`:
 
 
-```{r eval=FALSE}
+```{r , eval=FALSE}
 rostemplate::ros_build()
 ```
 
