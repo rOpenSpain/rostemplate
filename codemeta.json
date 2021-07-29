@@ -127,7 +127,7 @@
   ],
   "releaseNotes": "https://github.com/ropenspain/rostemplate/blob/master/NEWS.md",
   "readme": "https://github.com/rOpenSpain/rostemplate/blob/main/README.md",
-  "fileSize": "349.189KB",
+  "fileSize": "344.494KB",
   "contIntegration": ["https://github.com/ropenspain/rostemplate/actions", "https://codecov.io/gh/ropenspain/rostemplate"],
   "developmentStatus": "https://lifecycle.r-lib.org/articles/stages.html",
   "keywords": [

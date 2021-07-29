@@ -16,7 +16,6 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-
 ```
 
 
@@ -26,7 +25,9 @@ Este paquete proporciona una plantilla de `pkgdown` adaptada a la empleada por
 la comunidad [rOpenSpain](https://ropenspain.es/), que a su vez es una 
 adaptación de la plantilla 
 [Universal](https://bootstrapious.com/p/universal-business-e-commerce-template) 
-creada por [Bootstrapius](https://bootstrapious.com/p/universal-business-e-commerce-template) con la variación de color **violet**.
+creada por 
+[Bootstrapius](https://bootstrapious.com/p/universal-business-e-commerce-template) 
+con la variación de color **violet**.
 
 ## Limitaciones
 
@@ -54,7 +55,8 @@ template:
 ```
 
 Puedes encontrar información sobre cómo configurar otras opciones en 
-`_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
+`_pkgdown.yaml` 
+[aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
 Adicionalmente, es necesario añadir al archivo `.Rbuildignore` 
 las siguientes líneas:
@@ -97,7 +99,7 @@ los archivos solicitados en la ruta correspondiente. Adicionalmente, crean los
 archivos `.Rbuildignore` y `.github/.gitignore`, que ignoran ciertos archivos
 cuando se compila el paquete:
 
-```{r, eval=FALSE}
+```r
 
 # Instalación via r-universe
 options(repos = c(
@@ -137,7 +139,8 @@ on:
 
 ```
 
-Más información sobre cómo adaptar los *triggers* de la acción [aquí](https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows).
+Más información sobre cómo adaptar los *triggers* de la acción 
+[aquí](https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows).
 
 ## RStudio - manual
 
@@ -145,7 +148,7 @@ El sitio estático se puede generar igualmente desde una sesión local en
 RStudio. Para ello, es necesario instalar este paquete usando `remotes`:
 
 
-```{r , eval=FALSE}
+```r
 rostemplate::ros_build()
 ```
 
