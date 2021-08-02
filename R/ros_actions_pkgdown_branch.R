@@ -5,7 +5,7 @@
 #' The GitHub action created would build a `pkgdown` of
 #' your package in the `gh-pages` branch of your repo.
 #'
-#' #' @seealso [ros_build()], [ros_actions_pkgdown_docs()]
+#' @seealso [ros_build()], [ros_actions_pkgdown_docs()]
 #' @export
 #'
 #' @inheritParams ros_actions_pkgdown_docs
