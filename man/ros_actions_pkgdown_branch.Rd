@@ -14,6 +14,7 @@ ros_actions_pkgdown_branch(pkg = ".", overwrite = TRUE)
 \description{
 The GitHub action created would build a \code{pkgdown} of
 your package in the \code{gh-pages} branch of your repo.
-
-#' @seealso \code{\link[=ros_build]{ros_build()}}, \code{\link[=ros_actions_pkgdown_docs]{ros_actions_pkgdown_docs()}}
+}
+\seealso{
+\code{\link[=ros_build]{ros_build()}}, \code{\link[=ros_actions_pkgdown_docs]{ros_actions_pkgdown_docs()}}
 }
