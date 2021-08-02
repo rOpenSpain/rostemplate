@@ -2,6 +2,7 @@
 
 -   Use `testthat` package.
 -   Rename core functions.
+-   Update actions.
 
 # rostemplate 0.0.3
 
