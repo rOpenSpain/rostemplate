@@ -3,6 +3,7 @@
 -   Use `testthat` package.
 -   Rename core functions.
 -   Update actions.
+-   Update logo and favicons, created with `hexSticker`.
 
 # rostemplate 0.0.3
 

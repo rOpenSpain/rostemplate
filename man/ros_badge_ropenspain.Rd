@@ -18,7 +18,7 @@ A markdown badge or a message with the markdown code to be pasted.
 Add an rOpenSpain badge pointing to \url{https://ropenspain.es/} on your \code{README}
 file:
 
-\ifelse{html}{\href{https://ropenspain.es/}{\figure{ropenspain-badge.svg}{options: alt='rOpenSpain'}}}{\strong{rOpenSpain}}
+\ifelse{html}{\href{https://ropenspain.es/}{\figure{ropenspain-badge.svg}{options: alt='rOpenSpain'}}}{**rOpenSpain**}
 }
 \examples{
 

@@ -16,3 +16,4 @@
 ^project.*\.tgz$
 ^codemeta\.json$
 ^_pkgdown\.yaml$
+^data-raw$

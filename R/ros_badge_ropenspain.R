@@ -6,7 +6,7 @@
 #' Add an rOpenSpain badge pointing to <https://ropenspain.es/> on your `README`
 #' file:
 #'
-#' \ifelse{html}{\href{https://ropenspain.es/}{\figure{ropenspain-badge.svg}{options: alt='rOpenSpain'}}}{\strong{rOpenSpain}}
+#' \ifelse{html}{\href{https://ropenspain.es/}{\figure{ropenspain-badge.svg}{options: alt='rOpenSpain'}}}{**rOpenSpain**}
 #'
 #' @export
 #'
