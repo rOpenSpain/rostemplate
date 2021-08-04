@@ -5,6 +5,7 @@ template:
       src: https://ropenspain.github.io/rostemplate/logo.png
       alt: "ROpenSpain logo"
     twitter:
+      site: '@rOpenSpain'
       creator: '@dhernangomez'
       card: summary_large_image
 
