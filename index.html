@@ -43,7 +43,7 @@
       <i class="fa fa-align-justify"></i>
       </button>
       <span class="navbar-brand" id="ROS-navbar-brand">
-      <a class="navbar-link ROS-black" href="index.html"><img src="logo.png" alt="rostemplate-logo" id="ROS-navbar-logo">rostemplate</a> <span class="version label label-default hidden-xs" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3.9002</span>
+      <a class="navbar-link ROS-black" href="index.html"><img src="logo.png" alt="rostemplate-logo" id="ROS-navbar-logo">rostemplate</a> <span class="version label label-default hidden-xs" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3.9010</span>
       </span>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
@@ -97,9 +97,9 @@
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">template</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rostemplate</span></span></code></pre></div>
 <p>Also, add a <code>.Rbuildignore</code> file on the root of your repo with these lines:</p>
-<pre><code>^\.github$
-^docs$
-^_pkgdown\.yml$</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">^</span>\.github<span class="op">$</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="er">^</span>docs<span class="op">$</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="er">^</span>_pkgdown\.yml<span class="op">$</span></span></code></pre></div>
 </div>
 <div id="using-rostemplate" class="section level2">
 <h2 class="hasAnchor">
@@ -130,8 +130,7 @@
 <p>You can use any of the three functions included. <code><a href="reference/ros_actions_pkgdown_branch.html">ros_actions_pkgdown_branch()</a></code> and <code><a href="reference/ros_actions_pkgdown_docs.html">ros_actions_pkgdown_docs()</a></code> would set up the actions described before but the deployment would be still performed by a GitHub action.</p>
 <p>For building locally your package into your <code>docs</code> folder use:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R">
-<span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="reference/ros_build.html">ros_build</a></span><span class="op">(</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="reference/ros_build.html">ros_build</a></span><span class="op">(</span><span class="op">)</span>
 
 <span class="co"># or you can use also</span>
 
