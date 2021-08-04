@@ -1,6 +1,9 @@
 template:
   package: rostemplate
-
+  opengraph:
+    twitter:
+      creator: '@dhernangomez'
+      card: summary_large_image
 
 # Optional
 authors:
