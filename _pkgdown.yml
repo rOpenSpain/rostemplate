@@ -1,6 +1,9 @@
 template:
   package: rostemplate
   opengraph:
+    image:
+      src: https://ropenspain.github.io/rostemplate/logo.png
+      alt: "ROpenSpain logo"
     twitter:
       creator: '@dhernangomez'
       card: summary_large_image
