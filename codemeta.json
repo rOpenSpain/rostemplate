@@ -1,8 +1,5 @@
 {
-  "@context": [
-    "https://doi.org/10.5063/schema/codemeta-2.0",
-    "http://schema.org"
-  ],
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "rostemplate",
   "description": "This is a private template for use by core rOpenSpain\n    packages.  Please don’t use for your own code.",
@@ -27,7 +24,6 @@
       "@id": "https://orcid.org/0000-0001-8457-4658"
     }
   ],
-  "contributor": {},
   "copyrightHolder": [
     {
       "@type": "Person",
@@ -37,7 +33,6 @@
       "@id": "https://orcid.org/0000-0001-8457-4658"
     }
   ],
-  "funder": {},
   "maintainer": [
     {
       "@type": "Person",
@@ -86,14 +81,14 @@
       "sameAs": "https://CRAN.R-project.org/package=testthat"
     }
   ],
-  "softwareRequirements": [
-    {
+  "softwareRequirements": {
+    "1": {
       "@type": "SoftwareApplication",
       "identifier": "R",
       "name": "R",
       "version": ">= 3.6"
     },
-    {
+    "2": {
       "@type": "SoftwareApplication",
       "identifier": "pkgdown",
       "name": "pkgdown",
@@ -106,7 +101,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=pkgdown"
     },
-    {
+    "3": {
       "@type": "SoftwareApplication",
       "identifier": "usethis",
       "name": "usethis",
@@ -119,27 +114,15 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=usethis"
     },
-    {
+    "4": {
       "@type": "SoftwareApplication",
       "identifier": "utils",
       "name": "utils"
-    }
-  ],
-  "releaseNotes": "https://github.com/ropenspain/rostemplate/blob/master/NEWS.md",
-  "readme": "https://github.com/rOpenSpain/rostemplate/blob/main/README.md",
-  "fileSize": "291.758KB",
-  "contIntegration": ["https://github.com/ropenspain/rostemplate/actions", "https://codecov.io/gh/ropenspain/rostemplate"],
-  "developmentStatus": "https://lifecycle.r-lib.org/articles/stages.html#experimental",
-  "keywords": [
-    "r",
-    "template",
-    "pkgdown",
-    "ropenspain",
-    "yaml",
-    "github-actions",
-    "rstats",
-    "r-package"
-  ],
+    },
+    "SystemRequirements": null
+  },
+  "isPartOf": "https://ropenspain.es/",
+  "fileSize": "341.913KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -155,6 +138,5 @@
       "url": "https://ropenspain.github.io/rostemplate/",
       "description": "R package version "
     }
-  ],
-  "isPartOf": "https://ropenspain.es/"
+  ]
 }

@@ -17,3 +17,4 @@
 ^codemeta\.json$
 ^_pkgdown\.yaml$
 ^data-raw$
+^revdep$
