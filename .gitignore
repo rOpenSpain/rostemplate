@@ -28,3 +28,4 @@ vignettes/*.pdf
 *.knit.md
 .Renviron
 revdep
+docs
