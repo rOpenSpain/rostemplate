@@ -8,7 +8,6 @@ rostemplate*.tgz
 .github/R-version
 .github/depends.Rds
 doc
-docs
 Meta
 project.Rcheck/
 project*.tar.gz
