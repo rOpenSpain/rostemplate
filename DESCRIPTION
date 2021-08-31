@@ -6,7 +6,7 @@ Authors@R:
            family = "Hernangómez",
            role = c("aut", "cre", "cph"),
            email = "diego.hernangomezherrero@gmail.com",
-           comment = c(ORCID = "0000-0001-8457-4658"))
+           comment = c(ORCID = "0000-0001-8457-4658", affiliation = "rOpenSpain"))
 Description: This is a private template for use by core rOpenSpain
     packages.  Please don’t use for your own code.
 License: MIT + file LICENSE
