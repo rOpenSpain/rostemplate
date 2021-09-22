@@ -5,6 +5,7 @@
 -   Update actions.
 -   Update logo and favicons, created with `hexSticker`.
 
+
 # rostemplate 0.0.3
 
 -   Add `ros_badge_ropenspain()` : [![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
