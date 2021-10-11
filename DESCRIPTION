@@ -2,10 +2,7 @@ Package: rostemplate
 Title: 'pkgdown' Template for 'rOpenSpain' Packages
 Version: 0.0.3.9030
 Authors@R: 
-    person(given = "Diego",
-           family = "Hernangómez",
-           role = c("aut", "cre", "cph"),
-           email = "diego.hernangomezherrero@gmail.com",
+    person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0001-8457-4658", affiliation = "rOpenSpain"))
 Description: This is a private template for use by core rOpenSpain
     packages.  Please don’t use for your own code.
@@ -28,5 +25,5 @@ VignetteBuilder:
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 X-schema.org-isPartOf: https://ropenspain.es/

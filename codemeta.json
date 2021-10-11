@@ -2,10 +2,10 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "rostemplate",
-  "description": "This is a private template for use by core rOpenSpain\n    packages.  Please don’t use for your own code.",
+  "description": "This is a private template for use by core rOpenSpain packages. Please don’t use for your own code.",
   "name": "rostemplate: 'pkgdown' Template for 'rOpenSpain' Packages",
-  "codeRepository": "https://github.com/ropenspain/rostemplate",
   "relatedLink": "https://ropenspain.github.io/rostemplate/",
+  "codeRepository": "https://github.com/ropenspain/rostemplate",
   "issueTracker": "https://github.com/ropenspain/rostemplate/issues",
   "license": "https://spdx.org/licenses/MIT",
   "version": "0.0.3.9030",
@@ -122,7 +122,7 @@
     "SystemRequirements": null
   },
   "isPartOf": "https://ropenspain.es/",
-  "fileSize": "295.453KB",
+  "fileSize": "295.4KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -134,9 +134,9 @@
           "familyName": "Hernangómez"
         }
       ],
-      "name": "rostemplate: ",
+      "name": "rostemplate: 'pkgdown' Template for 'rOpenSpain' Packages",
       "url": "https://ropenspain.github.io/rostemplate/",
-      "description": "R package version "
+      "description": "R package version 0.0.3.9030"
     }
   ]
 }

@@ -1,5 +1,10 @@
+# -----------------------------------------------------------
+# CITATION file created with {cffr} R package, v0.0.1.9003
+# See also: https://dieghernan.github.io/cffr/
+# -----------------------------------------------------------
+ 
 cff-version: 1.2.0
-message: If you use this software, please cite it using these metadata.
+message: 'To cite package "rostemplate" in publications use:'
 type: software
 license: MIT
 title: 'rostemplate: ''pkgdown'' Template for ''rOpenSpain'' Packages'
@@ -12,6 +17,14 @@ authors:
   email: diego.hernangomezherrero@gmail.com
   orcid: https://orcid.org/0000-0001-8457-4658
   affiliation: rOpenSpain
+preferred-citation:
+  type: manual
+  title: 'rostemplate: ''pkgdown'' Template for ''rOpenSpain'' Packages'
+  authors:
+  - family-names: Hernangómez
+    given-names: Diego
+  year: '2021'
+  url: https://ropenspain.github.io/rostemplate/
 repository-code: https://github.com/ropenspain/rostemplate
 url: https://ropenspain.github.io/rostemplate/
 contact:
