@@ -1,6 +1,6 @@
 # -----------------------------------------------------------
-# CITATION file created with {cffr} R package, v0.0.1.9003
-# See also: https://dieghernan.github.io/cffr/
+# CITATION file created with {cffr} R package, v0.1.1
+# See also: https://docs.ropensci.org/cffr/
 # -----------------------------------------------------------
  
 cff-version: 1.2.0
@@ -33,3 +33,12 @@ contact:
   email: diego.hernangomezherrero@gmail.com
   orcid: https://orcid.org/0000-0001-8457-4658
   affiliation: rOpenSpain
+keywords:
+- github-actions
+- pkgdown
+- r
+- r-package
+- ropenspain
+- rstats
+- template
+- yaml
