@@ -44,17 +44,11 @@
       <i class="fa fa-align-justify"></i>
       </button>
       <span class="navbar-brand" id="ROS-navbar-brand">
-      <a class="navbar-link ROS-black" href="index.html"><img src="logo.png" alt="rostemplate-logo" id="ROS-navbar-logo">rostemplate</a> <span class="version label label-default hidden-xs" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3.9030</span>
+      <a class="navbar-link ROS-black" href="index.html"><img src="logo.png" alt="rostemplate-logo" id="ROS-navbar-logo">rostemplate</a> <span class="version label label-default hidden-xs" data-toggle="tooltip" data-placement="bottom" title="">0.0.3.9030</span>
       </span>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="articles/rostemplate.html">Get started</a>
 </li>
@@ -65,7 +59,7 @@
   <a href="news/index.html">Changelog</a>
 </li>
         <li>
-  <a href="https://github.com/ropenspain/rostemplate/">
+  <a href="https://github.com/ropenspain/rostemplate/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -82,18 +76,17 @@
 
       </header><div class="row">
   <div class="contents col-md-9" id="home">
-<div id="rostemplate-" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#rostemplate-" class="anchor"></a>rostemplate <img src="reference/figures/logo.png" align="right" width="120">
+<div class="section level1">
+<div class="page-header"><h1 id="rostemplate-">rostemplate <img src="reference/figures/logo.png" align="right" width="120"><a class="anchor" aria-label="anchor" href="#rostemplate-"></a>
 </h1></div>
 <!-- badges: start -->
 
-<p>This package is a <code>pkgdown</code> template adapted to <a href="https://ropenspain.es/">rOpenSpain</a> site.</p>
+<p>This package is a <code>pkgdown</code> template adapted to <a href="https://ropenspain.es/" class="external-link">rOpenSpain</a> site.</p>
 <p>This is a private template for use by core rOpenSpain packages. Please don’t use it for your own code.</p>
-<p>Guidelines on how to use this template package on <a href="https://ropenspain.github.io/rostemplate/articles/rostemplate.html">this vignette</a> (Spanish).</p>
-<div id="setup" class="section level2">
-<h2 class="hasAnchor">
-<a href="#setup" class="anchor"></a>Setup</h2>
+<p>Guidelines on how to use this template package on <a href="https://ropenspain.github.io/rostemplate/articles/rostemplate.html" class="external-link">this vignette</a> (Spanish).</p>
+<div class="section level2">
+<h2 id="setup">Setup<a class="anchor" aria-label="anchor" href="#setup"></a>
+</h2>
 <p>Add a <code>_pkgdown.yml</code> file that contains at least these lines:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">template</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rostemplate</span></span></code></pre></div>
@@ -102,32 +95,32 @@
 <span id="cb2-2"><a href="#cb2-2"></a><span class="er">^</span>docs<span class="op">$</span></span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="er">^</span>_pkgdown\.yml<span class="op">$</span></span></code></pre></div>
 </div>
-<div id="using-rostemplate" class="section level2">
-<h2 class="hasAnchor">
-<a href="#using-rostemplate" class="anchor"></a>Using <code>rostemplate</code>
+<div class="section level2">
+<h2 id="using-rostemplate">Using <code>rostemplate</code>
+<a class="anchor" aria-label="anchor" href="#using-rostemplate"></a>
 </h2>
 <p>It is possible to deploy your <code>pkgdown</code> site along with <code>rostemplate</code> via CI (GitHub Actions) or locally, that provides more control but it is not automatic.</p>
-<div id="option-a-deploy-using-github-actions" class="section level3">
-<h3 class="hasAnchor">
-<a href="#option-a-deploy-using-github-actions" class="anchor"></a>Option A: Deploy using GitHub Actions</h3>
-<p>It is not necessary to install <code>rostemplate</code> itself. Just select the GitHub action that you want to use for deploy the <code>pkgdown</code> version of your page (<a href="https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml">rostemplate-docs.yaml</a> or <a href="https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml">rostemplate-gh-pages.yaml</a>) and copy the file into your <code>.github/workflows/</code> folder.</p>
-</div>
-<div id="option-b-deploy-installing-rostemplate" class="section level3">
-<h3 class="hasAnchor">
-<a href="#option-b-deploy-installing-rostemplate" class="anchor"></a>Option B: Deploy installing <code>rostemplate</code>
+<div class="section level3">
+<h3 id="option-a-deploy-using-github-actions">Option A: Deploy using GitHub Actions<a class="anchor" aria-label="anchor" href="#option-a-deploy-using-github-actions"></a>
 </h3>
-<p>Install the package from the GitHub repo. The easiest option is to use the <a href="https://ropenspain.r-universe.dev/ui#builds">r-universe</a>:</p>
+<p>It is not necessary to install <code>rostemplate</code> itself. Just select the GitHub action that you want to use for deploy the <code>pkgdown</code> version of your page (<a href="https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml" class="external-link">rostemplate-docs.yaml</a> or <a href="https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml" class="external-link">rostemplate-gh-pages.yaml</a>) and copy the file into your <code>.github/workflows/</code> folder.</p>
+</div>
+<div class="section level3">
+<h3 id="option-b-deploy-installing-rostemplate">Option B: Deploy installing <code>rostemplate</code>
+<a class="anchor" aria-label="anchor" href="#option-b-deploy-installing-rostemplate"></a>
+</h3>
+<p>Install the package from the GitHub repo. The easiest option is to use the <a href="https://ropenspain.r-universe.dev/ui#builds" class="external-link">r-universe</a>:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
   ropenspain <span class="op">=</span> <span class="st">"https://ropenspain.r-universe.dev"</span>,
   CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span>
 <span class="op">)</span><span class="op">)</span>
 
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span><span class="op">)</span></code></pre></div>
 <p>Another option is to use the <code>remotes</code> package:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://remotes.r-lib.org">remotes</a></span><span class="op">)</span>
-<span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"ropenspain/rostemplate"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://remotes.r-lib.org" class="external-link">remotes</a></span><span class="op">)</span>
+<span class="fu">install_github</span><span class="op">(</span><span class="st">"ropenspain/rostemplate"</span><span class="op">)</span></code></pre></div>
 <p>You can use any of the three functions included. <code><a href="reference/ros_actions_pkgdown_branch.html">ros_actions_pkgdown_branch()</a></code> and <code><a href="reference/ros_actions_pkgdown_docs.html">ros_actions_pkgdown_docs()</a></code> would set up the actions described before but the deployment would be still performed by a GitHub action.</p>
 <p>For building locally your package into your <code>docs</code> folder use:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
@@ -136,12 +129,12 @@
 
 <span class="co"># or you can use also</span>
 
-<span class="fu">pkgdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgdown.r-lib.org/reference/build_site.html">build_site</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<span class="fu">pkgdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">build_site</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
-<div id="commit-to-github-and-deploy" class="section level2">
-<h2 class="hasAnchor">
-<a href="#commit-to-github-and-deploy" class="anchor"></a>Commit to GitHub and deploy</h2>
+<div class="section level2">
+<h2 id="commit-to-github-and-deploy">Commit to GitHub and deploy<a class="anchor" aria-label="anchor" href="#commit-to-github-and-deploy"></a>
+</h2>
 <p>Last step is commit to GitHub, wait until the GitHub action ends (in the case you chose to deploy in that way) and deploy the website via <em>YOUR_GITHUB_REPO&gt;Settings&gt;GitHub Pages</em>.</p>
 </div>
 </div>
@@ -149,47 +142,50 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/ropenspain/rostemplate/">https://​github.com/​ropenspain/​rostemplate/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/ropenspain/rostemplate/issues">https://​github.com/​ropenspain/​rostemplate/​issues</a>
-</li>
-</ul>
-</div>
-<div class="license">
-<h2>License</h2>
-<ul class="list-unstyled">
-<li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
-</ul>
-</div>
-<div class="citation">
-<h2>Citation</h2>
-<ul class="list-unstyled">
-<li><a href="authors.html">Citing rostemplate</a></li>
-</ul>
-</div>
-<div class="developers">
-<h2>Developers</h2>
-<ul class="list-unstyled">
-<li>
-<a href="https://github.com/dieghernan/">Diego Hernangómez</a> <br><small class="roles"> Author, maintainer, copyright holder </small> <a href="https://orcid.org/0000-0001-8457-4658" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> <br><small>(rOpenSpain)</small>
-</li>
+<li><a href="https://github.com/ropenspain/rostemplate/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/ropenspain/rostemplate/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="license">
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://ropenspain.es/"><img src="https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg" alt="rOS-badge"></a></li>
-<li><a href="https://ropenspain.r-universe.dev/"><img src="https://ropenspain.r-universe.dev/badges/rostemplate" alt="r-universe"></a></li>
-<li><a href="https://github.com/ropenspain/rostemplate/actions"><img src="https://github.com/ropenspain/rostemplate/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://app.codecov.io/gh/ropenspain/rostemplate"><img src="https://codecov.io/gh/ropenspain/rostemplate/branch/main/graph/badge.svg" alt="codecov"></a></li>
-<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental"><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg" alt="lifecycle"></a></li>
+<li><a href="LICENSE.html">Full license</a></li>
+<li><small><a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing rostemplate</a></li>
+</ul>
 </div>
+
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
+<ul class="list-unstyled">
+<li>
+<a href="https://github.com/dieghernan/" class="external-link">Diego Hernangómez</a> <br><small class="roles"> Author, maintainer, copyright holder </small> <a href="https://orcid.org/0000-0001-8457-4658" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="authors.html">More about authors...</a></li>
+</ul>
+</div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://ropenspain.es/" class="external-link"><img src="https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg" alt="rOS-badge"></a></li>
+<li><a href="https://ropenspain.r-universe.dev/" class="external-link"><img src="https://ropenspain.r-universe.dev/badges/rostemplate" alt="r-universe"></a></li>
+<li><a href="https://github.com/ropenspain/rostemplate/actions" class="external-link"><img src="https://github.com/ropenspain/rostemplate/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://app.codecov.io/gh/ropenspain/rostemplate" class="external-link"><img src="https://codecov.io/gh/ropenspain/rostemplate/branch/main/graph/badge.svg" alt="codecov"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg" alt="lifecycle"></a></li>
+</ul>
+</div>
+
+  </div>
 </div>
 
 <script>
@@ -198,20 +194,20 @@
   banner.innerHTML = '<a href="https://ropenspain.es/">' +
       '<div id="ROS-heading-breadcrumbs">' +
         '<div class="text-center" id="ROS-partof">' +
-          '<p>Part of <img src="ROS-logo.png" alt="rOpenSpain-Logo" height="24"> rOpenSpain </p>' +
+          '<p>Part of <img src="ROS-logo.png" alt="rOpenSpain-Logo" id="homelogoxs"> rOpenSpain </p>' +
         '</div></div></a>'
 
   home.insertBefore(banner,home.firstChild);
 </script><footer id="footer"><div class="container">
 		<div class="col-md-3 col-sm-6 col-md-offset-1">
 			<h4 data-toc-skip>About rostemplate</h4>
-			Developed by <a href="https://github.com/dieghernan/">Diego Hernangómez</a>, part of the <span class="ROS-light">rOpenSpain</span> project.
+			Developed by , part of the <span class="ROS-light">rOpenSpain</span> project.
 			<hr class="hidden-md hidden-lg hidden-sm">
 </div>
 		<div class="col-md-3 col-sm-6 col-md-offset-4">
 			<h4 data-toc-skip>About <img src="ROS-logo.png" alt="ROpenSpain Logo" height="24"><span class="ROS-light"> rOpenSpain</span>
 </h4>
-			<a href="https://ropenspain.es/"><span class="ROS-light">rOpenSpain</span></a> is a community of R enthusiasts whose ultimate goal is to create high-quality R packages for data mining public Spanish open sources.
+			<a href="https://ropenspain.es/" class="external-link"><span class="ROS-light">rOpenSpain</span></a> is a community of R enthusiasts whose ultimate goal is to create high-quality R packages for data mining public Spanish open sources.
 			<hr class="hidden-md hidden-lg hidden-sm">
 </div>
 	</div>
@@ -219,11 +215,11 @@
 	<div class="container">
 		<div class="col-md-12">
 			<p class="pull-left">
-			Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.
+			Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> .
 			</p>
 			<p class="pull-right">
-			Template by <a href="https://bootstrapious.com/snippets">Bootstrapious </a>.
-			Ported to pkgdown by <a href="https://github.com/dieghernan/">dieghernan</a>.
+			Template by <a href="https://bootstrapious.com/snippets" class="external-link">Bootstrapious </a>.
+			Ported to pkgdown by <a href="https://github.com/dieghernan/" class="external-link">dieghernan</a>.
 			</p>
 		</div>
 	</div>
