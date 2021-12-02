@@ -1,8 +1,10 @@
+{{#footer}}
 <footer id="footer">
-	<div class="container">
+  <div class="container">
 		<div class="col-md-3 col-sm-6 col-md-offset-1">
-			<h4 data-toc-skip>About {{#site}}{{title}}{{/site}}</h4>
-			{{#package}}Developed by {{{authors}}}{{/package}}, part of the <span class="ROS-light">rOpenSpain</span> project.
+			<h4 data-toc-skip>About <img src="{{#site}}{{root}}{{/site}}logo.png" alt="{{#site}}{{title}}{{/site}} Logo" height="24"> {{#site}}{{title}}{{/site}}</h4>
+      {{#left}}{{{.}}}{{/left}}
+      <p>Part of the <span class="ROS-light">rOpenSpain</span> project.</p>
 			<hr class="hidden-md hidden-lg hidden-sm">
 		</div>
 		<div class="col-md-3 col-sm-6 col-md-offset-4">
@@ -10,13 +12,13 @@
 			<a href="https://ropenspain.es/"><span class="ROS-light">rOpenSpain</span></a> is a community of R enthusiasts whose ultimate goal is to create high-quality R packages for data mining public Spanish open sources.
 			<hr class="hidden-md hidden-lg hidden-sm">
 		</div>
-	</div>
+</div>
 </footer>
 <div id="copyright">
 	<div class="container">
 		<div class="col-md-12">
 			<p class="pull-left">
-			Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> {{#pkgdown}}{{version}}{{/pkgdown}}.
+			  {{#right}}{{{.}}}{{/right}}
 			</p>
 			<p class="pull-right">
 			Template by <a href="https://bootstrapious.com/snippets">Bootstrapious </a>.
@@ -28,4 +30,5 @@
 
 <!-- ropenspain -->
 <script src="{{#site}}{{root}}{{/site}}ropenspain.js"></script>
+{{/footer}}
 
