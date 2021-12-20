@@ -2,21 +2,21 @@
 % Please edit documentation in R/ros_badge_ropenspain.R
 \name{ros_badge_ropenspain}
 \alias{ros_badge_ropenspain}
-\title{Add a rOpenSpain badge to your \code{README} file}
+\title{Añade una insignia de rOpenSpain a tu archivo \code{README}}
 \usage{
 ros_badge_ropenspain(install = TRUE)
 }
 \arguments{
-\item{install}{TRUE/FALSE. On TRUE the badge would be installed on your
-README.md/.Rmd. On FALSE a message with the Rmarkdown code would be
-displayed.}
+\item{install}{TRUE/FALSE. Si es \code{TRUE} la insignia se instala en el archivo
+\code{README.md/README.Rmd}. Si es \code{FALSE} muestra un mensaje con el código
+markdown correspondiente.}
 }
 \value{
-A markdown badge or a message with the markdown code to be pasted.
+Insignia en markdown o mensaje con el código markdown a introducir.
 }
 \description{
-Add an rOpenSpain badge pointing to \url{https://ropenspain.es/} on your \code{README}
-file:
+Añade una insignia de rOpenSpain que redirige a \url{https://ropenspain.es/}
+en tu archivo \code{README}:
 
 \ifelse{html}{\href{https://ropenspain.es/}{\figure{ropenspain-badge.svg}{options: alt='rOpenSpain'}}}{**rOpenSpain**}
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/ros_build.R
 \name{ros_build}
 \alias{ros_build}
-\title{Build your pkgdown website locally}
+\title{Genera tu sitio \code{pkgdown} en local}
 \usage{
 ros_build(pkg = ".", ...)
 }
@@ -44,15 +44,16 @@ so it is available for vignettes.}
   }}
 }
 \description{
-A wrapper of \code{\link[pkgdown:build_site]{pkgdown::build_site()}}
+Esta función es un wrapper de \code{\link[pkgdown:build_site]{pkgdown::build_site()}}
 }
 \details{
-This function would ask for confirmation to check your \verb{_pkgdown.yml} file
-and would create your pkgdown site on the \verb{docs/} folder.
+La única diferencia con \code{\link[pkgdown:build_site]{pkgdown::build_site()}} es que te recuerda los pasos
+a seguir para configurar \code{rostemplate}, y pide confirmación antes de
+ejecutar \code{\link[pkgdown:build_site]{pkgdown::build_site()}}. El resultado se genera en la carpeta
+\verb{/docs}.
 
-Unlike \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}, the user would trigger the build and
-it is possible to control it via the parameters of
-\code{\link[pkgdown:build_site]{pkgdown::build_site()}}.
+Al contrario que \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}, esta acción se ejecuta por
+el usuario.
 }
 \seealso{
 \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}, \code{\link[pkgdown:build_site]{pkgdown::build_site()}}

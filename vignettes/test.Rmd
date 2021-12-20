@@ -1,8 +1,8 @@
 ---
-title: "Another vignette"
+title: "Otro artículo"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Another vignette}
+  %\VignetteIndexEntry{Otro artículo}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -18,4 +18,4 @@ knitr::opts_chunk$set(
 library(rostemplate)
 ```
 
-A test vignette
+Un test simple

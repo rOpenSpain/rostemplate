@@ -2,7 +2,7 @@
 % Please edit documentation in R/ros_gh_actions_croncheck.R
 \name{ros_actions_check_cron}
 \alias{ros_actions_check_cron}
-\title{Create a GitHub action that checks regularly your package}
+\title{Crea una acción GitHub que comprueba tu paquete de manera regular}
 \source{
 \url{https://github.com/r-lib/actions/blob/master/.github/workflows/check-standard.yaml}
 }
@@ -10,22 +10,22 @@
 ros_actions_check_cron(pkg = ".", overwrite = TRUE)
 }
 \arguments{
-\item{pkg}{Path to package.}
+\item{pkg}{Ruta a la raíz del paquete.}
 
-\item{overwrite}{Overwrite the action if it was already present.}
+\item{overwrite}{Sobreescribe la acción si ya se encuntra instalada.}
 }
 \description{
-The GitHub action created would run \verb{R CMD check} on your package.
-The setup includes a regular check to be run monthly the first day of the
-month at 08:30 AM.
+La acción GitHub creada ejecuta \verb{R CMD check} para tu paquete.
+La configuración por defecto ejecuta el check de manera mensual los dias 1
+de mes a las 08:30 AM.
 }
 \details{
-Please see
-\url{https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule} to learn how cron works.
+Puedes aprender cómo configurar la acción cron en el siguiente link:
+\url{https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule}.
 
-The default configuration is  \code{'30 08 1 * *'} ("At 08:30 on
-day-of-month 1.").
+La configuración por defecto  \code{'30 08 1 * *'} ("A las 08:30 del
+dia-del-mes 1.").
 
-Use \href{https://crontab.guru/#30_08_1_*_*}{crontab.guru} to check and
-create your own cron tag.
+Usa \href{https://crontab.guru/#30_08_1_*_*}{crontab.guru} para crear tus propia
+configuración cron.
 }

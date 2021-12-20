@@ -4,11 +4,11 @@
 \name{rostemplate-package}
 \alias{rostemplate}
 \alias{rostemplate-package}
-\title{rostemplate: 'pkgdown' Template for 'rOpenSpain' Packages}
+\title{rostemplate: Plantilla 'pkgdown' para los paquetes de 'rOpenSpain'}
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
-This is a private template for use by core rOpenSpain packages. Please don’t use for your own code.
+Plantilla privada para uso exclusivo de los paquetes de rOpenSpain.
 }
 \seealso{
 Useful links:

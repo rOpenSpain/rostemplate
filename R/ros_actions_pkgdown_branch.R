@@ -1,9 +1,9 @@
-#' Creates a GitHub action that deploys on `gh-pages` branch
+#' Instala una acción GitHub que genera tu sitio en la rama `gh-pages`
 #'
 #' @description
 #'
-#' The GitHub action created would build a `pkgdown` of
-#' your package in the `gh-pages` branch of your repo.
+#' Instala una acción GitHub que crea el sitio `pkgdown` de tu paquete en la
+#' rama `gh-pages` de tu repositorio.
 #'
 #' @seealso [ros_build()], [ros_actions_pkgdown_docs()]
 #' @export

@@ -1,6 +1,7 @@
 # rostemplate (development version)
 
 -   Adapt to BS5 with new pkgdown version.
+-   Documentación en castellano
 
 # rostemplate 0.0.4
 
@@ -11,7 +12,8 @@
 
 # rostemplate 0.0.3
 
--   Add `ros_badge_ropenspain()` : [![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
+-   Add `ros_badge_ropenspain()` :
+    [![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
 
 # rostemplate 0.0.2
 

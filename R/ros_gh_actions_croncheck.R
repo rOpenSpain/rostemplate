@@ -1,19 +1,19 @@
-#' Create a GitHub action that checks regularly your package
+#' Crea una acción GitHub que comprueba tu paquete de manera regular
 #'
 #' @description
-#' The GitHub action created would run `R CMD check` on your package.
-#' The setup includes a regular check to be run monthly the first day of the
-#' month at 08:30 AM.
+#' La acción GitHub creada ejecuta `R CMD check` para tu paquete.
+#' La configuración por defecto ejecuta el check de manera mensual los dias 1
+#' de mes a las 08:30 AM.
 #'
 #' @details
-#' Please see
-#' <https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule> to learn how cron works.
+#' Puedes aprender cómo configurar la acción cron en el siguiente link:
+#' <https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule>.
 #'
-#' The default configuration is  `'30 08 1 * *'` ("At 08:30 on
-#' day-of-month 1.").
+#' La configuración por defecto  `'30 08 1 * *'` ("A las 08:30 del
+#' dia-del-mes 1.").
 #'
-#' Use [crontab.guru](https://crontab.guru/#30_08_1_*_*) to check and
-#' create your own cron tag.
+#' Usa [crontab.guru](https://crontab.guru/#30_08_1_*_*) para crear tus propia
+#' configuración cron.
 #'
 #' @source <https://github.com/r-lib/actions/blob/master/.github/workflows/check-standard.yaml>
 #'
