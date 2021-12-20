@@ -170,10 +170,17 @@
 <div class="section level2">
 <h2 id="rstudio---manual">RStudio - manual<a class="anchor" aria-label="anchor" href="#rstudio---manual"></a>
 </h2>
-<p>El sitio estático se puede generar igualmente desde una sesión local en RStudio. Para ello, es necesario instalar este paquete usando <code>remotes</code>:</p>
+<p>El sitio estático se puede generar igualmente desde una sesión local en RStudio. Para ello, es necesario instalar este paquete:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
+  ropenspain <span class="op">=</span> <span class="st">"https://ropenspain.r-universe.dev"</span>,
+  CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span>
+<span class="op">)</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span><span class="op">)</span></code></pre></div>
+<p>Una vez instalado, se ha de ejecutar este script:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_build.html">ros_build</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p>La función <code><a href="../reference/ros_build.html">rostemplate::ros_build()</a></code> no es más que un alias de <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site</a></code>, aportando únicamente un control sobre la configuración del archivo <code>_pkgdown.yml</code></p>
+<p>La función <code><a href="../reference/ros_build.html">rostemplate::ros_build()</a></code> no es más que un alias de <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code>, aportando únicamente un control sobre la configuración del archivo <code>_pkgdown.yml</code></p>
 <p>Una vez generado el sitio, es necesario actualizar el repositorio remoto en GitHub mediante un <em>commit</em>.</p>
 </div>
 </div>
