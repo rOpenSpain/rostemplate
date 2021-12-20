@@ -19,6 +19,10 @@ reference:
   contents:
   - starts_with("ros")
 
+development:
+  version_label: info
+  version_tooltip: "Paquete experimental"
+
 # Optional
 authors:
   Diego Hernangómez:
