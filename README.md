@@ -84,6 +84,7 @@ performed by a GitHub action.
 For building locally your package into your `docs` folder use:
 
 ``` r
+
 rostemplate::ros_build()
 
 # or you can use also
@@ -95,4 +96,4 @@ pkgdown::build_site()
 
 Last step is commit to GitHub, wait until the GitHub action ends (in the
 case you chose to deploy in that way) and deploy the website via
-*YOUR_GITHUB_REPO>Settings>GitHub Pages*.
+*YOUR\_GITHUB\_REPO\>Settings\>GitHub Pages*.
