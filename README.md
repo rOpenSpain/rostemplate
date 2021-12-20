@@ -129,14 +129,26 @@ Más información sobre cómo adaptar los *triggers* de la acción
 ### RStudio - manual
 
 El sitio estático se puede generar igualmente desde una sesión local en
-RStudio. Para ello, es necesario instalar este paquete usando `remotes`:
+RStudio. Para ello, es necesario instalar este paquete:
+
+``` r
+
+options(repos = c(
+  ropenspain = "https://ropenspain.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
+
+install.packages("rostemplate")
+```
+
+Una vez instalado, se ha de ejecutar este script:
 
 ``` r
 rostemplate::ros_build()
 ```
 
 La función `rostemplate::ros_build()` no es más que un alias de
-`pkgdown::build_site`, aportando únicamente un control sobre la
+`pkgdown::build_site()`, aportando únicamente un control sobre la
 configuración del archivo `_pkgdown.yml`
 
 Una vez generado el sitio, es necesario actualizar el repositorio remoto
