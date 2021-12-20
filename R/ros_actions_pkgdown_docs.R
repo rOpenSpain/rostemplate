@@ -1,20 +1,20 @@
-#' Creates a GitHub action that deploys on `/docs` folder
+#' Instala una acción GitHub que crea tu sitio en la carpeta `/docs`
 #'
 #' @description
-#' The GitHub action created would build a `pkgdown` of your package in the
-#' `docs` folder of your repo.
+#' Esta acción GitHub genera tu sitio `pkgdown` en la carpeta `docs` de tu
+#' repositorio.
 #'
 #' @details
-#' The final result is the same than using [ros_build()], with
-#' the difference that with this action the build is performed by GitHub
-#' actions.
+#' El resultado final es equivalente a ejecutar [ros_build()] con la única
+#' diferencia de que este comando se ejecuta en GitHub, en lugar de tener que
+#' ser ejecutado por el usuario.
 #'
 #' @seealso [ros_build()], [ros_actions_pkgdown_branch()]
 #'
 #' @export
 #'
-#' @param pkg Path to package.
-#' @param overwrite Overwrite the action if it was already present.
+#' @param pkg Ruta a la raíz del paquete.
+#' @param overwrite Sobreescribe la acción si ya se encuntra instalada.
 #'
 ros_actions_pkgdown_docs <-
   function(pkg = ".", overwrite = TRUE) {

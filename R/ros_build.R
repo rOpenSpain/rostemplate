@@ -1,14 +1,15 @@
-#' Build your pkgdown website locally
+#' Genera tu sitio `pkgdown` en local
 #'
-#' A wrapper of [`pkgdown::build_site()`]
+#' Esta función es un wrapper de [pkgdown::build_site()]
 #'
 #' @details
-#' This function would ask for confirmation to check your `_pkgdown.yml` file
-#' and would create your pkgdown site on the `docs/` folder.
+#' La única diferencia con [pkgdown::build_site()] es que te recuerda los pasos
+#' a seguir para configurar `rostemplate`, y pide confirmación antes de
+#' ejecutar [pkgdown::build_site()]. El resultado se genera en la carpeta
+#' `/docs`.
 #'
-#' Unlike [ros_actions_pkgdown_branch()], the user would trigger the build and
-#' it is possible to control it via the parameters of
-#' [pkgdown::build_site()].
+#' Al contrario que [ros_actions_pkgdown_branch()], esta acción se ejecuta por
+#' el usuario.
 #'
 #' @seealso [ros_actions_pkgdown_branch()], [`pkgdown::build_site()`]
 #'

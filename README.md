@@ -11,89 +11,140 @@
 status](https://github.com/ropenspain/rostemplate/workflows/R-CMD-check/badge.svg)](https://github.com/ropenspain/rostemplate/actions)
 [![codecov](https://codecov.io/gh/ropenspain/rostemplate/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ropenspain/rostemplate)
 [![lifecycle](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+
 <!-- badges: end -->
 
-This package is a `pkgdown` template adapted to
-[rOpenSpain](https://ropenspain.es/) site.
+Esta librería es una plantilla `pkgdown` adaptada al sitio web de
+[rOpenSpain](https://ropenspain.es/).
 
-This is a private template for use by core rOpenSpain packages. Please
-don’t use it for your own code.
+Esta plantilla es una plantilla privada para uso exclusivo de los
+paquetes de rOpenSpain. Por favor, no la uses para otros paquetes.
 
-Guidelines on how to use this template package on [this
-vignette](https://ropenspain.github.io/rostemplate/articles/rostemplate.html)
-(Spanish).
+## Introducción
 
-## Setup
+Este paquete proporciona una plantilla de `pkgdown` adaptada a la
+empleada por la comunidad [rOpenSpain](https://ropenspain.es/), que a su
+vez es una adaptación de la plantilla
+[Universal](https://bootstrapious.com/p/universal-business-e-commerce-template)
+creada por
+[Bootstrapius](https://bootstrapious.com/p/universal-business-e-commerce-template)
+con la variación de color **violet**.
 
-Add a `_pkgdown.yml` file that contains at least these lines:
+## Configuración previa
+
+En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al
+menos las siguientes líneas:
 
 ``` yaml
 template:
   package: rostemplate
+  # No pongas la siguiente línea!
+  default_assets: false
 ```
 
-Also, add a `.Rbuildignore` file on the root of your repo with these
-lines:
+Puedes encontrar información sobre cómo configurar otras opciones en
+`_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
+
+Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las
+siguientes líneas:
 
     ^\.github$
     ^docs$
     ^_pkgdown\.yml$
 
-## Using `rostemplate`
+## Uso de la plantilla
 
-It is possible to deploy your `pkgdown` site along with `rostemplate`
-via CI (GitHub Actions) or locally, that provides more control but it is
-not automatic.
+Esta sección detalla diferentes opciones para generar un sitio estático
+para el paquete deseado con el formato definido por esta plantilla. El
+resultado de este paso es la generación de un sitio estático compuesto
+de los archivos `html`, `css`, etc. basados en el paquete de R para el
+que se está generando el sitio.
 
-### Option A: Deploy using GitHub Actions
+### Con GitHub actions - CI
 
-It is not necessary to install `rostemplate` itself. Just select the
-GitHub action that you want to use for deploy the `pkgdown` version of
-your page
-([rostemplate-docs.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml)
-or
-[rostemplate-gh-pages.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml))
-and copy the file into your `.github/workflows/` folder.
+GitHub Actions permite automatizar procesos cuando se activa un
+*trigger*. En este caso se han preparado dos acciones que actualizan el
+sitio estático cada vez que se añade un *commit* al repositorio.
 
-### Option B: Deploy installing `rostemplate`
+Los flujos de trabajo consisten en archivos con extensión `.yaml`. La
+acción
+[rostemplate-docs.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml)
+crea el sitio estático en la carpeta `./docs` mientras que
+[rostemplate-gh-pages.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml)
+crea el sitio estático en el branch `gh-pages`.
 
-Install the package from the GitHub repo. The easiest option is to use
-the [r-universe](https://ropenspain.r-universe.dev/ui#builds):
+Para configurar esta opción, es necesario disponer en el repositorio de
+una carpeta en la ruta `.github/workflows` y copiar la acción deseada en
+dicha carpeta.
+
+#### Alternativa usando las funciones de `rostemplate`
+
+Aunque el uso del paquete `rostemplate` en si no es necesario con GitHub
+actions, se han desarrollado dos funciones que automatizan esta
+configuración de manera automática. Estas funciones simplemente crean el
+directorio `.github/workflows` si no existiera previamente y copian los
+archivos solicitados en la ruta correspondiente. Adicionalmente, crean
+los archivos `.Rbuildignore` y `.github/.gitignore`, que ignoran ciertos
+archivos cuando se compila el paquete:
 
 ``` r
+# Instalación via r-universe
 options(repos = c(
   ropenspain = "https://ropenspain.r-universe.dev",
   CRAN = "https://cloud.r-project.org"
 ))
 
 install.packages("rostemplate")
+
+# Deploy to gh-branch
+
+rostemplate::ros_actions_pkgdown_branch()
+
+
+# Deploy to docs folder
+rostemplate::ros_actions_pkgdown_docs()
 ```
 
-Another option is to use the `remotes` package:
+Es posible cambiar el evento que desencadena la actualización del sitio:
 
-``` r
-library(remotes)
-install_github("ropenspain/rostemplate")
+``` yaml
+# Actualiza en cada commit - por defecto
+on:
+  push:
+    branches:
+      - main
+      - master
+      
+# Actualiza cuando se modifica un archivo específico: _pkgdown.yaml
+
+on:
+  push:
+    paths:
+      - '_pkgdown.yaml'
 ```
 
-You can use any of the three functions included.
-`ros_actions_pkgdown_branch()` and `ros_actions_pkgdown_docs()` would
-set up the actions described before but the deployment would be still
-performed by a GitHub action.
+Más información sobre cómo adaptar los *triggers* de la acción
+[aquí](https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows).
 
-For building locally your package into your `docs` folder use:
+### RStudio - manual
+
+El sitio estático se puede generar igualmente desde una sesión local en
+RStudio. Para ello, es necesario instalar este paquete usando `remotes`:
 
 ``` r
-
 rostemplate::ros_build()
-
-# or you can use also
-
-pkgdown::build_site()
 ```
 
-## Commit to GitHub and deploy
+La función `rostemplate::ros_build()` no es más que un alias de
+`pkgdown::build_site`, aportando únicamente un control sobre la
+configuración del archivo `_pkgdown.yml`
 
-Last step is commit to GitHub, wait until the GitHub action ends (in the
-case you chose to deploy in that way) and deploy the website via
-*YOUR\_GITHUB\_REPO\>Settings\>GitHub Pages*.
+Una vez generado el sitio, es necesario actualizar el repositorio remoto
+en GitHub mediante un *commit*.
+
+## GitHub Pages
+
+Una vez generado el sitio estático y subido al repositorio en GitHub, el
+último paso es activar el sitio web a través de los *Settings* de
+nuestro repositorio (*Setting>GitHub Pages*), seleccionando el origen
+deseado (`gh-pages`, `main/docs`, etc.).

@@ -1,22 +1,21 @@
-#' Add a rOpenSpain badge to your `README` file
+#' Añade una insignia de rOpenSpain a tu archivo `README`
 #'
 #'
 #' @description
-#'
-#' Add an rOpenSpain badge pointing to <https://ropenspain.es/> on your `README`
-#' file:
+#' Añade una insignia de rOpenSpain que redirige a <https://ropenspain.es/>
+#' en tu archivo `README`:
 #'
 #' \ifelse{html}{\href{https://ropenspain.es/}{\figure{ropenspain-badge.svg}{options: alt='rOpenSpain'}}}{**rOpenSpain**}
 #'
 #' @export
 #'
-#' @return A markdown badge or a message with the markdown code to be pasted.
+#' @return Insignia en markdown o mensaje con el código markdown a introducir.
 #'
 #' @seealso [`usethis::use_badge()`]
 #'
-#' @param install TRUE/FALSE. On TRUE the badge would be installed on your
-#' README.md/.Rmd. On FALSE a message with the Rmarkdown code would be
-#' displayed.
+#' @param install TRUE/FALSE. Si es `TRUE` la insignia se instala en el archivo
+#'   `README.md/README.Rmd`. Si es `FALSE` muestra un mensaje con el código
+#'   markdown correspondiente.
 #'
 #' @examples
 #'

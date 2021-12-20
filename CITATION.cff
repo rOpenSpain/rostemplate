@@ -7,10 +7,9 @@ cff-version: 1.2.0
 message: 'To cite package "rostemplate" in publications use:'
 type: software
 license: MIT
-title: 'rostemplate: ''pkgdown'' Template for ''rOpenSpain'' Packages'
+title: 'rostemplate: Plantilla ''pkgdown'' para los paquetes de ''rOpenSpain'''
 version: 0.1.0.9000
-abstract: This is a private template for use by core rOpenSpain packages. Please don’t
-  use for your own code.
+abstract: Plantilla privada para uso exclusivo de los paquetes de rOpenSpain.
 authors:
 - family-names: Hernangómez
   given-names: Diego
@@ -19,7 +18,7 @@ authors:
   affiliation: rOpenSpain
 preferred-citation:
   type: manual
-  title: 'rostemplate: ''pkgdown'' Template for ''rOpenSpain'' Packages'
+  title: 'rostemplate: Plantilla ''pkgdown'' para los paquetes de ''rOpenSpain'''
   authors:
   - family-names: Hernangómez
     given-names: Diego

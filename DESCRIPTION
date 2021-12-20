@@ -1,11 +1,11 @@
 Package: rostemplate
-Title: 'pkgdown' Template for 'rOpenSpain' Packages
+Title: Plantilla 'pkgdown' para los paquetes de 'rOpenSpain'
 Version: 0.1.0.9000
 Authors@R: 
     person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0001-8457-4658", affiliation = "rOpenSpain"))
-Description: This is a private template for use by core rOpenSpain
-    packages.  Please don’t use for your own code.
+Description: Plantilla privada para uso exclusivo de los paquetes de
+    rOpenSpain.
 License: MIT + file LICENSE
 URL: https://ropenspain.github.io/rostemplate/,
     https://github.com/ropenspain/rostemplate
@@ -24,6 +24,7 @@ VignetteBuilder:
     knitr
 Config/testthat/edition: 3
 Encoding: UTF-8
+Language: es_ES
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 X-schema.org-isPartOf: https://ropenspain.es/

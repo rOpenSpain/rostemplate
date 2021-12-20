@@ -2,23 +2,23 @@
 % Please edit documentation in R/ros_actions_pkgdown_docs.R
 \name{ros_actions_pkgdown_docs}
 \alias{ros_actions_pkgdown_docs}
-\title{Creates a GitHub action that deploys on \verb{/docs} folder}
+\title{Instala una acción GitHub que crea tu sitio en la carpeta \verb{/docs}}
 \usage{
 ros_actions_pkgdown_docs(pkg = ".", overwrite = TRUE)
 }
 \arguments{
-\item{pkg}{Path to package.}
+\item{pkg}{Ruta a la raíz del paquete.}
 
-\item{overwrite}{Overwrite the action if it was already present.}
+\item{overwrite}{Sobreescribe la acción si ya se encuntra instalada.}
 }
 \description{
-The GitHub action created would build a \code{pkgdown} of your package in the
-\code{docs} folder of your repo.
+Esta acción GitHub genera tu sitio \code{pkgdown} en la carpeta \code{docs} de tu
+repositorio.
 }
 \details{
-The final result is the same than using \code{\link[=ros_build]{ros_build()}}, with
-the difference that with this action the build is performed by GitHub
-actions.
+El resultado final es equivalente a ejecutar \code{\link[=ros_build]{ros_build()}} con la única
+diferencia de que este comando se ejecuta en GitHub, en lugar de tener que
+ser ejecutado por el usuario.
 }
 \seealso{
 \code{\link[=ros_build]{ros_build()}}, \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}

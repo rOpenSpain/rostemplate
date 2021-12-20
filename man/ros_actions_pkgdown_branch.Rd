@@ -2,18 +2,18 @@
 % Please edit documentation in R/ros_actions_pkgdown_branch.R
 \name{ros_actions_pkgdown_branch}
 \alias{ros_actions_pkgdown_branch}
-\title{Creates a GitHub action that deploys on \code{gh-pages} branch}
+\title{Instala una acción GitHub que genera tu sitio en la rama \code{gh-pages}}
 \usage{
 ros_actions_pkgdown_branch(pkg = ".", overwrite = TRUE)
 }
 \arguments{
-\item{pkg}{Path to package.}
+\item{pkg}{Ruta a la raíz del paquete.}
 
-\item{overwrite}{Overwrite the action if it was already present.}
+\item{overwrite}{Sobreescribe la acción si ya se encuntra instalada.}
 }
 \description{
-The GitHub action created would build a \code{pkgdown} of
-your package in the \code{gh-pages} branch of your repo.
+Instala una acción GitHub que crea el sitio \code{pkgdown} de tu paquete en la
+rama \code{gh-pages} de tu repositorio.
 }
 \seealso{
 \code{\link[=ros_build]{ros_build()}}, \code{\link[=ros_actions_pkgdown_docs]{ros_actions_pkgdown_docs()}}
