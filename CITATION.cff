@@ -8,7 +8,7 @@ message: 'To cite package "rostemplate" in publications use:'
 type: software
 license: MIT
 title: 'rostemplate: ''pkgdown'' Template for ''rOpenSpain'' Packages'
-version: 0.0.3.9030
+version: 0.1.0.9000
 abstract: This is a private template for use by core rOpenSpain packages. Please don’t
   use for your own code.
 authors:

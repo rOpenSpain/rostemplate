@@ -1,5 +1,9 @@
 # rostemplate (development version)
 
+-   Adapt to BS5 with new pkgdown version.
+
+# rostemplate 0.0.4
+
 -   Use `testthat` package.
 -   Rename core functions.
 -   Update actions.

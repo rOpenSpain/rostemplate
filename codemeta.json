@@ -8,7 +8,7 @@
   "codeRepository": "https://github.com/ropenspain/rostemplate",
   "issueTracker": "https://github.com/ropenspain/rostemplate/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.0.3.9030",
+  "version": "0.1.0.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -92,7 +92,7 @@
       "@type": "SoftwareApplication",
       "identifier": "pkgdown",
       "name": "pkgdown",
-      "version": ">= 1.1.0",
+      "version": ">= 2.0.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -122,7 +122,7 @@
     "SystemRequirements": null
   },
   "isPartOf": "https://ropenspain.es/",
-  "fileSize": "296.053KB",
+  "fileSize": "214.468KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -136,7 +136,7 @@
       ],
       "name": "rostemplate: 'pkgdown' Template for 'rOpenSpain' Packages",
       "url": "https://ropenspain.github.io/rostemplate/",
-      "description": "R package version 0.0.3.9030"
+      "description": "R package version 0.1.0.9000"
     }
   ]
 }

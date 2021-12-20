@@ -1,0 +1,24 @@
+template:
+  bootstrap: 5
+  bslib:
+    code_font: {google: "Roboto Mono"}
+    base_font: {google: "Roboto"}
+    fg: "#555555"
+    bg: "#ffffff"
+    light: "#ffffff"
+    headings-color: black;
+    pkgdown-nav-height: 62px
+    primary: "#986dbd"
+    link-color: "#986dbd"
+    border-radius: 0
+    navbar-light-active-color: "#986dbd"
+    navbar-brand-font-size: 1.75rem
+    navbar-light-brand-color: "#555555"
+    nav-tabs-link-active-color: white
+
+    dropdown-link-hover-bg: white
+    dropdown-link-hover-color: "#986dbd"
+
+navbar:
+  type: light
+  bg: light
