@@ -90,11 +90,14 @@ pre code span.co {
 	background-color: #986dbd;
 }
 
-.navbar small.text-muted {
+.navbar small {
 	font-size: 0.75rem;
 	padding-top: 0.65rem;
-	color: #986dbd !important;
 	padding-right: 1rem;
+}
+
+.navbar small.text-muted {
+  color: #986dbd !important;
 }
 
 .navbar-light .navbar-nav .nav-item>.nav-link:hover {
