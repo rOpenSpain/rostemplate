@@ -9,13 +9,15 @@ template:
     headings-color: black;
     pkgdown-nav-height: 62px
     primary: "#986dbd"
+    info: "#5a9ddb"
+    warning: "#ff9800"
+    danger: "#9C27B0"
     link-color: "#986dbd"
     border-radius: 0
     navbar-light-active-color: "#986dbd"
     navbar-brand-font-size: 1.75rem
     navbar-light-brand-color: "#555555"
     nav-tabs-link-active-color: white
-
     dropdown-link-hover-bg: white
     dropdown-link-hover-color: "#986dbd"
 

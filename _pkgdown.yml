@@ -1,8 +1,5 @@
 url: 'https://ropenspain.github.io/rostemplate'
 
-# Comprueba la configuración local en https://pkgdown.r-lib.org/articles/pkgdown.html#language
-lang: es
-
 template:
   package: rostemplate
   opengraph:
@@ -13,6 +10,9 @@ template:
       site: '@rOpenSpain'
       creator: '@dhernangomez'
       card: summary_large_image
+
+# Comprueba la configuración local en https://pkgdown.r-lib.org/articles/pkgdown.html#language
+lang: es
 
 # Optional
 authors:
