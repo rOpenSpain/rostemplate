@@ -1,8 +1,5 @@
 url: 'https://ropenspain.github.io/rostemplate'
 
-# Comprueba la configuración local en https://pkgdown.r-lib.org/articles/pkgdown.html#language
-lang: es
-
 template:
   package: rostemplate
   opengraph:
@@ -19,9 +16,8 @@ reference:
   contents:
   - starts_with("ros")
 
-development:
-  version_label: info
-  version_tooltip: "Paquete experimental"
+# Comprueba la configuración local en https://pkgdown.r-lib.org/articles/pkgdown.html#language
+lang: es
 
 # Optional
 authors:
