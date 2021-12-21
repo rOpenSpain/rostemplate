@@ -44,7 +44,7 @@
     
     <img src="logo.png" alt="rostemplate-logo" id="ROS-navbar-logo"><a class="navbar-brand me-2" href="index.html">rostemplate</a>
 
-    <small class="nav-text text-info me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Cambiar la navegación">
@@ -236,8 +236,19 @@
   </aside>
 </div>
 
-
-   </div>
+<script>
+  var homeall = document.getElementsByTagName("h1");
+  var banner = document.createElement('div');
+  banner.innerHTML = '<a href="https://ropenspain.es/" id="ROS-heading-breadcrumbs">' +
+        '<div class="text-center" id="ROS-partof">' +
+          '<p>Part of <img src="ROS-logo.png" alt="rOpenSpain-Logo" id="homelogoxs"> rOpenSpain </p>' +
+        '</div></a>'
+  if (homeall.length > 0) {
+	  home = homeall[0];
+	  home.insertBefore(banner,home.firstChild);
+  }
+</script>
+</div>
 
   <!-- ropenspain rostemplate -->
 <footer id="footer"><div class="container">
