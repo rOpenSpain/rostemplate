@@ -126,7 +126,7 @@
   "citation": [
     {
       "@type": "SoftwareSourceCode",
-      "datePublished": "2021",
+      "datePublished": "2022",
       "author": [
         {
           "@type": "Person",
@@ -138,5 +138,10 @@
       "url": "https://ropenspain.github.io/rostemplate/",
       "description": "R package version 0.1.0.9000"
     }
-  ]
+  ],
+  "releaseNotes": "https://github.com/ropenspain/rostemplate/blob/master/NEWS.md",
+  "readme": "https://github.com/rOpenSpain/rostemplate/blob/main/README.md",
+  "contIntegration": ["https://github.com/ropenspain/rostemplate/actions", "https://app.codecov.io/gh/ropenspain/rostemplate"],
+  "developmentStatus": "https://lifecycle.r-lib.org/articles/stages.html#experimental",
+  "keywords": ["r", "template", "pkgdown", "ropenspain", "yaml", "github-actions", "rstats", "r-package"]
 }
