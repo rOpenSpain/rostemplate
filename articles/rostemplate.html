@@ -42,7 +42,7 @@
     
     <img src="../logo.png" alt="rostemplate-logo" id="ROS-navbar-logo"><a class="navbar-brand me-2" href="../index.html">rostemplate</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9100</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Cambiar la navegación">
@@ -84,6 +84,9 @@
     
   </div>
 </nav><div class="container template-article">
+
+
+
 <script src="rostemplate_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <main id="main"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Cómo usar esta plantilla</h1>
@@ -95,20 +98,20 @@
 
     
     
-<div class="section level1">
-<h1 id="introducción">Introducción<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n"></a>
-</h1>
-<p>Este paquete proporciona una plantilla de <code>pkgdown</code> adaptada a la empleada por la comunidad <a href="https://ropenspain.es/" class="external-link">rOpenSpain</a>, que a su vez es una adaptación de la plantilla <a href="https://bootstrapious.com/p/universal-business-e-commerce-template" class="external-link">Universal</a> creada por <a href="https://bootstrapious.com/p/universal-business-e-commerce-template" class="external-link">Bootstrapius</a> con la variación de color <strong>violet</strong>.</p>
 <div class="section level2">
-<h2 id="limitaciones">Limitaciones<a class="anchor" aria-label="anchor" href="#limitaciones"></a>
+<h2 id="introducción">Introducción<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n"></a>
 </h2>
+<p>Este paquete proporciona una plantilla de <code>pkgdown</code> adaptada a la empleada por la comunidad <a href="https://ropenspain.es/" class="external-link">rOpenSpain</a>, que a su vez es una adaptación de la plantilla <a href="https://bootstrapious.com/p/universal-business-e-commerce-template" class="external-link">Universal</a> creada por <a href="https://bootstrapious.com/p/universal-business-e-commerce-template" class="external-link">Bootstrapius</a> con la variación de color <strong>violet</strong>.</p>
+<div class="section level3">
+<h3 id="limitaciones">Limitaciones<a class="anchor" aria-label="anchor" href="#limitaciones"></a>
+</h3>
 <p>El diseño original de las plantillas que componen <code>pkgdown</code> es bastante rígido, en el sentido de que ligeras modificaciones (como el tipo de <em>navbar</em> o la localización del <em>footer</em>) pueden provocar que el renderizado final no sea óptimo. Para solucionarlo se han empleado algunos <em>hacks</em> en el fichero <code>css</code> y pequeños fragmentos en <code>javascript</code>.</p>
 <p>Otra limitación es la diferencia de versiones Bootstrap, ya que esta plantilla <code>pkgdown</code> emplea la versión Bootstrap 5 mientras que Universal emplea la 3.3.7.</p>
 </div>
 </div>
-<div class="section level1">
-<h1 id="configuración-previa">Configuración previa<a class="anchor" aria-label="anchor" href="#configuraci%C3%B3n-previa"></a>
-</h1>
+<div class="section level2">
+<h2 id="configuración-previa">Configuración previa<a class="anchor" aria-label="anchor" href="#configuraci%C3%B3n-previa"></a>
+</h2>
 <p>En la raíz del proyecto ha de existir un archivo <code>_pkgdown.yaml</code> con al menos las siguientes líneas:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">template</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rostemplate</span></span>
@@ -120,19 +123,19 @@
 ^docs$
 ^_pkgdown\.yml$</code></pre>
 </div>
-<div class="section level1">
-<h1 id="uso-de-la-plantilla">Uso de la plantilla<a class="anchor" aria-label="anchor" href="#uso-de-la-plantilla"></a>
-</h1>
-<p>Esta sección detalla diferentes opciones para generar un sitio estático para el paquete deseado con el formato definido por esta plantilla. El resultado de este paso es la generación de un sitio estático compuesto de los archivos <code>html</code>, <code>css</code>, etc. basados en el paquete de R para el que se está generando el sitio.</p>
 <div class="section level2">
-<h2 id="con-github-actions---ci">Con GitHub actions - CI<a class="anchor" aria-label="anchor" href="#con-github-actions---ci"></a>
+<h2 id="uso-de-la-plantilla">Uso de la plantilla<a class="anchor" aria-label="anchor" href="#uso-de-la-plantilla"></a>
 </h2>
+<p>Esta sección detalla diferentes opciones para generar un sitio estático para el paquete deseado con el formato definido por esta plantilla. El resultado de este paso es la generación de un sitio estático compuesto de los archivos <code>html</code>, <code>css</code>, etc. basados en el paquete de R para el que se está generando el sitio.</p>
+<div class="section level3">
+<h3 id="con-github-actions---ci">Con GitHub actions - CI<a class="anchor" aria-label="anchor" href="#con-github-actions---ci"></a>
+</h3>
 <p>GitHub Actions permite automatizar procesos cuando se activa un <em>trigger</em>. En este caso se han preparado dos acciones que actualizan el sitio estático cada vez que se añade un <em>commit</em> al repositorio.</p>
 <p>Los flujos de trabajo consisten en archivos con extensión <code>.yaml</code>. La acción <a href="https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml" class="external-link">rostemplate-docs.yaml</a> crea el sitio estático en la carpeta <code>./docs</code> mientras que <a href="https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml" class="external-link">rostemplate-gh-pages.yaml</a> crea el sitio estático en el branch <code>gh-pages</code>.</p>
 <p>Para configurar esta opción, es necesario disponer en el repositorio de una carpeta en la ruta <code>.github/workflows</code> y copiar la acción deseada en dicha carpeta.</p>
-<div class="section level3">
-<h3 id="alternativa-usando-las-funciones-de-rostemplate">Alternativa usando las funciones de <code>rostemplate</code><a class="anchor" aria-label="anchor" href="#alternativa-usando-las-funciones-de-rostemplate"></a>
-</h3>
+<div class="section level4">
+<h4 id="alternativa-usando-las-funciones-de-rostemplate">Alternativa usando las funciones de <code>rostemplate</code><a class="anchor" aria-label="anchor" href="#alternativa-usando-las-funciones-de-rostemplate"></a>
+</h4>
 <p>Aunque el uso del paquete <code>rostemplate</code> en si no es necesario con GitHub actions, se han desarrollado dos funciones que automatizan esta configuración de manera automática. Estas funciones simplemente crean el directorio <code>.github/workflows</code> si no existiera previamente y copian los archivos solicitados en la ruta correspondiente. Adicionalmente, crean los archivos <code>.Rbuildignore</code> y <code>.github/.gitignore</code>, que ignoran ciertos archivos cuando se compila el paquete:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Instalación via r-universe</span>
@@ -167,9 +170,9 @@
 <p>Más información sobre cómo adaptar los <em>triggers</em> de la acción <a href="https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows" class="external-link">aquí</a>.</p>
 </div>
 </div>
-<div class="section level2">
-<h2 id="rstudio---manual">RStudio - manual<a class="anchor" aria-label="anchor" href="#rstudio---manual"></a>
-</h2>
+<div class="section level3">
+<h3 id="rstudio---manual">RStudio - manual<a class="anchor" aria-label="anchor" href="#rstudio---manual"></a>
+</h3>
 <p>El sitio estático se puede generar igualmente desde una sesión local en RStudio. Para ello, es necesario instalar este paquete:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
@@ -184,9 +187,9 @@
 <p>Una vez generado el sitio, es necesario actualizar el repositorio remoto en GitHub mediante un <em>commit</em>.</p>
 </div>
 </div>
-<div class="section level1">
-<h1 id="github-pages">GitHub Pages<a class="anchor" aria-label="anchor" href="#github-pages"></a>
-</h1>
+<div class="section level2">
+<h2 id="github-pages">GitHub Pages<a class="anchor" aria-label="anchor" href="#github-pages"></a>
+</h2>
 <p>Una vez generado el sitio estático y subido al repositorio en GitHub, el último paso es activar el sitio web a través de los <em>Settings</em> de nuestro repositorio (<em>Setting&gt;GitHub Pages</em>), seleccionando el origen deseado (<code>gh-pages</code>, <code>main/docs</code>, etc.).</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>En esta página</h2>
@@ -218,7 +221,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md text-center text-lg-start">
-        <p>Sitio creado con <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+        <p>Sitio creado con <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
       </div>
       <div class="col-md offset-md-4 text-center text-lg-start">
       <p>Template <a href="https://github.com/ropenspain/rostemplate/" class="external-link">rostemplate</a> by <a href="https://github.com/dieghernan/" class="external-link">dieghernan</a>, based on <a href="https://bootstrapious.com/" class="external-link">Bootstrapious</a>.
