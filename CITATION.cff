@@ -1,5 +1,5 @@
 # -----------------------------------------------------------
-# CITATION file created with {cffr} R package, v0.2.0
+# CITATION file created with {cffr} R package, v0.2.1
 # See also: https://docs.ropensci.org/cffr/
 # -----------------------------------------------------------
  
@@ -8,7 +8,7 @@ message: 'To cite package "rostemplate" in publications use:'
 type: software
 license: MIT
 title: 'rostemplate: Plantilla ''pkgdown'' para los paquetes de ''rOpenSpain'''
-version: 0.1.0.9000
+version: 0.1.0.9100
 abstract: Plantilla privada para uso exclusivo de los paquetes de rOpenSpain.
 authors:
 - family-names: Hernangómez
@@ -26,7 +26,7 @@ preferred-citation:
     orcid: https://orcid.org/0000-0001-8457-4658
     affiliation: rOpenSpain
   year: '2022'
-  notes: R package version 0.1.0.9000
+  notes: R package version 0.1.0.9100
   url: https://ropenspain.github.io/rostemplate/
 repository-code: https://github.com/ropenspain/rostemplate
 url: https://ropenspain.github.io/rostemplate/
@@ -48,6 +48,7 @@ keywords:
 references:
 - type: software
   title: 'R: A Language and Environment for Statistical Computing'
+  notes: Depends
   authors:
   - name: R Core Team
   location:
@@ -57,9 +58,10 @@ references:
   institution:
     name: R Foundation for Statistical Computing
   version: '>= 3.6'
-  notes: Depends
 - type: software
-  title: 'pkgdown: Make Static HTML Documentation for a Package'
+  title: pkgdown
+  abstract: 'pkgdown: Make Static HTML Documentation for a Package'
+  notes: Imports
   authors:
   - family-names: Wickham
     given-names: Hadley
@@ -72,10 +74,11 @@ references:
     given-names: Maëlle
     orcid: https://orcid.org/0000-0002-2815-0399
   year: '2022'
-  notes: Imports
   version: '>= 2.0.0'
 - type: software
-  title: 'usethis: Automate Package and Project Setup'
+  title: usethis
+  abstract: 'usethis: Automate Package and Project Setup'
+  notes: Imports
   authors:
   - family-names: Wickham
     given-names: Hadley
@@ -90,10 +93,11 @@ references:
     email: malcolmbarrett@gmail.com
     orcid: https://orcid.org/0000-0003-0299-5825
   year: '2022'
-  notes: Imports
   version: '>= 2.0.0'
 - type: software
-  title: 'R: A Language and Environment for Statistical Computing'
+  title: utils
+  abstract: 'R: A Language and Environment for Statistical Computing'
+  notes: Imports
   authors:
   - name: R Core Team
   location:
@@ -102,19 +106,21 @@ references:
   url: https://www.R-project.org/
   institution:
     name: R Foundation for Statistical Computing
-  notes: Imports
 - type: software
-  title: 'knitr: A General-Purpose Package for Dynamic Report Generation in R'
+  title: knitr
+  abstract: 'knitr: A General-Purpose Package for Dynamic Report Generation in R'
+  notes: Suggests
   authors:
   - family-names: Xie
     given-names: Yihui
     email: xie@yihui.name
     orcid: https://orcid.org/0000-0003-0645-5666
   year: '2022'
-  notes: Suggests
   url: https://yihui.org/knitr/
 - type: software
-  title: 'rmarkdown: Dynamic Documents for R'
+  title: rmarkdown
+  abstract: 'rmarkdown: Dynamic Documents for R'
+  notes: Suggests
   authors:
   - family-names: Allaire
     given-names: JJ
@@ -149,13 +155,13 @@ references:
     email: rich@rstudio.com
     orcid: https://orcid.org/0000-0003-3925-190X
   year: '2022'
-  notes: Suggests
 - type: software
-  title: 'testthat: Unit Testing for R'
+  title: testthat
+  abstract: 'testthat: Unit Testing for R'
+  notes: Suggests
   authors:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@rstudio.com
   year: '2022'
-  notes: Suggests
   version: '>= 3.0.0'

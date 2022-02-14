@@ -8,7 +8,7 @@
   "codeRepository": "https://github.com/ropenspain/rostemplate",
   "issueTracker": "https://github.com/ropenspain/rostemplate/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.1.0.9000",
+  "version": "0.1.0.9100",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -136,7 +136,7 @@
       ],
       "name": "rostemplate: Plantilla 'pkgdown' para los paquetes de 'rOpenSpain'",
       "url": "https://ropenspain.github.io/rostemplate/",
-      "description": "R package version 0.1.0.9000"
+      "description": "R package version 0.1.0.9100"
     }
   ],
   "releaseNotes": "https://github.com/ropenspain/rostemplate/blob/master/NEWS.md",
