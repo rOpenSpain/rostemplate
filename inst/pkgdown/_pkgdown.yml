@@ -20,6 +20,11 @@ template:
     nav-tabs-link-active-color: white
     dropdown-link-hover-bg: white
     dropdown-link-hover-color: "#986dbd"
+  opengraph:
+    twitter:
+      creator: '@rOpenSpain'
+      site: '@rOpenSpain'
+      card: summary_large_image
 
 navbar:
   type: light
