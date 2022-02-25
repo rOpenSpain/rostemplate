@@ -132,7 +132,6 @@ El sitio estático se puede generar igualmente desde una sesión local en
 RStudio. Para ello, es necesario instalar este paquete:
 
 ``` r
-
 options(repos = c(
   ropenspain = "https://ropenspain.r-universe.dev",
   CRAN = "https://cloud.r-project.org"
@@ -158,5 +157,5 @@ en GitHub mediante un *commit*.
 
 Una vez generado el sitio estático y subido al repositorio en GitHub, el
 último paso es activar el sitio web a través de los *Settings* de
-nuestro repositorio (*Setting\>GitHub Pages*), seleccionando el origen
+nuestro repositorio (*Setting>GitHub Pages*), seleccionando el origen
 deseado (`gh-pages`, `main/docs`, etc.).
