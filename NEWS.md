@@ -2,6 +2,7 @@
 
 -   Adapt to BS5 with new pkgdown version.
 -   Documentación en castellano
+-   Añade paletas de colores
 
 # rostemplate 0.0.4
 
