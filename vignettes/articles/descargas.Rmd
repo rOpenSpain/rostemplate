@@ -1,0 +1,103 @@
+---
+title: "Descargas de paquetes de rOpenSpain"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  tidy = "styler",
+  comment = "#>",
+  warning = FALSE,
+  message = FALSE,
+  dev = "ragg_png",
+  dpi = 300,
+  out.width = "100%"
+)
+```
+
+Descargas de paquetes de rOpenSpain desde CRAN.
+
+```{r include=FALSE}
+library(cranlogs)
+library(rostemplate)
+library(tidyverse)
+library(jsonlite)
+
+ropenspain <- unlist(jsonlite::read_json("https://ropenspain.r-universe.dev/packages"))
+
+dwn <- cranlogs::cran_downloads(ropenspain, from = "2016-01-01")
+dwn <- dwn %>%
+  tidyr::drop_na() %>%
+  filter(count > 0)
+
+# By month
+library(lubridate)
+
+
+dwn_m <- dwn %>%
+  mutate(m = lubridate::ceiling_date(dwn$date, "month") - 1) %>%
+  group_by(package, m) %>%
+  summarise(downloads = sum(count))
+
+
+# factores por orden de inclusión en CRAN
+fact <- dwn_m %>%
+  arrange(m) %>%
+  pull(package) %>%
+  unique() %>%
+  rev()
+
+dwn_m$package <- factor(dwn_m$package, levels = unique(fact))
+```
+
+
+## Total de descargas
+
+```{r echo=FALSE}
+
+ggplot(dwn_m, aes(x = m)) +
+  geom_col(aes(y = downloads, fill = package)) +
+  scale_fill_manual(values = ros_qualitative_pal(length(fact),
+    rev = TRUE
+  )) +
+  theme_minimal() +
+  scale_y_continuous(labels = scales::label_comma()) +
+  labs(
+    fill = "Paquete",
+    x = "",
+    y = "# descargas mensuales"
+  ) +
+  theme(axis.title = element_text(size = 8))
+```
+
+## Descargas por semana
+
+```{r echo=FALSE}
+
+dwn_w <- dwn %>%
+  filter(date >= (Sys.Date() - years(1))) %>%
+  mutate(m = lubridate::ceiling_date(date, "week")) %>%
+  group_by(package, m) %>%
+  summarise(downloads = sum(count))
+
+dwn_w$package <- factor(dwn_w$package, levels = unique(rev(fact)))
+
+ggplot(dwn_w, aes(x = m)) +
+  geom_col(aes(y = downloads), fill = ros_green_pal(1)) +
+  facet_wrap(vars(package)) +
+  scale_x_date(
+    date_breaks = "3 months",
+    labels = scales::label_date("%Y-%m")
+  ) +
+  theme_minimal() +
+  scale_y_continuous(labels = scales::label_comma()) +
+  labs(
+    fill = "Paquete",
+    x = "",
+    y = "# descargas semanales"
+  ) +
+  theme(
+    axis.title = element_text(size = 8),
+    axis.text.x = element_text(size = 6)
+  )
+```

@@ -26,6 +26,10 @@ jobs:
           extra-packages:
             local::.
             any::pkgdown
+            any::cranlogs
+            any::tidyverse
+            any::jsonlite
+            any::lubridate
             ropenspain/rostemplate
           needs: website
 

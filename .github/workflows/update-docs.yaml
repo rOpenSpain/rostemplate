@@ -24,6 +24,10 @@ jobs:
             local::.
             any::rcmdcheck
             any::pkgdown
+            any::cranlogs
+            any::tidyverse
+            any::jsonlite
+            any::lubridate
             dieghernan/pkgdev
             ropenspain/rostemplate
           needs: website
