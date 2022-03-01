@@ -77,6 +77,18 @@ references:
   url: https://CRAN.R-project.org/package=pkgdown
   version: '>= 2.0.0'
 - type: software
+  title: scales
+  abstract: 'scales: Scale Functions for Visualization'
+  notes: Imports
+  authors:
+  - family-names: Wickham
+    given-names: Hadley
+    email: hadley@rstudio.com
+  - family-names: Seidel
+    given-names: Dana
+  year: '2022'
+  url: https://CRAN.R-project.org/package=scales
+- type: software
   title: usethis
   abstract: 'usethis: Automate Package and Project Setup'
   notes: Imports
