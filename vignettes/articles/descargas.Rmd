@@ -57,7 +57,7 @@ dwn_m$package <- factor(dwn_m$package, levels = unique(fact))
 ```{r echo=FALSE}
 
 ggplot(dwn_m, aes(x = m)) +
-  geom_area(aes(y = downloads, fill = package)) +
+  geom_col(aes(y = downloads, fill = package)) +
   scale_fill_manual(values = ros_qualitative_pal(length(fact),
     rev = TRUE, alpha = 0.75
   )) +
