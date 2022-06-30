@@ -141,21 +141,21 @@
 </h4>
 <p>Aunque el uso del paquete <code>rostemplate</code> en si no es necesario con GitHub actions, se han desarrollado dos funciones que automatizan esta configuración de manera automática. Estas funciones simplemente crean el directorio <code>.github/workflows</code> si no existiera previamente y copian los archivos solicitados en la ruta correspondiente. Adicionalmente, crean los archivos <code>.Rbuildignore</code> y <code>.github/.gitignore</code>, que ignoran ciertos archivos cuando se compila el paquete:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Instalación via r-universe</span>
-<span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
-  ropenspain <span class="op">=</span> <span class="st">"https://ropenspain.r-universe.dev"</span>,
-  CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span>
-<span class="op">)</span><span class="op">)</span>
-
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span><span class="op">)</span>
-
-<span class="co"># Deploy to gh-branch</span>
-
-<span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_actions_pkgdown_branch.html">ros_actions_pkgdown_branch</a></span><span class="op">(</span><span class="op">)</span>
-
-
-<span class="co"># Deploy to docs folder</span>
-<span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_actions_pkgdown_docs.html">ros_actions_pkgdown_docs</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Instalación via r-universe</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>  ropenspain <span class="op">=</span> <span class="st">"https://ropenspain.r-universe.dev"</span>,</span>
+<span>  CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span></span>
+<span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Deploy to gh-branch</span></span>
+<span></span>
+<span><span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_actions_pkgdown_branch.html">ros_actions_pkgdown_branch</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># Deploy to docs folder</span></span>
+<span><span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_actions_pkgdown_docs.html">ros_actions_pkgdown_docs</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>Es posible cambiar el evento que desencadena la actualización del sitio:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Actualiza en cada commit - por defecto</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
@@ -178,14 +178,14 @@
 </h3>
 <p>El sitio estático se puede generar igualmente desde una sesión local en RStudio. Para ello, es necesario instalar este paquete:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
-  ropenspain <span class="op">=</span> <span class="st">"https://ropenspain.r-universe.dev"</span>,
-  CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span>
-<span class="op">)</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>  ropenspain <span class="op">=</span> <span class="st">"https://ropenspain.r-universe.dev"</span>,</span>
+<span>  CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span></span>
+<span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span><span class="op">)</span></span></code></pre></div>
 <p>Una vez instalado, se ha de ejecutar este script:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_build.html">ros_build</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_build.html">ros_build</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>La función <code><a href="../reference/ros_build.html">rostemplate::ros_build()</a></code> no es más que un alias de <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code>, aportando únicamente un control sobre la configuración del archivo <code>_pkgdown.yml</code></p>
 <p>Una vez generado el sitio, es necesario actualizar el repositorio remoto en GitHub mediante un <em>commit</em>.</p>
 </div>
@@ -224,7 +224,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md text-center text-lg-start">
-        <p>Sitio creado con <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+        <p>Sitio creado con <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
       </div>
       <div class="col-md offset-md-4 text-center text-lg-start">
       <p>Template <a href="https://github.com/ropenspain/rostemplate/" class="external-link">rostemplate</a> by <a href="https://github.com/dieghernan/" class="external-link">dieghernan</a>, based on <a href="https://bootstrapious.com/" class="external-link">Bootstrapious</a>.
