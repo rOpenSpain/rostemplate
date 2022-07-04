@@ -1,6 +1,6 @@
 Package: rostemplate
 Title: Plantilla 'pkgdown' para los paquetes de 'rOpenSpain'
-Version: 0.1.0.9110
+Version: 0.1.1
 Authors@R: 
     person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0001-8457-4658", affiliation = "rOpenSpain"))
@@ -14,6 +14,7 @@ Depends:
     R (>= 3.6)
 Imports: 
     pkgdown (>= 2.0.0),
+    remotes,
     scales,
     usethis (>= 2.0.0),
     utils
