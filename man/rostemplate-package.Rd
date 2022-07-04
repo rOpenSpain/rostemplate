@@ -6,7 +6,7 @@
 \alias{rostemplate-package}
 \title{rostemplate: Plantilla 'pkgdown' para los paquetes de 'rOpenSpain'}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
 Plantilla privada para uso exclusivo de los paquetes de rOpenSpain.
 }

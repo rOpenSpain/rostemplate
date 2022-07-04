@@ -1,5 +1,5 @@
 # -----------------------------------------------------------
-# CITATION file created with {cffr} R package, v0.2.1
+# CITATION file created with {cffr} R package, v0.2.2
 # See also: https://docs.ropensci.org/cffr/
 # -----------------------------------------------------------
  
@@ -8,7 +8,7 @@ message: 'To cite package "rostemplate" in publications use:'
 type: software
 license: MIT
 title: 'rostemplate: Plantilla ''pkgdown'' para los paquetes de ''rOpenSpain'''
-version: 0.1.0.9110
+version: 0.1.1
 abstract: Plantilla privada para uso exclusivo de los paquetes de rOpenSpain.
 authors:
 - family-names: Hernangómez
@@ -26,7 +26,7 @@ preferred-citation:
     orcid: https://orcid.org/0000-0001-8457-4658
     affiliation: rOpenSpain
   year: '2022'
-  notes: R package version 0.1.0.9110
+  notes: R package version 0.1.1
   url: https://ropenspain.github.io/rostemplate/
 repository-code: https://github.com/ropenspain/rostemplate
 url: https://ropenspain.github.io/rostemplate/
@@ -76,6 +76,27 @@ references:
   year: '2022'
   url: https://CRAN.R-project.org/package=pkgdown
   version: '>= 2.0.0'
+- type: software
+  title: remotes
+  abstract: 'remotes: R Package Installation from Remote Repositories, Including ''GitHub'''
+  notes: Imports
+  authors:
+  - family-names: Csárdi
+    given-names: Gábor
+    email: csardi.gabor@gmail.com
+  - family-names: Hester
+    given-names: Jim
+    email: jim.hester@rstudio.com
+  - family-names: Wickham
+    given-names: Hadley
+  - family-names: Chang
+    given-names: Winston
+  - family-names: Morgan
+    given-names: Martin
+  - family-names: Tenenbaum
+    given-names: Dan
+  year: '2022'
+  url: https://CRAN.R-project.org/package=remotes
 - type: software
   title: scales
   abstract: 'scales: Scale Functions for Visualization'

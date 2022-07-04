@@ -21,3 +21,4 @@
 ^CITATION\.cff$
 ^CRAN-SUBMISSION$
 ^vignettes/articles$
+^cran-comments\.md$
