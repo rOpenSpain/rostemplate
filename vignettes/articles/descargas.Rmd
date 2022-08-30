@@ -2,6 +2,9 @@
 title: "Descargas de paquetes de rOpenSpain"
 ---
 
+*Fecha de actualización: `r format(Sys.Date(),"%d %b %Y")`*
+
+
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -17,6 +20,7 @@ knitr::opts_chunk$set(
 ```
 
 Descargas de paquetes de rOpenSpain desde CRAN.
+
 
 ```{r include=FALSE}
 library(cranlogs)
@@ -102,4 +106,85 @@ ggplot(dwn_w, aes(x = m)) +
     axis.title = element_text(size = 8),
     axis.text.x = element_text(size = 6)
   )
+```
+
+
+## Datos
+
+```{r datos, echo=FALSE}
+
+# Primera fecha en CRAN
+
+first_date_on_cran <- function(pkg) {
+  url <- paste0(
+    "https://crandb.r-pkg.org/",
+    pkg, "/all"
+  )
+  d <- jsonlite::fromJSON(url)$versions[[1]]$Date
+
+  df <- data.frame(
+    package = pkg,
+    date = as.Date(d)
+  )
+  return(df)
+}
+
+fechas <- lapply(unique(dwn$package), first_date_on_cran) %>%
+  bind_rows()
+
+
+
+library(reactable)
+
+lastyear <- dwn %>%
+  filter(date >= (Sys.Date() - 365)) %>%
+  group_by(package) %>%
+  summarise(last_year = sum(count, na.rm = TRUE))
+
+
+lastmonth <- dwn %>%
+  filter(date >= (Sys.Date() - months(1))) %>%
+  group_by(package) %>%
+  summarise(last_month = sum(count, na.rm = TRUE))
+
+lastweek <- dwn %>%
+  filter(date >= (Sys.Date() - 7)) %>%
+  group_by(package) %>%
+  summarise(last_week = sum(count, na.rm = TRUE))
+
+last_day <- dwn %>%
+  filter(date == max(dwn$date, na.rm = TRUE)) %>%
+  select(package, last_day = count)
+
+avg_daily <- dwn %>%
+  group_by(package) %>%
+  summarise(avg = round(mean(count, na.rm = TRUE), 1))
+
+# Une todo y da nombres
+end <-
+  fechas %>%
+  left_join(avg_daily) %>%
+  left_join(last_day) %>%
+  left_join(lastweek) %>%
+  left_join(lastmonth) %>%
+  left_join(lastyear) %>%
+  as_tibble() %>%
+  arrange(desc(date))
+
+names(end) <- c(
+  "paquete",
+  "en CRAN",
+  "media descargas diarias", "ultimo dia",
+  "ultima semana", "ultimo mes", "ultimo año"
+)
+
+reactable(
+  end,
+  filterable = TRUE,
+  searchable = TRUE,
+  showPageSizeOptions = TRUE,
+  striped = TRUE,
+  paginationType = "jump",
+  elementId = "station-table"
+)
 ```

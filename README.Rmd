@@ -142,16 +142,13 @@ Más información sobre cómo adaptar los *triggers* de la acción
 El sitio estático se puede generar igualmente desde una sesión local en RStudio.
 Para ello, es necesario instalar este paquete:
 
-
-```r
-
+``` r
 options(repos = c(
   ropenspain = "https://ropenspain.r-universe.dev",
   CRAN = "https://cloud.r-project.org"
 ))
 
 install.packages("rostemplate")
-
 ```
 
 Una vez instalado, se ha de ejecutar este script:
@@ -171,5 +168,5 @@ GitHub mediante un *commit*.
 
 Una vez generado el sitio estático y subido al repositorio en GitHub, el último
 paso es activar el sitio web a través de los *Settings* de nuestro repositorio
-(*Setting>GitHub Pages*), seleccionando el origen deseado (`gh-pages`,
+(*Setting\>GitHub Pages*), seleccionando el origen deseado (`gh-pages`,
 `main/docs`, etc.).

@@ -28,6 +28,7 @@ jobs:
             any::tidyverse
             any::jsonlite
             any::lubridate
+            any::reactable
             dieghernan/pkgdev
             ropenspain/rostemplate
           needs: website

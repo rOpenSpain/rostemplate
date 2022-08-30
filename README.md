@@ -157,5 +157,5 @@ en GitHub mediante un *commit*.
 
 Una vez generado el sitio estático y subido al repositorio en GitHub, el
 último paso es activar el sitio web a través de los *Settings* de
-nuestro repositorio (*Setting>GitHub Pages*), seleccionando el origen
+nuestro repositorio (*Setting\>GitHub Pages*), seleccionando el origen
 deseado (`gh-pages`, `main/docs`, etc.).

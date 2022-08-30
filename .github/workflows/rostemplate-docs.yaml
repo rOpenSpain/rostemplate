@@ -30,6 +30,7 @@ jobs:
             any::tidyverse
             any::jsonlite
             any::lubridate
+            any::reactable
             ropenspain/rostemplate
           needs: website
 
