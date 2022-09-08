@@ -31,13 +31,12 @@ library(jsonlite)
 allrepos <- jsonlite::read_json(
   "https://api.github.com/orgs/ropenspain/repos?per_page=100"
 )
-
-
+crandb <- unique(tools::CRAN_package_db()$Package)
 ropenspain <- unlist(lapply(allrepos, function(x) {
   x$name
 }))
-
-ropenspain <- gsub("-|_", "", ropenspain)
+# Packages in CRAN
+ropenspain <- ropenspain[ropenspain %in% crandb]
 
 dwn <- cranlogs::cran_downloads(ropenspain, from = "2016-01-01")
 dwn <- dwn %>%
