@@ -89,7 +89,7 @@ dwn_w$package <- factor(dwn_w$package, levels = unique(rev(fact)))
 
 ggplot(dwn_w, aes(x = m)) +
   geom_col(aes(y = downloads), fill = ros_green_pal(1, alpha = 0.75)) +
-  geom_smooth(aes(y = downloads), fill = ros_violet_pal(1), se = FALSE) +
+  geom_smooth(aes(y = downloads), color = ros_violet_pal(1), se = FALSE) +
   facet_wrap(vars(package)) +
   scale_x_date(
     date_breaks = "3 months",
