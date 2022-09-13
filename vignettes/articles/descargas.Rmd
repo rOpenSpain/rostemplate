@@ -53,9 +53,28 @@ dwn_m <- dwn %>%
   summarise(downloads = sum(count))
 
 
+# Primera fecha en CRAN
+
+first_date_on_cran <- function(pkg) {
+  url <- paste0(
+    "https://crandb.r-pkg.org/",
+    pkg, "/all"
+  )
+  d <- jsonlite::fromJSON(url)$versions[[1]]$Date
+
+  df <- data.frame(
+    package = pkg,
+    date = as.Date(d)
+  )
+  return(df)
+}
+
+fechas <- lapply(unique(dwn$package), first_date_on_cran) %>%
+  bind_rows()
+
 # factores por orden de inclusión en CRAN
-fact <- dwn_m %>%
-  arrange(m) %>%
+fact <- fechas %>%
+  arrange(date) %>%
   pull(package) %>%
   unique() %>%
   rev()
@@ -120,27 +139,6 @@ ggplot(dwn_w, aes(x = m)) +
 ## Datos
 
 ```{r datos, echo=FALSE}
-
-# Primera fecha en CRAN
-
-first_date_on_cran <- function(pkg) {
-  url <- paste0(
-    "https://crandb.r-pkg.org/",
-    pkg, "/all"
-  )
-  d <- jsonlite::fromJSON(url)$versions[[1]]$Date
-
-  df <- data.frame(
-    package = pkg,
-    date = as.Date(d)
-  )
-  return(df)
-}
-
-fechas <- lapply(unique(dwn$package), first_date_on_cran) %>%
-  bind_rows()
-
-
 
 library(reactable)
 
