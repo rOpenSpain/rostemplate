@@ -1,5 +1,5 @@
 # -----------------------------------------------------------
-# CITATION file created with {cffr} R package, v0.2.3
+# CITATION file created with {cffr} R package, v0.4.0
 # See also: https://docs.ropensci.org/cffr/
 # -----------------------------------------------------------
  
@@ -25,7 +25,7 @@ preferred-citation:
     email: diego.hernangomezherrero@gmail.com
     orcid: https://orcid.org/0000-0001-8457-4658
     affiliation: rOpenSpain
-  year: '2022'
+  year: '2023'
   notes: R package version 0.1.1.9000
   url: https://ropenspain.github.io/rostemplate/
 repository-code: https://github.com/ropenspain/rostemplate
@@ -49,12 +49,12 @@ references:
 - type: software
   title: 'R: A Language and Environment for Statistical Computing'
   notes: Depends
+  url: https://www.R-project.org/
   authors:
   - name: R Core Team
   location:
     name: Vienna, Austria
-  year: '2022'
-  url: https://www.R-project.org/
+  year: '2023'
   institution:
     name: R Foundation for Statistical Computing
   version: '>= 3.6'
@@ -62,6 +62,8 @@ references:
   title: pkgdown
   abstract: 'pkgdown: Make Static HTML Documentation for a Package'
   notes: Imports
+  url: https://pkgdown.r-lib.org
+  repository: https://CRAN.R-project.org/package=pkgdown
   authors:
   - family-names: Wickham
     given-names: Hadley
@@ -73,13 +75,14 @@ references:
   - family-names: Salmon
     given-names: Maëlle
     orcid: https://orcid.org/0000-0002-2815-0399
-  year: '2022'
-  url: https://CRAN.R-project.org/package=pkgdown
+  year: '2023'
   version: '>= 2.0.0'
 - type: software
   title: usethis
   abstract: 'usethis: Automate Package and Project Setup'
   notes: Imports
+  url: https://usethis.r-lib.org
+  repository: https://CRAN.R-project.org/package=usethis
   authors:
   - family-names: Wickham
     given-names: Hadley
@@ -93,8 +96,7 @@ references:
     given-names: Malcolm
     email: malcolmbarrett@gmail.com
     orcid: https://orcid.org/0000-0003-0299-5825
-  year: '2022'
-  url: https://CRAN.R-project.org/package=usethis
+  year: '2023'
   version: '>= 2.0.0'
 - type: software
   title: utils
@@ -104,25 +106,27 @@ references:
   - name: R Core Team
   location:
     name: Vienna, Austria
-  year: '2022'
-  url: https://www.R-project.org/
+  year: '2023'
   institution:
     name: R Foundation for Statistical Computing
 - type: software
   title: knitr
   abstract: 'knitr: A General-Purpose Package for Dynamic Report Generation in R'
   notes: Suggests
+  url: https://yihui.org/knitr/
+  repository: https://CRAN.R-project.org/package=knitr
   authors:
   - family-names: Xie
     given-names: Yihui
     email: xie@yihui.name
     orcid: https://orcid.org/0000-0003-0645-5666
-  year: '2022'
-  url: https://CRAN.R-project.org/package=knitr
+  year: '2023'
 - type: software
   title: rmarkdown
   abstract: 'rmarkdown: Dynamic Documents for R'
   notes: Suggests
+  url: https://pkgs.rstudio.com/rmarkdown/
+  repository: https://CRAN.R-project.org/package=rmarkdown
   authors:
   - family-names: Allaire
     given-names: JJ
@@ -156,28 +160,29 @@ references:
     given-names: Richard
     email: rich@rstudio.com
     orcid: https://orcid.org/0000-0003-3925-190X
-  year: '2022'
-  url: https://CRAN.R-project.org/package=rmarkdown
+  year: '2023'
 - type: software
   title: scales
   abstract: 'scales: Scale Functions for Visualization'
   notes: Suggests
+  url: https://scales.r-lib.org
+  repository: https://CRAN.R-project.org/package=scales
   authors:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@rstudio.com
   - family-names: Seidel
     given-names: Dana
-  year: '2022'
-  url: https://CRAN.R-project.org/package=scales
+  year: '2023'
 - type: software
   title: testthat
   abstract: 'testthat: Unit Testing for R'
   notes: Suggests
+  url: https://testthat.r-lib.org
+  repository: https://CRAN.R-project.org/package=testthat
   authors:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@rstudio.com
-  year: '2022'
-  url: https://CRAN.R-project.org/package=testthat
+  year: '2023'
   version: '>= 3.0.0'

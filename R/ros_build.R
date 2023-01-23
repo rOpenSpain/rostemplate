@@ -22,7 +22,6 @@
 #'
 #'
 ros_build <- function(pkg = ".", ...) {
-
   # nocov start
   # Check .Rbuildignore
 
