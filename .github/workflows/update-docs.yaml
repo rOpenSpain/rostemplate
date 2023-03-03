@@ -27,6 +27,12 @@ jobs:
           extra-packages: |
             local::.
             any::rcmdcheck
+            any::pkgdown
+            any::cranlogs
+            any::tidyverse
+            any::jsonlite
+            any::lubridate
+            any::reactable
             dieghernan/pkgdev
           needs: website
 
