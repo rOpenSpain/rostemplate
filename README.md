@@ -32,7 +32,7 @@ con la variación de color **violet**.
 
 ## Configuración previa
 
-En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al
+En la raíz del proyecto ha de existir un archivo `_pkgdown.yml` con al
 menos las siguientes líneas:
 
 ``` yaml
@@ -43,7 +43,7 @@ template:
 ```
 
 Puedes encontrar información sobre cómo configurar otras opciones en
-`_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
+`_pkgdown.yml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
 Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las
 siguientes líneas:

@@ -27,9 +27,9 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 .Renviron
-revdep
 docs
 inst/doc
 CRAN-SUBMISSION
 .github/pkg.lock
 cran-comments.md
+.Rdata
