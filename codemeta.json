@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.2.2 (2022-10-31 ucrt)",
+  "runtimePlatform": "R version 4.3.0 (2023-04-21 ucrt)",
   "author": [
     {
       "@type": "Person",
@@ -115,6 +115,18 @@
     },
     "3": {
       "@type": "SoftwareApplication",
+      "identifier": "styler",
+      "name": "styler",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=styler"
+    },
+    "4": {
+      "@type": "SoftwareApplication",
       "identifier": "usethis",
       "name": "usethis",
       "version": ">= 2.0.0",
@@ -126,7 +138,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=usethis"
     },
-    "4": {
+    "5": {
       "@type": "SoftwareApplication",
       "identifier": "utils",
       "name": "utils"
@@ -134,7 +146,7 @@
     "SystemRequirements": null
   },
   "isPartOf": "https://ropenspain.es/",
-  "fileSize": "222.154KB",
+  "fileSize": "222.166KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
