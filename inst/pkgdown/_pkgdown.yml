@@ -29,3 +29,7 @@ template:
 navbar:
   type: light
   bg: light
+
+figures:
+  dpi: 300
+  fig.retina: 2
