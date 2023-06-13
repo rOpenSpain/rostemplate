@@ -1,8 +1,8 @@
 template:
   bootstrap: 5
   bslib:
-    code_font: {google: "Roboto Mono"}
-    base_font: {google: "Roboto"}
+    base_font: ["Roboto", "Helvetica Neue", "Arial", "Noto Sans", "Liberation Sans", "sans-serif"]
+    code_font: ["Roboto Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"]
     fg: "#555555"
     bg: "#ffffff"
     light: "#ffffff"
