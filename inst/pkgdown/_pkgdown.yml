@@ -6,13 +6,15 @@ template:
     fg: "#555555"
     bg: "#ffffff"
     light: "#ffffff"
-    headings-color: black;
+    headings-color: "#333333"
+    headings-font-weight: bold
     pkgdown-nav-height: 62px
     primary: "#986dbd"
     info: "#5a9ddb"
     warning: "#ff9800"
     danger: "#9C27B0"
     link-color: "#986dbd"
+    link-decoration: none
     border-radius: 0
     navbar-light-toggler-border-color: "#986dbd"
     navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#986dbd' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
@@ -35,4 +37,3 @@ navbar:
 figures:
   dpi: 300
   fig.retina: 2
-

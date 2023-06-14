@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
-[![r-universe](https://ropenspain.r-universe.dev/badges/rostemplate)](https://ropenspain.r-universe.dev/)
+[![r-universe](https://ropenspain.r-universe.dev/badges/rostemplate)](https://ropenspain.r-universe.dev/rostemplate)
 [![R build
 status](https://github.com/ropenspain/rostemplate/workflows/R-CMD-check/badge.svg)](https://github.com/ropenspain/rostemplate/actions)
 [![codecov](https://codecov.io/gh/ropenspain/rostemplate/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ropenspain/rostemplate)
@@ -48,9 +48,11 @@ Puedes encontrar información sobre cómo configurar otras opciones en
 Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las
 siguientes líneas:
 
-    ^\.github$
-    ^docs$
-    ^_pkgdown\.yml$
+``` default
+^\.github$
+^docs$
+^_pkgdown\.yml$
+```
 
 ## Uso de la plantilla
 
@@ -89,12 +91,10 @@ archivos cuando se compila el paquete:
 
 ``` r
 # Instalación via r-universe
-options(repos = c(
-  ropenspain = "https://ropenspain.r-universe.dev",
-  CRAN = "https://cloud.r-project.org"
-))
 
-install.packages("rostemplate")
+install.packages("rostemplate",
+  repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
+)
 
 # Deploy to gh-branch
 
@@ -132,12 +132,9 @@ El sitio estático se puede generar igualmente desde una sesión local en
 RStudio. Para ello, es necesario instalar este paquete:
 
 ``` r
-options(repos = c(
-  ropenspain = "https://ropenspain.r-universe.dev",
-  CRAN = "https://cloud.r-project.org"
-))
-
-install.packages("rostemplate")
+install.packages("rostemplate",
+  repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
+)
 ```
 
 Una vez instalado, se ha de ejecutar este script:

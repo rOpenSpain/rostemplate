@@ -18,7 +18,7 @@ authors:
   affiliation: rOpenSpain
 preferred-citation:
   type: manual
-  title: 'rostemplate: Plantilla ''pkgdown'' para los paquetes de ''rOpenSpain'''
+  title: 'rostemplate: Plantilla pkgdown para los paquetes de rOpenSpain'
   authors:
   - family-names: Hernangómez
     given-names: Diego
@@ -26,8 +26,9 @@ preferred-citation:
     orcid: https://orcid.org/0000-0001-8457-4658
     affiliation: rOpenSpain
   year: '2023'
-  notes: R package version 0.1.1.9000
+  version: 0.1.1.9000
   url: https://ropenspain.github.io/rostemplate/
+  abstract: Plantilla privada para uso exclusivo de los paquetes de rOpenSpain.
 repository-code: https://github.com/ropenspain/rostemplate
 url: https://ropenspain.github.io/rostemplate/
 contact:

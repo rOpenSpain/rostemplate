@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 
 [![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
-[![r-universe](https://ropenspain.r-universe.dev/badges/rostemplate)](https://ropenspain.r-universe.dev/)
+[![r-universe](https://ropenspain.r-universe.dev/badges/rostemplate)](https://ropenspain.r-universe.dev/rostemplate)
 [![R build
 status](https://github.com/ropenspain/rostemplate/workflows/R-CMD-check/badge.svg)](https://github.com/ropenspain/rostemplate/actions)
 [![codecov](https://codecov.io/gh/ropenspain/rostemplate/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ropenspain/rostemplate)
@@ -45,8 +45,8 @@ con la variación de color **violet**.
 
 ## Configuración previa
 
-En la raíz del proyecto ha de existir un archivo `_pkgdown.yml` con al menos
-las siguientes líneas:
+En la raíz del proyecto ha de existir un archivo `_pkgdown.yml` con al menos las
+siguientes líneas:
 
 ``` yaml
 template:
@@ -61,9 +61,11 @@ Puedes encontrar información sobre cómo configurar otras opciones en
 Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las siguientes
 líneas:
 
-    ^\.github$
-    ^docs$
-    ^_pkgdown\.yml$
+``` default
+^\.github$
+^docs$
+^_pkgdown\.yml$
+```
 
 ## Uso de la plantilla
 
@@ -98,14 +100,12 @@ solicitados en la ruta correspondiente. Adicionalmente, crean los archivos
 `.Rbuildignore` y `.github/.gitignore`, que ignoran ciertos archivos cuando se
 compila el paquete:
 
-``` r
+```{r eval=FALSE}
 # Instalación via r-universe
-options(repos = c(
-  ropenspain = "https://ropenspain.r-universe.dev",
-  CRAN = "https://cloud.r-project.org"
-))
 
-install.packages("rostemplate")
+install.packages("rostemplate",
+  repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
+)
 
 # Deploy to gh-branch
 
@@ -142,18 +142,15 @@ Más información sobre cómo adaptar los *triggers* de la acción
 El sitio estático se puede generar igualmente desde una sesión local en RStudio.
 Para ello, es necesario instalar este paquete:
 
-``` r
-options(repos = c(
-  ropenspain = "https://ropenspain.r-universe.dev",
-  CRAN = "https://cloud.r-project.org"
-))
-
-install.packages("rostemplate")
+```{r eval=FALSE}
+install.packages("rostemplate",
+  repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
+)
 ```
 
 Una vez instalado, se ha de ejecutar este script:
 
-``` r
+```{r eval=FALSE}
 rostemplate::ros_build()
 ```
 

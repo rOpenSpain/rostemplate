@@ -41,8 +41,8 @@ Otra limitación es la diferencia de versiones Bootstrap, ya que esta plantilla
 
 # Configuración previa
 
-En la raíz del proyecto ha de existir un archivo `_pkgdown.yml` con al menos
-las siguientes líneas:
+En la raíz del proyecto ha de existir un archivo `_pkgdown.yml` con al menos las
+siguientes líneas:
 
 ``` yaml
 template:
@@ -57,9 +57,11 @@ Puedes encontrar información sobre cómo configurar otras opciones en
 Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las siguientes
 líneas:
 
-    ^\.github$
-    ^docs$
-    ^_pkgdown\.yml$
+``` default
+^\.github$
+^docs$
+^_pkgdown\.yml$
+```
 
 # Uso de la plantilla
 
@@ -94,15 +96,12 @@ solicitados en la ruta correspondiente. Adicionalmente, crean los archivos
 `.Rbuildignore` y `.github/.gitignore`, que ignoran ciertos archivos cuando se
 compila el paquete:
 
-``` r
+```{r eval=FALSE}
 # Instalación via r-universe
-options(repos = c(
-  ropenspain = "https://ropenspain.r-universe.dev",
-  CRAN = "https://cloud.r-project.org"
-))
 
-install.packages("rostemplate")
-
+install.packages("rostemplate",
+  repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
+)
 # Deploy to gh-branch
 
 rostemplate::ros_actions_pkgdown_branch()
@@ -138,18 +137,15 @@ Más información sobre cómo adaptar los *triggers* de la acción
 El sitio estático se puede generar igualmente desde una sesión local en RStudio.
 Para ello, es necesario instalar este paquete:
 
-
-```r
-options(repos = c(
-  ropenspain = "https://ropenspain.r-universe.dev",
-  CRAN = "https://cloud.r-project.org"
-))
-install.packages("rostemplate")
+```{r eval=FALSE}
+install.packages("rostemplate",
+  repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
+)
 ```
 
 Una vez instalado, se ha de ejecutar este script:
 
-``` r
+```{r eval=FALSE}
 rostemplate::ros_build()
 ```
 
@@ -164,5 +160,5 @@ GitHub mediante un *commit*.
 
 Una vez generado el sitio estático y subido al repositorio en GitHub, el último
 paso es activar el sitio web a través de los *Settings* de nuestro repositorio
-(*Setting>GitHub Pages*), seleccionando el origen deseado (`gh-pages`,
+(*Setting\>GitHub Pages*), seleccionando el origen deseado (`gh-pages`,
 `main/docs`, etc.).

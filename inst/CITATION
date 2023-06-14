@@ -1,14 +1,22 @@
-citHeader("To cite the 'rostemplate' package in publications use:")
+year <- format(Sys.time(), "%Y")
+vers <- paste("R package version", meta$Version)
+url <- "https://ropenspain.github.io/rostemplate/"
+title <- gsub("'", "", meta$Title, fixed = TRUE)
+title <- gsub("rOpenSpain", "{rOpenSpain}", title, fixed = TRUE)
+title <- gsub("pkgdown", "{pkgdown}", title, fixed = TRUE)
 
-year = format(Sys.time(), "%Y")
-vers = paste('R package version', meta$Version)
-url = 'https://ropenspain.github.io/rostemplate/'
-citEntry(
-  entry = 'manual',
-  title = paste('rostemplate:', meta$Title),
-  author = "Diego Hernangómez",
+abs <- trimws(gsub("\\s+", " ", meta$Description))
+abs <- gsub("'", "", abs)
+
+
+bibentry(
+  "Manual",
+  key = "R-rostemplate",
+  header = paste0("To cite ", meta$Package, " in publications use:"),
+  title = paste("{rostemplate}:", title),
+  author = c(person("Diego", "Hernangómez")),
   year = year,
-  note = vers,
-  url = url,
-  textVersion = paste0('Hernangomez, D. (', year, '). rostemplate: ', meta$Title, '. ', vers, '. Package url: ', url)
+  version = meta$Version,
+  url = unlist(strsplit(meta$URL, ","))[1],
+  abstract = abs
 )
