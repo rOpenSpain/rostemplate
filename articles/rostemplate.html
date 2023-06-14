@@ -60,7 +60,9 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-art-culos">Artículos</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-art-culos">
     <a class="dropdown-item" href="../articles/descargas.html">Descargas de paquetes de rOpenSpain</a>
-    <a class="dropdown-item" href="../articles/test.html">Otro artículo</a>
+    <a class="dropdown-item" href="../articles/bullets.html">Bullets</a>
+    <a class="dropdown-item" href="../articles/code.html">Code</a>
+    <a class="dropdown-item" href="../articles/headings.html">Headings</a>
   </div>
 </li>
 <li class="nav-item">
@@ -134,9 +136,9 @@ que Universal emplea la 3.3.7.</p>
 <code>_pkgdown.yml</code> <a href="https://pkgdown.r-lib.org/articles/pkgdown.html" class="external-link">aquí</a>.</p>
 <p>Adicionalmente, es necesario añadir al archivo
 <code>.Rbuildignore</code> las siguientes líneas:</p>
-<pre><code>^\.github$
-^docs$
-^_pkgdown\.yml$</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>^\.github$</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>^docs$</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>^_pkgdown\.yml$</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="uso-de-la-plantilla">Uso de la plantilla<a class="anchor" aria-label="anchor" href="#uso-de-la-plantilla"></a>
@@ -174,13 +176,10 @@ correspondiente. Adicionalmente, crean los archivos
 ignoran ciertos archivos cuando se compila el paquete:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Instalación via r-universe</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
-<span>  ropenspain <span class="op">=</span> <span class="st">"https://ropenspain.r-universe.dev"</span>,</span>
-<span>  CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span></span>
-<span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span><span class="op">)</span></span>
-<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span>,</span>
+<span>  repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://ropenspain.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
 <span><span class="co"># Deploy to gh-branch</span></span>
 <span></span>
 <span><span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_actions_pkgdown_branch.html">ros_actions_pkgdown_branch</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -213,11 +212,9 @@ sitio:</p>
 <p>El sitio estático se puede generar igualmente desde una sesión local
 en RStudio. Para ello, es necesario instalar este paquete:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
-<span>  ropenspain <span class="op">=</span> <span class="st">"https://ropenspain.r-universe.dev"</span>,</span>
-<span>  CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span></span>
-<span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span>,</span>
+<span>  repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://ropenspain.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p>Una vez instalado, se ha de ejecutar este script:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="../reference/ros_build.html">ros_build</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
