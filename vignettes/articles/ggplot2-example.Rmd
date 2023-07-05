@@ -1,0 +1,22 @@
+---
+title: "ggplot2 example"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  dev = "ragg_png"
+)
+```
+
+Example on a **ggplot2** image
+
+```{r setup, fig.alt="A ggplot2 image", fig.cap="A ggplot2 image"}
+library(ggplot2)
+
+# counts (or sums of weights)
+g <- ggplot(mpg, aes(class))
+# Number of cars in each class:
+g + geom_bar()
+```

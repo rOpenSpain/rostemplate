@@ -25,6 +25,7 @@ Suggests:
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 3
+Config/Needs/website: ropenspain/rostemplate, ggplot2
 Encoding: UTF-8
 Language: es_ES
 Roxygen: list(markdown = TRUE)
