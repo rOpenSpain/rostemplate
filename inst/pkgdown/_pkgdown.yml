@@ -29,11 +29,10 @@ template:
       creator: '@rOpenSpain'
       site: '@rOpenSpain'
       card: summary_large_image
-
 navbar:
   type: light
   bg: light
-
 figures:
   dpi: 300
   fig.retina: 2
+
