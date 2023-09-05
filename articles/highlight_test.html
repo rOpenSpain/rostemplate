@@ -40,7 +40,7 @@
   <a class="navbar-brand me-2" href="../index.html">
     <img src="../logo.png" alt="rostemplate logo" height="40" class="d-inline-block me-1">rostemplate</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1.9100</small>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Cambiar la navegación">
       <span class="navbar-toggler-icon"></span>
@@ -119,15 +119,14 @@
 <span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="va">orgsdb</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">grep</a></span><span class="op">(</span><span class="st">"Common"</span>, <span class="va">orgsdb</span><span class="op">$</span><span class="va">org_name</span><span class="op">)</span>, <span class="op">]</span>, format <span class="op">=</span> <span class="st">"markdown"</span><span class="op">)</span></span>
 <span></span>
 <span></span>
-<span><span class="va">ISO_memcol</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span>,</span>
-<span>                       <span class="va">orgtosearch</span><span class="op">)</span> <span class="op">{</span></span>
+<span><span class="va">ISO_memcol</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span>, <span class="va">orgtosearch</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/match.html" class="external-link">match</a></span><span class="op">(</span><span class="va">orgtosearch</span>, <span class="fu"><a href="https://rdrr.io/r/base/unlist.html" class="external-link">unlist</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span><span class="fl">1</span>, <span class="st">"org_id"</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="va">or</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span>, <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">or</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span><span class="op">)</span>, <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/unlist.html" class="external-link">unlist</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span><span class="va">x</span>, <span class="st">"org_member"</span><span class="op">]</span><span class="op">)</span><span class="op">[</span><span class="va">ind</span><span class="op">]</span></span>
 <span>  <span class="op">}</span><span class="op">)</span></span>
-<span>  <span class="va">or</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html" class="external-link">unlist</a></span><span class="op">(</span><span class="va">or</span><span class="op">)</span><span class="op">)</span>, stringsAsFactors <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></span>
+<span>  <span class="va">or</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html" class="external-link">unlist</a></span><span class="op">(</span><span class="va">or</span><span class="op">)</span><span class="op">)</span>, stringsAsFactors <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">or</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">orgtosearch</span></span>
-<span>  <span class="va">df2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">df</span>, <span class="va">or</span>, stringsAsFactors <span class="op">=</span> <span class="cn">F</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="va">df2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">df</span>, <span class="va">or</span>, stringsAsFactors <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span>
 <span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">df2</span><span class="op">)</span></span>
 <span><span class="op">}</span></span>
 <span><span class="va">df_org</span> <span class="op">&lt;-</span> <span class="fu">ISO_memcol</span><span class="op">(</span><span class="va">df</span>, <span class="st">"C"</span><span class="op">)</span></span>
@@ -203,16 +202,14 @@
 <span>  col <span class="op">=</span> <span class="st">"#B9B9B9"</span>,</span>
 <span>  border <span class="op">=</span> <span class="st">"#FFFFFF"</span>,</span>
 <span>  lwd <span class="op">=</span> <span class="fl">0.1</span>,</span>
-<span>  add <span class="op">=</span> <span class="cn">T</span></span>
+<span>  add <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
-<span>  <span class="fu">st_geometry</span><span class="op">(</span><span class="va">testmap_rob</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,</span>
-<span>  col <span class="op">=</span> <span class="st">"#346733"</span>,</span>
-<span>  border <span class="op">=</span> <span class="st">"#FFFFFF"</span>,</span>
-<span>  lwd <span class="op">=</span> <span class="fl">0.1</span>,</span>
-<span>  add <span class="op">=</span> <span class="cn">T</span></span>
+<span>  <span class="fu">st_geometry</span><span class="op">(</span></span>
+<span>    <span class="va">testmap_rob</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  col <span class="op">=</span> <span class="st">"#346733"</span>, border <span class="op">=</span> <span class="st">"#FFFFFF"</span>, lwd <span class="op">=</span> <span class="fl">0.1</span>, add <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># By last, add tiny countries</span></span>
@@ -221,34 +218,26 @@
 <span>  <span class="fu">st_geometry</span><span class="op">(</span><span class="va">tiny_rob</span><span class="op">)</span>,</span>
 <span>  col <span class="op">=</span> <span class="st">"#000000"</span>,</span>
 <span>  bg <span class="op">=</span> <span class="st">"#B9B9B9"</span>,</span>
-<span>  add <span class="op">=</span> <span class="cn">T</span>,</span>
+<span>  add <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  pch <span class="op">=</span> <span class="fl">21</span></span>
 <span><span class="op">)</span></span>
 <span><span class="co"># Dependencies</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
-<span>  <span class="fu">st_geometry</span><span class="op">(</span><span class="va">tiny_rob</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">ISO_3166_3.sov</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,</span>
-<span>  bg <span class="op">=</span> <span class="st">"#C6DEBD"</span>,</span>
-<span>  col <span class="op">=</span> <span class="st">"#000000"</span>,</span>
-<span>  pch <span class="op">=</span> <span class="fl">21</span>,</span>
-<span>  add <span class="op">=</span> <span class="cn">T</span></span>
+<span>  <span class="fu">st_geometry</span><span class="op">(</span></span>
+<span>    <span class="va">tiny_rob</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">ISO_3166_3.sov</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  bg <span class="op">=</span> <span class="st">"#C6DEBD"</span>, col <span class="op">=</span> <span class="st">"#000000"</span>, pch <span class="op">=</span> <span class="fl">21</span>, add <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span>
 <span><span class="co"># Independent</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
-<span>  <span class="fu">st_geometry</span><span class="op">(</span><span class="va">tiny_rob</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">ISO_3166_3.sov</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,</span>
-<span>  bg <span class="op">=</span> <span class="st">"#346733"</span>,</span>
-<span>  col <span class="op">=</span> <span class="st">"#000000"</span>,</span>
-<span>  pch <span class="op">=</span> <span class="fl">21</span>,</span>
-<span>  add <span class="op">=</span> <span class="cn">T</span></span>
+<span>  <span class="fu">st_geometry</span><span class="op">(</span><span class="va">tiny_rob</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">ISO_3166_3.sov</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  bg <span class="op">=</span> <span class="st">"#346733"</span>, col <span class="op">=</span> <span class="st">"#000000"</span>, pch <span class="op">=</span> <span class="fl">21</span>, add <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">bbox</span>,</span>
 <span>  col <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>  border <span class="op">=</span> <span class="st">"#AAAAAA"</span>,</span>
 <span>  lwd <span class="op">=</span> <span class="fl">1.5</span>,</span>
-<span>  add <span class="op">=</span> <span class="cn">T</span></span>
+<span>  add <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
   </main>
 </div>
