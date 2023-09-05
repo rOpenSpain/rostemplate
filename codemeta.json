@@ -8,13 +8,13 @@
   "codeRepository": "https://github.com/ropenspain/rostemplate",
   "issueTracker": "https://github.com/ropenspain/rostemplate/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.1.1.9000",
+  "version": "0.1.1.9100",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.3.0 (2023-04-21 ucrt)",
+  "runtimePlatform": "R version 4.3.1 (2023-06-16)",
   "author": [
     {
       "@type": "Person",
@@ -146,7 +146,7 @@
     "SystemRequirements": null
   },
   "isPartOf": "https://ropenspain.es/",
-  "fileSize": "245.759KB",
+  "fileSize": "245.087KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -158,7 +158,7 @@
           "familyName": "Hernangómez"
         }
       ],
-      "name": "{rostemplate}: Plantilla pkgdown para los paquetes de rOpenSpain",
+      "name": "{rostemplate}: Plantilla {pkgdown} para los paquetes de {rOpenSpain}",
       "url": "https://ropenspain.github.io/rostemplate/"
     }
   ],

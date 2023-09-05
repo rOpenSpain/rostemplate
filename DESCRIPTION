@@ -1,6 +1,6 @@
 Package: rostemplate
 Title: Plantilla 'pkgdown' para los paquetes de 'rOpenSpain'
-Version: 0.1.1.9000
+Version: 0.1.1.9100
 Authors@R: 
     person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0001-8457-4658", affiliation = "rOpenSpain"))
@@ -24,8 +24,8 @@ Suggests:
     testthat (>= 3.0.0)
 VignetteBuilder: 
     knitr
-Config/testthat/edition: 3
 Config/Needs/website: ropenspain/rostemplate, ggplot2
+Config/testthat/edition: 3
 Encoding: UTF-8
 Language: es_ES
 Roxygen: list(markdown = TRUE)

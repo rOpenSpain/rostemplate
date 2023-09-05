@@ -15,7 +15,8 @@
 #' Usa [crontab.guru](https://crontab.guru/#30_08_1_*_*) para crear tus propia
 #' configuración cron.
 #'
-#' @source <https://github.com/r-lib/actions/blob/master/.github/workflows/check-standard.yaml>
+#' @source
+#' <https://github.com/r-lib/actions/blob/master/.github/workflows/check-standard.yaml>
 #'
 #' @export
 #'
