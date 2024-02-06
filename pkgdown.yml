@@ -8,8 +8,7 @@ articles:
   bullets: bullets.html
   code: code.html
   headings: headings.html
-  precompute: precompute.html
-last_built: 2024-02-06T22:11Z
+last_built: 2024-02-06T22:27Z
 urls:
   reference: https://ropenspain.github.io/rostemplate/reference
   article: https://ropenspain.github.io/rostemplate/articles
