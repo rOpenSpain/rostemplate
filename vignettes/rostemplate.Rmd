@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Introducción
+## Introducción
 
 Este paquete proporciona una plantilla de `pkgdown` adaptada a la empleada por
 la comunidad [rOpenSpain](https://ropenspain.es/), que a su vez es una
@@ -39,7 +39,7 @@ pequeños fragmentos en `javascript`.
 Otra limitación es la diferencia de versiones Bootstrap, ya que esta plantilla
 `pkgdown` emplea la versión Bootstrap 5 mientras que Universal emplea la 3.3.7.
 
-# Configuración previa
+## Configuración previa
 
 En la raíz del proyecto ha de existir un archivo `_pkgdown.yml` con al menos las
 siguientes líneas:
@@ -63,14 +63,15 @@ líneas:
 ^_pkgdown\.yml$
 ```
 
-# Uso de la plantilla
+
+## Uso de la plantilla
 
 Esta sección detalla diferentes opciones para generar un sitio estático para el
 paquete deseado con el formato definido por esta plantilla. El resultado de este
 paso es la generación de un sitio estático compuesto de los archivos `html`,
 `css`, etc. basados en el paquete de R para el que se está generando el sitio.
 
-## Con GitHub actions - CI
+### Con GitHub actions - CI
 
 GitHub Actions permite automatizar procesos cuando se activa un *trigger*. En
 este caso se han preparado dos acciones que actualizan el sitio estático cada
@@ -86,7 +87,7 @@ Para configurar esta opción, es necesario disponer en el repositorio de una
 carpeta en la ruta `.github/workflows` y copiar la acción deseada en dicha
 carpeta.
 
-### Alternativa usando las funciones de `rostemplate`
+#### Alternativa usando las funciones de `rostemplate`
 
 Aunque el uso del paquete `rostemplate` en si no es necesario con GitHub
 actions, se han desarrollado dos funciones que automatizan esta configuración de
@@ -102,6 +103,7 @@ compila el paquete:
 install.packages("rostemplate",
   repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
 )
+
 # Deploy to gh-branch
 
 rostemplate::ros_actions_pkgdown_branch()
@@ -132,7 +134,7 @@ on:
 Más información sobre cómo adaptar los *triggers* de la acción
 [aquí](https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows).
 
-## RStudio - manual
+### RStudio - manual
 
 El sitio estático se puede generar igualmente desde una sesión local en RStudio.
 Para ello, es necesario instalar este paquete:
@@ -156,7 +158,7 @@ del archivo `_pkgdown.yml`
 Una vez generado el sitio, es necesario actualizar el repositorio remoto en
 GitHub mediante un *commit*.
 
-# GitHub Pages
+## GitHub Pages
 
 Una vez generado el sitio estático y subido al repositorio en GitHub, el último
 paso es activar el sitio web a través de los *Settings* de nuestro repositorio
