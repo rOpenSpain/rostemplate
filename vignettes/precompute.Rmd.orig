@@ -1,4 +1,4 @@
-favicon-32x32.png---
+---
 title: "Example of a precomputed vignette"
 output: rmarkdown::html_vignette
 vignette: >
