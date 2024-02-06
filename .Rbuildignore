@@ -28,3 +28,5 @@
 ^\.lintr$
 ^CODE_OF_CONDUCT\.md$
 ^CONTRIBUTING\.md$
+^Rplots\.pdf$
+^vignettes/precompute\.Rmd\.orig$
