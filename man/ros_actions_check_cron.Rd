@@ -3,9 +3,6 @@
 \name{ros_actions_check_cron}
 \alias{ros_actions_check_cron}
 \title{Crea una acción GitHub que comprueba tu paquete de manera regular}
-\source{
-\url{https://github.com/r-lib/actions/blob/master/.github/workflows/check-standard.yaml}
-}
 \usage{
 ros_actions_check_cron(pkg = ".", overwrite = TRUE)
 }

@@ -21,17 +21,17 @@ ros_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
 
   # Check .Rbuildignore
 
-  Rbuildignore <- file.path(pkg, ".Rbuildignore")
-  if (!file.exists(Rbuildignore)) {
-    file.create(Rbuildignore)
+  rbuildig <- file.path(pkg, ".Rbuildignore")
+  if (!file.exists(rbuildig)) {
+    file.create(rbuildig)
   }
 
   # Add lines to Rbuildignore
-  linesRbuild <- readLines(Rbuildignore)
-  newlinesRbuild <-
-    unique(c(linesRbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))
-  newlinesRbuild <- newlinesRbuild[newlinesRbuild != ""]
-  writeLines(newlinesRbuild, Rbuildignore)
+  linesrbuild <- readLines(rbuildig)
+  newlinesrbuild <-
+    unique(c(linesrbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))
+  newlinesrbuild <- newlinesrbuild[newlinesrbuild != ""]
+  writeLines(newlinesrbuild, rbuildig)
 
   # Check gitignore
 

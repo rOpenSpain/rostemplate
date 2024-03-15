@@ -15,8 +15,6 @@
 #' Usa [crontab.guru](https://crontab.guru/#30_08_1_*_*) para crear tus propia
 #' configuración cron.
 #'
-#' @source
-#' <https://github.com/r-lib/actions/blob/master/.github/workflows/check-standard.yaml>
 #'
 #' @export
 #'
@@ -34,17 +32,17 @@ ros_actions_check_cron <-
 
     # Check .Rbuildignore
 
-    Rbuildignore <- file.path(pkg, ".Rbuildignore")
-    if (!file.exists(Rbuildignore)) {
-      file.create(Rbuildignore)
+    rbuildignore <- file.path(pkg, ".Rbuildignore")
+    if (!file.exists(rbuildignore)) {
+      file.create(rbuildignore)
     }
 
     # Add lines to Rbuildignore
-    linesRbuild <- readLines(Rbuildignore)
-    newlinesRbuild <-
-      unique(c(linesRbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))
-    newlinesRbuild <- newlinesRbuild[newlinesRbuild != ""]
-    writeLines(newlinesRbuild, Rbuildignore)
+    linesrbuild <- readLines(rbuildignore)
+    newlinesrbuild <-
+      unique(c(linesrbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))
+    newlinesrbuild <- newlinesrbuild[newlinesrbuild != ""]
+    writeLines(newlinesrbuild, rbuildignore)
 
     # Check gitignore
 

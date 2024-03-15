@@ -5,7 +5,15 @@
 #' Añade una insignia de rOpenSpain que redirige a <https://ropenspain.es/>
 #' en tu archivo `README`:
 #'
-#' \ifelse{html}{\href{https://ropenspain.es/}{\figure{ropenspain-badge.svg}{options: alt='rOpenSpain'}}}{**rOpenSpain**}
+#' ```{r, echo=FALSE, results='asis'}
+#'
+#' cat(paste0(
+#'   "\\ifelse{html}{\\href{https://ropenspain.es/}{\\figure{",
+#'   "ropenspain-badge.svg}{options: alt='rOpenSpain'}}}",
+#'   "{**rOpenSpain**}"
+#' ))
+#'
+#' ```
 #'
 #' @export
 #'
@@ -24,7 +32,10 @@ ros_badge_ropenspain <- function(install = TRUE) {
   stopifnot(is.logical(install))
 
   # Add pkg
-  badge <- "https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg"
+  badge <- paste0(
+    "https://ropenspain.github.io/rostemplate/reference/",
+    "figures/ropenspain-badge.svg"
+  )
 
   href <- "https://ropenspain.es/"
 

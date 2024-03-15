@@ -25,21 +25,24 @@ ros_build <- function(pkg = ".", ...) {
   # nocov start
   # Check .Rbuildignore
 
-  Rbuildignore <- file.path(pkg, ".Rbuildignore")
-  if (!file.exists(Rbuildignore)) {
-    file.create(Rbuildignore)
+  rbuildignore <- file.path(pkg, ".Rbuildignore")
+  if (!file.exists(rbuildignore)) {
+    file.create(rbuildignore)
   }
 
   # Add lines to Rbuildignore
-  linesRbuild <- readLines(Rbuildignore)
-  newlinesRbuild <-
-    unique(c(linesRbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))
-  newlinesRbuild <- newlinesRbuild[newlinesRbuild != ""]
-  writeLines(newlinesRbuild, Rbuildignore)
+  linesrbuild <- readLines(rbuildignore)
+  newlinesrbuild <-
+    unique(c(linesrbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))
+  newlinesrbuild <- newlinesrbuild[newlinesrbuild != ""]
+  writeLines(newlinesrbuild, rbuildignore)
 
   sel <-
     menu(c("Yes", "No"),
-      title = "Have you included \n\ntemplate:\n  package: rostemplate\n\nin your _pkgdown.yml file?"
+      title = paste0(
+        "Have you included \n\ntemplate:\n  package: ",
+        "rostemplate\n\nin your _pkgdown.yml file?"
+      )
     )
   if (sel != 1) {
     stop("Execution halted")

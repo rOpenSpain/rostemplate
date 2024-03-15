@@ -29,19 +29,25 @@ library(tidyverse)
 library(jsonlite)
 
 allrepos <- jsonlite::read_json(
-  "https://api.github.com/orgs/ropenspain/repos?per_page=100"
+  paste0(
+    "https://raw.githubusercontent.com/rOpenSpain/rOpenSpain.",
+    "r-universe.dev/master/packages.json"
+  )
 )
+
+ropenspain <- unlist(lapply(allrepos, function(x) {
+  x[["package"]]
+}))
 
 Sys.setenv("R_CRAN_WEB" = "https://cloud.r-project.org")
 crandb <- unique(tools::CRAN_package_db()$Package)
-ropenspain <- unlist(lapply(allrepos, function(x) {
-  x$name
-}))
 # Packages in CRAN
 ropenspain <- ropenspain[ropenspain %in% crandb]
 
-dwn <- cranlogs::cran_downloads(ropenspain, from = "2016-01-01")
+dwn <- lapply(ropenspain, cranlogs::cran_downloads, from = "2016-01-01")
+
 dwn <- dwn %>%
+  bind_rows() %>%
   tidyr::drop_na() %>%
   filter(count > 0)
 
@@ -58,21 +64,27 @@ dwn_m <- dwn %>%
 # Primera fecha en CRAN
 
 first_date_on_cran <- function(pkg) {
-  url <- paste0(
-    "https://crandb.r-pkg.org/",
-    pkg, "/all"
-  )
-  d <- jsonlite::fromJSON(url)$versions[[1]]$Date
+  all <- pkgsearch::cran_package_history(pkg)
 
-  df <- data.frame(
-    package = pkg,
-    date = as.Date(d)
-  )
+  d <- all %>%
+    select(`Date/Publication`) %>%
+    slice_head(n = 1) %>%
+    pull() %>%
+    as.Date()
+
+  lv <- all %>%
+    select(`Date/Publication`) %>%
+    slice_tail(n = 1) %>%
+    pull() %>%
+    as.Date()
+
+  df <- tibble(package = pkg, date = d, lv = lv)
   return(df)
 }
 
 fechas <- lapply(unique(dwn$package), first_date_on_cran) %>%
   bind_rows()
+
 
 # factores por orden de inclusión en CRAN
 fact <- fechas %>%
@@ -172,11 +184,12 @@ end <-
   left_join(lastmonth) %>%
   left_join(lastyear) %>%
   as_tibble() %>%
-  arrange(desc(date))
+  arrange(desc(lv))
 
 names(end) <- c(
   "paquete",
-  "en CRAN",
+  "en CRAN desde",
+  "última version en CRAN",
   "media descargas diarias", "ultimo dia",
   "ultima semana", "ultimo mes", "ultimo año"
 )
@@ -235,11 +248,12 @@ res <- lapply(ropenspain, function(x) {
 })
 
 res_all <- bind_rows(res) %>%
-  arrange(desc(mdown))
+  arrange(desc(date_in_ppm))
+
 
 names(res_all) <- c(
-  "paquete", "Última version", "Version en CRAN",
-  "Version en Posit", "Tamaño", "Descargas (último mes)"
+  "paquete", "Última version", "en CRAN",
+  "en Posit", "Tamaño", "Descargas (último mes)"
 )
 
 

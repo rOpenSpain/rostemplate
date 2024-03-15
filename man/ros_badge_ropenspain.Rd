@@ -17,7 +17,6 @@ Insignia en markdown o mensaje con el código markdown a introducir.
 \description{
 Añade una insignia de rOpenSpain que redirige a \url{https://ropenspain.es/}
 en tu archivo \code{README}:
-
 \ifelse{html}{\href{https://ropenspain.es/}{\figure{ropenspain-badge.svg}{options: alt='rOpenSpain'}}}{**rOpenSpain**}
 }
 \examples{
