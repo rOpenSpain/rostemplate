@@ -24,27 +24,31 @@ Descargas de paquetes de [rOpenSpain](https://ropenspain.es/) desde CRAN.
 
 ```{r include=FALSE}
 library(cranlogs)
-library(rostemplate)
+library(tibble)
+library(dplyr)
 library(tidyverse)
-library(jsonlite)
+library(rostemplate)
 
-allrepos <- jsonlite::read_json(
+Sys.setenv("R_CRAN_WEB" = "https://cloud.r-project.org")
+crandb <- unique(tools::CRAN_package_db()$Package)
+
+
+mypaks <- jsonlite::read_json(
   paste0(
     "https://raw.githubusercontent.com/rOpenSpain/rOpenSpain.",
     "r-universe.dev/master/packages.json"
   )
-)
+) %>%
+  lapply(function(x) {
+    x[["package"]]
+  }) %>%
+  unlist() %>%
+  unique()
 
-ropenspain <- unlist(lapply(allrepos, function(x) {
-  x[["package"]]
-}))
-
-Sys.setenv("R_CRAN_WEB" = "https://cloud.r-project.org")
-crandb <- unique(tools::CRAN_package_db()$Package)
 # Packages in CRAN
-ropenspain <- ropenspain[ropenspain %in% crandb]
+mypaks <- mypaks[mypaks %in% crandb]
 
-dwn <- lapply(ropenspain, cranlogs::cran_downloads, from = "2016-01-01")
+dwn <- lapply(mypaks, cranlogs::cran_downloads, from = "2016-01-01")
 
 dwn <- dwn %>%
   bind_rows() %>%
@@ -61,7 +65,7 @@ dwn_m <- dwn %>%
   summarise(downloads = sum(count))
 
 
-# Primera fecha en CRAN
+# First date on CRAN
 
 first_date_on_cran <- function(pkg) {
   all <- pkgsearch::cran_package_history(pkg)
@@ -85,8 +89,7 @@ first_date_on_cran <- function(pkg) {
 fechas <- lapply(unique(dwn$package), first_date_on_cran) %>%
   bind_rows()
 
-
-# factores por orden de inclusión en CRAN
+# factors by first date on CRAN
 fact <- fechas %>%
   arrange(date) %>%
   pull(package) %>%
@@ -99,17 +102,22 @@ dwn_m$package <- factor(dwn_m$package, levels = unique(fact))
 ### Histórico de descargas
 
 ```{r echo=FALSE}
+tot <- dwn_m %>%
+  group_by(m) %>%
+  summarise(ntot = sum(downloads))
+
 ggplot(dwn_m, aes(x = m)) +
   geom_col(aes(y = downloads, fill = package)) +
+  geom_smooth(data = tot, aes(m, ntot), color = "grey40", se = TRUE) +
+  theme_minimal() +
   scale_fill_manual(values = ros_qualitative_pal(length(fact),
     rev = TRUE, alpha = 0.75
   )) +
-  theme_minimal() +
   scale_y_continuous(labels = scales::label_comma()) +
   labs(
     fill = "Paquete",
     x = "",
-    y = "# descargas mensuales"
+    y = "# descargas semanales"
   ) +
   theme(axis.title = element_text(size = 8))
 ```
@@ -125,8 +133,9 @@ dwn_w <- dwn %>%
 
 dwn_w$package <- factor(dwn_w$package, levels = unique(rev(fact)))
 
-ggplot(dwn_w, aes(x = m)) +
-  geom_col(aes(y = downloads), fill = ros_green_pal(1, alpha = 0.75)) +
+dwn_w %>%
+  ggplot(aes(x = m)) +
+  geom_area(aes(y = downloads), fill = ros_green_pal(1, alpha = 0.75)) +
   geom_smooth(aes(y = downloads), color = ros_violet_pal(1), se = FALSE) +
   facet_wrap(vars(package)) +
   scale_x_date(
@@ -184,7 +193,7 @@ end <-
   left_join(lastmonth) %>%
   left_join(lastyear) %>%
   as_tibble() %>%
-  arrange(desc(lv))
+  arrange(desc(avg))
 
 names(end) <- c(
   "paquete",
@@ -201,7 +210,8 @@ reactable(
   showPageSizeOptions = TRUE,
   striped = TRUE,
   paginationType = "jump",
-  elementId = "cran-dwn"
+  elementId = "cran-dwn",
+  defaultPageSize = 25
 )
 ```
 
@@ -211,7 +221,7 @@ Descargas de paquetes de [rOpenSpain](https://ropenspain.es/) y metadatos desde
 [Posit Package Manager](https://packagemanager.posit.co/client/#/).
 
 ```{r data-posit, echo=FALSE}
-res <- lapply(ropenspain, function(x) {
+res <- lapply(mypaks, function(x) {
   tmp <- tempfile(fileext = ".json")
   api_res <- suppressWarnings(try(download.file(
     paste0("https://packagemanager.posit.co/__api__/repos/1/packages/", x),
@@ -248,8 +258,7 @@ res <- lapply(ropenspain, function(x) {
 })
 
 res_all <- bind_rows(res) %>%
-  arrange(desc(date_in_ppm))
-
+  arrange(desc(mdown))
 
 names(res_all) <- c(
   "paquete", "Última version", "en CRAN",
@@ -265,6 +274,6 @@ reactable(
   striped = TRUE,
   paginationType = "jump",
   elementId = "posit-dwn",
-  defaultPageSize = nrow(res_all)
+  defaultPageSize = 25
 )
 ```
