@@ -211,7 +211,12 @@ reactable(
   striped = TRUE,
   paginationType = "jump",
   elementId = "cran-dwn",
-  defaultPageSize = 25
+  defaultPageSize = 25,
+  columns = list(paquete = colDef(cell = function(value) {
+    # Render as a link
+    url <- paste0("https://CRAN.R-project.org/package=", value)
+    htmltools::tags$a(href = url, target = "_blank", as.character(value))
+  }))
 )
 ```
 
@@ -274,6 +279,11 @@ reactable(
   striped = TRUE,
   paginationType = "jump",
   elementId = "posit-dwn",
-  defaultPageSize = 25
+  defaultPageSize = 25,
+  columns = list(paquete = colDef(cell = function(value) {
+    # Render as a link
+    url <- paste0("https://CRAN.R-project.org/package=", value)
+    htmltools::tags$a(href = url, target = "_blank", as.character(value))
+  }))
 )
 ```
