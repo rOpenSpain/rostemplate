@@ -22,6 +22,17 @@ code a {
 	font-weight: bold;
 }
 
+.template-reference-topic dt code {
+	font-weight: 700;
+	font-family: var(--bs-body-font-family);
+	font-size: var(--bs-body-font-size);
+	color: var(--bs-body-color);
+	text-align: var(--bs-body-text-align);
+	background-color: var(--bs-body-bg);
+	padding: 0;
+	border-radius: 0;
+}
+
 /* Section: Syntax highlighter emacs (como en la web de rOpenSpain) */
 pre {
 	display: block;
