@@ -159,6 +159,7 @@ dwn_w %>%
 
 ```{r datos, echo=FALSE}
 library(reactable)
+library(htmltools)
 
 lastyear <- dwn %>%
   filter(date >= (Sys.Date() - 365)) %>%
@@ -198,10 +199,31 @@ end <-
 names(end) <- c(
   "paquete",
   "en CRAN desde",
-  "última version en CRAN",
-  "media descargas diarias", "ultimo dia",
-  "ultima semana", "ultimo mes", "ultimo año"
+  "Versión en CRAN",
+  "media diaria", "último dia",
+  "última semana", "último mes", "último año"
 )
+
+react_es <- reactableLang(
+  sortLabel = "Ordena {name}",
+  filterPlaceholder = "",
+  filterLabel = "Filtro {name}",
+  searchPlaceholder = "Búsqueda",
+  searchLabel = "Búsqueda",
+  noData = "Sin resultados",
+  pageNext = "Siguiente",
+  pagePrevious = "Anterior",
+  pageNumbers = "{page} de {pages}",
+  pageInfo = "{rowStart}\u2013{rowEnd} de {rows} registros",
+  pageSizeOptions = "Mostrando {rows}",
+  pageNextLabel = "Siguiente página",
+  pagePreviousLabel = "Página anterior",
+  pageNumberLabel = "Página {page}",
+  pageJumpLabel = "Ir a página",
+  pageSizeOptionsLabel = "Registros por página"
+)
+
+options(reactable.language = react_es)
 
 reactable(
   end,
@@ -209,14 +231,47 @@ reactable(
   searchable = TRUE,
   showPageSizeOptions = TRUE,
   striped = TRUE,
+  defaultColDef = colDef(
+    minWidth = 150, vAlign = "center", footerStyle = list(fontWeight = "bold"),
+    footer = function(values) {
+      if (!is.numeric(values)) {
+        return()
+      }
+      prettyNum(sum(values), big.mark = ".", decimal.mark = ",")
+    }
+  ),
   paginationType = "jump",
   elementId = "cran-dwn",
-  defaultPageSize = 25,
-  columns = list(paquete = colDef(cell = function(value) {
-    # Render as a link
-    url <- paste0("https://CRAN.R-project.org/package=", value)
-    htmltools::tags$a(href = url, target = "_blank", as.character(value))
-  }))
+  columns <- list(
+    paquete = colDef(
+      cell = function(value) {
+        # Render as a link
+        url <- paste0("https://CRAN.R-project.org/package=", value)
+        badge <- paste0("https://badges.cranchecks.info/worst/", value, ".svg")
+        link <- htmltools::a(href = url, target = "_blank", as.character(value))
+        div(
+          div(link, style = list(fontWeight = "bold")),
+          div(htmltools::img(src = badge, alt = as.character(value)),
+            style = list(fontSize = "75%")
+          )
+        )
+      },
+      align = "left",
+      sticky = "left",
+      rowHeader = TRUE
+    ),
+    "media diaria" = colDef(
+      format = colFormat(separators = TRUE),
+      footer = function(values) {
+        p <- round(mean(values), 2)
+        prettyNum(p, big.mark = ".", decimal.mark = ",")
+      }
+    ),
+    "último dia" = colDef(format = colFormat(separators = TRUE)),
+    "última semana" = colDef(format = colFormat(separators = TRUE)),
+    "último mes" = colDef(format = colFormat(separators = TRUE)),
+    "último año" = colDef(format = colFormat(separators = TRUE))
+  )
 )
 ```
 
@@ -277,13 +332,30 @@ reactable(
   searchable = TRUE,
   showPageSizeOptions = TRUE,
   striped = TRUE,
+  defaultColDef = colDef(
+    minWidth = 150, vAlign = "center", footerStyle = list(fontWeight = "bold"),
+    footer = function(values) {
+      if (!is.numeric(values)) {
+        return()
+      }
+      prettyNum(sum(values), big.mark = ".", decimal.mark = ",")
+    }
+  ),
   paginationType = "jump",
   elementId = "posit-dwn",
-  defaultPageSize = 25,
-  columns = list(paquete = colDef(cell = function(value) {
-    # Render as a link
-    url <- paste0("https://CRAN.R-project.org/package=", value)
-    htmltools::tags$a(href = url, target = "_blank", as.character(value))
-  }))
+  columns = list(
+    paquete = colDef(
+      cell = function(value) {
+        # Render as a link
+        url <- paste0("https://CRAN.R-project.org/package=", value)
+        link <- htmltools::a(href = url, target = "_blank", as.character(value))
+        div(link, style = list(fontWeight = "bold"))
+      },
+      align = "left",
+      sticky = "left",
+      rowHeader = TRUE
+    ),
+    "Descargas (último mes)" = colDef(format = colFormat(separators = TRUE))
+  )
 )
 ```
