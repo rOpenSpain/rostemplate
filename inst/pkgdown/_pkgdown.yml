@@ -29,6 +29,12 @@ template:
       creator: '@rOpenSpain'
       site: '@rOpenSpain'
       card: summary_large_image
+
+home:
+  links:
+  - text: 'About <img src="ROS-logo.png" alt="rOpenSpain-Logo" height="24" style="display: inline;"> rOpenSpain'
+    href: https://ropenspain.es/
+
 navbar:
   type: light
   bg: light
