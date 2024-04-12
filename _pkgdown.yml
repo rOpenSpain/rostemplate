@@ -1,6 +1,7 @@
 url: 'https://ropenspain.github.io/rostemplate'
 
 template:
+  bootstrap: 5
   package: rostemplate
   opengraph:
     image:

@@ -1,6 +1,6 @@
-#' rOpenSpain paletas de color
+#' Paletas de colores de **rOpenSpain**
 #'
-#' Paletas de colores basadas en el tema de rOpenSpain
+#' Paletas de colores basadas en el tema de **rOpenSpain**.
 #'
 #' @family ros_plot
 #'

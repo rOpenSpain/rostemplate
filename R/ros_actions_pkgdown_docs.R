@@ -1,15 +1,15 @@
 #' Instala una acción GitHub que crea tu sitio en la carpeta `/docs`
 #'
 #' @description
-#' Esta acción GitHub genera tu sitio `pkgdown` en la carpeta `docs` de tu
-#' repositorio.
+#' Esta acción GitHub genera tu sitio \CRANpkg{pkgdown} en la carpeta `docs`
+#' de tu repositorio.
 #'
 #' @details
 #' El resultado final es equivalente a ejecutar [ros_build()] con la única
 #' diferencia de que este comando se ejecuta en GitHub, en lugar de tener que
 #' ser ejecutado por el usuario.
 #'
-#' @seealso [ros_build()], [ros_actions_pkgdown_branch()]
+#' @seealso [ros_build()], [ros_actions_pkgdown_branch()].
 #'
 #' @export
 #'
@@ -34,25 +34,24 @@ ros_actions_pkgdown_docs <-
     }
 
     # Add lines to Rbuildignore
-    linesrbuild <- readLines(rbuildignore)
-    newlinesrbuild <-
-      unique(c(linesrbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))
-    newlinesrbuild <- newlinesrbuild[newlinesrbuild != ""]
-    writeLines(newlinesrbuild, rbuildignore)
+    usethis::write_union(
+      rbuildignore,
+      c(
+        "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$",
+        "^\\.github$", "^pkgdown$"
+      )
+    )
 
     # Check gitignore
-
     gitignore <- file.path(pkg, ".github", ".gitignore")
     if (!file.exists(gitignore)) {
       file.create(gitignore)
     }
+    usethis::write_union(
+      gitignore,
+      c("*.html", "R-version", "depends.Rds")
+    )
 
-    # Add lines to gitignore
-    lines <- readLines(gitignore)
-    newlines <-
-      unique(c(lines, "*.html", "R-version", "depends.Rds"))
-    newlines <- newlines[newlines != ""]
-    writeLines(newlines, gitignore)
 
     # Get action file
     filepath <-

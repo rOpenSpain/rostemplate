@@ -14,15 +14,15 @@ status](https://github.com/ropenspain/rostemplate/workflows/R-CMD-check/badge.sv
 
 <!-- badges: end -->
 
-Esta librería es una plantilla `pkgdown` adaptada al sitio web de
+Esta librería es una plantilla **pkgdown** adaptada al sitio web de
 [rOpenSpain](https://ropenspain.es/).
 
 Esta plantilla es una plantilla privada para uso exclusivo de los
-paquetes de rOpenSpain. Por favor, no la uses para otros paquetes.
+paquetes de **rOpenSpain**. Por favor, no la uses para otros paquetes.
 
 ## Introducción
 
-Este paquete proporciona una plantilla de `pkgdown` adaptada a la
+Este paquete proporciona una plantilla de **pkgdown** adaptada a la
 empleada por la comunidad [rOpenSpain](https://ropenspain.es/), que a su
 vez es una adaptación de la plantilla
 [Universal](https://bootstrapious.com/p/universal-business-e-commerce-template)
@@ -37,6 +37,7 @@ menos las siguientes líneas:
 
 ``` yaml
 template:
+  bootstrap: 5
   package: rostemplate
   # No pongas la siguiente línea!
   default_assets: false
@@ -59,8 +60,8 @@ siguientes líneas:
 Esta sección detalla diferentes opciones para generar un sitio estático
 para el paquete deseado con el formato definido por esta plantilla. El
 resultado de este paso es la generación de un sitio estático compuesto
-de los archivos `html`, `css`, etc. basados en el paquete de R para el
-que se está generando el sitio.
+de los archivos `html`, `css`, etc. basados en el paquete de **R** para
+el que se está generando el sitio.
 
 ### Con GitHub actions - CI
 
@@ -79,10 +80,10 @@ Para configurar esta opción, es necesario disponer en el repositorio de
 una carpeta en la ruta `.github/workflows` y copiar la acción deseada en
 dicha carpeta.
 
-#### Alternativa usando las funciones de `rostemplate`
+#### Alternativa usando las funciones de rostemplate
 
-Aunque el uso del paquete `rostemplate` en si no es necesario con GitHub
-actions, se han desarrollado dos funciones que automatizan esta
+Aunque el uso del paquete **rostemplate** en si no es necesario con
+GitHub actions, se han desarrollado dos funciones que automatizan esta
 configuración de manera automática. Estas funciones simplemente crean el
 directorio `.github/workflows` si no existiera previamente y copian los
 archivos solicitados en la ruta correspondiente. Adicionalmente, crean
@@ -129,7 +130,7 @@ Más información sobre cómo adaptar los *triggers* de la acción
 ### RStudio - manual
 
 El sitio estático se puede generar igualmente desde una sesión local en
-RStudio. Para ello, es necesario instalar este paquete:
+**RStudio**. Para ello, es necesario instalar este paquete:
 
 ``` r
 install.packages("rostemplate",

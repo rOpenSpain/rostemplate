@@ -2,7 +2,7 @@
 % Please edit documentation in R/ros_build.R
 \name{ros_build}
 \alias{ros_build}
-\title{Genera tu sitio \code{pkgdown} en local}
+\title{Genera tu sitio \CRANpkg{pkgdown} en local}
 \usage{
 ros_build(pkg = ".", ...)
 }
@@ -14,8 +14,8 @@ ros_build(pkg = ".", ...)
   \describe{
     \item{\code{examples}}{Run examples?}
     \item{\code{run_dont_run}}{Run examples that are surrounded in \\dontrun?}
-    \item{\code{seed}}{Seed used to initialize so that random examples are
-reproducible.}
+    \item{\code{seed}}{Seed used to initialize random number generation in order to
+make article output reproducible. An integer scalar or \code{NULL} for no seed.}
     \item{\code{lazy}}{If \code{TRUE}, will only rebuild articles and reference pages
 if the source is newer than the destination.}
     \item{\code{override}}{An optional named list used to temporarily override
@@ -44,7 +44,7 @@ so it is available for vignettes.}
   }}
 }
 \description{
-Esta función es un wrapper de \code{\link[pkgdown:build_site]{pkgdown::build_site()}}
+Esta función es un wrapper de \code{\link[pkgdown:build_site]{pkgdown::build_site()}}.
 }
 \details{
 La única diferencia con \code{\link[pkgdown:build_site]{pkgdown::build_site()}} es que te recuerda los pasos
@@ -56,5 +56,5 @@ Al contrario que \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_br
 el usuario.
 }
 \seealso{
-\code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}, \code{\link[pkgdown:build_site]{pkgdown::build_site()}}
+\code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}, \code{\link[pkgdown:build_site]{pkgdown::build_site()}}.
 }

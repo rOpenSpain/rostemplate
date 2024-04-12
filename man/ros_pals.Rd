@@ -6,7 +6,7 @@
 \alias{ros_violet_pal}
 \alias{ros_gradient_pal}
 \alias{ros_qualitative_pal}
-\title{rOpenSpain paletas de color}
+\title{Paletas de colores de \strong{rOpenSpain}}
 \usage{
 ros_green_pal(n = 4, alpha = 0.9, rev = FALSE)
 
@@ -29,7 +29,7 @@ inverso.}
 Paletas de colores
 }
 \description{
-Paletas de colores basadas en el tema de rOpenSpain
+Paletas de colores basadas en el tema de \strong{rOpenSpain}.
 }
 \examples{
 

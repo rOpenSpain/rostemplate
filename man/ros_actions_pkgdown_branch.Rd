@@ -12,8 +12,8 @@ ros_actions_pkgdown_branch(pkg = ".", overwrite = TRUE)
 \item{overwrite}{Sobreescribe la acción si ya se encuntra instalada.}
 }
 \description{
-Instala una acción GitHub que crea el sitio \code{pkgdown} de tu paquete en la
-rama \code{gh-pages} de tu repositorio.
+Instala una acción GitHub que crea el sitio \CRANpkg{pkgdown} de tu paquete
+en la rama \code{gh-pages} de tu repositorio.
 }
 \seealso{
 \code{\link[=ros_build]{ros_build()}}, \code{\link[=ros_actions_pkgdown_docs]{ros_actions_pkgdown_docs()}}

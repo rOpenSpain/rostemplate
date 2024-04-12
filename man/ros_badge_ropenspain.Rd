@@ -2,7 +2,7 @@
 % Please edit documentation in R/ros_badge_ropenspain.R
 \name{ros_badge_ropenspain}
 \alias{ros_badge_ropenspain}
-\title{Añade una insignia de rOpenSpain a tu archivo \code{README}}
+\title{Añade una insignia de \strong{rOpenSpain} a tu archivo \code{README}}
 \usage{
 ros_badge_ropenspain(install = TRUE)
 }
@@ -15,7 +15,7 @@ markdown correspondiente.}
 Insignia en markdown o mensaje con el código markdown a introducir.
 }
 \description{
-Añade una insignia de rOpenSpain que redirige a \url{https://ropenspain.es/}
+Añade una insignia de \strong{rOpenSpain} que redirige a \url{https://ropenspain.es/}
 en tu archivo \code{README}:
 \ifelse{html}{\href{https://ropenspain.es/}{\figure{ropenspain-badge.svg}{options: alt='rOpenSpain'}}}{**rOpenSpain**}
 }

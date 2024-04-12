@@ -1,8 +1,8 @@
-#' Añade una insignia de rOpenSpain a tu archivo `README`
+#' Añade una insignia de **rOpenSpain** a tu archivo `README`
 #'
 #'
 #' @description
-#' Añade una insignia de rOpenSpain que redirige a <https://ropenspain.es/>
+#' Añade una insignia de **rOpenSpain** que redirige a <https://ropenspain.es/>
 #' en tu archivo `README`:
 #'
 #' ```{r, echo=FALSE, results='asis'}
@@ -19,7 +19,7 @@
 #'
 #' @return Insignia en markdown o mensaje con el código markdown a introducir.
 #'
-#' @seealso [`usethis::use_badge()`]
+#' @seealso [usethis::use_badge()]
 #'
 #' @param install TRUE/FALSE. Si es `TRUE` la insignia se instala en el archivo
 #'   `README.md/README.Rmd`. Si es `FALSE` muestra un mensaje con el código

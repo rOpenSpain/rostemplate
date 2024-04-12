@@ -34,3 +34,6 @@ CRAN-SUBMISSION
 cran-comments.md
 .Rdata
 Rplots.pdf
+*.html
+R-version
+depends.Rds

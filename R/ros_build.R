@@ -1,6 +1,6 @@
-#' Genera tu sitio `pkgdown` en local
+#' Genera tu sitio \CRANpkg{pkgdown} en local
 #'
-#' Esta función es un wrapper de [pkgdown::build_site()]
+#' Esta función es un wrapper de [pkgdown::build_site()].
 #'
 #' @details
 #' La única diferencia con [pkgdown::build_site()] es que te recuerda los pasos
@@ -11,7 +11,7 @@
 #' Al contrario que [ros_actions_pkgdown_branch()], esta acción se ejecuta por
 #' el usuario.
 #'
-#' @seealso [ros_actions_pkgdown_branch()], [`pkgdown::build_site()`]
+#' @seealso [ros_actions_pkgdown_branch()], [pkgdown::build_site()].
 #'
 #' @export
 #'
@@ -31,16 +31,19 @@ ros_build <- function(pkg = ".", ...) {
   }
 
   # Add lines to Rbuildignore
-  linesrbuild <- readLines(rbuildignore)
-  newlinesrbuild <-
-    unique(c(linesrbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))
-  newlinesrbuild <- newlinesrbuild[newlinesrbuild != ""]
-  writeLines(newlinesrbuild, rbuildignore)
+  usethis::write_union(
+    rbuildignore,
+    c(
+      "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$",
+      "^\\.github$", "^pkgdown$"
+    )
+  )
+
 
   sel <-
     menu(c("Yes", "No"),
       title = paste0(
-        "Have you included \n\ntemplate:\n  package: ",
+        "Have you included \n\ntemplate:\n  bootstrap: 5\n  package: ",
         "rostemplate\n\nin your _pkgdown.yml file?"
       )
     )

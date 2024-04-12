@@ -1,15 +1,25 @@
-# rostemplate (development version)
+# rostemplate 0.2.0
 
--   Adapt to BS5 with new pkgdown version.
+**Importante!** Configuración mínima en `pkgdowm.yaml` ha de ser:
+
+``` yaml
+template:
+  bootstrap: 5
+  package: rostemplate
+```
+
+Otros cambios:
+
+-   Adapt to BS5 with new **pkgdown** version.
 -   Documentación en castellano
 -   Añade paletas de colores
 
 # rostemplate 0.0.4
 
--   Use `testthat` package.
+-   Use **testthat** package.
 -   Rename core functions.
 -   Update actions.
--   Update logo and favicons, created with `hexSticker`.
+-   Update logo and favicons, created with **hexSticker**.
 
 # rostemplate 0.0.3
 
@@ -18,7 +28,7 @@
 
 # rostemplate 0.0.2
 
--   Move to rOpenSpain
+-   Move to [**rOpenSpain**](https://github.com/rOpenSpain/rostemplate)**.**
 
 # rostemplate 0.0.1
 

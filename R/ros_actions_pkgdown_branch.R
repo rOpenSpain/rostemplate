@@ -2,8 +2,8 @@
 #'
 #' @description
 #'
-#' Instala una acción GitHub que crea el sitio `pkgdown` de tu paquete en la
-#' rama `gh-pages` de tu repositorio.
+#' Instala una acción GitHub que crea el sitio \CRANpkg{pkgdown} de tu paquete
+#' en la rama `gh-pages` de tu repositorio.
 #'
 #' @seealso [ros_build()], [ros_actions_pkgdown_docs()]
 #' @export
@@ -27,24 +27,23 @@ ros_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
   }
 
   # Add lines to Rbuildignore
-  linesrbuild <- readLines(rbuildig)
-  newlinesrbuild <-
-    unique(c(linesrbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))
-  newlinesrbuild <- newlinesrbuild[newlinesrbuild != ""]
-  writeLines(newlinesrbuild, rbuildig)
-
+  usethis::write_union(
+    rbuildig,
+    c(
+      "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$",
+      "^\\.github$", "^pkgdown$"
+    )
+  )
   # Check gitignore
-
   gitignore <- file.path(pkg, ".github", ".gitignore")
   if (!file.exists(gitignore)) {
     file.create(gitignore)
   }
+  usethis::write_union(
+    gitignore,
+    c("*.html", "R-version", "depends.Rds")
+  )
 
-  # Add lines to gitignore
-  lines <- readLines(gitignore)
-  newlines <- unique(c(lines, "*.html", "R-version", "depends.Rds"))
-  newlines <- newlines[newlines != ""]
-  writeLines(newlines, gitignore)
 
   # Get action file
   filepath <-

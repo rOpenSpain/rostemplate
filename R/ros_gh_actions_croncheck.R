@@ -38,11 +38,13 @@ ros_actions_check_cron <-
     }
 
     # Add lines to Rbuildignore
-    linesrbuild <- readLines(rbuildignore)
-    newlinesrbuild <-
-      unique(c(linesrbuild, "^\\.github$", "^docs$", "^_pkgdown\\.yml$"))
-    newlinesrbuild <- newlinesrbuild[newlinesrbuild != ""]
-    writeLines(newlinesrbuild, rbuildignore)
+    usethis::write_union(
+      rbuildignore,
+      c(
+        "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$",
+        "^\\.github$", "^pkgdown$"
+      )
+    )
 
     # Check gitignore
 
@@ -52,11 +54,10 @@ ros_actions_check_cron <-
     }
 
     # Add lines to gitignore
-    lines <- readLines(gitignore)
-    newlines <-
-      unique(c(lines, "*.html", "R-version", "depends.Rds"))
-    newlines <- newlines[newlines != ""]
-    writeLines(newlines, gitignore)
+    usethis::write_union(
+      gitignore,
+      c("*.html", "R-version", "depends.Rds")
+    )
 
     # Get action file
     filepath <-

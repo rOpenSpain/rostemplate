@@ -12,8 +12,8 @@ ros_actions_pkgdown_docs(pkg = ".", overwrite = TRUE)
 \item{overwrite}{Sobreescribe la acción si ya se encuntra instalada.}
 }
 \description{
-Esta acción GitHub genera tu sitio \code{pkgdown} en la carpeta \code{docs} de tu
-repositorio.
+Esta acción GitHub genera tu sitio \CRANpkg{pkgdown} en la carpeta \code{docs}
+de tu repositorio.
 }
 \details{
 El resultado final es equivalente a ejecutar \code{\link[=ros_build]{ros_build()}} con la única
@@ -21,5 +21,5 @@ diferencia de que este comando se ejecuta en GitHub, en lugar de tener que
 ser ejecutado por el usuario.
 }
 \seealso{
-\code{\link[=ros_build]{ros_build()}}, \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}
+\code{\link[=ros_build]{ros_build()}}, \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}.
 }

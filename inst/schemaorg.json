@@ -23,7 +23,7 @@
         "url": "https://r-project.org"
       },
       "runtimePlatform": "R version 4.3.3 (2024-02-29)",
-      "version": "0.1.1.9100"
+      "version": "0.2.0"
     },
     {
       "type": "SoftwareSourceCode",
