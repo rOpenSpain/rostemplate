@@ -75,7 +75,7 @@ references:
     given-names: Maëlle
     orcid: https://orcid.org/0000-0002-2815-0399
   year: '2024'
-  version: '>= 2.0.0'
+  version: '>= 2.0.8'
 - type: software
   title: styler
   abstract: 'styler: Non-Invasive Pretty Printing of R Code'
