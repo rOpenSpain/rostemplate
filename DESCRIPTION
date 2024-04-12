@@ -13,7 +13,7 @@ BugReports: https://github.com/ropenspain/rostemplate/issues
 Depends: 
     R (>= 3.6)
 Imports: 
-    pkgdown (>= 2.0.0),
+    pkgdown (>= 2.0.8),
     styler,
     usethis (>= 2.0.0),
     utils
