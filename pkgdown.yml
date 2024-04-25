@@ -1,5 +1,5 @@
 pandoc: 3.1.11
-pkgdown: 2.0.8
+pkgdown: 2.0.9
 pkgdown_sha: ~
 articles:
   bullets: bullets.html
@@ -9,7 +9,7 @@ articles:
   headings: headings.html
   highlight_test: highlight_test.html
   precompute: precompute.html
-last_built: 2024-04-18T10:42Z
+last_built: 2024-04-25T10:35Z
 urls:
   reference: https://ropenspain.github.io/rostemplate/reference
   article: https://ropenspain.github.io/rostemplate/articles
