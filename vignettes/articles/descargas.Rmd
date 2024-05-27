@@ -184,6 +184,10 @@ last_day <- dwn %>%
 avg_daily <- dwn %>%
   group_by(package) %>%
   summarise(avg = round(mean(count, na.rm = TRUE), 1))
+  
+  avg_daily_all <- dwn %>%
+  summarise(avg = round(mean(count, na.rm = TRUE), 1))
+
 
 # Une todo y da nombres
 end <-
@@ -263,7 +267,7 @@ reactable(
     "media diaria" = colDef(
       format = colFormat(separators = TRUE),
       footer = function(values) {
-        p <- round(mean(values), 2)
+        p <- round(avg_daily_all$avg, 2)
         prettyNum(p, big.mark = ".", decimal.mark = ",")
       }
     ),
@@ -296,21 +300,20 @@ res <- lapply(mypaks, function(x) {
   info <- jsonlite::read_json(tmp)
 
   df_init <- as_tibble(
-    info[c("name", "date_publication", "occurred", "package_size", "version")]
+    info[c("name", "date_publication",  "package_size", "version")]
   )
 
 
   df_prep <- df_init %>%
     mutate(
       date_in_cran = as.Date(date_publication),
-      date_in_ppm = as.Date(occurred),
       psize = paste(round(package_size / (1024^2), 2), "Mb"),
       mdown = as.integer(info$downloads)
     ) %>%
     select(
       package = name,
       lvers = version,
-      date_in_cran, date_in_ppm, , psize, mdown
+      date_in_cran, psize, mdown
     )
 
 
@@ -322,7 +325,7 @@ res_all <- bind_rows(res) %>%
 
 names(res_all) <- c(
   "paquete", "Última version", "en CRAN",
-  "en Posit", "Tamaño", "Descargas (último mes)"
+  "Tamaño", "Descargas (último mes)"
 )
 
 
