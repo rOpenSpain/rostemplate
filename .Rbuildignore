@@ -31,3 +31,4 @@
 ^Rplots\.pdf$
 ^vignettes/precompute\.Rmd\.orig$
 
+^codecov\.yml$

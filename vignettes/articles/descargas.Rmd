@@ -184,8 +184,8 @@ last_day <- dwn %>%
 avg_daily <- dwn %>%
   group_by(package) %>%
   summarise(avg = round(mean(count, na.rm = TRUE), 1))
-  
-  avg_daily_all <- dwn %>%
+
+avg_daily_all <- dwn %>%
   summarise(avg = round(mean(count, na.rm = TRUE), 1))
 
 
@@ -300,7 +300,7 @@ res <- lapply(mypaks, function(x) {
   info <- jsonlite::read_json(tmp)
 
   df_init <- as_tibble(
-    info[c("name", "date_publication",  "package_size", "version")]
+    info[c("name", "date_publication", "package_size", "version")]
   )
 
 
