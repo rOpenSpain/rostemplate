@@ -9,7 +9,8 @@ articles:
   headings: headings.html
   articles/highlight_test: highlight_test.html
   precompute: precompute.html
-last_built: 2024-07-08T13:59Z
+  rostemplate: rostemplate.html
+last_built: 2024-07-08T14:11Z
 urls:
   reference: https://ropenspain.github.io/rostemplate/reference
   article: https://ropenspain.github.io/rostemplate/articles
