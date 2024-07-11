@@ -8,13 +8,13 @@
   "codeRepository": "https://github.com/ropenspain/rostemplate",
   "issueTracker": "https://github.com/ropenspain/rostemplate/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.2.0",
+  "version": "0.2.0.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.4.1 (2024-06-14 ucrt)",
+  "runtimePlatform": "R version 4.4.1 (2024-06-14)",
   "author": [
     {
       "@type": "Person",
@@ -146,7 +146,7 @@
     "SystemRequirements": null
   },
   "isPartOf": "https://ropenspain.es/",
-  "fileSize": "221.292KB",
+  "fileSize": "220.166KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",

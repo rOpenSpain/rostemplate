@@ -1,3 +1,7 @@
+# rostemplate (development version)
+
+-   Añade una nueva paleta de colores `ros_metro_madrid_pal()`.
+
 # rostemplate 0.2.0
 
 **Importante!** Configuración mínima en `pkgdowm.yaml` ha de ser:

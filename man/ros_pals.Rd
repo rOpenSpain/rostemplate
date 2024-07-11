@@ -6,6 +6,7 @@
 \alias{ros_violet_pal}
 \alias{ros_gradient_pal}
 \alias{ros_qualitative_pal}
+\alias{ros_metro_madrid_pal}
 \title{Paletas de colores de \strong{rOpenSpain}}
 \usage{
 ros_green_pal(n = 4, alpha = 0.9, rev = FALSE)
@@ -15,6 +16,8 @@ ros_violet_pal(n = 4, alpha = 0.9, rev = FALSE)
 ros_gradient_pal(n = 4, alpha = 0.9, rev = FALSE)
 
 ros_qualitative_pal(n = 6, alpha = 0.9, rev = FALSE)
+
+ros_metro_madrid_pal(n = 4, alpha = 0.9, rev = FALSE)
 }
 \arguments{
 \item{n}{Número de colores}
@@ -40,5 +43,7 @@ scales::show_col(ros_violet_pal(9))
 scales::show_col(ros_gradient_pal(9))
 
 scales::show_col(ros_qualitative_pal(9))
+
+scales::show_col(ros_metro_madrid_pal(9))
 }
 \concept{ros_plot}

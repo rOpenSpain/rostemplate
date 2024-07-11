@@ -22,8 +22,8 @@
         "name": "R",
         "url": "https://r-project.org"
       },
-      "runtimePlatform": "R version 4.4.1 (2024-06-14 ucrt)",
-      "version": "0.2.0"
+      "runtimePlatform": "R version 4.4.1 (2024-06-14)",
+      "version": "0.2.0.9000"
     },
     {
       "type": "SoftwareSourceCode",
