@@ -80,6 +80,7 @@ references:
     given-names: Salim
     orcid: https://orcid.org/0000-0002-5329-5987
   year: '2024'
+  doi: 10.32614/CRAN.package.pkgdown
   version: '>= 2.0.8'
 - type: software
   title: styler
@@ -96,6 +97,7 @@ references:
     given-names: Lorenz
     email: lorenz.walthert@icloud.com
   year: '2024'
+  doi: 10.32614/CRAN.package.styler
 - type: software
   title: usethis
   abstract: 'usethis: Automate Package and Project Setup'
@@ -120,6 +122,7 @@ references:
     email: andy.teucher@posit.co
     orcid: https://orcid.org/0000-0002-7840-692X
   year: '2024'
+  doi: 10.32614/CRAN.package.usethis
   version: '>= 2.0.0'
 - type: software
   title: utils
@@ -143,6 +146,7 @@ references:
     email: xie@yihui.name
     orcid: https://orcid.org/0000-0003-0645-5666
   year: '2024'
+  doi: 10.32614/CRAN.package.knitr
 - type: software
   title: rmarkdown
   abstract: 'rmarkdown: Dynamic Documents for R'
@@ -186,6 +190,7 @@ references:
     email: rich@posit.co
     orcid: https://orcid.org/0000-0003-3925-190X
   year: '2024'
+  doi: 10.32614/CRAN.package.rmarkdown
 - type: software
   title: scales
   abstract: 'scales: Scale Functions for Visualization'
@@ -203,6 +208,7 @@ references:
   - family-names: Seidel
     given-names: Dana
   year: '2024'
+  doi: 10.32614/CRAN.package.scales
 - type: software
   title: testthat
   abstract: 'testthat: Unit Testing for R'
@@ -214,5 +220,6 @@ references:
     given-names: Hadley
     email: hadley@posit.co
   year: '2024'
+  doi: 10.32614/CRAN.package.testthat
   version: '>= 3.0.0'
 
