@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.4.1 (2024-06-14 ucrt)",
+  "runtimePlatform": "R version 4.4.2 (2024-10-31 ucrt)",
   "author": [
     {
       "@type": "Person",
@@ -146,7 +146,7 @@
     "SystemRequirements": null
   },
   "isPartOf": "https://ropenspain.es/",
-  "fileSize": "222.249KB",
+  "fileSize": "222.258KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
