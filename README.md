@@ -157,3 +157,55 @@ Una vez generado el sitio estático y subido al repositorio en GitHub, el
 último paso es activar el sitio web a través de los *Settings* de
 nuestro repositorio (*Setting\>GitHub Pages*), seleccionando el origen
 deseado (`gh-pages`, `main/docs`, etc.).
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+All contributions to this project are gratefully acknowledged using the
+[`allcontributors` package](https://github.com/ropensci/allcontributors)
+following the [all-contributors](https://allcontributors.org)
+specification. Contributions of any kind are welcome!
+
+### Code
+
+<table>
+<tr>
+<td align="center">
+<a href="https://github.com/dieghernan">
+<img src="https://avatars.githubusercontent.com/u/25656809?v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/rOpenSpain/rostemplate/commits?author=dieghernan">dieghernan</a>
+</td>
+<td align="center">
+<a href="https://github.com/actions-user">
+<img src="https://avatars.githubusercontent.com/u/65916846?v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/rOpenSpain/rostemplate/commits?author=actions-user">actions-user</a>
+</td>
+</tr>
+</table>
+
+### Issues
+
+<table>
+<tr>
+<td align="center">
+<a href="https://github.com/Enchufa2">
+<img src="https://avatars.githubusercontent.com/u/4542928?v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/rOpenSpain/rostemplate/issues?q=is%3Aissue+commenter%3AEnchufa2">Enchufa2</a>
+</td>
+<td align="center">
+<a href="https://github.com/llrs">
+<img src="https://avatars.githubusercontent.com/u/6818218?u=c0a96a5dc32b3035f057ee75a7679680363b1a89&v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/rOpenSpain/rostemplate/issues?q=is%3Aissue+commenter%3Allrs">llrs</a>
+</td>
+</tr>
+</table>
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
