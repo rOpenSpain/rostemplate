@@ -25,10 +25,9 @@ paquetes de **rOpenSpain**. Por favor, no la uses para otros paquetes.
 Este paquete proporciona una plantilla de **pkgdown** adaptada a la
 empleada por la comunidad [rOpenSpain](https://ropenspain.es/), que a su
 vez es una adaptación de la plantilla
-[Universal](https://bootstraptemple.com/p/universal-business-e-commerce-template)
-creada por
-[Bootstrapius](https://bootstraptemple.com/p/universal-business-e-commerce-template)
-con la variación de color **violet**.
+[Universal](https://bootstraptemple.com/universal-business-e-commerce-template)
+creada por [bootstraptemple](https://bootstraptemple.com/) con la
+variación de color **violet**.
 
 ## Configuración previa
 
