@@ -174,7 +174,7 @@ specification. Contributions of any kind are welcome!
 <tr>
 <td align="center">
 <a href="https://github.com/dieghernan">
-<img src="https://avatars.githubusercontent.com/u/25656809?v=4" width="100px;" class="border border-dark rounded-circle" alt=""/>
+<img src="https://avatars.githubusercontent.com/u/25656809?v=4" width="100px;" class="ctb_avatar" alt=""/>
 </a><br>
 <a href="https://github.com/rOpenSpain/rostemplate/commits?author=dieghernan">dieghernan</a>
 </td>
@@ -187,13 +187,13 @@ specification. Contributions of any kind are welcome!
 <tr>
 <td align="center">
 <a href="https://github.com/Enchufa2">
-<img src="https://avatars.githubusercontent.com/u/4542928?v=4" width="100px;" class="border border-dark rounded-circle" alt=""/>
+<img src="https://avatars.githubusercontent.com/u/4542928?v=4" width="100px;" class="ctb_avatar" alt=""/>
 </a><br>
 <a href="https://github.com/rOpenSpain/rostemplate/issues?q=is%3Aissue+commenter%3AEnchufa2">Enchufa2</a>
 </td>
 <td align="center">
 <a href="https://github.com/llrs">
-<img src="https://avatars.githubusercontent.com/u/6818218?u=c0a96a5dc32b3035f057ee75a7679680363b1a89&v=4" width="100px;" class="border border-dark rounded-circle" alt=""/>
+<img src="https://avatars.githubusercontent.com/u/6818218?u=c0a96a5dc32b3035f057ee75a7679680363b1a89&v=4" width="100px;" class="ctb_avatar" alt=""/>
 </a><br>
 <a href="https://github.com/rOpenSpain/rostemplate/issues?q=is%3Aissue+commenter%3Allrs">llrs</a>
 </td>
