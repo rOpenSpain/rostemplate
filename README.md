@@ -166,7 +166,7 @@ deseado (`gh-pages`, `main/docs`, etc.).
 
 All contributions to this project are gratefully acknowledged using the
 [`allcontributors` package](https://github.com/ropensci/allcontributors)
-following the [all-contributors](https://allcontributors.org)
+following the [allcontributors](https://allcontributors.org)
 specification. Contributions of any kind are welcome!
 
 ### Code
@@ -178,12 +178,6 @@ specification. Contributions of any kind are welcome!
 <img src="https://avatars.githubusercontent.com/u/25656809?v=4" width="100px;" alt=""/>
 </a><br>
 <a href="https://github.com/rOpenSpain/rostemplate/commits?author=dieghernan">dieghernan</a>
-</td>
-<td align="center">
-<a href="https://github.com/actions-user">
-<img src="https://avatars.githubusercontent.com/u/65916846?v=4" width="100px;" alt=""/>
-</a><br>
-<a href="https://github.com/rOpenSpain/rostemplate/commits?author=actions-user">actions-user</a>
 </td>
 </tr>
 </table>
