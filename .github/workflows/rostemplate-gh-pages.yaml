@@ -12,7 +12,7 @@ name: rostemplate-gh-pages
 
 jobs:
   rostemplate-gh-pages:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
