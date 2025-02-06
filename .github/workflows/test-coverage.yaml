@@ -30,11 +30,13 @@ jobs:
 
       - name: Test coverage
         run: |
+
           wdir <- file.path(normalizePath(getwd()))
-          cat(wdir)
+          junfile <- file.path(normalizePath(tempdir(), winslash = "/"),"junit.xml")
+
           pkgname <- as.character(unname(read.dcf("DESCRIPTION", "Package")))
 
-          cod <- paste0("testthat::test_package('", pkgname, "', reporter = testthat::JunitReporter$new(file = 'junit.xml'))")
+          cod <- paste0("testthat::test_package('", pkgname, "', reporter = testthat::JunitReporter$new(file = '",junfile, "'))")
 
           cov <- covr::package_coverage(
             quiet = FALSE,
@@ -47,7 +49,9 @@ jobs:
           print(cov)
           covr::to_cobertura(cov)
 
-          findjun <- list.files(recursive = TRUE, pattern = "junit.xml", full.names = TRUE)
+          findjun <- list.files(tempdir(), recursive = TRUE, pattern = "junit.xml", full.names = TRUE)
+          cat(findjun, sep = "\n")
+
           file.copy(findjun, wdir, overwrite = TRUE)
 
           cat(list.files(), sep = "\n")
