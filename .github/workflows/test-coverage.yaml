@@ -53,7 +53,7 @@ jobs:
             install_path = file.path(normalizePath(Sys.getenv("RUNNER_TEMP"),
               winslash = "/"
             ), "package"),
-            code = cod
+            code = junreport
           )
 
           # Show results
