@@ -6,6 +6,7 @@ on:
     tags: ['*']
 
 name: rostemplate-docs
+permissions: write-all
 
 jobs:
   rostemplate-docs:

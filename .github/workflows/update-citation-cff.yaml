@@ -15,6 +15,7 @@ on:
   workflow_dispatch:
 
 name: Update CITATION.cff
+permissions: write-all
 
 jobs:
   update-citation-cff:
