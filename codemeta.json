@@ -163,7 +163,7 @@
       "url": "https://ropenspain.github.io/rostemplate/"
     }
   ],
-  "releaseNotes": "https://github.com/ropenspain/rostemplate/blob/master/NEWS.md",
+  "releaseNotes": "https://github.com/ropenspain/rostemplate/blob/main/NEWS.md",
   "readme": "https://github.com/rOpenSpain/rostemplate/blob/main/README.md",
   "contIntegration": ["https://github.com/ropenspain/rostemplate/actions", "https://app.codecov.io/gh/ropenspain/rostemplate"],
   "developmentStatus": "https://lifecycle.r-lib.org/articles/stages.html#experimental"
