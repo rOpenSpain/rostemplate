@@ -30,8 +30,11 @@ ros_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
   usethis::write_union(
     rbuildig,
     c(
-      "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$",
-      "^\\.github$", "^pkgdown$"
+      "^docs$",
+      "^_pkgdown\\.yml$",
+      "^_pkgdown\\.yaml$",
+      "^\\.github$",
+      "^pkgdown$"
     )
   )
   # Check gitignore
@@ -43,7 +46,6 @@ ros_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
     gitignore,
     c("*.html", "R-version", "depends.Rds")
   )
-
 
   # Get action file
   filepath <-

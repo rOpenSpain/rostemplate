@@ -37,8 +37,11 @@ ros_actions_pkgdown_docs <-
     usethis::write_union(
       rbuildignore,
       c(
-        "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$",
-        "^\\.github$", "^pkgdown$"
+        "^docs$",
+        "^_pkgdown\\.yml$",
+        "^_pkgdown\\.yaml$",
+        "^\\.github$",
+        "^pkgdown$"
       )
     )
 
@@ -51,7 +54,6 @@ ros_actions_pkgdown_docs <-
       gitignore,
       c("*.html", "R-version", "depends.Rds")
     )
-
 
     # Get action file
     filepath <-

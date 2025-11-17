@@ -16,8 +16,14 @@ sp <- ggplot(l) +
   theme_void()
 
 
-sticker(sp,
-  package = "", filename = "man/figures/logo.png",
-  s_height = 1.88, s_width = 1.88, s_x = 1,
-  s_y = 0.75, h_fill = "#aecd47", h_color = NA
+sticker(
+  sp,
+  package = "",
+  filename = "man/figures/logo.png",
+  s_height = 1.88,
+  s_width = 1.88,
+  s_x = 1,
+  s_y = 0.75,
+  h_fill = "#aecd47",
+  h_color = NA
 )

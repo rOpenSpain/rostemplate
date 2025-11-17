@@ -34,14 +34,17 @@ ros_build <- function(pkg = ".", ...) {
   usethis::write_union(
     rbuildignore,
     c(
-      "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$",
-      "^\\.github$", "^pkgdown$"
+      "^docs$",
+      "^_pkgdown\\.yml$",
+      "^_pkgdown\\.yaml$",
+      "^\\.github$",
+      "^pkgdown$"
     )
   )
 
-
   sel <-
-    menu(c("Yes", "No"),
+    menu(
+      c("Yes", "No"),
       title = paste0(
         "Have you included \n\ntemplate:\n  bootstrap: 5\n  package: ",
         "rostemplate\n\nin your _pkgdown.yml file?"

@@ -41,8 +41,11 @@ ros_actions_check_cron <-
     usethis::write_union(
       rbuildignore,
       c(
-        "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$",
-        "^\\.github$", "^pkgdown$"
+        "^docs$",
+        "^_pkgdown\\.yml$",
+        "^_pkgdown\\.yaml$",
+        "^\\.github$",
+        "^pkgdown$"
       )
     )
 

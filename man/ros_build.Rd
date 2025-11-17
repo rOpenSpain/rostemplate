@@ -40,6 +40,8 @@ This enhances reproducibility by ensuring nothing that you have loaded
 in the current process affects the build process.}
     \item{\code{install}}{If \code{TRUE}, will install the package in a temporary library
 so it is available for vignettes.}
+    \item{\code{quiet}}{If \code{FALSE}, generate build messages for build functions that
+take \code{quiet} arguments.}
   }}
 }
 \description{

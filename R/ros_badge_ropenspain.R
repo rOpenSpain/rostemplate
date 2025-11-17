@@ -45,9 +45,13 @@ ros_badge_ropenspain <- function(install = TRUE) {
     # nocov end
   } else {
     message(
-      "Badge URL is ", "\n",
+      "Badge URL is ",
+      "\n",
       "[![rOS-badge](",
-      badge, ")](", href, ")"
+      badge,
+      ")](",
+      href,
+      ")"
     )
   }
 }

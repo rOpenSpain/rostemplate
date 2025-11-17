@@ -98,7 +98,9 @@ ros_qualitative_pal <- function(n = 6, alpha = 0.9, rev = FALSE) {
     colors <- paste(colors, alpha, sep = "")
   }
 
-  if (rev) colors <- rev(colors)
+  if (rev) {
+    colors <- rev(colors)
+  }
 
   if (alpha == 1) {
     return(colors)
@@ -114,21 +116,36 @@ ros_qualitative_pal <- function(n = 6, alpha = 0.9, rev = FALSE) {
 #' @export
 ros_metro_madrid_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   cols <- c(
-    "#39b5e6", "#e0292f", "#ffe114", "#b6551a", "#96bf0d", "#9a9999",
-    "#ff7c00", "#f373b7", "#990d66", "#1b0c80", "#136926", "#999933"
+    "#39b5e6",
+    "#e0292f",
+    "#ffe114",
+    "#b6551a",
+    "#96bf0d",
+    "#9a9999",
+    "#ff7c00",
+    "#f373b7",
+    "#990d66",
+    "#1b0c80",
+    "#136926",
+    "#999933"
   )
 
   if (n > length(cols)) {
     warning(
-      "ros_metropal_color() has ", length(cols),
-      ", less than requested (", n, ")"
+      "ros_metropal_color() has ",
+      length(cols),
+      ", less than requested (",
+      n,
+      ")"
     )
     n <- length(cols)
   }
 
   colors <- cols[seq_len(n)]
 
-  if (rev) colors <- rev(colors)
+  if (rev) {
+    colors <- rev(colors)
+  }
 
   if (alpha == 1) {
     return(colors)

@@ -32,3 +32,5 @@
 ^vignettes/precompute\.Rmd\.orig$
 
 ^codecov\.yml$
+^[.]?air[.]toml$
+^\.vscode$
