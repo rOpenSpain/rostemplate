@@ -25,7 +25,7 @@ preferred-citation:
     email: diego.hernangomezherrero@gmail.com
     orcid: https://orcid.org/0000-0001-8457-4658
     affiliation: rOpenSpain
-  year: '2025'
+  year: '2026'
   url: https://ropenspain.github.io/rostemplate/
   abstract: Plantilla privada para uso exclusivo de los paquetes de rOpenSpain.
 repository-code: https://github.com/ropenspain/rostemplate
@@ -55,8 +55,8 @@ references:
   institution:
     name: R Foundation for Statistical Computing
     address: Vienna, Austria
-  year: '2025'
-  version: '>= 3.6'
+  year: '2026'
+  version: '>= 4.1.0'
 - type: software
   title: pkgdown
   abstract: 'pkgdown: Make Static HTML Documentation for a Package'
@@ -79,7 +79,7 @@ references:
   - family-names: Brüggemann
     given-names: Salim
     orcid: https://orcid.org/0000-0002-5329-5987
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.pkgdown
   version: '>= 2.0.8'
 - type: software
@@ -100,7 +100,7 @@ references:
     given-names: Indrajeet
     email: patilindrajeet.science@gmail.com
     orcid: https://orcid.org/0000-0003-1995-6531
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.styler
 - type: software
   title: usethis
@@ -125,7 +125,7 @@ references:
     given-names: Andy
     email: andy.teucher@posit.co
     orcid: https://orcid.org/0000-0002-7840-692X
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.usethis
   version: '>= 2.0.0'
 - type: software
@@ -137,7 +137,7 @@ references:
   institution:
     name: R Foundation for Statistical Computing
     address: Vienna, Austria
-  year: '2025'
+  year: '2026'
 - type: software
   title: knitr
   abstract: 'knitr: A General-Purpose Package for Dynamic Report Generation in R'
@@ -149,7 +149,7 @@ references:
     given-names: Yihui
     email: xie@yihui.name
     orcid: https://orcid.org/0000-0003-0645-5666
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.knitr
 - type: software
   title: rmarkdown
@@ -193,7 +193,7 @@ references:
     given-names: Richard
     email: rich@posit.co
     orcid: https://orcid.org/0000-0003-3925-190X
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.rmarkdown
 - type: software
   title: scales
@@ -211,7 +211,7 @@ references:
     orcid: https://orcid.org/0000-0002-5147-4711
   - family-names: Seidel
     given-names: Dana
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.scales
 - type: software
   title: testthat
@@ -223,7 +223,7 @@ references:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@posit.co
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.testthat
   version: '>= 3.0.0'
 

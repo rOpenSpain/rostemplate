@@ -8,7 +8,6 @@ on:
     types: [ published ]
   workflow_dispatch:
 
-
 name: rostemplate-gh-pages
 permissions: write-all
 # This will cancel running jobs once a new run is triggered
@@ -33,7 +32,7 @@ jobs:
     - uses: r-lib/actions/setup-r-dependencies@v2
       with:
         extra-packages: |
-          local::. any::pkgdown 
+          local::. any::pkgdown
           ropenspain/rostemplate
         needs: website
 
