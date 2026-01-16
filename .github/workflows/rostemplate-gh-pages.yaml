@@ -35,7 +35,8 @@ jobs:
     - uses: r-lib/actions/setup-r-dependencies@v2
       with:
         extra-packages: |
-          local::. any::pkgdown 
+          local::. 
+          any::pkgdown 
           ropenspain/rostemplate
         needs: website
 
