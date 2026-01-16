@@ -1,3 +1,5 @@
+# nocov start
+
 #' Paletas de colores de **rOpenSpain**
 #'
 #' Paletas de colores basadas en el tema de **rOpenSpain**.
@@ -155,3 +157,5 @@ ros_metro_madrid_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 
   colors
 }
+
+# nocov end

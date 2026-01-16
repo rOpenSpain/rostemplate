@@ -38,8 +38,8 @@ Esta plantilla es una plantilla privada para uso exclusivo de los paquetes de
 Este paquete proporciona una plantilla de **pkgdown** adaptada a la empleada por
 la comunidad [rOpenSpain](https://ropenspain.es/), que a su vez es una
 adaptación de la plantilla
-[Universal](https://templatesherpa.com/universal-business-e-commerce-template)
-creada por [bootstraptemple](https://templatesherpa.com/) con la variación de
+[Universal](https://templatesherpa.com/templates/universal-business-e-commerce)
+creada por [templatesherpa.com](https://templatesherpa.com/) con la variación de
 color **violet**.
 
 ## Configuración previa
@@ -168,4 +168,3 @@ Una vez generado el sitio estático y subido al repositorio en GitHub, el últim
 paso es activar el sitio web a través de los *Settings* de nuestro repositorio
 (*Setting\>GitHub Pages*), seleccionando el origen deseado (`gh-pages`,
 `main/docs`, etc.).
-
