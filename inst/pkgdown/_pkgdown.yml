@@ -1,8 +1,8 @@
 template:
   bootstrap: 5
   bslib:
-    base_font: ["Roboto", "Helvetica Neue", "Arial", "Noto Sans", "Liberation Sans", "sans-serif"]
-    code_font: ["Roboto Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"]
+    base_font: [ "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "Liberation Sans", "sans-serif" ]
+    code_font: [ "Roboto Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace" ]
     fg: "#555555"
     bg: "#ffffff"
     light: "#ffffff"
@@ -24,6 +24,7 @@ template:
     nav-tabs-link-active-color: white
     dropdown-link-hover-bg: white
     dropdown-link-hover-color: "#986dbd"
+
   opengraph:
     twitter:
       creator: '@rOpenSpain'
@@ -41,4 +42,3 @@ navbar:
 figures:
   dpi: 300
   fig.retina: 2
-

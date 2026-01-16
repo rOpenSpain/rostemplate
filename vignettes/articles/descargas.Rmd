@@ -72,7 +72,7 @@ first_date_on_cran <- function(pkg) {
     as.Date()
 
   df <- tibble(package = pkg, date = d, lv = lv)
-  return(df)
+  df
 }
 
 fechas <- lapply(unique(dwn$package), first_date_on_cran) %>%

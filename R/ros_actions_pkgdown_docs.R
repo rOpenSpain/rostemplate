@@ -67,5 +67,5 @@ ros_actions_pkgdown_docs <-
       message("File not updated")
     }
 
-    return(invisible())
+    invisible()
   }

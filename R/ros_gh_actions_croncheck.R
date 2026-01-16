@@ -74,5 +74,5 @@ ros_actions_check_cron <-
       message("File not updated")
     }
 
-    return(invisible())
+    invisible()
   }

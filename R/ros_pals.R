@@ -41,7 +41,7 @@ ros_green_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
     return(ramp(n))
   }
   col_end <- adjustcolor(ramp(n), alpha.f = alpha)
-  return(col_end)
+  col_end
 }
 
 #' @rdname ros_pals
@@ -58,7 +58,7 @@ ros_violet_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
     return(ramp(n))
   }
   col_end <- adjustcolor(ramp(n), alpha.f = alpha)
-  return(col_end)
+  col_end
 }
 
 #' @rdname ros_pals
@@ -75,7 +75,7 @@ ros_gradient_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
     return(ramp(n))
   }
   col_end <- adjustcolor(ramp(n), alpha.f = alpha)
-  return(col_end)
+  col_end
 }
 
 #' @rdname ros_pals
@@ -108,7 +108,7 @@ ros_qualitative_pal <- function(n = 6, alpha = 0.9, rev = FALSE) {
 
   colors <- adjustcolor(colors, alpha.f = alpha)
 
-  return(colors)
+  colors
 }
 
 #' @rdname ros_pals
@@ -153,5 +153,5 @@ ros_metro_madrid_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 
   colors <- adjustcolor(colors, alpha.f = alpha)
 
-  return(colors)
+  colors
 }

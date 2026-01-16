@@ -1,36 +1,24 @@
 Package: rostemplate
 Title: Plantilla 'pkgdown' para los paquetes de 'rOpenSpain'
 Version: 0.2.0.9000
-Authors@R: 
-    person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
-           comment = c(ORCID = "0000-0001-8457-4658", affiliation = "rOpenSpain"))
-Description: Plantilla privada para uso exclusivo de los paquetes de
-    rOpenSpain.
+Authors@R: person("Diego", "Hernangómez", ,
+    "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"), comment
+    = c(ORCID = "0000-0001-8457-4658", affiliation = "rOpenSpain"))
+Description: Plantilla privada para uso exclusivo de los paquetes de rOpenSpain.
 License: MIT + file LICENSE
 URL: https://ropenspain.github.io/rostemplate/,
     https://github.com/ropenspain/rostemplate
 BugReports: https://github.com/ropenspain/rostemplate/issues
-Depends: 
-    R (>= 3.6)
-Imports: 
-    pkgdown (>= 2.0.8),
-    styler,
-    usethis (>= 2.0.0),
-    utils
-Suggests: 
-    knitr,
-    rmarkdown,
-    scales,
-    testthat (>= 3.0.0)
-VignetteBuilder: 
-    knitr
+Depends: R (>= 4.1.0)
+Imports: pkgdown (>= 2.0.8), styler, usethis (>= 2.0.0), utils
+Suggests: knitr, rmarkdown, scales, testthat (>= 3.0.0)
+VignetteBuilder: knitr
 Config/Needs/website: ropenspain/rostemplate, ggplot2, devtools, remotes,
-    pkgsearch, htmltools
+    pkgsearch, htmltools, cranlogs, tidyverse, jsonlite, lubridate, reactable
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: es_ES
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 X-schema.org-isPartOf: https://ropenspain.es/
-X-schema.org-keywords: github-actions, pkgdown, r, r-package, ropenspain,
-    rstats, template, yaml
+X-schema.org-keywords: github-actions, pkgdown, r, r-package, ropenspain, rstats, template, yaml

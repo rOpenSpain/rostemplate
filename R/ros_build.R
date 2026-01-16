@@ -55,6 +55,6 @@ ros_build <- function(pkg = ".", ...) {
   }
 
   pkgdown::build_site(pkg = ".", ...)
-  return(invisible())
+  invisible()
   # nocov end
 }
