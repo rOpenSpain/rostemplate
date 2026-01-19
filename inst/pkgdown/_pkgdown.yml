@@ -1,8 +1,26 @@
 template:
   bootstrap: 5
   bslib:
-    base_font: [ "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "Liberation Sans", "sans-serif" ]
-    code_font: [ "Roboto Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace" ]
+    base_font:
+      [
+        "Roboto",
+        "Helvetica Neue",
+        "Arial",
+        "Noto Sans",
+        "Liberation Sans",
+        "sans-serif",
+      ]
+    code_font:
+      [
+        "Roboto Mono",
+        "SFMono-Regular",
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        "Liberation Mono",
+        "Courier New",
+        "monospace",
+      ]
     fg: "#555555"
     bg: "#ffffff"
     light: "#ffffff"
@@ -27,14 +45,14 @@ template:
 
   opengraph:
     twitter:
-      creator: '@rOpenSpain'
-      site: '@rOpenSpain'
+      creator: "@rOpenSpain"
+      site: "@rOpenSpain"
       card: summary_large_image
 
 home:
   links:
-  - text: 'About <img src="ROS-logo.png" alt="rOpenSpain-Logo" height="24" style="display: inline;"> rOpenSpain'
-    href: https://ropenspain.es/
+    - text: 'About <img src="ROS-logo.png" alt="rOpenSpain-Logo" height="24" style="display: inline;"> rOpenSpain'
+      href: https://ropenspain.es/
 
 navbar:
   type: light

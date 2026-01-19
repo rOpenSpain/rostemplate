@@ -1,4 +1,4 @@
-url: 'https://ropenspain.github.io/rostemplate'
+url: "https://ropenspain.github.io/rostemplate"
 
 template:
   bootstrap: 5
@@ -8,14 +8,14 @@ template:
       src: https://ropenspain.github.io/rostemplate/logo.png
       alt: "ROpenSpain logo"
     twitter:
-      site: '@rOpenSpain'
-      creator: '@dhernangomez'
+      site: "@rOpenSpain"
+      creator: "@dhernangomez"
       card: summary_large_image
 
 reference:
-- title: Todas las funciones
-  contents:
-  - starts_with("ros")
+  - title: Todas las funciones
+    contents:
+      - starts_with("ros")
 
 # Comprueba la configuración local en https://pkgdown.r-lib.org/articles/pkgdown.html#language
 lang: es
