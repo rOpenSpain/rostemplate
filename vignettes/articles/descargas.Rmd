@@ -38,11 +38,11 @@ mypaks <- jsonlite::read_json(
     "https://raw.githubusercontent.com/rOpenSpain/rOpenSpain.",
     "r-universe.dev/master/packages.json"
   )
-) %>%
+) |>
   lapply(function(x) {
     x[["package"]]
-  }) %>%
-  unlist() %>%
+  }) |>
+  unlist() |>
   unique()
 
 # Packages in CRAN
@@ -50,8 +50,8 @@ mypaks <- mypaks[mypaks %in% crandb]
 
 dwn <- lapply(mypaks, cranlogs::cran_downloads, from = "2016-01-01")
 
-dwn <- dwn %>%
-  bind_rows() %>%
+dwn <- dwn |>
+  bind_rows() |>
   as_tibble()
 
 # First date on CRAN
@@ -59,47 +59,47 @@ dwn <- dwn %>%
 first_date_on_cran <- function(pkg) {
   all <- pkgsearch::cran_package_history(pkg)
 
-  d <- all %>%
-    select(`Date/Publication`) %>%
-    slice_head(n = 1) %>%
-    pull() %>%
+  d <- all |>
+    select(`Date/Publication`) |>
+    slice_head(n = 1) |>
+    pull() |>
     as.Date()
 
-  lv <- all %>%
-    select(`Date/Publication`) %>%
-    slice_tail(n = 1) %>%
-    pull() %>%
+  lv <- all |>
+    select(`Date/Publication`) |>
+    slice_tail(n = 1) |>
+    pull() |>
     as.Date()
 
   df <- tibble(package = pkg, date = d, lv = lv)
   df
 }
 
-fechas <- lapply(unique(dwn$package), first_date_on_cran) %>%
+fechas <- lapply(unique(dwn$package), first_date_on_cran) |>
   bind_rows()
 
-dwn <- dwn %>%
-  left_join(fechas %>% select(package, d_cran = date)) %>%
-  filter(date >= d_cran) %>%
-  select(-d_cran) %>%
-  tidyr::replace_na(list(count = 0)) %>%
+dwn <- dwn |>
+  left_join(fechas |> select(package, d_cran = date)) |>
+  filter(date >= d_cran) |>
+  select(-d_cran) |>
+  tidyr::replace_na(list(count = 0)) |>
   filter(date < Sys.Date())
 
 # By month
 library(lubridate)
 
 
-dwn_m <- dwn %>%
-  mutate(m = lubridate::ceiling_date(dwn$date, "month") - 1) %>%
-  group_by(package, m) %>%
+dwn_m <- dwn |>
+  mutate(m = lubridate::ceiling_date(dwn$date, "month") - 1) |>
+  group_by(package, m) |>
   summarise(downloads = sum(count))
 
 
 # factors by first date on CRAN
-fact <- fechas %>%
-  arrange(date) %>%
-  pull(package) %>%
-  unique() %>%
+fact <- fechas |>
+  arrange(date) |>
+  pull(package) |>
+  unique() |>
   rev()
 
 dwn_m$package <- factor(dwn_m$package, levels = unique(fact))
@@ -108,8 +108,8 @@ dwn_m$package <- factor(dwn_m$package, levels = unique(fact))
 ### Histórico de descargas
 
 ```{r echo=FALSE}
-tot <- dwn_m %>%
-  group_by(m) %>%
+tot <- dwn_m |>
+  group_by(m) |>
   summarise(ntot = sum(downloads))
 
 ggplot(dwn_m, aes(x = m)) +
@@ -131,15 +131,15 @@ ggplot(dwn_m, aes(x = m)) +
 ### Descargas semanales
 
 ```{r echo=FALSE}
-dwn_w <- dwn %>%
-  filter(date >= (Sys.Date() - years(1))) %>%
-  mutate(m = lubridate::ceiling_date(date, "week")) %>%
-  group_by(package, m) %>%
+dwn_w <- dwn |>
+  filter(date >= (Sys.Date() - years(1))) |>
+  mutate(m = lubridate::ceiling_date(date, "week")) |>
+  group_by(package, m) |>
   summarise(downloads = sum(count))
 
 dwn_w$package <- factor(dwn_w$package, levels = unique(rev(fact)))
 
-dwn_w %>%
+dwn_w |>
   ggplot(aes(x = m)) +
   geom_area(aes(y = downloads), fill = ros_green_pal(1, alpha = 0.75)) +
   geom_smooth(aes(y = downloads), color = ros_violet_pal(1), se = FALSE) +
@@ -167,43 +167,43 @@ dwn_w %>%
 library(reactable)
 library(htmltools)
 
-lastyear <- dwn %>%
-  filter(date >= (Sys.Date() - 365)) %>%
-  group_by(package) %>%
+lastyear <- dwn |>
+  filter(date >= (Sys.Date() - 365)) |>
+  group_by(package) |>
   summarise(last_year = sum(count, na.rm = TRUE))
 
 
-lastmonth <- dwn %>%
-  filter(date >= (Sys.Date() - months(1))) %>%
-  group_by(package) %>%
+lastmonth <- dwn |>
+  filter(date >= (Sys.Date() - months(1))) |>
+  group_by(package) |>
   summarise(last_month = sum(count, na.rm = TRUE))
 
-lastweek <- dwn %>%
-  filter(date >= (Sys.Date() - 7)) %>%
-  group_by(package) %>%
+lastweek <- dwn |>
+  filter(date >= (Sys.Date() - 7)) |>
+  group_by(package) |>
   summarise(last_week = sum(count, na.rm = TRUE))
 
-last_day <- dwn %>%
-  filter(date == max(dwn$date, na.rm = TRUE) - 1) %>%
+last_day <- dwn |>
+  filter(date == max(dwn$date, na.rm = TRUE) - 1) |>
   select(package, last_day = count)
 
-avg_daily <- dwn %>%
-  group_by(package) %>%
+avg_daily <- dwn |>
+  group_by(package) |>
   summarise(avg = round(mean(count, na.rm = TRUE), 1))
 
-avg_daily_all <- avg_daily %>%
-  ungroup() %>%
+avg_daily_all <- avg_daily |>
+  ungroup() |>
   summarise(avg = round(sum(avg, na.rm = TRUE), 1))
 
 # Une todo y da nombres
 end <-
-  fechas %>%
-  left_join(avg_daily) %>%
-  left_join(last_day) %>%
-  left_join(lastweek) %>%
-  left_join(lastmonth) %>%
-  left_join(lastyear) %>%
-  as_tibble() %>%
+  fechas |>
+  left_join(avg_daily) |>
+  left_join(last_day) |>
+  left_join(lastweek) |>
+  left_join(lastmonth) |>
+  left_join(lastyear) |>
+  as_tibble() |>
   arrange(desc(avg))
 
 names(end) <- c(
@@ -310,12 +310,12 @@ res <- lapply(mypaks, function(x) {
   )
 
 
-  df_prep <- df_init %>%
+  df_prep <- df_init |>
     mutate(
       date_in_cran = as.Date(date_publication),
       psize = paste(round(package_size / (1024^2), 2), "Mb"),
       mdown = as.integer(info$downloads)
-    ) %>%
+    ) |>
     select(
       package = name,
       lvers = version,
@@ -326,7 +326,7 @@ res <- lapply(mypaks, function(x) {
   df_prep
 })
 
-res_all <- bind_rows(res) %>%
+res_all <- bind_rows(res) |>
   arrange(desc(mdown))
 
 names(res_all) <- c(

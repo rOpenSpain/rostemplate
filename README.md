@@ -91,15 +91,12 @@ archivos cuando se compila el paquete:
 
 ``` r
 # Instalación via r-universe
-
 install.packages("rostemplate",
   repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
 )
 
 # Deploy to gh-branch
-
 rostemplate::ros_actions_pkgdown_branch()
-
 
 # Deploy to docs folder
 rostemplate::ros_actions_pkgdown_docs()
@@ -114,9 +111,8 @@ on:
     branches:
       - main
       - master
-      
-# Actualiza cuando se modifica un archivo específico: _pkgdown.yaml
 
+# Actualiza cuando se modifica un archivo específico: _pkgdown.yaml
 on:
   push:
     paths:

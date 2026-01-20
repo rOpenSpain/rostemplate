@@ -11,7 +11,6 @@ knitr::opts_chunk$set(
 
 Test how `pkgdown` highlights **R** code:
 
-
 ```{r eval=FALSE}
 library("knitr")
 library("rmarkdown")
@@ -25,7 +24,7 @@ library(dplyr)
 
 df <- fromJSON("https://raw.githubusercontent.com/dieghernan/Country-Codes-and-International-Organizations/master/outputs/Countrycodesfull.json")
 # Identify Commonwealth acronym
-orgsdb <- read.csv("https://raw.githubusercontent.com/dieghernan/Country-Codes-and-International-Organizations/master/outputs/CountrycodesOrgs.csv") %>%
+orgsdb <- read.csv("https://raw.githubusercontent.com/dieghernan/Country-Codes-and-International-Organizations/master/outputs/CountrycodesOrgs.csv") |>
   distinct(org_id, org_name)
 
 kable(orgsdb[grep("Common", orgsdb$org_name), ], format = "markdown")
@@ -44,39 +43,39 @@ ISO_memcol <- function(df, orgtosearch) {
 df_org <- ISO_memcol(df, "C")
 
 
-df_org %>%
-  count(C) %>%
+df_org |>
+  count(C) |>
   kable(format = "markdown")
 
-df_org %>%
-  filter(!is.na(C)) %>%
+df_org |>
+  filter(!is.na(C)) |>
   select(
     ISO_3166_3,
     NAME.EN,
     C
-  ) %>%
-  head() %>%
+  ) |>
+  head() |>
   kable(format = "markdown")
 
 
 testmap <- ne_countries(50,
   "countries",
   returnclass = "sf"
-) %>%
-  select(ISO_3166_3 = adm0_a3) %>%
+) |>
+  select(ISO_3166_3 = adm0_a3) |>
   full_join(df_org)
 
 # We add also tiny countries
 tiny <- ne_countries(50,
   "tiny_countries",
   returnclass = "sf"
-) %>%
-  select(ISO_3166_3 = adm0_a3) %>%
+) |>
+  select(ISO_3166_3 = adm0_a3) |>
   full_join(df_org)
 
 # Identify dependencies
-ISOCommon <- df_org %>%
-  filter(!is.na(C)) %>%
+ISOCommon <- df_org |>
+  filter(!is.na(C)) |>
   select(
     ISO_3166_3.sov = ISO_3166_3,
     C_sov = C
@@ -96,10 +95,10 @@ bbox <- st_linestring(rbind(
   c(180, -90),
   c(-180, -90),
   c(-180, 90)
-)) %>%
-  st_segmentize(5) %>%
-  st_cast("POLYGON") %>%
-  st_sfc(crs = 4326) %>%
+)) |>
+  st_segmentize(5) |>
+  st_cast("POLYGON") |>
+  st_sfc(crs = 4326) |>
   st_transform(crs = "+proj=robin")
 
 # Plotting
@@ -119,7 +118,7 @@ plot(
 
 plot(
   st_geometry(
-    testmap_rob %>% filter(!is.na(C))
+    testmap_rob |> filter(!is.na(C))
   ),
   col = "#346733", border = "#FFFFFF", lwd = 0.1, add = TRUE
 )
@@ -136,13 +135,13 @@ plot(
 # Dependencies
 plot(
   st_geometry(
-    tiny_rob %>% filter(!is.na(C)) %>% filter(!is.na(ISO_3166_3.sov))
+    tiny_rob |> filter(!is.na(C)) |> filter(!is.na(ISO_3166_3.sov))
   ),
   bg = "#C6DEBD", col = "#000000", pch = 21, add = TRUE
 )
 # Independent
 plot(
-  st_geometry(tiny_rob %>% filter(!is.na(C)) %>% filter(is.na(ISO_3166_3.sov))),
+  st_geometry(tiny_rob |> filter(!is.na(C)) |> filter(is.na(ISO_3166_3.sov))),
   bg = "#346733", col = "#000000", pch = 21, add = TRUE
 )
 plot(bbox,

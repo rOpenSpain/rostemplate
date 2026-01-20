@@ -8,7 +8,7 @@ template:
         "Arial",
         "Noto Sans",
         "Liberation Sans",
-        "sans-serif",
+        "sans-serif"
       ]
     code_font:
       [
@@ -19,7 +19,7 @@ template:
         "Consolas",
         "Liberation Mono",
         "Courier New",
-        "monospace",
+        "monospace"
       ]
     fg: "#555555"
     bg: "#ffffff"
@@ -35,7 +35,10 @@ template:
     link-decoration: none
     border-radius: 0
     navbar-light-toggler-border-color: "#986dbd"
-    navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#986dbd' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
+    navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg
+      xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path
+      stroke='#986dbd' stroke-linecap='round' stroke-miterlimit='10'
+      stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
     navbar-light-active-color: "#986dbd"
     navbar-brand-font-size: 1.75rem
     navbar-light-brand-color: "#555555"
@@ -51,8 +54,9 @@ template:
 
 home:
   links:
-    - text: 'About <img src="ROS-logo.png" alt="rOpenSpain-Logo" height="24" style="display: inline;"> rOpenSpain'
-      href: https://ropenspain.es/
+  - text: 'About <img src="ROS-logo.png" alt="rOpenSpain-Logo" height="24"
+      style="display: inline;"> rOpenSpain'
+    href: https://ropenspain.es/
 
 navbar:
   type: light
