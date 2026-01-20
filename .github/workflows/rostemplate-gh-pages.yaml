@@ -51,3 +51,5 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         Rscript -e 'pkgdown::deploy_to_branch(clean = TRUE, run_dont_run = TRUE, new_process = TRUE)'
+      env:
+        LANG: es_ES.UTF-8
