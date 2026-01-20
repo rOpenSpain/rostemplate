@@ -45,6 +45,7 @@ template:
     nav-tabs-link-active-color: white
     dropdown-link-hover-bg: white
     dropdown-link-hover-color: "#986dbd"
+    enable-negative-margins: true
 
   opengraph:
     twitter:
