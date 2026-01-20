@@ -1,0 +1,16 @@
+pandoc: 3.1.11
+pkgdown: 2.2.0
+pkgdown_sha: ~
+articles:
+  bullets: bullets.html
+  code: code.html
+  articles/descargas: descargas.html
+  articles/ggplot2-example: ggplot2-example.html
+  headings: headings.html
+  articles/highlight_test: highlight_test.html
+  precompute: precompute.html
+  rostemplate: rostemplate.html
+last_built: 2026-01-20T23:16Z
+urls:
+  reference: https://ropenspain.github.io/rostemplate/reference
+  article: https://ropenspain.github.io/rostemplate/articles
