@@ -1,4 +1,4 @@
-# Changelog
+# Registro de cambios
 
 ## rostemplate (development version)
 

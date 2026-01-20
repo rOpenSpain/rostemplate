@@ -1,6 +1,6 @@
-# Articles
+# Artículos
 
-### All vignettes
+### Todos los artículos
 
 - [Bullets](https://ropenspain.github.io/rostemplate/articles/bullets.md):
 - [Code](https://ropenspain.github.io/rostemplate/articles/code.md):

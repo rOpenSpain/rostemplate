@@ -142,7 +142,7 @@ Una vez generado el sitio estático y subido al repositorio en GitHub, el
 nuestro repositorio (*Setting\>GitHub Pages*), seleccionando el origen
 deseado (`gh-pages`, `main/docs`, etc.).
 
-# Package index
+# Índice del paquete
 
 ## Todas las funciones
 
@@ -179,9 +179,9 @@ deseado (`gh-pages`, `main/docs`, etc.).
 
   Paletas de colores de **rOpenSpain**
 
-# Articles
+# Artículos
 
-### All vignettes
+### Todos los artículos
 
 - [Bullets](https://ropenspain.github.io/rostemplate/articles/bullets.md):
 - [Code](https://ropenspain.github.io/rostemplate/articles/code.md):

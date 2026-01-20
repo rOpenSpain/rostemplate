@@ -2,7 +2,7 @@
 
 Plantilla privada para uso exclusivo de los paquetes de rOpenSpain.
 
-## See also
+## Ver también
 
 Useful links:
 
@@ -12,7 +12,7 @@ Useful links:
 
 - Report bugs at <https://github.com/ropenspain/rostemplate/issues>
 
-## Author
+## Autor-a
 
 **Maintainer**: Diego Hernangómez <diego.hernangomezherrero@gmail.com>
 ([ORCID](https://orcid.org/0000-0001-8457-4658)) (rOpenSpain)

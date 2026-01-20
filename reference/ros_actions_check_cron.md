@@ -4,13 +4,13 @@ La acción GitHub creada ejecuta `R CMD check` para tu paquete. La
 configuración por defecto ejecuta el check de manera mensual los dias 1
 de mes a las 08:30 AM.
 
-## Usage
+## Uso
 
 ``` r
 ros_actions_check_cron(pkg = ".", overwrite = TRUE)
 ```
 
-## Arguments
+## Argumentos
 
 - pkg:
 
@@ -20,7 +20,7 @@ ros_actions_check_cron(pkg = ".", overwrite = TRUE)
 
   Sobreescribe la acción si ya se encuntra instalada.
 
-## Details
+## Detalles
 
 Puedes aprender cómo configurar la acción cron en el siguiente link:
 <https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule>.

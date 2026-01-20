@@ -2,7 +2,7 @@
 
 Paletas de colores basadas en el tema de **rOpenSpain**.
 
-## Usage
+## Uso
 
 ``` r
 ros_green_pal(n = 4, alpha = 0.9, rev = FALSE)
@@ -16,7 +16,7 @@ ros_qualitative_pal(n = 6, alpha = 0.9, rev = FALSE)
 ros_metro_madrid_pal(n = 4, alpha = 0.9, rev = FALSE)
 ```
 
-## Arguments
+## Argumentos
 
 - n:
 
@@ -32,11 +32,11 @@ ros_metro_madrid_pal(n = 4, alpha = 0.9, rev = FALSE)
   Valor lógico que indica si los colores se han de mostar en orden
   inverso.
 
-## Value
+## Valor
 
 Paletas de colores
 
-## Examples
+## Ejemplos
 
 ``` r
 scales::show_col(ros_green_pal(9))

@@ -4,13 +4,13 @@ Instala una acción GitHub que crea el sitio
 [pkgdown](https://CRAN.R-project.org/package=pkgdown) de tu paquete en
 la rama `gh-pages` de tu repositorio.
 
-## Usage
+## Uso
 
 ``` r
 ros_actions_pkgdown_branch(pkg = ".", overwrite = TRUE)
 ```
 
-## Arguments
+## Argumentos
 
 - pkg:
 
@@ -20,7 +20,7 @@ ros_actions_pkgdown_branch(pkg = ".", overwrite = TRUE)
 
   Sobreescribe la acción si ya se encuntra instalada.
 
-## See also
+## Ver también
 
 [`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md),
 [`ros_actions_pkgdown_docs()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_docs.md)

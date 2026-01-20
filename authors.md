@@ -1,15 +1,15 @@
-# Authors and Citation
+# Autores y Citas
 
-## Authors
+## Autores
 
-- **[Diego Hernangómez](https://github.com/dieghernan/)**. Author,
-  maintainer, copyright holder.
+- **[Diego Hernangómez](https://github.com/dieghernan/)**. Autor-a,
+  mantenedor-a, titular de los derechos de autor.
   [](https://orcid.org/0000-0001-8457-4658)  
   rOpenSpain
 
-## Citation
+## Cita
 
-Source:
+Código:
 [`inst/CITATION`](https://github.com/ropenspain/rostemplate/blob/main/inst/CITATION)
 
 Hernangómez D (2026). *rostemplate: Plantilla pkgdown para los paquetes

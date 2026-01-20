@@ -3,13 +3,13 @@
 Esta función es un wrapper de
 [`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html).
 
-## Usage
+## Uso
 
 ``` r
 ros_build(pkg = ".", ...)
 ```
 
-## Arguments
+## Argumentos
 
 - pkg:
 
@@ -82,7 +82,7 @@ ros_build(pkg = ".", ...)
   :   If `FALSE`, generate build messages for build functions that take
       `quiet` arguments.
 
-## Details
+## Detalles
 
 La única diferencia con
 [`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html)
@@ -95,7 +95,7 @@ Al contrario que
 [`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md),
 esta acción se ejecuta por el usuario.
 
-## See also
+## Ver también
 
 [`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md),
 [`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html).
