@@ -7,9 +7,13 @@
 #'
 #' @details
 #' Puedes aprender cómo configurar la acción cron en el siguiente link:
-#' <https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule>.
 #'
-#' La configuración por defecto  `'30 08 1 * *'` ("A las 08:30 del
+#' ```{r, echo=FALSE, results='asis'}
+#' cat(paste0("\n<https://docs.github.com/en/free-pro-team@latest/",
+#' "actions/reference/events-that-trigger-workflows#schedule>"))
+#' ```
+#'
+#' La configuración por defecto  `"30 08 1 * *""` ("A las 08:30 del
 #' dia-del-mes 1.").
 #'
 #' Usa [crontab.guru](https://crontab.guru/#30_08_1_*_*) para crear tus propia
