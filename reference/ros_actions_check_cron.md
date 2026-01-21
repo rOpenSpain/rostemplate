@@ -23,9 +23,10 @@ ros_actions_check_cron(pkg = ".", overwrite = TRUE)
 ## Detalles
 
 Puedes aprender cómo configurar la acción cron en el siguiente link:
-<https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule>.
 
-La configuración por defecto `'30 08 1 * *'` ("A las 08:30 del
+<https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule>
+
+La configuración por defecto `"30 08 1 * *""` ("A las 08:30 del
 dia-del-mes 1.").
 
 Usa [crontab.guru](https://crontab.guru/#30_08_1_*_*) para crear tus
