@@ -1,4 +1,4 @@
 *.html
 R-version
 depends.Rds
-r-depends.Rds
+*.rds
