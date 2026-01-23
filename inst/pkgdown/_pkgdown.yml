@@ -30,7 +30,7 @@ template:
     primary: "#986dbd"
     info: "#5a9ddb"
     warning: "#ff9800"
-    danger: "#9C27B0"
+    danger: "#c21f25"
     link-color: "#986dbd"
     link-decoration: none
     border-radius: 0
