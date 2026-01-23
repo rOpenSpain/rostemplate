@@ -11,9 +11,9 @@ paquetes de **rOpenSpain**. Por favor, no la uses para otros paquetes.
 Este paquete proporciona una plantilla de **pkgdown** adaptada a la
 empleada por la comunidad [rOpenSpain](https://ropenspain.es/), que a su
 vez es una adaptación de la plantilla
-[Universal](https://templatesherpa.com/templates/universal-business-e-commerce)
-creada por [templatesherpa.com](https://templatesherpa.com/) con la
-variación de color **violet**.
+[Universal](https://devcows.github.io/hugo-universal-theme/) creada por
+[DevCows](https://github.com/devcows) con la variación de color
+**violet**.
 
 ## Configuración previa
 
@@ -77,7 +77,8 @@ archivos cuando se compila el paquete:
 
 ``` r
 # Instalación via r-universe
-install.packages("rostemplate",
+install.packages(
+  "rostemplate",
   repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
 )
 
@@ -114,7 +115,8 @@ El sitio estático se puede generar igualmente desde una sesión local en
 **RStudio**. Para ello, es necesario instalar este paquete:
 
 ``` r
-install.packages("rostemplate",
+install.packages(
+  "rostemplate",
   repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
 )
 ```

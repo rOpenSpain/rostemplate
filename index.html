@@ -86,7 +86,7 @@
 <div class="section level2">
 <h2 id="introducción">Introducción<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n"></a>
 </h2>
-<p>Este paquete proporciona una plantilla de <strong>pkgdown</strong> adaptada a la empleada por la comunidad <a href="https://ropenspain.es/" class="external-link">rOpenSpain</a>, que a su vez es una adaptación de la plantilla <a href="https://templatesherpa.com/templates/universal-business-e-commerce" class="external-link">Universal</a> creada por <a href="https://templatesherpa.com/" class="external-link">templatesherpa.com</a> con la variación de color <strong>violet</strong>.</p>
+<p>Este paquete proporciona una plantilla de <strong>pkgdown</strong> adaptada a la empleada por la comunidad <a href="https://ropenspain.es/" class="external-link">rOpenSpain</a>, que a su vez es una adaptación de la plantilla <a href="https://devcows.github.io/hugo-universal-theme/" class="external-link">Universal</a> creada por <a href="https://github.com/devcows" class="external-link">DevCows</a> con la variación de color <strong>violet</strong>.</p>
 </div>
 <div class="section level2">
 <h2 id="configuración-previa">Configuración previa<a class="anchor" aria-label="anchor" href="#configuraci%C3%B3n-previa"></a>
@@ -119,7 +119,8 @@
 <p>Aunque el uso del paquete <strong>rostemplate</strong> en si no es necesario con GitHub actions, se han desarrollado dos funciones que automatizan esta configuración de manera automática. Estas funciones simplemente crean el directorio <code>.github/workflows</code> si no existiera previamente y copian los archivos solicitados en la ruta correspondiente. Adicionalmente, crean los archivos <code>.Rbuildignore</code> y <code>.github/.gitignore</code>, que ignoran ciertos archivos cuando se compila el paquete:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Instalación via r-universe</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span>,</span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span></span>
+<span>  <span class="st">"rostemplate"</span>,</span>
 <span>  repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://ropenspain.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span></span>
@@ -149,7 +150,8 @@
 </h3>
 <p>El sitio estático se puede generar igualmente desde una sesión local en <strong>RStudio</strong>. Para ello, es necesario instalar este paquete:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rostemplate"</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span></span>
+<span>  <span class="st">"rostemplate"</span>,</span>
 <span>  repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://ropenspain.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p>Una vez instalado, se ha de ejecutar este script:</p>
@@ -254,7 +256,8 @@
         <p>Sitio creado con <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
       </div>
       <div class="col-md offset-md-4 text-center text-md-start lh-base">
-        <p>Template <a href="https://github.com/ropenspain/rostemplate/" class="external-link">rostemplate</a> by <a href="https://github.com/dieghernan/" class="external-link">dieghernan</a>, based on <a href="https://templatesherpa.com/templates/universal-business-e-commerce" class="external-link">templatesherpa.com</a>.
+        <p>Template <a href="https://github.com/ropenspain/rostemplate/" class="external-link">rostemplate</a> by <a href="https://github.com/dieghernan/" class="external-link">dieghernan</a>, based on <a href="hugo-universal-theme">Universal
+            Theme for Hugo</a>.
         </p>
       </div>
     </div>
