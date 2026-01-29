@@ -1,58 +1,68 @@
+navbar:
+  type: light
+  bg: light
+
 template:
   bootstrap: 5
-  bslib:
-    base_font:
-      [
-        "Roboto",
-        "Helvetica Neue",
-        "Arial",
-        "Noto Sans",
-        "Liberation Sans",
-        "sans-serif"
-      ]
-    code_font:
-      [
-        "Roboto Mono",
-        "SFMono-Regular",
-        "Menlo",
-        "Monaco",
-        "Consolas",
-        "Liberation Mono",
-        "Courier New",
-        "monospace"
-      ]
-    fg: "#555555"
-    bg: "#ffffff"
-    light: "#ffffff"
-    headings-color: "#333333"
-    headings-font-weight: bold
-    pkgdown-nav-height: 62px
-    primary: "#986dbd"
-    info: "#5a9ddb"
-    warning: "#ff9800"
-    danger: "#c21f25"
-    link-color: "#986dbd"
-    link-decoration: none
-    border-radius: 0
-    navbar-light-toggler-border-color: "#986dbd"
-    navbar-light-toggler-icon-bg: >
-      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0
-      0 30 30'><path stroke='#986dbd' stroke-linecap='round'
-      stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4
-      23h22'/></svg>")
-    navbar-light-active-color: "#986dbd"
-    navbar-brand-font-size: 1.75rem
-    navbar-light-brand-color: "#555555"
-    nav-tabs-link-active-color: white
-    dropdown-link-hover-bg: white
-    dropdown-link-hover-color: "#986dbd"
-    enable-negative-margins: true
-
+  light-switch: true
   opengraph:
     twitter:
       creator: "@rOpenSpain"
       site: "@rOpenSpain"
       card: summary_large_image
+  bslib:
+    brand:
+      color:
+        palette:
+          ros-green: "#97bf13"
+          ros-violet: "#986dbd"
+          ros-violet-dark: "#653d87"
+          ros-gray: "#555555"
+          ros-orange: "#fd7e14"
+        primary: ros-violet
+        success: ros-green
+        warning: ros-orange
+        foreground: ros-gray
+      typography:
+        fonts:
+        - family: Roboto
+          source: google
+          weight: [300, 400, 800]
+        base: Roboto
+        headings:
+          family: Roboto
+          weight: 800
+        link:
+          color: ros-violet
+          decoration: "none"
+      defaults:
+        bootstrap:
+          defaults:
+            navbar-light-bg: "#ffffff"
+            enable-negative-margins: true
+
+# headings-font-weight: bold
+# pkgdown-nav-height: 62px
+# primary: "#986dbd"
+# info: "#5a9ddb"
+# warning: "#ff9800"
+# danger: "#c21f25"
+# link-color: "#986dbd"
+# link-decoration: none
+# border-radius: 0
+# navbar-light-toggler-border-color: "#986dbd"
+# navbar-light-toggler-icon-bg: >
+#   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0
+#               0 30 30'><path stroke='#986dbd' stroke-linecap='round'
+#               stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4
+#               23h22'/></svg>")
+# navbar-light-active-color: "#986dbd"
+# navbar-brand-font-size: 1.75rem
+# navbar-light-brand-color: "#555555"
+# nav-tabs-link-active-color: white
+# dropdown-link-hover-bg: white
+# dropdown-link-hover-color: "#986dbd"
+
 
 home:
   links:
@@ -60,10 +70,6 @@ home:
       About <img src="ROS-logo.png" alt="rOpenSpain-Logo" height="24"
       style="display: inline;"> rOpenSpain
     href: https://ropenspain.es/
-
-navbar:
-  type: light
-  bg: light
 
 figures:
   dpi: 300

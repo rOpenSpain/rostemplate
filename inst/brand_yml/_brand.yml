@@ -1,0 +1,42 @@
+meta:
+  name: rostemplate
+  description: >
+    Private template for use by core rOpenSpain packages.
+  links:
+    home: https://ropenspain.es/
+    github: https://github.com/rOpenSpain
+
+logo:
+  images:
+    header: ./assets/logo.png
+  medium: header
+
+color:
+  palette:
+    ros-green: "#97bf13"
+    ros-violet: "#986dbd"
+    ros-violet-dark: "#653d87"
+    ros-gray: "#555555"
+    ros-orange: "#fd7e14"
+  primary: ros-violet
+  success: ros-green
+  warning: ros-orange
+  foreground: ros-gray
+
+typography:
+  fonts:
+  - family: Roboto
+    source: google
+    weight: [300, 400, 800]
+  base: Roboto
+  headings:
+    family: Roboto
+    weight: 800
+  link:
+    color: ros-violet
+    decoration: "none"
+
+defaults:
+  bootstrap:
+    defaults:
+      navbar-light-bg: "#ffffff"
