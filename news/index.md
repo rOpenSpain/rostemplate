@@ -4,6 +4,7 @@
 
 - Añade una nueva paleta de colores
   [`ros_metro_madrid_pal()`](https://ropenspain.github.io/rostemplate/reference/ros_pals.md).
+- Nuevo modo oscuro.
 
 ## rostemplate 0.2.0
 
