@@ -18,6 +18,7 @@ color:
     ros-violet-dark: "#653d87"
     ros-gray: "#555555"
     ros-orange: "#fd7e14"
+    ros-black: "#333333"
   primary: ros-violet
   success: ros-green
   warning: ros-orange
@@ -27,16 +28,50 @@ typography:
   fonts:
   - family: Roboto
     source: google
-    weight: [300, 400, 800]
   base: Roboto
   headings:
     family: Roboto
-    weight: 800
+    weight: 900
+    color: ros-black
   link:
     color: ros-violet
     decoration: "none"
 
 defaults:
+  # For pkgdown see
+  # https://github.com/r-lib/pkgdown/blob/main/inst/BS5/assets/pkgdown.scss
   bootstrap:
     defaults:
+      # Overall
+      enable-negative-margins: true
+      enable-rounded: false
+      link-decoration: none
+      font-size-base: 0.875rem
+      # Navbar
+      pkgdown-nav-height: 62px
       navbar-light-bg: "#ffffff"
+      navbar-light-color: "#555555" # pkgdown overrides this
+      navbar-dark-bg: "#333"
+      navbar-dark-color: "#ffffff" # pkgdown overrides this
+      navbar-brand-font-size: 1.75rem
+      navbar-light-toggler-border-color: "#986dbd"
+      navbar-light-toggler-icon-bg: >
+        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
+        viewBox='0 0 30 30'><path stroke='#986dbd' stroke-linecap='round'
+        stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4
+        23h22'/></svg>")
+      navbar-dark-toggler-border-color: "#fff"
+      navbar-dark-toggler-icon-bg: >
+        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
+        viewBox='0 0 30 30'><path stroke='#ffffff' stroke-linecap='round'
+        stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4
+        23h22'/></svg>")
+      navbar-light-active-color: "#986dbd"
+      navbar-light-brand-color: "#555555"
+      nav-tabs-link-active-color: white
+      nav-link-hover-color: "#555555"
+      dropdown-link-hover-bg: "#cab3dd"
+      dropdown-link-hover-color: "#555555"
+      # Footer
+      pkgdown-footer-color: "#555555"
+      pkgdown-footer-bg: "#999999"
