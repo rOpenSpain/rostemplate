@@ -1,6 +1,7 @@
 # rostemplate (development version)
 
 - Añade una nueva paleta de colores `ros_metro_madrid_pal()`.
+- Nuevo modo oscuro.
 
 # rostemplate 0.2.0
 
