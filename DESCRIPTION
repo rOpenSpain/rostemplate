@@ -13,6 +13,7 @@ BugReports: https://github.com/ropenspain/rostemplate/issues
 Depends: 
     R (>= 4.1.0)
 Imports: 
+    brand.yml,
     pkgdown (>= 2.0.8),
     styler,
     usethis (>= 2.0.0),

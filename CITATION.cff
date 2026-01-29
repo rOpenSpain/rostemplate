@@ -58,6 +58,19 @@ references:
   year: '2026'
   version: '>= 4.1.0'
 - type: software
+  title: brand.yml
+  abstract: 'brand.yml: Unified Branding with a Simple YAML File'
+  notes: Imports
+  url: https://posit-dev.github.io/brand-yml/pkg/r/
+  repository: https://CRAN.R-project.org/package=brand.yml
+  authors:
+  - family-names: Aden-Buie
+    given-names: Garrick
+    email: garrick@posit.co
+    orcid: https://orcid.org/0000-0002-7111-0077
+  year: '2026'
+  doi: 10.32614/CRAN.package.brand.yml
+- type: software
   title: pkgdown
   abstract: 'pkgdown: Make Static HTML Documentation for a Package'
   notes: Imports
