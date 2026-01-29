@@ -65,7 +65,10 @@ template:
             nav-link-hover-color: "#555555"
             dropdown-link-hover-bg: "#cab3dd"
             dropdown-link-hover-color: "#555555"
-            # pkgdown-nav-height: 62px
+            
+
+
+# pkgdown-nav-height: 62px
 
 home:
   links:
