@@ -10,7 +10,7 @@
 ## Cita
 
 Código:
-[`inst/CITATION`](https://github.com/ropenspain/rostemplate/blob/dark-mode/inst/CITATION)
+[`inst/CITATION`](https://github.com/ropenspain/rostemplate/blob/main/inst/CITATION)
 
 Hernangómez D (2026). *rostemplate: Plantilla pkgdown para los paquetes
 de rOpenSpain*. <https://ropenspain.github.io/rostemplate/>.
