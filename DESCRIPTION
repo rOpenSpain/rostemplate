@@ -14,7 +14,7 @@ Depends:
     R (>= 4.1.0)
 Imports: 
     pkgdown (>= 2.0.8),
-    brand.yml
+    brand.yml,
     styler,
     usethis (>= 2.0.0),
     utils
