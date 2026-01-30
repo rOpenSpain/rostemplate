@@ -37,3 +37,4 @@
 ^jarl\.toml$
 /.quarto/
 [.]quarto_ipynb$
+^vignettes/test-precompute\.Rmd\.orig$

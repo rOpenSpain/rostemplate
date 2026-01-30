@@ -11,6 +11,7 @@ knitr::opts_chunk$set(
 
 Test how `pkgdown` highlights **R** code:
 
+
 ```{r eval=FALSE}
 library("knitr")
 library("rmarkdown")
@@ -30,15 +31,16 @@ orgsdb <- read.csv("https://raw.githubusercontent.com/dieghernan/Country-Codes-a
 kable(orgsdb[grep("Common", orgsdb$org_name), ], format = "markdown")
 
 
-ISO_memcol <- function(df, orgtosearch) {
+ISO_memcol <- function(df,
+                       orgtosearch) {
   ind <- match(orgtosearch, unlist(df[1, "org_id"]))
-  or <- lapply(seq_len(nrow(df)), function(x) {
+  or <- lapply(1:nrow(df), function(x) {
     unlist(df[x, "org_member"])[ind]
   })
-  or <- data.frame(matrix(unlist(or)), stringsAsFactors = FALSE)
+  or <- data.frame(matrix(unlist(or)), stringsAsFactors = F)
   names(or) <- orgtosearch
-  df2 <- as.data.frame(cbind(df, or, stringsAsFactors = FALSE))
-  df2
+  df2 <- as.data.frame(cbind(df, or, stringsAsFactors = F))
+  return(df2)
 }
 df_org <- ISO_memcol(df, "C")
 
@@ -113,14 +115,16 @@ plot(
   col = "#B9B9B9",
   border = "#FFFFFF",
   lwd = 0.1,
-  add = TRUE
+  add = T
 )
 
 plot(
-  st_geometry(
-    testmap_rob |> filter(!is.na(C))
-  ),
-  col = "#346733", border = "#FFFFFF", lwd = 0.1, add = TRUE
+  st_geometry(testmap_rob |>
+    filter(!is.na(C))),
+  col = "#346733",
+  border = "#FFFFFF",
+  lwd = 0.1,
+  add = T
 )
 
 # By last, add tiny countries
@@ -129,25 +133,33 @@ plot(
   st_geometry(tiny_rob),
   col = "#000000",
   bg = "#B9B9B9",
-  add = TRUE,
+  add = T,
   pch = 21
 )
 # Dependencies
 plot(
-  st_geometry(
-    tiny_rob |> filter(!is.na(C)) |> filter(!is.na(ISO_3166_3.sov))
-  ),
-  bg = "#C6DEBD", col = "#000000", pch = 21, add = TRUE
+  st_geometry(tiny_rob |>
+    filter(!is.na(C)) |>
+    filter(!is.na(ISO_3166_3.sov))),
+  bg = "#C6DEBD",
+  col = "#000000",
+  pch = 21,
+  add = T
 )
 # Independent
 plot(
-  st_geometry(tiny_rob |> filter(!is.na(C)) |> filter(is.na(ISO_3166_3.sov))),
-  bg = "#346733", col = "#000000", pch = 21, add = TRUE
+  st_geometry(tiny_rob |>
+    filter(!is.na(C)) |>
+    filter(is.na(ISO_3166_3.sov))),
+  bg = "#346733",
+  col = "#000000",
+  pch = 21,
+  add = T
 )
 plot(bbox,
   col = NA,
   border = "#AAAAAA",
   lwd = 1.5,
-  add = TRUE
+  add = T
 )
 ```

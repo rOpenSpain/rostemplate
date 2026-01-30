@@ -24,3 +24,25 @@ lang: es
 authors:
   Diego Hernangómez:
     href: https://github.com/dieghernan/
+
+articles:
+- title: Artículos
+  navbar: Sobre rOpenSpain
+  contents:
+  - articles/descargas
+  
+- title: Test Menu
+  navbar: Test Menu
+  desc: >
+    Comprueba menú.
+  contents:
+  - starts_with("menu")
+  - starts_with("articles/menu")
+
+- title: Test
+  desc: >
+    Artículos de test para <a href="https://CRAN.R-project.org/package=pkgdown"
+    class="external-link"><span class="pkg">pkgdown</span></a>.
+  contents:
+  - starts_with("test")
+  - starts_with("articles/test")
