@@ -2,15 +2,20 @@ pandoc: 3.1.11
 pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
-  bullets: bullets.html
-  code: code.html
   articles/descargas: descargas.html
-  articles/ggplot2-example: ggplot2-example.html
-  headings: headings.html
-  articles/highlight_test: highlight_test.html
-  precompute: precompute.html
+  menu/ggplot2: menu/ggplot2.html
+  menu/highlight: menu/highlight.html
+  test/long-toc: test/long-toc.html
+  test/quarto-features: test/quarto-features.html
+  test/reactable: test/reactable.html
+  test/rendering: test/rendering.html
   rostemplate: rostemplate.html
-last_built: 2026-01-30T20:31Z
+  test/short: test/short.html
+  test/test-bullets: test/test-bullets.html
+  test-precompute: test-precompute.html
+  test/test-quarto: test/test-quarto.html
+  test/widgets: test/widgets.html
+last_built: 2026-01-30T22:26Z
 urls:
   reference: https://ropenspain.github.io/rostemplate/reference
   article: https://ropenspain.github.io/rostemplate/articles
