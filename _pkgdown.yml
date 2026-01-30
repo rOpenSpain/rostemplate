@@ -27,9 +27,17 @@ authors:
 
 articles:
 - title: Artículos
-  navbar:
+  navbar: Sobre rOpenSpain
   contents:
   - articles/descargas
+  
+- title: Test Menu
+  navbar: Test Menu
+  desc: >
+    Comprueba menú.
+  contents:
+  - starts_with("menu")
+  - starts_with("articles/menu")
 
 - title: Test
   desc: >
