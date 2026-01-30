@@ -20,14 +20,16 @@ Imports:
     utils
 Suggests: 
     knitr,
+    quarto,
     rmarkdown,
     scales,
     testthat (>= 3.0.0)
 VignetteBuilder: 
-    knitr
+    knitr,
+    quarto
 Config/Needs/website: ropenspain/rostemplate, ggplot2, devtools, remotes,
     pkgsearch, htmltools, cranlogs, tidyverse, jsonlite, lubridate,
-    reactable
+    reactable, diffviewer
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: es_ES
