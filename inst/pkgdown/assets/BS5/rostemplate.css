@@ -326,7 +326,7 @@ img.logo {
 /* Hack to reduce color in dark mode */
 [data-bs-theme="dark"] img.r-plt,
 [data-bs-theme="dark"] pre .r-plt.img img {
-	filter: grayscale(33%) !important;
+	filter: grayscale(40%) !important;
 }
 
 blockquote {
