@@ -51,7 +51,7 @@ template:
             navbar-light-bg: "#ffffff"
             navbar-light-color: "#555555" # pkgdown overrides this
             navbar-dark-bg: "#333"
-            navbar-dark-color: "#ffffff" # pkgdown overrides this
+            navbar-dark-color: "#cccccc" # pkgdown overrides this
             navbar-brand-font-size: 1.75rem
             navbar-light-toggler-border-color: "#986dbd"
             navbar-light-toggler-icon-bg: >
@@ -59,15 +59,15 @@ template:
               viewBox='0 0 30 30'><path stroke='#986dbd' stroke-linecap='round'
               stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4
               23h22'/></svg>")
-            navbar-dark-toggler-border-color: "#fff"
+            navbar-dark-toggler-border-color: "#cccccc"
             navbar-dark-toggler-icon-bg: >
               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 30 30'><path stroke='#ffffff' stroke-linecap='round'
+              viewBox='0 0 30 30'><path stroke='#cccccc' stroke-linecap='round'
               stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4
               23h22'/></svg>")
             navbar-light-active-color: "#986dbd"
             navbar-light-brand-color: "#555555"
-            nav-tabs-link-active-color: white
+            nav-tabs-link-active-color: "#ffffff"
             nav-link-hover-color: "#555555"
             dropdown-link-hover-bg: "#cab3dd"
             dropdown-link-hover-color: "#555555"
