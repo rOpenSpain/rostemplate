@@ -89,6 +89,10 @@ main img {
 	box-shadow: 0 0 0 0.25rem rgba(152, 109, 189, 0.3);
 }
 
+#navbar .dropdown-divider {
+    border: none;
+}
+
 #navbar,
 #navbar .nav-link {
 	text-transform: uppercase;
