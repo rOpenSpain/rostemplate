@@ -68,6 +68,10 @@ main img {
 	padding-right: 1rem;
 }
 
+#navbar .dropdown-menu .dropdown-header {
+  	color: var(--bs-navbar-brand-color);
+}
+
 .navbar .navbar-brand:hover,
 .navbar .navbar-brand:focus {
 	color: var(--bs-navbar-brand-color);
