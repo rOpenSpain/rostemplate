@@ -336,6 +336,12 @@ h6 {
 	background-color: var(--brand-ros_violet);
 }
 
+@media (max-width: 575.98px) {
+	.btn-copy-ex {
+		right: 5px;
+	}
+}
+
 img.logo {
 	display: none;
 }
