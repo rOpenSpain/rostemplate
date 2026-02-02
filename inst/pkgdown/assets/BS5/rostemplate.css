@@ -427,12 +427,21 @@ code {
 }
 
 @media (max-width: 575.98px) {
+	/* See https://github.com/r-lib/pkgdown/pull/2970 */
+
 	div > pre {
+		border-radius: 0;
+	}
+
+	:not(li, blockquote) > div > pre {
 		margin-left: calc(var(--bs-gutter-x) * -0.5);
 		margin-right: calc(var(--bs-gutter-x) * -0.5);
-		border-radius: 0;
 		padding-left: 1rem;
 		padding-right: 1rem;
+	}
+
+	:not(li, blockquote) > div > .btn-copy-ex {
+		right: calc(var(--bs-gutter-x) * -0.5 + 5px);
 	}
 }
 
