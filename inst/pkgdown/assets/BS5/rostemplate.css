@@ -121,16 +121,37 @@ main img {
 	box-shadow: 0 0 0 0.25rem rgba(152, 109, 189, 0.3);
 }
 
+/* Show colors */
+
+#navbar .nav-link.dropdown-toggle.show {
+	background-color: #cab3dd;
+}
+
 /* Hovers */
 /* Normal */
 #navbar .nav-link:hover,
-#navbar .nav-link:focus {
+#navbar .nav-link:focus,
+#navbar .nav-item .nav-link:hover {
 	color: var(--brand-ros_gray);
 }
 
 #navbar .nav-item > .nav-link:hover,
 #navbar .nav-item > .nav-link:focus {
 	background-color: #cab3dd;
+}
+
+/* Fill also the nav-item in all cases except inline form-inline */
+#navbar .nav-item:not(:has(> :first-child.form-inline)):hover {
+	background-color: #cab3dd;
+}
+
+@media ((max-width: 992px)) {
+	#navbar .nav-item.dropdown:has(.show):hover {
+		background-color: inherit;
+	}
+	#navbar .nav-item.dropdown .nav-item.show {
+		background-color: #cab3dd;
+	}
 }
 
 @media ((min-width: 992px)) {
@@ -153,10 +174,27 @@ main img {
 
 /* Active */
 
-#navbar .nav-item.active .nav-link {
+#navbar .nav-item.active .nav-link,
+#navbar .nav-item.active .nav-link:hover,
+#navbar .nav-item.active .nav-link:focus {
 	background-color: var(--brand-ros_violet);
 	color: var(--bs-white);
 	text-decoration: none !important;
+}
+
+#navbar .nav-item.active,
+#navbar .nav-item.active:hover,
+#navbar .nav-item.active:not(:has(> :first-child.form-inline)):hover {
+	background-color: var(--brand-ros_violet);
+}
+
+@media ((max-width: 992px)) {
+	#navbar .nav-item.dropdown.active:has(.show):hover {
+		background-color: inherit;
+	}
+	#navbar .nav-item.dropdown.active .nav-item.show {
+		background-color: var(--brand-ros_violet);
+	}
 }
 
 @media ((min-width: 992px)) {
