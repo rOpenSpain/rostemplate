@@ -435,6 +435,14 @@ code {
 	}
 }
 
+/* Clipboard button */
+
+.btn-copy-ex,
+.btn-copy-ex:hover,
+.btn-copy-ex:focus {
+	color: var(--bs-white);
+}
+
 /* Section: Syntax highlighter emacs (como en la web de rOpenSpain) */
 pre {
 	display: block;
