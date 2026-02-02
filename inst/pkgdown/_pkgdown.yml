@@ -21,6 +21,7 @@ template:
           ros-orange: "#fd7e14"
           ros-black: "#333333"
           ros-light: "#cccccc"
+          ros-pre-bg: "#f5f5f5"
         primary: ros-violet
         success: ros-green
         warning: ros-orange

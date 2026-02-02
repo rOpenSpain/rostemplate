@@ -18,6 +18,7 @@
 	/* Branding */
 	--brand-ros_light: #555555;
 	--brand-ros_gray: #ffffff;
+	--brand-ros_pre_bg: #444;
 }
 [data-bs-theme="dark"] {
 	.dropdown-menu {
@@ -440,7 +441,7 @@ code {
 .btn-copy-ex,
 .btn-copy-ex:hover,
 .btn-copy-ex:focus {
-	color: var(--bs-white);
+	color: var(--brand-ros_pre_bg);
 }
 
 /* Section: Syntax highlighter emacs (como en la web de rOpenSpain) */
@@ -453,7 +454,7 @@ pre {
 	color: #333;
 	word-break: break-all;
 	word-wrap: break-word;
-	background-color: #f5f5f5;
+	background-color: var(--brand-ros_pre_bg);
 	border: 1px solid #ccc;
 	border-radius: 4px;
 }
@@ -657,7 +658,6 @@ pre code span.wa
 [data-bs-theme="dark"] {
 	pre {
 		color: var(--bs-body-color);
-		background-color: #444;
 		border: 1px solid #555;
 	}
 
