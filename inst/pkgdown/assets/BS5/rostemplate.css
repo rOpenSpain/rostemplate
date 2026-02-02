@@ -335,13 +335,6 @@ h6 {
 	color: var(--bs-white);
 	background-color: var(--brand-ros_violet);
 }
-
-@media (max-width: 575.98px) {
-	.btn-copy-ex {
-		right: 5px;
-	}
-}
-
 img.logo {
 	display: none;
 }
@@ -430,6 +423,16 @@ code {
 	font-size: 90%;
 	border-radius: 4px;
 	word-wrap: break-word;
+}
+
+@media (max-width: 575.98px) {
+	div > pre {
+		margin-left: calc(var(--bs-gutter-x) * -0.5);
+		margin-right: calc(var(--bs-gutter-x) * -0.5);
+		border-radius: 0;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 
 /* Section: Syntax highlighter emacs (como en la web de rOpenSpain) */
