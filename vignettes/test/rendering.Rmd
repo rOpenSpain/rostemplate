@@ -52,8 +52,7 @@ Second paragraph
 
 ```{r}
 1 + 2
-``
-`
+```
 </details>
 
 ## Tables
@@ -186,8 +185,7 @@ cat(cli::col_blue("This is blue\n"), "\n")
 message(cli::col_green("This is green"))
 
 warning(cli::style_bold("This is bold"))
-`
-``
+```
 Some text
 
 ```{r}
