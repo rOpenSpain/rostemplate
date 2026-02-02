@@ -9,3 +9,5 @@ sass(
   cache = NULL,
   options = sass_options(output_style = "compressed")
 )
+
+message("OK, compressed")
