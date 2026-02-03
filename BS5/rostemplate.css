@@ -429,6 +429,12 @@ code {
 @media (max-width: 575.98px) {
 	/* See https://github.com/r-lib/pkgdown/pull/2970 */
 
+	/* Need to override pkgdown */
+	li > div > .btn-copy-ex,
+	li > div > .btn-copy-ex {
+		right: 5px;
+	}
+
 	div > pre {
 		border-radius: 0;
 	}
