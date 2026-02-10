@@ -35,6 +35,7 @@ jobs:
           any::lubridate
           any::reactable
           dieghernan/pkgdev
+          any::sass
         needs: website
 
     - name: Install optipng
@@ -66,7 +67,9 @@ jobs:
 
     - name: Update docs
       run: |
-        
+        # Compress css
+        source("./data-raw/compress_css.R")
+
         pkgdev::update_docs()
 
       shell: Rscript {0}
