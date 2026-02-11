@@ -102,7 +102,7 @@ home:
   links:
   - text: >
       About <img src="ROS-logo.png" alt="rOpenSpain-Logo" height="24"
-      style="display: inline;"> rOpenSpain
+      style="display: inline;" class="round-logo"> rOpenSpain
     href: https://ropenspain.es/
 
 figures:
