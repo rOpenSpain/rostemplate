@@ -2,7 +2,8 @@
 title: "Testing syntax highlighter"
 ---
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -12,7 +13,8 @@ knitr::opts_chunk$set(
 Test how `pkgdown` highlights **R** code:
 
 
-```{r eval=FALSE}
+```{r}
+#| eval: false
 library("knitr")
 library("rmarkdown")
 

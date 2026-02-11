@@ -2,7 +2,8 @@
 title: "HTML widgets"
 ---
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -13,7 +14,8 @@ knitr::opts_chunk$set(
 
 Test spacing above widget.
 
-```{r, echo=FALSE}
+```{r}
+#| echo: false
 path1 <- tempfile()
 writeLines(letters, path1)
 path2 <- tempfile()

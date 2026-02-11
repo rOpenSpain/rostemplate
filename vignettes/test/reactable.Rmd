@@ -2,14 +2,16 @@
 title: "reactable example"
 ---
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
 
-```{r setup}
+```{r}
+#| label: setup
 data <- MASS::Cars93[
   1:50,
   c("Manufacturer", "Model", "Type", "AirBags", "Price")

@@ -38,7 +38,8 @@ flowchart LR
 
 ## HTML widgets
 
-```{r, echo=FALSE}
+```{r}
+#| echo: false
 dir <- tempdir()
 path1 <- file.path(dir, "a.txt")
 writeLines(letters, path1)

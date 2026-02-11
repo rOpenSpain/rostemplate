@@ -4,7 +4,8 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -100,7 +101,8 @@ solicitados en la ruta correspondiente. Adicionalmente, crean los archivos
 `.Rbuildignore` y `.github/.gitignore`, que ignoran ciertos archivos cuando se
 compila el paquete:
 
-```{r eval=FALSE}
+```{r}
+#| eval: false
 # Instalación via r-universe
 install.packages(
   "rostemplate",
@@ -139,7 +141,8 @@ Más información sobre cómo adaptar los *triggers* de la acción
 El sitio estático se puede generar igualmente desde una sesión local en
 **RStudio**. Para ello, es necesario instalar este paquete:
 
-```{r eval=FALSE}
+```{r}
+#| eval: false
 install.packages(
   "rostemplate",
   repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
@@ -148,7 +151,8 @@ install.packages(
 
 Una vez instalado, se ha de ejecutar este script:
 
-```{r eval=FALSE}
+```{r}
+#| eval: false
 rostemplate::ros_build()
 ```
 

@@ -36,3 +36,7 @@ cran-comments.md
 Rplots.pdf
 /.quarto/
 **/*.quarto_ipynb
+gitdevr.Rcheck/
+gitdevr*.tar.gz
+gitdevr*.tgz
+**/.quarto/

@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.5.2 (2025-10-31)",
+  "runtimePlatform": "R version 4.5.2 (2025-10-31 ucrt)",
   "author": [
     {
       "@type": "Person",
@@ -171,7 +171,7 @@
   },
   "isPartOf": "https://ropenspain.es/",
   "keywords": ["github-actions", "pkgdown", "r", "r-package", "ropenspain", "rstats", "template", "yaml"],
-  "fileSize": "437.992KB",
+  "fileSize": "441.124KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",

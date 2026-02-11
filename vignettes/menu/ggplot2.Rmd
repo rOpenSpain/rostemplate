@@ -2,7 +2,8 @@
 title: "ggplot2 example"
 ---
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -12,7 +13,10 @@ knitr::opts_chunk$set(
 
 Example on a **ggplot2** image
 
-```{r setup, fig.alt="A ggplot2 image", fig.cap="A ggplot2 image"}
+```{r}
+#| label: setup
+#| fig-alt: A ggplot2 image
+#| fig-cap: A ggplot2 image
 library(ggplot2)
 
 # counts (or sums of weights)

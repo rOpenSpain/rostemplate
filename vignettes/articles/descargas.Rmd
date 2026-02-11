@@ -4,7 +4,8 @@ title: "Descargas de paquetes de rOpenSpain"
 
 *Fecha de actualización: `r format(Sys.Date(),"%d %b %Y")`*
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   tidy = "styler",
@@ -22,7 +23,8 @@ knitr::opts_chunk$set(
 
 Descargas de paquetes de [rOpenSpain](https://ropenspain.es/) desde CRAN.
 
-```{r include=FALSE}
+```{r}
+#| include: false
 library(cranlogs)
 library(tibble)
 library(dplyr)
@@ -107,7 +109,8 @@ dwn_m$package <- factor(dwn_m$package, levels = unique(fact))
 
 ### Histórico de descargas
 
-```{r echo=FALSE}
+```{r}
+#| echo: false
 tot <- dwn_m |>
   group_by(m) |>
   summarise(ntot = sum(downloads))
@@ -130,7 +133,8 @@ ggplot(dwn_m, aes(x = m)) +
 
 ### Descargas semanales
 
-```{r echo=FALSE}
+```{r}
+#| echo: false
 dwn_w <- dwn |>
   filter(date >= (Sys.Date() - years(1))) |>
   mutate(m = lubridate::ceiling_date(date, "week")) |>
@@ -163,7 +167,9 @@ dwn_w |>
 
 ### Datos sobre descargas
 
-```{r datos, echo=FALSE}
+```{r}
+#| label: datos
+#| echo: false
 library(reactable)
 library(htmltools)
 
@@ -290,7 +296,9 @@ reactable(
 Descargas de paquetes de [rOpenSpain](https://ropenspain.es/) y metadatos desde
 [Posit Package Manager](https://packagemanager.posit.co/client/#/).
 
-```{r data-posit, echo=FALSE}
+```{r}
+#| label: data-posit
+#| echo: false
 res <- lapply(mypaks, function(x) {
   tmp <- tempfile(fileext = ".json")
   api_res <- suppressWarnings(try(download.file(
