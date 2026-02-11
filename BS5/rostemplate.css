@@ -33,7 +33,8 @@ main img {
 
 .caption,
 .figure,
-.figcaption {
+.figcaption,
+figcaption {
 	color: var(--bs-secondary);
 	margin-left: auto;
 	margin-right: auto;
@@ -341,7 +342,8 @@ h6 {
 
 /* Hack to reduce color in dark mode */
 [data-bs-theme="dark"] img.r-plt,
-[data-bs-theme="dark"] pre .r-plt.img img {
+[data-bs-theme="dark"] pre .r-plt.img img,
+[data-bs-theme="dark"] .cell-output-display img {
 	filter: grayscale(40%) !important;
 }
 
