@@ -36,6 +36,9 @@ Artículos de test para
 
 - [Bullets](https://ropenspain.github.io/rostemplate/articles/test/test-bullets.md):
 
+- [Example of a precomputed vignette -
+  Quarto](https://ropenspain.github.io/rostemplate/articles/test-precompute-quarto.md):
+
 - [Example of a precomputed
   vignette](https://ropenspain.github.io/rostemplate/articles/test-precompute.md):
 

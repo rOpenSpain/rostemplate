@@ -12,10 +12,11 @@ articles:
   rostemplate: rostemplate.html
   test/short: test/short.html
   test/test-bullets: test/test-bullets.html
+  test-precompute-quarto: test-precompute-quarto.html
   test-precompute: test-precompute.html
   test/test-quarto: test/test-quarto.html
   test/widgets: test/widgets.html
-last_built: 2026-02-16T15:56Z
+last_built: 2026-02-16T16:00Z
 urls:
   reference: https://ropenspain.github.io/rostemplate/reference
   article: https://ropenspain.github.io/rostemplate/articles
