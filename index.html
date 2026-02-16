@@ -119,7 +119,7 @@
 <h3 id="con-github-actions---ci">Con GitHub actions - CI<a class="anchor" aria-label="anchor" href="#con-github-actions---ci"></a>
 </h3>
 <p>GitHub Actions permite automatizar procesos cuando se activa un <em>trigger</em>. En este caso se han preparado dos acciones que actualizan el sitio estático cada vez que se añade un <em>commit</em> al repositorio.</p>
-<p>Los flujos de trabajo consisten en archivos con extensión <code>.yaml</code>. La acción <a href="https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml" class="external-link">rostemplate-docs.yaml</a> crea el sitio estático en la carpeta <code>./docs</code> mientras que <a href="https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml" class="external-link">rostemplate-gh-pages.yaml</a> crea el sitio estático en el branch <code>gh-pages</code>.</p>
+<p>Los flujos de trabajo consisten en archivos con extensión <code>.yml</code>. La acción <a href="https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yml" class="external-link">rostemplate-docs.yml</a> crea el sitio estático en la carpeta <code>./docs</code> mientras que <a href="https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yml" class="external-link">rostemplate-gh-pages.yml</a> crea el sitio estático en el branch <code>gh-pages</code>.</p>
 <p>Para configurar esta opción, es necesario disponer en el repositorio de una carpeta en la ruta <code>.github/workflows</code> y copiar la acción deseada en dicha carpeta.</p>
 <div class="section level4">
 <h4 id="alternativa-usando-las-funciones-de-rostemplate">Alternativa usando las funciones de rostemplate<a class="anchor" aria-label="anchor" href="#alternativa-usando-las-funciones-de-rostemplate"></a>
@@ -145,11 +145,11 @@
 <span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> main</span></span>
 <span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> master</span></span>
 <span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co"># Actualiza cuando se modifica un archivo específico: _pkgdown.yaml</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co"># Actualiza cuando se modifica un archivo específico: _pkgdown.yml</span></span>
 <span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
 <span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
 <span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
-<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">'_pkgdown.yaml'</span></span></code></pre></div>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">'_pkgdown.yml'</span></span></code></pre></div>
 <p>Más información sobre cómo adaptar los <em>triggers</em> de la acción <a href="https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows" class="external-link">aquí</a>.</p>
 </div>
 </div>
