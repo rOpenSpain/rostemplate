@@ -49,7 +49,7 @@ ros_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
 
   # Get action file
   filepath <-
-    system.file("yaml/rostemplate-gh-pages.yaml", package = "rostemplate")
+    system.file("yaml/rostemplate-gh-pages.yml", package = "rostemplate")
 
   # Copy
   result <- file.copy(filepath, destdir, overwrite = overwrite)

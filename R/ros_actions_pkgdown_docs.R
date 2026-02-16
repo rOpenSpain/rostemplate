@@ -57,7 +57,7 @@ ros_actions_pkgdown_docs <-
 
     # Get action file
     filepath <-
-      system.file("yaml/rostemplate-docs.yaml", package = "rostemplate")
+      system.file("yaml/rostemplate-docs.yml", package = "rostemplate")
 
     # Copy
     result <- file.copy(filepath, destdir, overwrite = overwrite)

@@ -68,7 +68,7 @@ ros_actions_check_cron <-
 
     # Get action file
     filepath <-
-      system.file("yaml/roscron-check-standard.yaml", package = "rostemplate")
+      system.file("yaml/roscron-check-standard.yml", package = "rostemplate")
 
     # Copy
     result <- file.copy(filepath, destdir, overwrite = overwrite)
