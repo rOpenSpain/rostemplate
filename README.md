@@ -68,11 +68,11 @@ GitHub Actions permite automatizar procesos cuando se activa un
 *trigger*. En este caso se han preparado dos acciones que actualizan el
 sitio estático cada vez que se añade un *commit* al repositorio.
 
-Los flujos de trabajo consisten en archivos con extensión `.yaml`. La
+Los flujos de trabajo consisten en archivos con extensión `.yml`. La
 acción
-[rostemplate-docs.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml)
+[rostemplate-docs.yml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yml)
 crea el sitio estático en la carpeta `./docs` mientras que
-[rostemplate-gh-pages.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml)
+[rostemplate-gh-pages.yml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yml)
 crea el sitio estático en el branch `gh-pages`.
 
 Para configurar esta opción, es necesario disponer en el repositorio de
@@ -113,11 +113,11 @@ on:
       - main
       - master
 
-# Actualiza cuando se modifica un archivo específico: _pkgdown.yaml
+# Actualiza cuando se modifica un archivo específico: _pkgdown.yml
 on:
   push:
     paths:
-      - '_pkgdown.yaml'
+      - '_pkgdown.yml'
 ```
 
 Más información sobre cómo adaptar los *triggers* de la acción

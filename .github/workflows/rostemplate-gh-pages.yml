@@ -8,6 +8,10 @@ on:
   workflow_dispatch:
   schedule:
   - cron: "30 10 * * 4"
+  workflow_run:
+    workflows: [update-docs]
+    types: completed
+    branches: [main, master]
 
 name: rostemplate-gh-pages
 permissions: write-all
@@ -19,6 +23,9 @@ concurrency:
 jobs:
   rostemplate-gh-pages:
     runs-on: ubuntu-latest
+    if: >
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:

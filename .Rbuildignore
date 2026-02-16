@@ -30,7 +30,6 @@
 ^CONTRIBUTING\.md$
 ^Rplots\.pdf$
 ^vignettes/precompute\.Rmd\.orig$
-
 ^codecov\.yml$
 ^[.]?air[.]toml$
 ^\.vscode$
@@ -42,3 +41,6 @@
 ^vignettes/articles/\.quarto$
 ^vignettes/articles/*_files$
 ^vignettes/precompute-quarto\.qmd\.orig$
+^vignettes/_quarto\.yaml$
+^vignettes/_quarto\.yml$
+^\.quarto$

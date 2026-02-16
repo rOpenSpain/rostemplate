@@ -11,9 +11,10 @@ concurrency:
 
 jobs:
   update-docs:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
     - uses: actions/checkout@v6
 
@@ -28,15 +29,8 @@ jobs:
         extra-packages: |
           local::.
           any::rcmdcheck
-          any::pkgdown
-          any::cranlogs
-          any::tidyverse
-          any::jsonlite
-          any::lubridate
-          any::reactable
           dieghernan/pkgdev
           any::sass
-        needs: website
 
     - name: Install optipng
       run: |
@@ -62,7 +56,7 @@ jobs:
     - name: Install Air
       uses: posit-dev/setup-air@v1
 
-    - name: Format with Air
+    - name: Format package
       run: air format .
 
     - name: Update docs
@@ -83,19 +77,3 @@ jobs:
         git push origin || echo "No changes to commit"
 
     - uses: r-lib/actions/check-r-package@v2
-
-    # https://github.com/r-lib/pkgdown/issues/2832
-    # Translate on web
-    - name: Set locale to Spanish
-      run: |
-        sudo locale-gen es_ES.UTF-8
-        sudo update-locale LANG=es_ES.UTF-8
-      shell: bash
-
-    - name: Deploy package
-      run: |
-        git config --local user.name "github-actions[bot]"
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        Rscript -e 'pkgdown::deploy_to_branch(new_process = FALSE, run_dont_run = TRUE)'
-      env:
-        LANG: es_ES.UTF-8
