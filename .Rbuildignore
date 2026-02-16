@@ -44,3 +44,5 @@
 ^vignettes/_quarto\.yaml$
 ^vignettes/_quarto\.yml$
 ^\.quarto$
+^vignettes/test-precompute-quarto\.qmd\.orig$
+^vignettes/*_files$
