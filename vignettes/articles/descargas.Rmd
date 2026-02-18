@@ -135,9 +135,13 @@ ggplot(dwn_m, aes(x = m)) +
 
 ```{r}
 #| echo: false
+# Not this week
+thisw <- lubridate::ceiling_date(Sys.Date(), "week", week_start = 1)
+
 dwn_w <- dwn |>
   filter(date >= (Sys.Date() - years(1))) |>
-  mutate(m = lubridate::ceiling_date(date, "week")) |>
+  mutate(m = lubridate::ceiling_date(date, "week", week_start = 1)) |>
+  filter(m < thisw) |>
   group_by(package, m) |>
   summarise(downloads = sum(count))
 
@@ -147,7 +151,10 @@ dwn_w |>
   ggplot(aes(x = m)) +
   geom_area(aes(y = downloads), fill = ros_green_pal(1, alpha = 0.75)) +
   geom_smooth(aes(y = downloads), color = ros_violet_pal(1), se = FALSE) +
-  facet_wrap(vars(package)) +
+  facet_wrap(vars(package),
+    scales = "free_y", ncol = 3,
+    axes = "all_x"
+  ) +
   scale_x_date(
     date_breaks = "3 months",
     labels = scales::label_date("%Y-%m")
@@ -210,7 +217,7 @@ end <-
   left_join(lastmonth) |>
   left_join(lastyear) |>
   as_tibble() |>
-  arrange(desc(avg))
+  arrange(desc(last_week))
 
 names(end) <- c(
   "paquete",
