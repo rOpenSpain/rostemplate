@@ -17,7 +17,7 @@ vez es una adaptación de la plantilla
 
 ## Configuración previa
 
-En la raíz del proyecto ha de existir un archivo `_pkgdown.yml` con al
+En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al
 menos las siguientes líneas:
 
 ``` yaml
@@ -29,7 +29,7 @@ template:
 ```
 
 Puedes encontrar información sobre cómo configurar otras opciones en
-`_pkgdown.yml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
+`_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
 Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las
 siguientes líneas:
@@ -37,7 +37,7 @@ siguientes líneas:
 ``` default
 ^\.github$
 ^docs$
-^_pkgdown\.yml$
+^_pkgdown\.yaml$
 ```
 
 ## Uso de la plantilla
@@ -54,11 +54,11 @@ GitHub Actions permite automatizar procesos cuando se activa un
 *trigger*. En este caso se han preparado dos acciones que actualizan el
 sitio estático cada vez que se añade un *commit* al repositorio.
 
-Los flujos de trabajo consisten en archivos con extensión `.yml`. La
+Los flujos de trabajo consisten en archivos con extensión `.yaml`. La
 acción
-[rostemplate-docs.yml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yml)
+[rostemplate-docs.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml)
 crea el sitio estático en la carpeta `./docs` mientras que
-[rostemplate-gh-pages.yml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yml)
+[rostemplate-gh-pages.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml)
 crea el sitio estático en el branch `gh-pages`.
 
 Para configurar esta opción, es necesario disponer en el repositorio de
@@ -99,11 +99,11 @@ on:
       - main
       - master
 
-# Actualiza cuando se modifica un archivo específico: _pkgdown.yml
+# Actualiza cuando se modifica un archivo específico: _pkgdown.yaml
 on:
   push:
     paths:
-      - '_pkgdown.yml'
+      - '_pkgdown.yaml'
 ```
 
 Más información sobre cómo adaptar los *triggers* de la acción
@@ -132,7 +132,7 @@ La función
 no es más que un alias de
 [`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html),
 aportando únicamente un control sobre la configuración del archivo
-`_pkgdown.yml`
+`_pkgdown.yaml`
 
 Una vez generado el sitio, es necesario actualizar el repositorio remoto
 en GitHub mediante un *commit*.
