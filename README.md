@@ -125,6 +125,12 @@ rostemplate::ros_actions_pkgdown_docs()
 
 Es posible cambiar el evento que desencadena la actualización del sitio:
 
+<div class="code-with-filename">
+
+<div class="code-with-filename-file">
+
+<pre><strong>rostemplate-gh-pages.yaml</strong></pre>
+
 ``` yaml
 # Actualiza en cada commit - por defecto
 on:
@@ -139,6 +145,10 @@ on:
     paths:
       - '_pkgdown.yaml'
 ```
+
+</div>
+
+</div>
 
 Más información sobre cómo adaptar los *triggers* de la acción
 [aquí](https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows).

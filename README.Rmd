@@ -44,12 +44,11 @@ adaptación de la plantilla
 
 ## Configuración previa
 
-En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al menos las
-siguientes líneas:
+En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al menos
+las siguientes líneas:
 
 :::: code-with-filename
 ::: code-with-filename-file
-
 ```{=html}
 <pre><strong>_pkgdown.yaml</strong></pre>
 ```
@@ -72,10 +71,10 @@ líneas:
 
 :::: code-with-filename
 ::: code-with-filename-file
-
 ```{=html}
 <pre><strong>.Rbuildignore</strong></pre>
 ```
+
 ``` default
 ^\.github$
 ^docs$
@@ -135,6 +134,12 @@ rostemplate::ros_actions_pkgdown_docs()
 
 Es posible cambiar el evento que desencadena la actualización del sitio:
 
+:::: code-with-filename
+::: code-with-filename-file
+```{=html}
+<pre><strong>rostemplate-gh-pages.yaml</strong></pre>
+```
+
 ``` yaml
 # Actualiza en cada commit - por defecto
 on:
@@ -149,6 +154,8 @@ on:
     paths:
       - '_pkgdown.yaml'
 ```
+:::
+::::
 
 Más información sobre cómo adaptar los *triggers* de la acción
 [aquí](https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows).
