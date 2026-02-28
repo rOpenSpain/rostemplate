@@ -37,46 +37,121 @@ plt.show()
 
 ## Callout Blocks
 
-::: callout-note
-Note that there are five types of callouts, including: `note`, `warning`,
-`important`, `tip`, and `caution`.
-:::
+```{=html}
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">Note</div>
+</div>
+<div class="callout-body-container callout-body">
+```
 
-::: callout-tip
-## Tip with Title
+Note that there are five types of callouts, including: `note`,`tip`, `warning`,
+`caution` and `important`.
 
-This is an example of a callout with a title.
-:::
+```{=html}
+</div>
+</div>
+```
 
-::: {.callout-caution collapse="true"}
-## Expand To Learn About Collapse
+```{=html}
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">Warning</div>
+</div>
+<div class="callout-body-container callout-body">
+```
 
-This is an example of a 'folded' caution callout that can be expanded by the
-user. You can use `collapse="true"` to collapse it by default or
-`collapse="false"` to make a collapsible callout that is expanded by default.
-:::
+Callouts provide a simple way to attract attention, for example, to this
+warning.
 
-::: {.callout-note appearance="simple"}
-## Pay Attention
+```{=html}
+</div>
+</div>
+```
 
-Using callouts is an effective way to highlight content that your reader give
-special consideration or attention.
-:::
+```{=html}
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">Important</div>
+</div>
+<div class="callout-body-container callout-body">
+```
 
-::: {.callout-note icon="false"}
-## Pay Attention
+The callout heading is provided by the callout type, with the expected heading
+(i.e., Note, Warning, Important, Tip, or Caution).
 
-Using callouts is an effective way to highlight content that your reader give
-special consideration or attention.
-:::
+```{=html}
+</div>
+</div>
+```
 
-::: {#tip-example .callout-tip}
-## Cross-Referencing a Tip
+```{=html}
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">Tip With Title</div>
+</div>
+<div class="callout-body-container callout-body">
+```
 
-Add an ID starting with `#tip-` to reference a tip.
-:::
+This is an example of a callout with a title. Providing a callout heading is
+optional.
 
-See @tip-example...
+```{=html}
+</div>
+</div>
+```
+
+```{=html}
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">Caution</div>
+</div>
+<div class="callout-body-container callout-body">
+```
+
+This is an example of a caution.
+
+```{=html}
+</div>
+</div>
+```
+
+```{=html}
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">Simple</div>
+</div>
+<div class="callout-body-container callout-body">
+```
+
+A simple callout.
+
+```{=html}
+</div>
+</div>
+```
+
+```{=html}
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon no-icon"></i></div>
+<div class="callout-title-container flex-fill"><span class="screen-reader-only">Note</span>No Icon</div>
+</div>
+<div class="callout-body-container callout-body">
+```
+
+No icon
+
+```{=html}
+</div>
+</div>
+```
 
 ## Diagrams
 
