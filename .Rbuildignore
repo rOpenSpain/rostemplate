@@ -46,3 +46,7 @@
 ^\.quarto$
 ^vignettes/test-precompute-quarto\.qmd\.orig$
 ^vignettes/*_files$
+^index\.qmd$
+^index_files$
+^index\.html$
+^index\.md$

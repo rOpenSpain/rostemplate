@@ -40,3 +40,6 @@ gitdevr.Rcheck/
 gitdevr*.tar.gz
 gitdevr*.tgz
 **/.quarto/
+index_files/
+*index.html
+pkgdown/*_files
