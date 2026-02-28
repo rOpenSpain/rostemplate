@@ -95,6 +95,8 @@ rostemplate::ros_actions_pkgdown_docs()
 
 Es posible cambiar el evento que desencadena la actualización del sitio:
 
+    rostemplate-gh-pages.yaml
+
 ``` yaml
 # Actualiza en cada commit - por defecto
 on:

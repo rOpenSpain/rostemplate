@@ -148,6 +148,9 @@
 <span><span class="co"># Deploy to docs folder</span></span>
 <span><span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="reference/ros_actions_pkgdown_docs.html">ros_actions_pkgdown_docs</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>Es posible cambiar el evento que desencadena la actualización del sitio:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>rostemplate-gh-pages.yaml</strong></pre>
 <div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Actualiza en cada commit - por defecto</span></span>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
@@ -160,6 +163,8 @@
 <span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
 <span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
 <span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">'_pkgdown.yaml'</span></span></code></pre></div>
+</div>
+</div>
 <p>Más información sobre cómo adaptar los <em>triggers</em> de la acción <a href="https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows" class="external-link">aquí</a>.</p>
 </div>
 </div>
