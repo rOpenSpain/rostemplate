@@ -489,6 +489,7 @@ code {
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
 	border-radius: 0;
+	color: var(--bs-body-color);
 	background-color: RGBA(var(--bs-body-color-rgb), 0.1);
 }
 
