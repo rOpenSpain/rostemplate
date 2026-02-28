@@ -24,6 +24,50 @@ library(palmerpenguins)
 
   add new columns for the bill ratio and bill area.
 
+## Code filename
+
+    matplotlib.py
+
+``` python
+import matplotlib.pyplot as plt
+plt.plot([1,23,2,4])
+plt.show()
+```
+
+## Callout Blocks
+
+> **Note**
+>
+> Note that there are five types of callouts, including: `note`,
+> `warning`, `important`, `tip`, and `caution`.
+
+> **Tip with Title**
+>
+> This is an example of a callout with a title.
+
+> **Expand To Learn About Collapse**
+>
+> This is an example of a ‘folded’ caution callout that can be expanded
+> by the user. You can use `collapse="true"` to collapse it by default
+> or `collapse="false"` to make a collapsible callout that is expanded
+> by default.
+
+> **Pay Attention**
+>
+> Using callouts is an effective way to highlight content that your
+> reader give special consideration or attention.
+
+> **Pay Attention**
+>
+> Using callouts is an effective way to highlight content that your
+> reader give special consideration or attention.
+
+> **Tip 1: Cross-Referencing a Tip**
+>
+> Add an ID starting with `#tip-` to reference a tip.
+
+See [Tip 1](#tip-example)…
+
 ## Diagrams
 
 ``` mermaid
