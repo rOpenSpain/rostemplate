@@ -34,6 +34,12 @@ vez es una adaptación de la plantilla
 En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al
 menos las siguientes líneas:
 
+<div class="code-with-filename">
+
+<div class="code-with-filename-file">
+
+<pre><strong>_pkgdown.yaml</strong></pre>
+
 ``` yaml
 template:
   bootstrap: 5
@@ -42,17 +48,31 @@ template:
   default_assets: false
 ```
 
+</div>
+
+</div>
+
 Puedes encontrar información sobre cómo configurar otras opciones en
 `_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
 Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las
 siguientes líneas:
 
+<div class="code-with-filename">
+
+<div class="code-with-filename-file">
+
+<pre><strong>.Rbuildignore</strong></pre>
+
 ``` default
 ^\.github$
 ^docs$
 ^_pkgdown\.yaml$
 ```
+
+</div>
+
+</div>
 
 ## Uso de la plantilla
 
