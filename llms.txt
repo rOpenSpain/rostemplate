@@ -20,6 +20,8 @@ vez es una adaptación de la plantilla
 En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al
 menos las siguientes líneas:
 
+    _pkgdown.yaml
+
 ``` yaml
 template:
   bootstrap: 5
@@ -33,6 +35,8 @@ Puedes encontrar información sobre cómo configurar otras opciones en
 
 Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las
 siguientes líneas:
+
+    .Rbuildignore
 
 ``` default
 ^\.github$
