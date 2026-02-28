@@ -1,5 +1,5 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- index.md is generated from index.Rmd. Please edit that file -->
 
 # rostemplate <img src="man/figures/logo.png" align="right" width="120"/>
 
@@ -34,6 +34,12 @@ vez es una adaptación de la plantilla
 En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al
 menos las siguientes líneas:
 
+<div class="code-with-filename">
+
+<div class="code-with-filename-file">
+
+<pre><strong>_pkgdown.yaml</strong></pre>
+
 ``` yaml
 template:
   bootstrap: 5
@@ -42,17 +48,31 @@ template:
   default_assets: false
 ```
 
+</div>
+
+</div>
+
 Puedes encontrar información sobre cómo configurar otras opciones en
 `_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
 Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las
 siguientes líneas:
 
+<div class="code-with-filename">
+
+<div class="code-with-filename-file">
+
+<pre><strong>.Rbuildignore</strong></pre>
+
 ``` default
 ^\.github$
 ^docs$
 ^_pkgdown\.yaml$
 ```
+
+</div>
+
+</div>
 
 ## Uso de la plantilla
 
@@ -105,6 +125,12 @@ rostemplate::ros_actions_pkgdown_docs()
 
 Es posible cambiar el evento que desencadena la actualización del sitio:
 
+<div class="code-with-filename">
+
+<div class="code-with-filename-file">
+
+<pre><strong>rostemplate-gh-pages.yaml</strong></pre>
+
 ``` yaml
 # Actualiza en cada commit - por defecto
 on:
@@ -119,6 +145,10 @@ on:
     paths:
       - '_pkgdown.yaml'
 ```
+
+</div>
+
+</div>
 
 Más información sobre cómo adaptar los *triggers* de la acción
 [aquí](https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows).
