@@ -1,5 +1,6 @@
 ---
 title: quarto features
+subtitle: Using this for shortcodes
 output: html
 knitr:
   opts_chunk:
@@ -179,5 +180,141 @@ diffviewer::visual_diff(path1, path2)
 ## Keyboard
 
 -   Keyboard shortcut: {{< kbd Shift-Ctrl-P >}}
+
+## Lists
+
+-   item 2
+
+    Continued (indent 4 spaces)
+
+Another example
+
+1.  ordered list
+
+2.  item 2
+
+    ``` python
+    print("Hello, World!")
+    ```
+
+    A.  sub-sub-item 1
+
+A task list
+
+-   [ ] Task 1
+-   [x] Task 2
+
+A definition
+
+term
+
+:   definition
+
+## Footnotes
+
+Here is a footnote reference,[^1] and another.[^2]
+
+[^1]: Here is the footnote.
+
+[^2]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they belong to the previous
+    footnote.
+
+    ```
+    { some.code }
+    ```
+
+    The whole paragraph can be indented, or just the first line. In this way,
+    multi-paragraph footnotes work like multi-paragraph list items.
+
+This paragraph won't be part of the note, because it isn't indented.
+
+Here is an inline note.[^3]
+
+[^3]: Inlines notes are easier to write, since you don't have to pick an
+    identifier and move down to type the note.
+
+## Equations
+
+inline math: $E = mc^{2}$
+
+display math:
+
+$$E = mc^{2}$$
+
+## Other blocks
+
+| Line Block
+|   Spaces and newlines
+|   are preserved
+
+[This text is smallcaps]{.smallcaps}
+
+[This text is underlined]{.underline}
+
+[This text is highlighted]{.mark}
+
+endash: --
+
+emdash: ---
+
+## Shortcodes
+
+The subtitle of this document is as follows: {{< meta subtitle >}}
+
+{{< placeholder 400 200 >}}
+
+{{< lipsum 1 >}}
+
+### A section
+
+Here we define a plot.
+
+::: {#a-plot}
+```{r}
+#| echo: false
+#| label: a-cell
+
+plot(c(1, 2, 3))
+```
+:::
+
+#### Note the following plot
+
+{{< contents a-plot >}}
+
+### Another example
+
+We will define some values here. [`{r} "some code"`]{#a-span}
+
+The output of that inline code cell is {{< contents a-span >}}. Etc.
+
+## Figures
+
+:::: {#fig-puppies layout="[[50,50], [100]]"}
+![A sketch of a pitbull puppy](pitbull.jpg){#fig-pitbull}
+
+![A sketch of a sharpei puppy](shar-pei.jpg){#fig-shar-pei}
+
+::: {#fig-placeholder}
+{{< placeholder 1000 200>}}
+
+This is a placeholder
+:::
+
+Cute puppies (@fig-pitbull and @fig-shar-pei) and placeholder
+(@fig-placeholder).
+::::
+
+## Video
+
+::: {#fig-cern}
+{{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
+
+The video "CERN: The Journey of Discovery"
+:::
+
+In @fig-cern...
 
 ## References
