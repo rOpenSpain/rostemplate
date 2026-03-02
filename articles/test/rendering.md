@@ -203,6 +203,10 @@ Some more text
 
 > Single-line quote about something miscellaneous.
 
+> A Boostrap 5 blockquote with footer.
+
+Someone famous in Source Title
+
 Flush  
  1 space indent  
   2 space indent  
