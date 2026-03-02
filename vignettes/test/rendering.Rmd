@@ -14,9 +14,9 @@ This vignette tests pkgdown output rendering for several use cases.
 
 ## Footnotes
 
-Yay[^footnote]
+Yay[^1]
 
-[^footnote]: Including **footnotes**! 😁
+[^1]: Including **footnotes**! 😁
 
 ## Figures
 
@@ -36,30 +36,33 @@ x
 
 ## Details tag
 
-<details>
-This should only be shown when required
-</details>
+<details>This should only be shown when required</details>
 
 <details>
+
 <summary>Multiple paragraphs</summary>
+
 First paragraph
 
 Second paragraph
+
 </details>
 
 <details>
+
 <summary>Some R code</summary>
 
 ```{r}
 1 + 2
 ```
+
 </details>
 
 ## Tables
 
 | col 1 | col 2 | col 3 | col 4 |
-|:---------------|:-----------|:-------:|:---------:|
-| Brightness     | Total brightness, total reflectance, spectral intensity | $$y = x^2$$ | test |
+|:------------------------|:------------------|:-----------------:|:-----------------:|
+| Brightness | Total brightness, total reflectance, spectral intensity | $$y = x^2$$ | test |
 
 ## Math
 
@@ -71,8 +74,23 @@ Inline equations: $y=x^2$
 
 <mark>This text should be</mark> marked as highlighted by search.
 
-<div class="mark">This text too.</div>
+::: mark
+This text too.
+:::
 
+
+## Buttons
+
+<div class="d-grid gap-2 col-6 mx-auto">
+<button type="button" class="btn btn-primary btn-lg">Primary</button>
+<button type="button" class="btn btn-secondary btn-lg">Secondary</button>
+<button type="button" class="btn btn-success btn-lg">Success</button>
+<button type="button" class="btn btn-danger btn-lg">Danger</button>
+<button type="button" class="btn btn-warning btn-lg">Warning</button>
+<button type="button" class="btn btn-info btn-lg">Info</button>
+<button type="button" class="btn btn-light btn-lg">Light</button>
+<button type="button" class="btn btn-dark btn-lg">Dark</button>
+</div>
 
 ## Code
 
@@ -101,13 +119,13 @@ mean(a + 1)
 
 R code in `r` block:
 
-```R
+```r
 mean(a + 1)
 ```
 
 Yaml
 
-```yaml
+``` yaml
 yaml: [a, 1]
 ```
 
@@ -123,7 +141,7 @@ yaml: [a, b, c]
 
 Testing margins and copy buttons on small screens.
 
-```r
+``` r
 txt <- "Not wrapped; check the copy button behavior."
 ```
 
@@ -131,7 +149,7 @@ txt <- "Not wrapped; check the copy button behavior."
 
 Wrapped in a `<section>` (e.g. `section > div > pre`)
 
-```r
+``` r
 txt <- "Wrapped in section"
 ```
 
@@ -140,7 +158,7 @@ txt <- "Wrapped in section"
 > This is a blockquote with enough text to test the width of the code block and
 > verify whether it aligns with the paragraph width.
 >
-> ```r
+> ``` r
 > txt <- "Wrapped in blockquote; margins are preserved."
 > ```
 >
@@ -149,7 +167,7 @@ txt <- "Wrapped in section"
 -   This list item includes enough text to test the width of the code block and
     check whether it matches the paragraph width.
 
-    ```r
+    ``` r
     txt <- "Wrapped in li; margins are preserved."
     ```
 
@@ -160,7 +178,7 @@ txt <- "Wrapped in section"
     2.  Second level item with enough text to test the width of the code block
         and confirm alignment with the paragraph.
 
-        ```r
+        ``` r
         txt <- "Wrapped in li; margins are preserved."
         ```
 
@@ -170,7 +188,7 @@ txt <- "Wrapped in section"
 
 <summary>`<pre>` block inside a `<details>` element.</summary>
 
-```r
+``` r
 txt <- "Wrapped in details"
 ```
 
@@ -186,6 +204,7 @@ message(cli::col_green("This is green"))
 
 warning(cli::style_bold("This is bold"))
 ```
+
 Some text
 
 ```{r}
@@ -216,7 +235,7 @@ There should however be no bug here!
 
 blablablabla
 
-```r
+``` r
 1 + 1
 ```
 
@@ -269,6 +288,7 @@ Guten tag.
 
 ## Very long words
 
-This word should be broken across multiple lines on mobile, rather than making the page scroll horizontally:
+This word should be broken across multiple lines on mobile, rather than making
+the page scroll horizontally:
 
 Ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss
