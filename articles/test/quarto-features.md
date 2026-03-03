@@ -124,11 +124,11 @@ Here is an inline note.[³](#fn3)
 
 ## Equations
 
-inline math: $E = mc^{2}$
+inline math: E = mc^{2}
 
 display math:
 
-$$E = mc^{2}$$
+E = mc^{2}
 
 ## Other blocks
 

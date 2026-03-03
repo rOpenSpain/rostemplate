@@ -11,7 +11,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="icon" sizes="any" href="../../favicon.ico">
 <link rel="manifest" href="../../site.webmanifest">
-<script src="../../lightswitch.js"></script><script src="../../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- katex math --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script><script src="../../katex-auto.js"></script><script src="../../lightswitch.js"></script><script src="../../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../../deps/Roboto-0.4.10/font.css" rel="stylesheet">
 <link href="../../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
@@ -170,12 +171,12 @@ Figura 1: Cute puppies
 </div>
 </section><section class="level3"><h3 id="equations">Equations<a class="anchor" aria-label="anchor" href="#equations"></a>
 </h3>
-<p><span id="eq-black-scholes"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>∂</mi><mi mathvariant="normal">C</mi></mrow><mrow><mi>∂</mi><mi mathvariant="normal">t</mi></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>σ</mi><mn>2</mn></msup><msup><mi mathvariant="normal">S</mi><mn>2</mn></msup><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi mathvariant="normal">C</mi></mrow><mrow><mi>∂</mi><msup><mi mathvariant="normal">C</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mi mathvariant="normal">r</mi><mi mathvariant="normal">S</mi><mfrac><mrow><mi>∂</mi><mi mathvariant="normal">C</mi></mrow><mrow><mi>∂</mi><mi mathvariant="normal">S</mi></mrow></mfrac><mspace width="0.222em"></mspace><mo>=</mo><mi mathvariant="normal">r</mi><mi mathvariant="normal">C</mi><mspace width="2.0em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">
+<p><span id="eq-black-scholes"><span class="math display">
 \frac{\partial \mathrm C}{ \partial \mathrm t } + \frac{1}{2}\sigma^{2} \mathrm S^{2}
 \frac{\partial^{2} \mathrm C}{\partial \mathrm C^2}
   + \mathrm r \mathrm S \frac{\partial \mathrm C}{\partial \mathrm S}\ =
   \mathrm r \mathrm C
- \qquad(1)</annotation></semantics></math></span></p>
+\tag{1}</span></span></p>
 </section><section class="level3"><h3 id="cross-references">Cross references<a class="anchor" aria-label="anchor" href="#cross-references"></a>
 </h3>
 <p>See <a href="#fig-puppies" class="quarto-xref">Figura 1</a> for two cute puppies.</p>

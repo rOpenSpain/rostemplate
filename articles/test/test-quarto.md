@@ -88,7 +88,10 @@ Figura 1: Cute puppies
 
 ### Equations
 
-$$\frac{\partial C}{\partial t} + \frac{1}{2}\sigma^{2}S^{2}\frac{\partial^{2}C}{\partial C^{2}} + rS\frac{\partial C}{\partial S}\  = rC\qquad(1)$$
+\frac{\partial \mathrm C}{ \partial \mathrm t } + \frac{1}{2}\sigma^{2}
+\mathrm S^{2} \frac{\partial^{2} \mathrm C}{\partial \mathrm C^2} +
+\mathrm r \mathrm S \frac{\partial \mathrm C}{\partial \mathrm S}\\ =
+\mathrm r \mathrm C \tag{1}
 
 ### Cross references
 

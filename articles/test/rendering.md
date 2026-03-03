@@ -45,15 +45,15 @@ Some R code
 
 ## Tables
 
-| col 1      | col 2                                                   |     col 3     | col 4 |
-|:-----------|:--------------------------------------------------------|:-------------:|:-----:|
-| Brightness | Total brightness, total reflectance, spectral intensity | $$y = x^{2}$$ | test  |
+| col 1      | col 2                                                   |  col 3  | col 4 |
+|:-----------|:--------------------------------------------------------|:-------:|:-----:|
+| Brightness | Total brightness, total reflectance, spectral intensity | y = x^2 | test  |
 
 ## Math
 
-$$f(x) = \frac{1}{\sqrt{2\pi\sigma^{2}}}e^{- \frac{(x - \mu^{2})}{2\sigma^{2}}}$$
+f(x) = \dfrac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu^2)}{2\sigma^2}}
 
-Inline equations: $y = x^{2}$
+Inline equations: y=x^2
 
 ## Search
 
