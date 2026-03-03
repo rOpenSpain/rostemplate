@@ -4,6 +4,7 @@ navbar:
 
 template:
   bootstrap: 5
+  math-rendering: katex
   light-switch: true
   opengraph:
     twitter:
