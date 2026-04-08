@@ -24,5 +24,5 @@ en tu archivo \code{README}:
 ros_badge_ropenspain(install = FALSE)
 }
 \seealso{
-\code{\link[usethis:badges]{usethis::use_badge()}}
+\code{\link[usethis:use_badge]{usethis::use_badge()}}
 }
