@@ -15,5 +15,11 @@ Useful links:
 ## Autor-a
 
 **Maintainer**: Diego Hernangómez <diego.hernangomezherrero@gmail.com>
-([ORCID](https://orcid.org/0000-0001-8457-4658)) (rOpenSpain)
-\[copyright holder\]
+([ORCID](https://orcid.org/0000-0001-8457-4658)) (affiliation:
+rOpenSpain) \[copyright holder\]
+
+Authors:
+
+- Diego Hernangómez <diego.hernangomezherrero@gmail.com>
+  ([ORCID](https://orcid.org/0000-0001-8457-4658)) (affiliation:
+  rOpenSpain) \[copyright holder\]
