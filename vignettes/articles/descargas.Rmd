@@ -51,7 +51,6 @@ mypaks <- jsonlite::read_json(
 mypaks <- mypaks[mypaks %in% crandb]
 
 dwn <- lapply(mypaks, cranlogs::cran_downloads, from = "2016-01-01")
-
 dwn <- dwn |>
   bind_rows() |>
   as_tibble()
@@ -74,11 +73,12 @@ first_date_on_cran <- function(pkg) {
     as.Date()
 
   df <- tibble(package = pkg, date = d, lv = lv)
-  df
+  return(df)
 }
 
 fechas <- lapply(unique(dwn$package), first_date_on_cran) |>
   bind_rows()
+
 
 dwn <- dwn |>
   left_join(fechas |> select(package, d_cran = date)) |>
@@ -97,12 +97,13 @@ dwn_m <- dwn |>
   summarise(downloads = sum(count))
 
 
-# factors by first date on CRAN
-fact <- fechas |>
-  arrange(date) |>
+# factors by avg. monthly downloads
+fact <- dwn_m |>
+  group_by(package) |>
+  summarise(precedence = mean(downloads, na.rm = TRUE)) |>
+  arrange(precedence) |>
   pull(package) |>
-  unique() |>
-  rev()
+  unique()
 
 dwn_m$package <- factor(dwn_m$package, levels = unique(fact))
 ```
@@ -311,6 +312,7 @@ res <- lapply(mypaks, function(x) {
   api_res <- suppressWarnings(try(download.file(
     paste0("https://packagemanager.posit.co/__api__/repos/1/packages/", x),
     tmp,
+    mode = "wb",
     quiet = TRUE
   ), silent = TRUE))
 
