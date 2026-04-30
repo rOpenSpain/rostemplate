@@ -1,6 +1,7 @@
 # reactable example
 
 ``` r
+
 data <- MASS::Cars93[
   1:50,
   c("Manufacturer", "Model", "Type", "AirBags", "Price")

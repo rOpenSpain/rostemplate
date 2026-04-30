@@ -29,6 +29,7 @@ Insignia en markdown o mensaje con el código markdown a introducir.
 ## Ejemplos
 
 ``` r
+
 ros_badge_ropenspain(install = FALSE)
 #> Badge URL is 
 #> [![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)

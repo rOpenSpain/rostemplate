@@ -3,6 +3,7 @@
 Example on a **ggplot2** image
 
 ``` r
+
 library(ggplot2)
 
 # counts (or sums of weights)

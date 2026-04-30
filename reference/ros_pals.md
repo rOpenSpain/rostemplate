@@ -39,6 +39,7 @@ Paletas de colores
 ## Ejemplos
 
 ``` r
+
 scales::show_col(ros_green_pal(9))
 
 

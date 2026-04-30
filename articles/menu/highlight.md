@@ -3,6 +3,7 @@
 Test how `pkgdown` highlights **R** code:
 
 ``` r
+
 library("knitr")
 library("rmarkdown")
 

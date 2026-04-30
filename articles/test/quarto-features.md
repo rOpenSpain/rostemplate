@@ -116,11 +116,11 @@ A definition
 
 ## Footnotes
 
-Here is a footnote reference,[¹](#fn1) and another.[²](#fn2)
+Here is a footnote reference,[^1] and another.[^2]
 
 This paragraph won’t be part of the note, because it isn’t indented.
 
-Here is an inline note.[³](#fn3)
+Here is an inline note.[^3]
 
 ## Equations
 
@@ -209,11 +209,9 @@ In [Figura 2](#fig-cern)…
 Wickham, Hadley. 2014. «Tidy Data». *Journal of Statistical Software,
 Articles* 59 (10): 1-23. <https://doi.org/10.18637/jss.v059.i10>.
 
-------------------------------------------------------------------------
+[^1]: Here is the footnote.
 
-1.  Here is the footnote.
-
-2.  Here’s one with multiple blocks.
+[^2]: Here’s one with multiple blocks.
 
     Subsequent paragraphs are indented to show that they belong to the
     previous footnote.
@@ -223,5 +221,5 @@ Articles* 59 (10): 1-23. <https://doi.org/10.18637/jss.v059.i10>.
     The whole paragraph can be indented, or just the first line. In this
     way, multi-paragraph footnotes work like multi-paragraph list items.
 
-3.  Inlines notes are easier to write, since you don’t have to pick an
+[^3]: Inlines notes are easier to write, since you don’t have to pick an
     identifier and move down to type the note.

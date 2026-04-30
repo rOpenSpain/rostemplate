@@ -1,6 +1,7 @@
 # Ejemplo
 
 ``` r
+
 library(rostemplate)
 ```
 
