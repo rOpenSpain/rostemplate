@@ -7,7 +7,7 @@
 
 **Importante!** Configuración mínima en `pkgdowm.yaml` ha de ser:
 
-```yaml
+``` yaml
 template:
   bootstrap: 5
   package: rostemplate

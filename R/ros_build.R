@@ -42,14 +42,13 @@ ros_build <- function(pkg = ".", ...) {
     )
   )
 
-  sel <-
-    menu(
-      c("Yes", "No"),
-      title = paste0(
-        "Have you included \n\ntemplate:\n  bootstrap: 5\n  package: ",
-        "rostemplate\n\nin your _pkgdown.yml file?"
-      )
+  sel <- menu(
+    c("Yes", "No"),
+    title = paste0(
+      "Have you included \n\ntemplate:\n  bootstrap: 5\n  package: ",
+      "rostemplate\n\nin your _pkgdown.yml file?"
     )
+  )
   if (sel != 1) {
     stop("Execution halted")
   }

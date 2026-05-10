@@ -1,0 +1,7 @@
+# Forzar que todos los archivos de texto se normalicen a LF al hacer commit
+* text=auto eol=lf
+
+# (Opcional) Asegurar que archivos binarios no se toquen
+*.jpg binary
+*.png binary
+*.gif binary

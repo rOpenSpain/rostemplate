@@ -24,59 +24,57 @@
 #'
 #' @inheritParams ros_actions_pkgdown_docs
 #'
-ros_actions_check_cron <-
-  function(pkg = ".", overwrite = TRUE) {
-    # Check destdir
+ros_actions_check_cron <- function(pkg = ".", overwrite = TRUE) {
+  # Check destdir
 
-    destdir <- file.path(pkg, ".github", "workflows")
-    checkdir <- dir.exists(destdir)
-    if (isFALSE(checkdir)) {
-      dir.create(destdir, recursive = TRUE)
-    }
-
-    # Check .Rbuildignore
-
-    rbuildignore <- file.path(pkg, ".Rbuildignore")
-    if (!file.exists(rbuildignore)) {
-      file.create(rbuildignore)
-    }
-
-    # Add lines to Rbuildignore
-    usethis::write_union(
-      rbuildignore,
-      c(
-        "^docs$",
-        "^_pkgdown\\.yml$",
-        "^_pkgdown\\.yaml$",
-        "^\\.github$",
-        "^pkgdown$"
-      )
-    )
-
-    # Check gitignore
-
-    gitignore <- file.path(pkg, ".github", ".gitignore")
-    if (!file.exists(gitignore)) {
-      file.create(gitignore)
-    }
-
-    # Add lines to gitignore
-    usethis::write_union(
-      gitignore,
-      c("*.html", "R-version", "depends.Rds")
-    )
-
-    # Get action file
-    filepath <-
-      system.file("yaml/roscron-check-standard.yml", package = "rostemplate")
-
-    # Copy
-    result <- file.copy(filepath, destdir, overwrite = overwrite)
-    if (result) {
-      message("Success!")
-    } else {
-      message("File not updated")
-    }
-
-    invisible()
+  destdir <- file.path(pkg, ".github", "workflows")
+  checkdir <- dir.exists(destdir)
+  if (isFALSE(checkdir)) {
+    dir.create(destdir, recursive = TRUE)
   }
+
+  # Check .Rbuildignore
+
+  rbuildignore <- file.path(pkg, ".Rbuildignore")
+  if (!file.exists(rbuildignore)) {
+    file.create(rbuildignore)
+  }
+
+  # Add lines to Rbuildignore
+  usethis::write_union(
+    rbuildignore,
+    c(
+      "^docs$",
+      "^_pkgdown\\.yml$",
+      "^_pkgdown\\.yaml$",
+      "^\\.github$",
+      "^pkgdown$"
+    )
+  )
+
+  # Check gitignore
+
+  gitignore <- file.path(pkg, ".github", ".gitignore")
+  if (!file.exists(gitignore)) {
+    file.create(gitignore)
+  }
+
+  # Add lines to gitignore
+  usethis::write_union(gitignore, c("*.html", "R-version", "depends.Rds"))
+
+  # Get action file
+  filepath <- system.file(
+    "yaml/roscron-check-standard.yml",
+    package = "rostemplate"
+  )
+
+  # Copy
+  result <- file.copy(filepath, destdir, overwrite = overwrite)
+  if (result) {
+    message("Success!")
+  } else {
+    message("File not updated")
+  }
+
+  invisible()
+}

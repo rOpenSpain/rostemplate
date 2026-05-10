@@ -1,2 +1,2 @@
 [lint]
-ignore = ["implicit_assignment"]
+ignore = ["implicit_assignment", "internal_function"]

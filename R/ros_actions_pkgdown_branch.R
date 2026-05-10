@@ -42,14 +42,13 @@ ros_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
   if (!file.exists(gitignore)) {
     file.create(gitignore)
   }
-  usethis::write_union(
-    gitignore,
-    c("*.html", "R-version", "depends.Rds")
-  )
+  usethis::write_union(gitignore, c("*.html", "R-version", "depends.Rds"))
 
   # Get action file
-  filepath <-
-    system.file("yaml/rostemplate-gh-pages.yml", package = "rostemplate")
+  filepath <- system.file(
+    "yaml/rostemplate-gh-pages.yml",
+    package = "rostemplate"
+  )
 
   # Copy
   result <- file.copy(filepath, destdir, overwrite = overwrite)

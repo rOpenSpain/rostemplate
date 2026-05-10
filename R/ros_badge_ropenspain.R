@@ -44,14 +44,6 @@ ros_badge_ropenspain <- function(install = TRUE) {
     usethis::use_badge("rOS-badge", href = href, src = badge)
     # nocov end
   } else {
-    message(
-      "Badge URL is ",
-      "\n",
-      "[![rOS-badge](",
-      badge,
-      ")](",
-      href,
-      ")"
-    )
+    message("Badge URL is ", "\n", "[![rOS-badge](", badge, ")](", href, ")")
   }
 }

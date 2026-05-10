@@ -12,8 +12,4 @@ schema_json <- jsonlite::read_json(
 tmp_json_file <- tempfile(fileext = ".json")
 jsonlite::write_json(schema_json, tmp_json_file)
 
-jsonvalidate::json_validate(
-  json_brand,
-  schema = tmp_json_file,
-  verbose = TRUE
-)
+jsonvalidate::json_validate(json_brand, schema = tmp_json_file, verbose = TRUE)
