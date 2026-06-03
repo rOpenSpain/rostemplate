@@ -1,6 +1,6 @@
 # Descargas de paquetes de rOpenSpain
 
-*Fecha de actualización: 28 may 2026*
+*Fecha de actualización: 03 jun 2026*
 
 ## En CRAN
 
