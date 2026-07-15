@@ -1,23 +1,24 @@
-#' Instala una acción GitHub que crea tu sitio en la carpeta `/docs`
+#' Instala un workflow de GitHub Actions que crea tu sitio en `/docs`
 #'
-#' @description
-#' Esta acción GitHub genera tu sitio \CRANpkg{pkgdown} en la carpeta `docs`
-#' de tu repositorio.
+#' Este workflow de GitHub Actions genera tu sitio \CRANpkg{pkgdown} en la
+#' carpeta `docs` de tu repositorio.
 #'
 #' @details
-#' El resultado final es equivalente a ejecutar [ros_build()] con la única
-#' diferencia de que este comando se ejecuta en GitHub, en lugar de tener que
-#' ser ejecutado por el usuario.
-#'
-#' @seealso [ros_build()], [ros_actions_pkgdown_branch()].
-#'
-#' @export
+#' El resultado final es equivalente a ejecutar [ros_build()], con la diferencia
+#' de que este comando se ejecuta en GitHub en lugar de ejecutarse localmente.
 #'
 #' @param pkg Ruta a la raíz del paquete.
-#' @param overwrite Sobreescribe la acción si ya se encuntra instalada.
+#' @param overwrite Sobrescribe el workflow si ya se encuentra instalado.
 #'
+#' @returns Se llama por sus efectos secundarios y devuelve `NULL` de forma
+#'   invisible.
+#'
+#' @family pkgdown
+#'
+#' @export
+#' @encoding UTF-8
 ros_actions_pkgdown_docs <- function(pkg = ".", overwrite = TRUE) {
-  # Check destdir
+  # Ensure the workflow directory exists.
 
   destdir <- file.path(pkg, ".github", "workflows")
   checkdir <- dir.exists(destdir)
@@ -25,14 +26,14 @@ ros_actions_pkgdown_docs <- function(pkg = ".", overwrite = TRUE) {
     dir.create(destdir, recursive = TRUE)
   }
 
-  # Check .Rbuildignore
+  # Ensure .Rbuildignore exists.
 
   rbuildignore <- file.path(pkg, ".Rbuildignore")
   if (!file.exists(rbuildignore)) {
     file.create(rbuildignore)
   }
 
-  # Add lines to Rbuildignore
+  # Add pkgdown paths to .Rbuildignore.
   usethis::write_union(
     rbuildignore,
     c(
@@ -44,17 +45,17 @@ ros_actions_pkgdown_docs <- function(pkg = ".", overwrite = TRUE) {
     )
   )
 
-  # Check gitignore
+  # Ensure the workflow .gitignore exists.
   gitignore <- file.path(pkg, ".github", ".gitignore")
   if (!file.exists(gitignore)) {
     file.create(gitignore)
   }
   usethis::write_union(gitignore, c("*.html", "R-version", "depends.Rds"))
 
-  # Get action file
+  # Locate the workflow template.
   filepath <- system.file("yaml/rostemplate-docs.yml", package = "rostemplate")
 
-  # Copy
+  # Copy the workflow template.
   result <- file.copy(filepath, destdir, overwrite = overwrite)
   if (result) {
     message("Success!")

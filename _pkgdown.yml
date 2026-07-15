@@ -6,16 +6,34 @@ template:
   opengraph:
     image:
       src: https://ropenspain.github.io/rostemplate/logo.png
-      alt: "ROpenSpain logo"
+      alt: "rOpenSpain logo"
     twitter:
       site: "@rOpenSpain"
       creator: "@dhernangomez"
       card: summary_large_image
 
 reference:
-- title: Todas las funciones
+- title: Sitios pkgdown
+  desc: >
+    Funciones para crear sitios pkgdown localmente o con workflows de
+    GitHub Actions.
   contents:
-  - starts_with("ros")
+  - has_concept("pkgdown")
+
+- title: Comprobaciones con GitHub Actions
+  desc: Workflows de GitHub Actions para comprobar paquetes de forma periódica.
+  contents:
+  - ros_actions_check_cron
+
+- title: Identidad visual
+  desc: Insignias y paletas de colores de rOpenSpain.
+  contents:
+  - ros_badge_ropenspain
+  - has_concept("palettes")
+
+- title: internal
+  contents:
+  - rostemplate-package
 
 # Comprueba la configuración local en https://pkgdown.r-lib.org/articles/pkgdown.html#language
 lang: es
@@ -30,19 +48,32 @@ articles:
   navbar: Sobre rOpenSpain
   contents:
   - articles/descargas
-  
-- title: Test Menu
-  navbar: Test Menu
+
+- title: Ejemplos precomputados
   desc: >
-    Comprueba menú.
+    Artículos de ejemplo para comprobar vignettes precomputadas en R Markdown
+    y Quarto.
   contents:
-  - starts_with("menu")
-  - starts_with("articles/menu")
+  - test-precompute
+  - test-precompute-quarto
+
+- title: Menú de pruebas
+  navbar: Menú de pruebas
+  desc: >
+    Artículos de prueba para comprobar el menú de navegación.
+  contents:
+  - menu/ggplot2
+  - menu/highlight
 
 - title: Test
   desc: >
-    Artículos de test para <a href="https://CRAN.R-project.org/package=pkgdown"
-    class="external-link"><span class="pkg">pkgdown</span></a>.
+    Artículos de prueba para comprobar la salida de pkgdown.
   contents:
-  - starts_with("test")
-  - starts_with("articles/test")
+  - test/long-toc
+  - test/quarto-features
+  - test/reactable
+  - test/rendering
+  - test/short
+  - test/test-bullets
+  - test/test-quarto
+  - test/widgets

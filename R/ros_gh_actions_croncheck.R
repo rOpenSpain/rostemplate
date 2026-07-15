@@ -1,31 +1,32 @@
-#' Crea una acción GitHub que comprueba tu paquete de manera regular
+#' Crea un workflow de GitHub Actions que comprueba tu paquete regularmente
 #'
-#' @description
-#' La acción GitHub creada ejecuta `R CMD check` para tu paquete.
-#' La configuración por defecto ejecuta el check de manera mensual los dias 1
-#' de mes a las 08:30 AM.
+#' El workflow de GitHub Actions creado ejecuta `R CMD check` para tu paquete.
+#' La configuración por defecto ejecuta el check de manera mensual los días 1
+#' de cada mes a las 08:30.
 #'
 #' @details
-#' Puedes aprender cómo configurar la acción cron en el siguiente link:
+#' Puedes aprender cómo configurar la acción cron en el siguiente enlace:
 #'
 #' ```{r, echo=FALSE, results='asis'}
 #' cat(paste0("\n<https://docs.github.com/en/free-pro-team@latest/",
 #' "actions/reference/events-that-trigger-workflows#schedule>"))
 #' ```
 #'
-#' La configuración por defecto  `"30 08 1 * *""` ("A las 08:30 del
-#' dia-del-mes 1.").
+#' La configuración por defecto es `"30 08 1 * *"` ("a las 08:30 del día 1 de
+#' cada mes").
 #'
-#' Usa [crontab.guru](https://crontab.guru/#30_08_1_*_*) para crear tus propia
+#' Usa [crontab.guru](https://crontab.guru/#30_08_1_*_*) para crear tu propia
 #' configuración cron.
-#'
-#'
-#' @export
 #'
 #' @inheritParams ros_actions_pkgdown_docs
 #'
+#' @returns Se llama por sus efectos secundarios y devuelve `NULL` de forma
+#'   invisible.
+#'
+#' @export
+#' @encoding UTF-8
 ros_actions_check_cron <- function(pkg = ".", overwrite = TRUE) {
-  # Check destdir
+  # Ensure the workflow directory exists.
 
   destdir <- file.path(pkg, ".github", "workflows")
   checkdir <- dir.exists(destdir)
@@ -33,14 +34,14 @@ ros_actions_check_cron <- function(pkg = ".", overwrite = TRUE) {
     dir.create(destdir, recursive = TRUE)
   }
 
-  # Check .Rbuildignore
+  # Ensure .Rbuildignore exists.
 
   rbuildignore <- file.path(pkg, ".Rbuildignore")
   if (!file.exists(rbuildignore)) {
     file.create(rbuildignore)
   }
 
-  # Add lines to Rbuildignore
+  # Add pkgdown paths to .Rbuildignore.
   usethis::write_union(
     rbuildignore,
     c(
@@ -52,23 +53,23 @@ ros_actions_check_cron <- function(pkg = ".", overwrite = TRUE) {
     )
   )
 
-  # Check gitignore
+  # Ensure the workflow .gitignore exists.
 
   gitignore <- file.path(pkg, ".github", ".gitignore")
   if (!file.exists(gitignore)) {
     file.create(gitignore)
   }
 
-  # Add lines to gitignore
+  # Add workflow helper files to .gitignore.
   usethis::write_union(gitignore, c("*.html", "R-version", "depends.Rds"))
 
-  # Get action file
+  # Locate the workflow template.
   filepath <- system.file(
     "yaml/roscron-check-standard.yml",
     package = "rostemplate"
   )
 
-  # Copy
+  # Copy the workflow template.
   result <- file.copy(filepath, destdir, overwrite = overwrite)
   if (result) {
     message("Success!")

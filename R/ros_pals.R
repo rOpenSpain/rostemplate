@@ -4,25 +4,22 @@
 #'
 #' Paletas de colores basadas en el tema de **rOpenSpain**.
 #'
-#' @family ros_plot
-#'
 #' @rdname ros_pals
 #' @name ros_pals
 #'
-#' @return Paletas de colores
+#' @param n Número de colores.
+#' @param alpha Valor alfa (transparencia) de los colores. `alpha = 1` es opaco
+#'   y `alpha = 0` es totalmente transparente.
+#' @param rev Valor lógico. Si es `TRUE`, muestra los colores en orden inverso.
+#'
+#' @returns Un vector de colores.
+#'
+#' @family palettes
 #'
 #' @export
-#'
-#' @param n Número de colores
-#' @param alpha Valor alfa (transparencia) de los colores. alpha = 1 es opaco
-#'   y alpha = 0 totalmente transparente
-#' @param rev	Valor lógico que indica si los colores se han de mostar en orden
-#'   inverso.
-#'
-#'
+#' @encoding UTF-8
 #'
 #' @examples
-#'
 #' scales::show_col(ros_green_pal(9))
 #'
 #' scales::show_col(ros_violet_pal(9))
@@ -49,6 +46,7 @@ ros_green_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 #' @rdname ros_pals
 #'
 #' @export
+#' @encoding UTF-8
 ros_violet_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   cols <- c("#986dbd", "#e0d3eb")
   if (rev) {
@@ -66,6 +64,7 @@ ros_violet_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 #' @rdname ros_pals
 #'
 #' @export
+#' @encoding UTF-8
 ros_gradient_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   cols <- c("#98c00b", "#e0ecb5", "#e0d3eb", "#986dbd")
   if (rev) {
@@ -83,6 +82,7 @@ ros_gradient_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 #' @rdname ros_pals
 #'
 #' @export
+#' @encoding UTF-8
 ros_qualitative_pal <- function(n = 6, alpha = 0.9, rev = FALSE) {
   color <- "#98c00b"
 
@@ -116,6 +116,7 @@ ros_qualitative_pal <- function(n = 6, alpha = 0.9, rev = FALSE) {
 #' @rdname ros_pals
 #'
 #' @export
+#' @encoding UTF-8
 ros_metro_madrid_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   cols <- c(
     "#39b5e6",

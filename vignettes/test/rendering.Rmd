@@ -1,5 +1,5 @@
 ---
-title: "Output Rendering"
+title: "Output rendering"
 subtitle: "Subtitle is skipped from the TOC"
 author: "Author is skipped from the TOC"
 date: "Date is skipped from the TOC"
@@ -14,7 +14,7 @@ This vignette tests pkgdown output rendering for several use cases.
 
 ## Footnotes
 
-Yay[^1]
+Yay.[^1]
 
 [^1]: Including **footnotes**! 😁
 
@@ -42,9 +42,9 @@ x
 
 <summary>Multiple paragraphs</summary>
 
-First paragraph
+First paragraph.
 
-Second paragraph
+Second paragraph.
 
 </details>
 
@@ -124,7 +124,7 @@ R code in `r` block:
 mean(a + 1)
 ```
 
-Yaml
+YAML.
 
 ``` yaml
 yaml: [a, 1]
@@ -143,7 +143,7 @@ yaml: [a, b, c]
 Testing margins and copy buttons on small screens.
 
 ``` r
-txt <- "Not wrapped; check the copy button behavior."
+txt <- "Not wrapped, check the copy button behavior."
 ```
 
 <section>
@@ -160,7 +160,7 @@ txt <- "Wrapped in section"
 > verify whether it aligns with the paragraph width.
 >
 > ``` r
-> txt <- "Wrapped in blockquote; margins are preserved."
+> txt <- "Wrapped in blockquote, margins are preserved."
 > ```
 >
 > Continue…
@@ -169,7 +169,7 @@ txt <- "Wrapped in section"
     check whether it matches the paragraph width.
 
     ``` r
-    txt <- "Wrapped in li; margins are preserved."
+    txt <- "Wrapped in li, margins are preserved."
     ```
 
 -   Another bullet.
@@ -180,7 +180,7 @@ txt <- "Wrapped in section"
         and confirm alignment with the paragraph.
 
         ``` r
-        txt <- "Wrapped in li; margins are preserved."
+        txt <- "Wrapped in li, margins are preserved."
         ```
 
     3.  Nested list continues.
@@ -206,14 +206,14 @@ message(cli::col_green("This is green"))
 warning(cli::style_bold("This is bold"))
 ```
 
-Some text
+Some text.
 
 ```{r}
 #| error: TRUE
 stop(cli::style_italic("This is italic"))
 ```
 
-Some more text
+Some more text.
 
 ## Quoted text
 
@@ -245,27 +245,27 @@ There should however be no bug here!
 
 #### Tab 1
 
-blablablabla
+Placeholder text.
 
 ``` r
 1 + 1
 ```
 
-Should be "cool" heading below
+The heading below should be "cool".
 
 ##### cool
 
-Stuff
+Content.
 
 #### Tab 2
 
-blop
+Placeholder text.
 
 ### Tabset without pills {.tabset}
 
 #### Tab 1
 
-something nice
+Something nice.
 
 ```{r}
 #| fig.alt: Another test plot
@@ -274,7 +274,7 @@ plot(1:42)
 
 #### Tab 2 {.active}
 
-This tab should be active
+This tab should be active.
 
 ### Fading tabset {.tabset .tabset-fade}
 

@@ -7,9 +7,9 @@ cff-version: 1.2.0
 message: 'To cite package "rostemplate" in publications use:'
 type: software
 license: MIT
-title: 'rostemplate: Plantilla ''pkgdown'' para los paquetes de ''rOpenSpain'''
+title: 'rostemplate: Plantilla ''pkgdown'' para paquetes de ''rOpenSpain'''
 version: 0.2.0.9000
-abstract: Plantilla privada para uso exclusivo de los paquetes de rOpenSpain.
+abstract: Plantilla privada para crear sitios pkgdown de los paquetes de rOpenSpain.
 authors:
 - family-names: Hernangómez
   given-names: Diego
@@ -18,7 +18,7 @@ authors:
   affiliation: rOpenSpain
 preferred-citation:
   type: manual
-  title: 'rostemplate: Plantilla pkgdown para los paquetes de rOpenSpain'
+  title: 'rostemplate: Plantilla pkgdown para paquetes de rOpenSpain'
   authors:
   - family-names: Hernangómez
     given-names: Diego
@@ -27,7 +27,7 @@ preferred-citation:
     affiliation: rOpenSpain
   year: '2026'
   url: https://ropenspain.github.io/rostemplate/
-  abstract: Plantilla privada para uso exclusivo de los paquetes de rOpenSpain.
+  abstract: Plantilla privada para crear sitios pkgdown de los paquetes de rOpenSpain.
 repository-code: https://github.com/ropenspain/rostemplate
 url: https://ropenspain.github.io/rostemplate/
 contact:
@@ -123,7 +123,6 @@ references:
   abstract: 'usethis: Automate Package and Project Setup'
   notes: Imports
   url: https://usethis.r-lib.org
-  repository: https://CRAN.R-project.org/package=usethis
   authors:
   - family-names: Wickham
     given-names: Hadley
@@ -142,7 +141,6 @@ references:
     email: andy.teucher@posit.co
     orcid: https://orcid.org/0000-0002-7840-692X
   year: '2026'
-  doi: 10.32614/CRAN.package.usethis
   version: '>= 2.0.0'
 - type: software
   title: utils
@@ -175,7 +173,6 @@ references:
   abstract: 'quarto: R Interface to ''Quarto'' Markdown Publishing System'
   notes: Suggests
   url: https://quarto-dev.github.io/quarto-r/
-  repository: https://CRAN.R-project.org/package=quarto
   authors:
   - family-names: Allaire
     given-names: JJ
@@ -186,7 +183,6 @@ references:
     email: cderv@posit.co
     orcid: https://orcid.org/0000-0003-4474-2498
   year: '2026'
-  doi: 10.32614/CRAN.package.quarto
 - type: software
   title: rmarkdown
   abstract: 'rmarkdown: Dynamic Documents for R'

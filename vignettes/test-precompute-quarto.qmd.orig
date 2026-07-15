@@ -1,7 +1,7 @@
 ---
-title: "Example of a precomputed vignette - Quarto"
+title: "Example of a precomputed vignette with Quarto"
 vignette: >
-  %\VignetteIndexEntry{Example of a precomputed vignette - Quarto}
+  %\VignetteIndexEntry{Example of a precomputed vignette with Quarto}
   %\VignetteEngine{quarto::html}
   %\VignetteEncoding{UTF-8}
 ---
@@ -25,7 +25,7 @@ knitr::opts_chunk$set(
 ```
 
 
-This is an example of a precomputed vignette in Quarto
+This is an example of a precomputed vignette in Quarto.
 
 ```{r}
 #| label: plot_quarto
@@ -38,7 +38,7 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
 
 ```
 
-See here some text:
+The following text is placeholder prose for checking rendered output:
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur massa
 risus, eu tincidunt magna finibus id. Donec quis tincidunt est, sed commodo leo.

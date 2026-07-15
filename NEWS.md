@@ -5,7 +5,7 @@
 
 # rostemplate 0.2.0
 
-**Importante!** Configuración mínima en `pkgdowm.yaml` ha de ser:
+**Importante:** la configuración mínima en `_pkgdown.yaml` ha de ser:
 
 ``` yaml
 template:
@@ -15,26 +15,26 @@ template:
 
 Otros cambios:
 
-- Adapt to BS5 with new **pkgdown** version.
-- Documentación en castellano
-- Añade paletas de colores
+- Adaptación a Bootstrap 5 con la nueva versión de **pkgdown**.
+- Añade paletas de colores.
+- Documentación en castellano.
 
 # rostemplate 0.0.4
 
-- Use **testthat** package.
-- Rename core functions.
-- Update actions.
-- Update logo and favicons, created with **hexSticker**.
+- Actualiza el logo y los favicons, creados con **hexSticker**.
+- Actualiza los workflows de GitHub Actions.
+- Renombra las funciones principales.
+- Usa el paquete **testthat**.
 
 # rostemplate 0.0.3
 
-- Add `ros_badge_ropenspain()` :
+- Añade `ros_badge_ropenspain()`:
   [![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
 
 # rostemplate 0.0.2
 
-- Move to [**rOpenSpain**](https://github.com/rOpenSpain/rostemplate)**.**
+- Traslada el paquete a [**rOpenSpain**](https://github.com/rOpenSpain/rostemplate).
 
 # rostemplate 0.0.1
 
-- First stable release
+- Primera versión estable.

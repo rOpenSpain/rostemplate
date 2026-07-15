@@ -55,3 +55,4 @@
 ^\.claude$
 ^\.gitattributes$
 ^index\.Rmd$
+^AGENTS\.md$

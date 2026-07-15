@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-Example on a **ggplot2** image
+Example using a **ggplot2** image.
 
 ```{r}
 #| label: setup
@@ -19,8 +19,8 @@ Example on a **ggplot2** image
 #| fig-cap: A ggplot2 image
 library(ggplot2)
 
-# counts (or sums of weights)
+# Counts or sums of weights.
 g <- ggplot(mpg, aes(class))
-# Number of cars in each class:
+# Number of cars in each class.
 g + geom_bar()
 ```

@@ -1,5 +1,5 @@
 ---
-title: quarto features
+title: Quarto features
 subtitle: Using this for shortcodes
 output: html
 knitr:
@@ -25,7 +25,7 @@ penguins |>                                      # <1>
   )                                              # <2>
 ```
 
-1.  Take `penguins`, and then,
+1.  Take `penguins`, then,
 2.  add new columns for the bill ratio and bill area.
 
 ## Code filename
@@ -36,7 +36,7 @@ plt.plot([1,23,2,4])
 plt.show()
 ```
 
-## Callout Blocks
+## Callout blocks
 
 ```{=html}
 <div class="callout callout-style-default callout-note callout-titled">
@@ -47,8 +47,8 @@ plt.show()
 <div class="callout-body-container callout-body">
 ```
 
-Note that there are five types of callouts, including: `note`,`tip`, `warning`,
-`caution` and `important`.
+Note that there are five types of callouts: `note`, `tip`, `warning`, `caution`
+and `important`.
 
 ```{=html}
 </div>
@@ -82,7 +82,7 @@ warning.
 ```
 
 The callout heading is provided by the callout type, with the expected heading
-(i.e., Note, Warning, Important, Tip, or Caution).
+(i.e., Note, Warning, Important, Tip or Caution).
 
 ```{=html}
 </div>
@@ -147,7 +147,7 @@ A simple callout.
 <div class="callout-body-container callout-body">
 ```
 
-No icon
+No icon.
 
 ```{=html}
 </div>
@@ -179,7 +179,7 @@ diffviewer::visual_diff(path1, path2)
 
 ## Keyboard
 
--   Keyboard shortcut: {{< kbd Shift-Ctrl-P >}}
+-   Keyboard shortcut: {{< kbd Shift-Ctrl-P >}}.
 
 ## Lists
 
@@ -187,7 +187,7 @@ diffviewer::visual_diff(path1, path2)
 
     Continued (indent 4 spaces)
 
-Another example
+Another example.
 
 1.  ordered list
 
@@ -199,12 +199,12 @@ Another example
 
     A.  sub-sub-item 1
 
-A task list
+A task list.
 
 -   [ ] Task 1
 -   [x] Task 2
 
-A definition
+A definition.
 
 term
 
@@ -225,7 +225,7 @@ Here is a footnote reference,[^1] and another.[^2]
     { some.code }
     ```
 
-    The whole paragraph can be indented, or just the first line. In this way,
+    The whole paragraph or just the first line can be indented. This way,
     multi-paragraph footnotes work like multi-paragraph list items.
 
 This paragraph won't be part of the note, because it isn't indented.
@@ -312,9 +312,9 @@ Cute puppies (@fig-pitbull and @fig-shar-pei) and placeholder
 ::: {#fig-cern}
 {{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
 
-The video "CERN: The Journey of Discovery"
+The video "CERN: The Journey of Discovery".
 :::
 
-In @fig-cern...
+See @fig-cern.
 
 ## References

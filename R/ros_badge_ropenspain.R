@@ -1,7 +1,5 @@
 #' Añade una insignia de **rOpenSpain** a tu archivo `README`
 #'
-#'
-#' @description
 #' Añade una insignia de **rOpenSpain** que redirige a <https://ropenspain.es/>
 #' en tu archivo `README`:
 #'
@@ -15,23 +13,24 @@
 #'
 #' ```
 #'
-#' @export
+#' @param install Valor lógico. Si es `TRUE`, la insignia se instala en
+#'   `README.md` o `README.Rmd`. Si es `FALSE`, muestra un mensaje con el
+#'   código markdown correspondiente.
 #'
-#' @return Insignia en markdown o mensaje con el código markdown a introducir.
+#' @returns Se llama por sus efectos secundarios. Si `install` es `FALSE`,
+#'   muestra el código markdown de la insignia.
 #'
 #' @seealso [usethis::use_badge()]
 #'
-#' @param install TRUE/FALSE. Si es `TRUE` la insignia se instala en el archivo
-#'   `README.md/README.Rmd`. Si es `FALSE` muestra un mensaje con el código
-#'   markdown correspondiente.
+#' @export
+#' @encoding UTF-8
 #'
 #' @examples
-#'
 #' ros_badge_ropenspain(install = FALSE)
 ros_badge_ropenspain <- function(install = TRUE) {
   stopifnot(is.logical(install))
 
-  # Add pkg
+  # Prepare badge URLs.
   badge <- paste0(
     "https://ropenspain.github.io/rostemplate/reference/",
     "figures/ropenspain-badge.svg"

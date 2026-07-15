@@ -108,7 +108,7 @@ fact <- dwn_m |>
 dwn_m$package <- factor(dwn_m$package, levels = unique(fact))
 ```
 
-### Histórico de descargas
+### Historial de descargas
 
 ```{r}
 #| echo: false
@@ -136,7 +136,7 @@ ggplot(dwn_m, aes(x = m)) +
 
 ```{r}
 #| echo: false
-# Not this week
+# Exclude the current week.
 thisw <- lubridate::ceiling_date(Sys.Date(), "week", week_start = 1)
 
 dwn_w <- dwn |>
@@ -209,7 +209,7 @@ avg_daily_all <- avg_daily |>
   ungroup() |>
   summarise(avg = round(sum(avg, na.rm = TRUE), 1))
 
-# Une todo y da nombres
+# Combina las métricas y asigna nombres legibles.
 end <-
   fechas |>
   left_join(avg_daily) |>
@@ -224,7 +224,7 @@ names(end) <- c(
   "paquete",
   "en CRAN desde",
   "Versión en CRAN",
-  "media diaria", "último dia",
+  "media diaria", "último día",
   "última semana", "último mes", "último año"
 )
 
@@ -291,7 +291,7 @@ reactable(
         prettyNum(p, big.mark = ".", decimal.mark = ",")
       }
     ),
-    "último dia" = colDef(format = colFormat(separators = TRUE)),
+    "último día" = colDef(format = colFormat(separators = TRUE)),
     "última semana" = colDef(format = colFormat(separators = TRUE)),
     "último mes" = colDef(format = colFormat(separators = TRUE)),
     "último año" = colDef(format = colFormat(separators = TRUE))

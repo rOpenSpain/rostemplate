@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-This is an example of a precomputed vignette:
+This is an example of a precomputed vignette.
 
 ```{r}
 #| label: plot
@@ -33,7 +33,7 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
 
 ```
 
-See here some text:
+The following text is placeholder prose for checking rendered output:
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra, ipsum
 vel maximus viverra, elit magna volutpat metus, eget bibendum velit libero vel
