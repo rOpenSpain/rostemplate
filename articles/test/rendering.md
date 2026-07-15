@@ -1,10 +1,10 @@
-# Output Rendering
+# Output rendering
 
 This vignette tests pkgdown output rendering for several use cases.
 
 ## Footnotes
 
-Yay[^1]
+Yay.[^1]
 
 ## Figures
 
@@ -34,9 +34,9 @@ This should only be shown when required
 
 Multiple paragraphs
 
-First paragraph
+First paragraph.
 
-Second paragraph
+Second paragraph.
 
 Some R code
 
@@ -118,7 +118,7 @@ R code in `r` block:
 mean(a + 1)
 ```
 
-Yaml
+YAML.
 
 ``` yaml
 yaml: [a, 1]
@@ -136,7 +136,7 @@ Testing margins and copy buttons on small screens.
 
 ``` r
 
-txt <- "Not wrapped; check the copy button behavior."
+txt <- "Not wrapped, check the copy button behavior."
 ```
 
 Wrapped in a `<section>` (e.g. `section > div > pre`)
@@ -151,7 +151,7 @@ txt <- "Wrapped in section"
 >
 > ``` r
 >
-> txt <- "Wrapped in blockquote; margins are preserved."
+> txt <- "Wrapped in blockquote, margins are preserved."
 > ```
 >
 > Continue…
@@ -161,7 +161,7 @@ txt <- "Wrapped in section"
 
   ``` r
 
-  txt <- "Wrapped in li; margins are preserved."
+  txt <- "Wrapped in li, margins are preserved."
   ```
 
 - Another bullet.
@@ -173,7 +173,7 @@ txt <- "Wrapped in section"
 
       ``` r
 
-      txt <- "Wrapped in li; margins are preserved."
+      txt <- "Wrapped in li, margins are preserved."
       ```
 
   3.  Nested list continues.
@@ -202,7 +202,7 @@ warning(cli::style_bold("This is bold"))
 #> Warning: This is bold
 ```
 
-Some text
+Some text.
 
 ``` r
 
@@ -211,7 +211,7 @@ stop(cli::style_italic("This is italic"))
 #> ! This is italic
 ```
 
-Some more text
+Some more text.
 
 ## Quoted text
 
@@ -237,27 +237,27 @@ There should however be no bug here!
 - Tab 1
 - Tab 2
 
-blablablabla
+Placeholder text.
 
 ``` r
 
 1 + 1
 ```
 
-Should be “cool” heading below
+The heading below should be “cool”.
 
 ##### cool
 
-Stuff
+Content.
 
-blop
+Placeholder text.
 
 ### Tabset without pills
 
 - Tab 1
 - Tab 2
 
-something nice
+Something nice.
 
 ``` r
 
@@ -266,7 +266,7 @@ plot(1:42)
 
 ![Another test plot](rendering_files/figure-html/unnamed-chunk-8-1.png)
 
-This tab should be active
+This tab should be active.
 
 ### Fading tabset
 

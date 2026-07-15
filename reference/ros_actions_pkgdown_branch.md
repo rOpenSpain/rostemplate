@@ -1,6 +1,6 @@
-# Instala una acción GitHub que genera tu sitio en la rama `gh-pages`
+# Instala un workflow de GitHub Actions que genera tu sitio en `gh-pages`
 
-Instala una acción GitHub que crea el sitio
+Instala un workflow de GitHub Actions que crea el sitio
 [pkgdown](https://CRAN.R-project.org/package=pkgdown) de tu paquete en
 la rama `gh-pages` de tu repositorio.
 
@@ -18,9 +18,15 @@ ros_actions_pkgdown_branch(pkg = ".", overwrite = TRUE)
 
 - overwrite:
 
-  Sobreescribe la acción si ya se encuntra instalada.
+  Sobrescribe el workflow si ya se encuentra instalado.
+
+## Valor
+
+Se llama por sus efectos secundarios y devuelve `NULL` de forma
+invisible.
 
 ## Ver también
 
-[`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md),
-[`ros_actions_pkgdown_docs()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_docs.md)
+Sitios pkgdown:
+[`ros_actions_pkgdown_docs()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_docs.md),
+[`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)

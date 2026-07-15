@@ -1,6 +1,6 @@
 # Genera tu sitio [pkgdown](https://CRAN.R-project.org/package=pkgdown) en local
 
-Esta función es un wrapper de
+Esta función envuelve
 [`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html).
 
 ## Uso
@@ -82,20 +82,28 @@ ros_build(pkg = ".", ...)
   :   If `FALSE`, generate build messages for build functions that take
       `quiet` arguments.
 
+## Valor
+
+Se llama por sus efectos secundarios y devuelve `NULL` de forma
+invisible.
+
 ## Detalles
 
 La única diferencia con
 [`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html)
-es que te recuerda los pasos a seguir para configurar `rostemplate`, y
+es que te recuerda los pasos a seguir para configurar `rostemplate` y
 pide confirmación antes de ejecutar
 [`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html).
 El resultado se genera en la carpeta `/docs`.
 
 Al contrario que
 [`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md),
-esta acción se ejecuta por el usuario.
+este workflow se ejecuta localmente.
 
 ## Ver también
 
-[`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md),
 [`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html).
+
+Sitios pkgdown:
+[`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md),
+[`ros_actions_pkgdown_docs()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_docs.md)

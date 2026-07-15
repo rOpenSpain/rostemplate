@@ -1,6 +1,7 @@
-# rostemplate: Plantilla 'pkgdown' para los paquetes de 'rOpenSpain'
+# rostemplate: Plantilla 'pkgdown' para paquetes de 'rOpenSpain'
 
-Plantilla privada para uso exclusivo de los paquetes de rOpenSpain.
+Plantilla privada para crear sitios pkgdown de los paquetes de
+rOpenSpain.
 
 ## Ver también
 

@@ -1,8 +1,8 @@
-# Ejemplo
+# Ejemplo de rostemplate
 
 ``` r
 
 library(rostemplate)
 ```
 
-Plantilla de ejemplo.
+Plantilla mínima de ejemplo para comprobar la carga de **rostemplate**.

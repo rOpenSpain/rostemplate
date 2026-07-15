@@ -12,13 +12,13 @@
 Código:
 [`inst/CITATION`](https://github.com/ropenspain/rostemplate/blob/main/inst/CITATION)
 
-Hernangómez D (2026). *rostemplate: Plantilla pkgdown para los paquetes
-de rOpenSpain*. <https://ropenspain.github.io/rostemplate/>.
+Hernangómez D (2026). *rostemplate: Plantilla pkgdown para paquetes de
+rOpenSpain*. <https://ropenspain.github.io/rostemplate/>.
 
     @Manual{R-rostemplate,
-      title = {{rostemplate}: Plantilla {pkgdown} para los paquetes de {rOpenSpain}},
+      title = {{rostemplate}: Plantilla {pkgdown} para paquetes de {rOpenSpain}},
       author = {Diego Hernangómez},
       year = {2026},
       url = {https://ropenspain.github.io/rostemplate/},
-      abstract = {Plantilla privada para uso exclusivo de los paquetes de rOpenSpain.},
+      abstract = {Plantilla privada para crear sitios pkgdown de los paquetes de rOpenSpain.},
     }

@@ -20,26 +20,24 @@ ros_metro_madrid_pal(n = 4, alpha = 0.9, rev = FALSE)
 
 - n:
 
-  Número de colores
+  Número de colores.
 
 - alpha:
 
-  Valor alfa (transparencia) de los colores. alpha = 1 es opaco y alpha
-  = 0 totalmente transparente
+  Valor alfa (transparencia) de los colores. `alpha = 1` es opaco y
+  `alpha = 0` es totalmente transparente.
 
 - rev:
 
-  Valor lógico que indica si los colores se han de mostar en orden
-  inverso.
+  Valor lógico. Si es `TRUE`, muestra los colores en orden inverso.
 
 ## Valor
 
-Paletas de colores
+Un vector de colores.
 
 ## Ejemplos
 
 ``` r
-
 scales::show_col(ros_green_pal(9))
 
 

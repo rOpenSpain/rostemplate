@@ -1,6 +1,6 @@
-# Testing syntax highlighter
+# Testing syntax highlighting
 
-Test how `pkgdown` highlights **R** code:
+Test how pkgdown highlights **R** code:
 
 ``` r
 
@@ -15,7 +15,7 @@ library(dplyr)
 
 
 df <- fromJSON("https://raw.githubusercontent.com/dieghernan/Country-Codes-and-International-Organizations/master/outputs/Countrycodesfull.json")
-# Identify Commonwealth acronym
+# Identify the Commonwealth acronym.
 orgsdb <- read.csv("https://raw.githubusercontent.com/dieghernan/Country-Codes-and-International-Organizations/master/outputs/CountrycodesOrgs.csv") |>
   distinct(org_id, org_name)
 
@@ -58,7 +58,7 @@ testmap <- ne_countries(50,
   select(ISO_3166_3 = adm0_a3) |>
   full_join(df_org)
 
-# We add also tiny countries
+# Add tiny countries.
 tiny <- ne_countries(50,
   "tiny_countries",
   returnclass = "sf"
@@ -118,8 +118,8 @@ plot(
   add = TRUE
 )
 
-# By last, add tiny countries
-# All
+# Add tiny countries last.
+# All tiny countries.
 plot(
   st_geometry(tiny_rob),
   col = "#000000",
@@ -127,7 +127,7 @@ plot(
   add = TRUE,
   pch = 21
 )
-# Dependencies
+# Dependencies.
 plot(
   st_geometry(tiny_rob |>
     filter(!is.na(C)) |>
@@ -137,7 +137,7 @@ plot(
   pch = 21,
   add = TRUE
 )
-# Independent
+# Independent countries.
 plot(
   st_geometry(tiny_rob |>
     filter(!is.na(C)) |>

@@ -7,7 +7,7 @@
 Descargas de paquetes de [rOpenSpain](https://ropenspain.es/) desde
 CRAN.
 
-### Histórico de descargas
+### Historial de descargas
 
 ![](descargas_files/figure-html/unnamed-chunk-3-1.png)
 

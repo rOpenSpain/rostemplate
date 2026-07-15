@@ -1,8 +1,8 @@
-# Long TOC
+# Long table of contents
 
-This vignette tests has a very long TOC. You should be able to navigate
-to a heading near the bottom of the doc without having to scroll all the
-way down.
+This vignette has a very long table of contents. You should be able to
+navigate to a heading near the bottom of the document without scrolling
+all the way down.
 
 ## Heading a1
 

@@ -1,6 +1,6 @@
 # Example of a precomputed vignette
 
-This is an example of a precomputed vignette:
+This is an example of a precomputed vignette.
 
 ``` r
 
@@ -14,7 +14,7 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
 
 A plot with a long caption here
 
-See here some text:
+The following text is placeholder prose for checking rendered output:
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra,
 ipsum vel maximus viverra, elit magna volutpat metus, eget bibendum

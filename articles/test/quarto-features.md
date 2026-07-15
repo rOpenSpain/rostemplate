@@ -1,4 +1,4 @@
-# quarto features
+# Quarto features
 
 ## Citations
 
@@ -18,7 +18,7 @@ library(palmerpenguins)
 
 - 1:
 
-  Take `penguins`, and then,
+  Take `penguins`, then,
 
 - 2:
 
@@ -34,12 +34,12 @@ plt.plot([1,23,2,4])
 plt.show()
 ```
 
-## Callout Blocks
+## Callout blocks
 
 Note
 
-Note that there are five types of callouts, including: `note`,`tip`,
-`warning`, `caution` and `important`.
+Note that there are five types of callouts: `note`, `tip`, `warning`,
+`caution` and `important`.
 
 Warning
 
@@ -49,7 +49,7 @@ warning.
 Important
 
 The callout heading is provided by the callout type, with the expected
-heading (i.e., Note, Warning, Important, Tip, or Caution).
+heading (i.e., Note, Warning, Important, Tip or Caution).
 
 Tip With Title
 
@@ -66,7 +66,7 @@ A simple callout.
 
 NoteNo Icon
 
-No icon
+No icon.
 
 ## Diagrams
 
@@ -82,7 +82,7 @@ flowchart LR
 
 ## Keyboard
 
-- Keyboard shortcut: Shift-Ctrl-PShift-Ctrl-P
+- Keyboard shortcut: Shift-Ctrl-PShift-Ctrl-P.
 
 ## Lists
 
@@ -90,7 +90,7 @@ flowchart LR
 
   Continued (indent 4 spaces)
 
-Another example
+Another example.
 
 1.  ordered list
 
@@ -102,13 +102,13 @@ Another example
 
     1.  sub-sub-item 1
 
-A task list
+A task list.
 
 Task 1
 
 Task 2
 
-A definition
+A definition.
 
 - term:
 
@@ -200,9 +200,9 @@ Figura 1: Cute puppies ([Figura 1 (a)](#fig-pitbull) and [Figura 1
 
 Unable to execute JavaScript.
 
-Figura 2: The video “CERN: The Journey of Discovery”
+Figura 2: The video “CERN: The Journey of Discovery”.
 
-In [Figura 2](#fig-cern)…
+See [Figura 2](#fig-cern).
 
 ## References
 
@@ -218,7 +218,7 @@ Articles* 59 (10): 1-23. <https://doi.org/10.18637/jss.v059.i10>.
 
         { some.code }
 
-    The whole paragraph can be indented, or just the first line. In this
+    The whole paragraph or just the first line can be indented. This
     way, multi-paragraph footnotes work like multi-paragraph list items.
 
 [^3]: Inlines notes are easier to write, since you don’t have to pick an

@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Testing syntax highlighter • rostemplate</title>
+<title>Testing syntax highlighting • rostemplate</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../../favicon-96x96.png">
 <link rel="icon" type="”image/svg+xml”" href="../../favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
@@ -17,7 +17,7 @@
 <script src="../../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../../deps/Roboto-0.4.10/font.css" rel="stylesheet">
 <link href="../../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../../deps/headroom-0.11.0/headroom.min.js"></script><script src="../../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../../deps/search-1.0.0/fuse.min.js"></script><script src="../../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../../pkgdown.js"></script><meta property="og:title" content="Testing syntax highlighter">
+<script src="../../deps/headroom-0.11.0/headroom.min.js"></script><script src="../../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../../deps/search-1.0.0/fuse.min.js"></script><script src="../../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../../pkgdown.js"></script><meta property="og:title" content="Testing syntax highlighting">
 <!-- rogtemplate style sheet --><link href="../../BS5/rostemplate.min.css" rel="stylesheet">
 </head>
 <body>
@@ -46,9 +46,9 @@
     <li><h6 class="dropdown-header" data-toc-skip>Sobre rOpenSpain</h6></li>
     <li><a class="dropdown-item" href="../../articles/descargas.html">Descargas de paquetes de rOpenSpain</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Test Menu</h6></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Menú de pruebas</h6></li>
     <li><a class="dropdown-item" href="../../articles/menu/ggplot2.html">ggplot2 example</a></li>
-    <li><a class="dropdown-item" href="../../articles/menu/highlight.html">Testing syntax highlighter</a></li>
+    <li><a class="dropdown-item" href="../../articles/menu/highlight.html">Testing syntax highlighting</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="../../articles/index.html">Más artículos...</a></li>
   </ul>
@@ -80,7 +80,7 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="../../logo.png" class="logo" alt=""><h1>Testing syntax highlighter</h1>
+      <img src="../../logo.png" class="logo" alt=""><h1>Testing syntax highlighting</h1>
             
       
       <small class="dont-index">Código: <a href="https://github.com/ropenspain/rostemplate/blob/main/vignettes/menu/highlight.Rmd" class="external-link"><code>vignettes/menu/highlight.Rmd</code></a></small>
@@ -89,7 +89,7 @@
 
     
     
-<p>Test how <code>pkgdown</code> highlights <strong>R</strong> code:</p>
+<p>Test how pkgdown highlights <strong>R</strong> code:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://yihui.org/knitr/" class="external-link">"knitr"</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/rstudio/rmarkdown" class="external-link">"rmarkdown"</a></span><span class="op">)</span></span>
@@ -102,7 +102,7 @@
 <span></span>
 <span></span>
 <span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://jeroen.r-universe.dev/jsonlite/reference/fromJSON.html" class="external-link">fromJSON</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/dieghernan/Country-Codes-and-International-Organizations/master/outputs/Countrycodesfull.json"</span><span class="op">)</span></span>
-<span><span class="co"># Identify Commonwealth acronym</span></span>
+<span><span class="co"># Identify the Commonwealth acronym.</span></span>
 <span><span class="va">orgsdb</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/dieghernan/Country-Codes-and-International-Organizations/master/outputs/CountrycodesOrgs.csv"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html" class="external-link">distinct</a></span><span class="op">(</span><span class="va">org_id</span>, <span class="va">org_name</span><span class="op">)</span></span>
 <span></span>
@@ -145,7 +145,7 @@
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span>ISO_3166_3 <span class="op">=</span> <span class="va">adm0_a3</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">full_join</a></span><span class="op">(</span><span class="va">df_org</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># We add also tiny countries</span></span>
+<span><span class="co"># Add tiny countries.</span></span>
 <span><span class="va">tiny</span> <span class="op">&lt;-</span> <span class="fu">ne_countries</span><span class="op">(</span><span class="fl">50</span>,</span>
 <span>  <span class="st">"tiny_countries"</span>,</span>
 <span>  returnclass <span class="op">=</span> <span class="st">"sf"</span></span>
@@ -205,8 +205,8 @@
 <span>  add <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># By last, add tiny countries</span></span>
-<span><span class="co"># All</span></span>
+<span><span class="co"># Add tiny countries last.</span></span>
+<span><span class="co"># All tiny countries.</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
 <span>  <span class="fu">st_geometry</span><span class="op">(</span><span class="va">tiny_rob</span><span class="op">)</span>,</span>
 <span>  col <span class="op">=</span> <span class="st">"#000000"</span>,</span>
@@ -214,7 +214,7 @@
 <span>  add <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  pch <span class="op">=</span> <span class="fl">21</span></span>
 <span><span class="op">)</span></span>
-<span><span class="co"># Dependencies</span></span>
+<span><span class="co"># Dependencies.</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
 <span>  <span class="fu">st_geometry</span><span class="op">(</span><span class="va">tiny_rob</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -224,7 +224,7 @@
 <span>  pch <span class="op">=</span> <span class="fl">21</span>,</span>
 <span>  add <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span>
-<span><span class="co"># Independent</span></span>
+<span><span class="co"># Independent countries.</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
 <span>  <span class="fu">st_geometry</span><span class="op">(</span><span class="va">tiny_rob</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -257,15 +257,13 @@
         <hr class="d-md-none">
 </div>
       <div class="col-md offset-md-4">
-        <h4 data-toc-skip>About <img src="../../ROS-logo.png" alt="ROpenSpain Logo" height="24" class="round-logo"><span class="ROS-light">
+        <h4 data-toc-skip>About <img src="../../ROS-logo.png" alt="rOpenSpain logo" height="24" class="round-logo"><span class="ROS-light">
             rOpenSpain</span>
 </h4>
         <p><a href="https://ropenspain.es/" class="external-link"><span class="ROS-light">rOpenSpain</span></a> is a community of
-          enthusiasts
-          of <strong>R</strong>, open data, and reproducibility that comes
-          together and organizes itself to create <strong>R</strong> packages of
-          the highest quality for the analysis
-          and use of Spanish data of general interest.
+          enthusiasts of <strong>R</strong>, open data and reproducibility that
+          works together to create high-quality <strong>R</strong> packages for
+          the analysis and use of Spanish data of general interest.
         </p>
         <p class="fst-italic text-md-end">"rOpenSci is our form, Spanish public
           data our matter"</p>

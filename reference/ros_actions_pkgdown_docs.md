@@ -1,6 +1,6 @@
-# Instala una acción GitHub que crea tu sitio en la carpeta `/docs`
+# Instala un workflow de GitHub Actions que crea tu sitio en `/docs`
 
-Esta acción GitHub genera tu sitio
+Este workflow de GitHub Actions genera tu sitio
 [pkgdown](https://CRAN.R-project.org/package=pkgdown) en la carpeta
 `docs` de tu repositorio.
 
@@ -18,16 +18,22 @@ ros_actions_pkgdown_docs(pkg = ".", overwrite = TRUE)
 
 - overwrite:
 
-  Sobreescribe la acción si ya se encuntra instalada.
+  Sobrescribe el workflow si ya se encuentra instalado.
+
+## Valor
+
+Se llama por sus efectos secundarios y devuelve `NULL` de forma
+invisible.
 
 ## Detalles
 
 El resultado final es equivalente a ejecutar
-[`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)
-con la única diferencia de que este comando se ejecuta en GitHub, en
-lugar de tener que ser ejecutado por el usuario.
+[`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md),
+con la diferencia de que este comando se ejecuta en GitHub en lugar de
+ejecutarse localmente.
 
 ## Ver también
 
-[`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md),
-[`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md).
+Sitios pkgdown:
+[`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md),
+[`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)

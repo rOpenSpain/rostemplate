@@ -2,7 +2,6 @@
 
 Añade una insignia de **rOpenSpain** que redirige a
 <https://ropenspain.es/> en tu archivo `README`:
-[![rOpenSpain](figures/ropenspain-badge.svg)](https://ropenspain.es/)
 
 ## Uso
 
@@ -14,13 +13,18 @@ ros_badge_ropenspain(install = TRUE)
 
 - install:
 
-  TRUE/FALSE. Si es `TRUE` la insignia se instala en el archivo
-  `README.md/README.Rmd`. Si es `FALSE` muestra un mensaje con el código
-  markdown correspondiente.
+  Valor lógico. Si es `TRUE`, la insignia se instala en `README.md` o
+  `README.Rmd`. Si es `FALSE`, muestra un mensaje con el código markdown
+  correspondiente.
 
 ## Valor
 
-Insignia en markdown o mensaje con el código markdown a introducir.
+Se llama por sus efectos secundarios. Si `install` es `FALSE`, muestra
+el código markdown de la insignia.
+
+## Detalles
+
+[![rOpenSpain](figures/ropenspain-badge.svg)](https://ropenspain.es/)
 
 ## Ver también
 
@@ -29,7 +33,6 @@ Insignia en markdown o mensaje con el código markdown a introducir.
 ## Ejemplos
 
 ``` r
-
 ros_badge_ropenspain(install = FALSE)
 #> Badge URL is 
 #> [![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
