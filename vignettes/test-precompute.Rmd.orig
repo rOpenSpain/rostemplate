@@ -1,5 +1,6 @@
 ---
 title: "Example of a precomputed vignette"
+description: "Checks how precomputed vignette content and figures are rendered."
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Example of a precomputed vignette}

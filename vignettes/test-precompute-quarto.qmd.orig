@@ -1,5 +1,6 @@
 ---
 title: "Example of a precomputed vignette with Quarto"
+description: "Checks how precomputed Quarto vignette content and figures are rendered."
 vignette: >
   %\VignetteIndexEntry{Example of a precomputed vignette with Quarto}
   %\VignetteEngine{quarto::html}
