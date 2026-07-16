@@ -85,6 +85,9 @@ install.packages(
   repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
 )
 
+# O usando pak.
+pak::pak("ropenspain/rostemplate")
+
 # Publicar en la rama gh-pages
 rostemplate::ros_actions_pkgdown_branch()
 
@@ -200,6 +203,13 @@ Insignias y paletas de colores de rOpenSpain.
 
   Paletas de colores de **rOpenSpain**
 
+## Sobre el paquete
+
+- [`rostemplate`](https://ropenspain.github.io/rostemplate/reference/rostemplate-package.md)
+  [`rostemplate-package`](https://ropenspain.github.io/rostemplate/reference/rostemplate-package.md)
+  : rostemplate: Plantilla Para Sitios 'pkgdown' De Paquetes De
+  'rOpenSpain'
+
 # Artículos
 
 ### Artículos
@@ -214,16 +224,15 @@ Insignias y paletas de colores de rOpenSpain.
 Artículos de ejemplo para comprobar vignettes precomputadas en R
 Markdown y Quarto.
 
-- [Example of a precomputed
-  vignette](https://ropenspain.github.io/rostemplate/articles/test-precompute.md):
+- [Precomputed Quarto
+  vignette](https://ropenspain.github.io/rostemplate/articles/precompute-quarto.md):
 
-  Checks how precomputed vignette content and figures are rendered.
+  Check how pkgdown handles a precomputed Quarto vignette.
 
-- [Example of a precomputed vignette with
-  Quarto](https://ropenspain.github.io/rostemplate/articles/test-precompute-quarto.md):
+- [Precomputed R Markdown
+  vignette](https://ropenspain.github.io/rostemplate/articles/precompute.md):
 
-  Checks how precomputed Quarto vignette content and figures are
-  rendered.
+  Check how pkgdown handles a precomputed R Markdown vignette.
 
 ### Menú de pruebas
 
@@ -232,51 +241,59 @@ Artículos de prueba para comprobar el menú de navegación.
 - [ggplot2
   example](https://ropenspain.github.io/rostemplate/articles/menu/ggplot2.md):
 
-  Tests rendering of a ggplot2 figure inside the articles menu.
+  Check how pkgdown renders ggplot2 figures in article pages.
 
 - [Testing syntax
-  highlighting](https://ropenspain.github.io/rostemplate/articles/menu/highlight.md):
+  highlighter](https://ropenspain.github.io/rostemplate/articles/menu/highlight.md):
 
-  Exercises syntax highlighting for R code and related examples.
+  Check how pkgdown highlights R code blocks and inline syntax.
 
 ### Test
 
 Artículos de prueba para comprobar la salida de pkgdown.
 
+- [Bullets](https://ropenspain.github.io/rostemplate/articles/test/bullets.md):
+
+  Check list rendering, spacing and nested bullet styles.
+
+- [Code](https://ropenspain.github.io/rostemplate/articles/test/code.md):
+
+  Check code blocks, copy buttons and package code rendering.
+
 - [Long table of
   contents](https://ropenspain.github.io/rostemplate/articles/test/long-toc.md):
 
-  Checks navigation behavior for articles with long tables of contents.
+  Check navigation and layout behavior for long article tables of
+  contents.
 
 - [Quarto
   features](https://ropenspain.github.io/rostemplate/articles/test/quarto-features.md):
 
-- [reactable
+  Check Quarto-specific article features such as citations and
+  shortcodes.
+
+- [Reactable
   example](https://ropenspain.github.io/rostemplate/articles/test/reactable.md):
 
-  Checks styling and interaction for reactable tables.
+  Check reactable widgets and table styling inside pkgdown articles.
 
 - [Output
   rendering](https://ropenspain.github.io/rostemplate/articles/test/rendering.md):
 
-  Tests pkgdown output rendering across common article elements.
+  Check rendered output blocks, metadata display and article layout.
 
 - [A short
   page](https://ropenspain.github.io/rostemplate/articles/test/short.md):
 
-  Checks footer placement on pages with little content.
-
-- [Bullets](https://ropenspain.github.io/rostemplate/articles/test/test-bullets.md):
-
-  Checks list rendering for simple, ordered and paragraph bullets.
+  Check footer placement on short article pages.
 
 - [Quarto
-  vignettes](https://ropenspain.github.io/rostemplate/articles/test/test-quarto.md):
+  vignettes](https://ropenspain.github.io/rostemplate/articles/test-quarto.md):
 
-  Learn how Quarto vignettes work with pkgdown, including currently
+  Learn how **pkgdown** works with Quarto vignettes, including currently
   supported features and known limitations.
 
 - [HTML
   widgets](https://ropenspain.github.io/rostemplate/articles/test/widgets.md):
 
-  Tests spacing and rendering for embedded HTML widgets.
+  Check HTML widget rendering and layout inside pkgdown articles.

@@ -1,19 +1,19 @@
 # Quarto vignettes
 
-pkgdown uses Quarto only to generate HTML, then supplies its own CSS and
-JavaScript. This means that when Quarto introduces new features, pkgdown
-may lag behind in their support. If you’re trying out something that
-doesn’t work and isn’t mentioned explicitly below, please [file an
+**pkgdown** uses Quarto only to generate HTML and then supplies its own
+CSS and JS. This means that when Quarto introduces new features,
+**pkgdown** may lag behind in their support. If you try something that
+does not work and is not mentioned explicitly below, please [file an
 issue](https://github.com/r-lib/pkgdown/issues) so we can look into it.
 
 ## Operation
 
-pkgdown turns your articles directory into a Quarto project by
-temporarily adding a `_quarto.yml` file to your articles. You can also
-add your own if you want to control options for all Quarto articles. If
-you do so and you have a mix of `.qmd` and `.Rmd` files, you’ll need to
-include the following YAML so that R Markdown can continue to handle the
-`.Rmd` files:
+**pkgdown** turns your articles directory into a Quarto project by
+temporarily adding a `_quarto.yml` to your articles. You can also add
+your own if you want to control options for all Quarto articles. If you
+do so and have a mix of `.qmd` and `.Rmd` files, you need to include the
+following YAML so that R Markdown can continue to handle the `.Rmd`
+files:
 
 ``` yaml
 project:
@@ -24,27 +24,26 @@ project:
 
 The `setup-r-dependencies` action will
 [automatically](https://github.com/r-lib/actions/tree/v2-branch/setup-r-dependencies#usage)
-install Quarto in your GitHub Actions workflow if a `.qmd` file is
-present in your repository. See the `install-quarto` parameter for more
-details.
+install Quarto in GitHub Actions if a `.qmd` file is present in your
+repository (see the `install-quarto` parameter for more details).
 
 ## Limitations
 
 - Callouts are not currently supported
   (<https://github.com/quarto-dev/quarto-cli/issues/9963>).
 
-- pkgdown assumes that you’re using [Quarto vignette
-  style](https://quarto-dev.github.io/quarto-r/articles/hello.html) or
+- **pkgdown** assumes that you are using [Quarto vignette
+  style](https://quarto-dev.github.io/quarto-r/articles/hello.html), or
   more generally an HTML format with
   [`minimal: true`](https://quarto.org/docs/output-formats/html-basics.html#minimal-html).
   Specifically, only HTML vignettes are currently supported.
 
-- You can’t customize Mermaid styles with Quarto Mermaid themes. If you
-  want to change the colors, you’ll need to provide your own custom CSS
-  as shown in [the Quarto
+- You cannot customize Mermaid styles with Quarto Mermaid themes. If you
+  want to change the colors, provide your own custom CSS as shown in
+  [the Quarto
   docs](https://quarto.org/docs/authoring/diagrams.html#customizing-mermaid).
 
-- pkgdown will pass the `lang` setting on to Quarto, but the set of
+- **pkgdown** passes the `lang` setting on to Quarto, but the set of
   available languages is not perfectly matched. Learn more in
   <https://quarto.org/docs/authoring/language.html>, including how to
   supply your own translations.
@@ -52,13 +51,13 @@ details.
 ## Supported features
 
 The following sections demonstrate useful Quarto features so that we can
-make sure that they work.
+make sure they work.
 
 ### Inline formatting
 
 - SMALL CAPS
 
-- Here is a footnote reference.[^1]
+- Here is a footnote reference[^1]
 
 ### Code
 
@@ -72,7 +71,7 @@ make sure that they work.
 plot(1:3)
 ```
 
-![A plot of the numbers 1, 2 and
+![A plot of the numbers 1, 2, and
 3](test-quarto_files/figure-html/unnamed-chunk-1-1.png)
 
 ### Figures
@@ -102,7 +101,7 @@ Black-Scholes ([Ecuación 1](#eq-black-scholes)) is a mathematical model
 that seeks to explain the behavior of financial derivatives, most
 commonly options.
 
-## To do
+## To-do
 
 Code annotations
 

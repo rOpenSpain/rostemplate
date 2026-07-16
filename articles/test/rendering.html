@@ -18,8 +18,10 @@
 <link href="../../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../../deps/headroom-0.11.0/headroom.min.js"></script><script src="../../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../../deps/search-1.0.0/fuse.min.js"></script><script src="../../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../../pkgdown.js"></script><meta property="og:title" content="Output rendering">
-<meta name="description" content="Tests pkgdown output rendering across common article elements.">
-<meta property="og:description" content="Tests pkgdown output rendering across common article elements.">
+<meta name="description" content="Check rendered output blocks, metadata display and article layout.
+">
+<meta property="og:description" content="Check rendered output blocks, metadata display and article layout.
+">
 <meta property="og:image" content="https://ropenspain.github.io/rostemplate/logo.png">
 <meta property="og:image:alt" content="rOpenSpain logo">
 <meta name="twitter:card" content="summary_large_image">
@@ -55,7 +57,7 @@
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Menú de pruebas</h6></li>
     <li><a class="dropdown-item" href="../../articles/menu/ggplot2.html">ggplot2 example</a></li>
-    <li><a class="dropdown-item" href="../../articles/menu/highlight.html">Testing syntax highlighting</a></li>
+    <li><a class="dropdown-item" href="../../articles/menu/highlight.html">Testing syntax highlighter</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="../../articles/index.html">Más artículos...</a></li>
   </ul>
@@ -89,12 +91,12 @@
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../../logo.png" class="logo" alt=""><h1>Output rendering</h1>
             <h3 data-toc-skip class="subtitle">Subtitle is skipped from
-the TOC</h3>
+the table of contents</h3>
                         <h4 data-toc-skip class="author">Author is
-skipped from the TOC</h4>
+skipped from the table of contents</h4>
             
             <h4 data-toc-skip class="date">Date is skipped from the
-TOC</h4>
+table of contents</h4>
       
       <small class="dont-index">Código: <a href="https://github.com/ropenspain/rostemplate/blob/main/vignettes/test/rendering.Rmd" class="external-link"><code>vignettes/test/rendering.Rmd</code></a></small>
       <div class="d-none name"><code>rendering.Rmd</code></div>
@@ -102,12 +104,12 @@ TOC</h4>
 
     
     
-<p>This vignette tests pkgdown output rendering for several use
-cases.</p>
+<p>This vignette tests <strong>pkgdown</strong> output rendering for
+several use cases.</p>
 <div class="section level2">
 <h2 id="footnotes">Footnotes<a class="anchor" aria-label="anchor" href="#footnotes"></a>
 </h2>
-<p>Yay.<a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;Including &lt;strong&gt;footnotes&lt;/strong&gt;! 😁&lt;/p&gt;"><sup>1</sup></a></p>
+<p>This paragraph checks footnote rendering.<a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;Including &lt;strong&gt;footnotes&lt;/strong&gt;.&lt;/p&gt;"><sup>1</sup></a></p>
 </div>
 <div class="section level2">
 <h2 id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
@@ -134,8 +136,8 @@ cases.</p>
 This should only be shown when required
 </details><details><summary>
 Multiple paragraphs
-</summary><p>First paragraph.</p>
-<p>Second paragraph.</p>
+</summary><p>First paragraph</p>
+<p>Second paragraph</p>
 </details><details><summary>
 Some R code
 </summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -149,9 +151,9 @@ Some R code
 <table class="table">
 <colgroup>
 <col width="25%">
-<col width="24%">
-<col width="24%">
-<col width="24%">
+<col width="25%">
+<col width="25%">
+<col width="25%">
 </colgroup>
 <thead><tr class="header">
 <th align="left">col 1</th>
@@ -224,13 +226,13 @@ e^{-\frac{(x-\mu^2)}{2\sigma^2}}</span></p>
 <p>R code in <code>r</code> block:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">a</span> <span class="op">+</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
-<p>YAML.</p>
+<p>YAML</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">yaml</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">a</span><span class="kw">,</span><span class="at"> </span><span class="dv">1</span><span class="kw">]</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="shouldnt-be-highlighted">Shouldn’t be highlighted<a class="anchor" aria-label="anchor" href="#shouldnt-be-highlighted"></a>
 </h3>
-<p>Non-R code in <code>\preformatted{}</code></p>
+<p>Non-R code in <code>\preformatted{}</code>:</p>
 <pre><code>yaml: [a, b, c]</code></pre>
 </div>
 <div class="section level3">
@@ -239,7 +241,7 @@ e^{-\frac{(x-\mu^2)}{2\sigma^2}}</span></p>
 </h3>
 <p>Testing margins and copy buttons on small screens.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">txt</span> <span class="op">&lt;-</span> <span class="st">"Not wrapped, check the copy button behavior."</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">txt</span> <span class="op">&lt;-</span> <span class="st">"Not wrapped; check the copy button behavior."</span></span></code></pre></div>
 <section><p>Wrapped in a <code>&lt;section&gt;</code>
 (e.g. <code>section &gt; div &gt; pre</code>)</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
@@ -248,7 +250,7 @@ e^{-\frac{(x-\mu^2)}{2\sigma^2}}</span></p>
 <p>This is a blockquote with enough text to test the width of the code
 block and verify whether it aligns with the paragraph width.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">txt</span> <span class="op">&lt;-</span> <span class="st">"Wrapped in blockquote, margins are preserved."</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">txt</span> <span class="op">&lt;-</span> <span class="st">"Wrapped in blockquote; margins are preserved."</span></span></code></pre></div>
 <p>Continue…</p>
 </blockquote>
 <ul>
@@ -256,7 +258,7 @@ block and verify whether it aligns with the paragraph width.</p>
 <p>This list item includes enough text to test the width of the code
 block and check whether it matches the paragraph width.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">txt</span> <span class="op">&lt;-</span> <span class="st">"Wrapped in li, margins are preserved."</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">txt</span> <span class="op">&lt;-</span> <span class="st">"Wrapped in li; margins are preserved."</span></span></code></pre></div>
 </li>
 <li>
 <p>Another bullet.</p>
@@ -266,7 +268,7 @@ block and check whether it matches the paragraph width.</p>
 <p>Second level item with enough text to test the width of the code
 block and confirm alignment with the paragraph.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">txt</span> <span class="op">&lt;-</span> <span class="st">"Wrapped in li, margins are preserved."</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">txt</span> <span class="op">&lt;-</span> <span class="st">"Wrapped in li; margins are preserved."</span></span></code></pre></div>
 </li>
 <li><p>Nested list continues.</p></li>
 </ol>
@@ -293,12 +295,12 @@ element.
 <span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/warning.html" class="external-link">warning</a></span><span class="op">(</span><span class="fu">cli</span><span class="fu">::</span><span class="fu"><a href="https://cli.r-lib.org/reference/ansi-styles.html" class="external-link">style_bold</a></span><span class="op">(</span><span class="st">"This is bold"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning: <span style="font-weight: bold;">This is bold</span></span></span></code></pre></div>
-<p>Some text.</p>
+<p>Some text</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/stop.html" class="external-link">stop</a></span><span class="op">(</span><span class="fu">cli</span><span class="fu">::</span><span class="fu"><a href="https://cli.r-lib.org/reference/ansi-styles.html" class="external-link">style_italic</a></span><span class="op">(</span><span class="st">"This is italic"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #BBBB00; font-weight: bold;">Error</span><span style="font-weight: bold;">:</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BBBB00;">!</span> <span style="font-style: italic;">This is italic</span></span></span></code></pre></div>
-<p>Some more text.</p>
+<p>Some more text</p>
 </div>
 </div>
 <div class="section level2">
@@ -308,7 +310,7 @@ element.
 <p>Single-line quote about something miscellaneous.</p>
 </blockquote>
 <figure><blockquote>
-<p>A Boostrap 5 blockquote with footer.</p>
+<p>A Bootstrap 5 blockquote with footer.</p>
 </blockquote>
 <figcaption class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
 </figcaption></figure><div class="line-block">Flush<br>
@@ -319,7 +321,7 @@ element.
 <div class="section level2 unnumbered">
 <h2 class="unnumbered" id="this-section-is-unnumbered">This section is unnumbered<a class="anchor" aria-label="anchor" href="#this-section-is-unnumbered"></a>
 </h2>
-<p>There should however be no bug here!</p>
+<p>There should be no bug here.</p>
 </div>
 <div class="section level2">
 <h2 id="tabsets">Tabsets<a class="anchor" aria-label="anchor" href="#tabsets"></a>
@@ -336,19 +338,19 @@ element.
 <div class="tab-content">
 <div class="active  tab-pane" id="tab-1" role="tabpanel" aria-labelledby="tab-1-tab">
 
-<p>Placeholder text.</p>
+<p>Tab content.</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></span></code></pre></div>
 <p>The heading below should be “cool”.</p>
 <div class="section level5">
 <h5 id="cool">cool<a class="anchor" aria-label="anchor" href="#cool"></a>
 </h5>
-<p>Content.</p>
+<p>More tab content.</p>
 </div>
 </div>
 <div class="tab-pane" id="tab-2" role="tabpanel" aria-labelledby="tab-2-tab">
 
-<p>Placeholder text.</p>
+<p>More tab content.</p>
 </div>
 </div>
 </div>
@@ -364,7 +366,7 @@ element.
 <div class="tab-content">
 <div class="tab-pane" id="tab-1-1" role="tabpanel" aria-labelledby="tab-1-1-tab">
 
-<p>Something nice.</p>
+<p>More tab content.</p>
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">42</span><span class="op">)</span></span></code></pre></div>
 <p><img src="rendering_files/figure-html/unnamed-chunk-8-1.png" class="r-plt" alt="Another test plot" width="2187.5"></p>
@@ -397,7 +399,7 @@ element.
 </div>
 <div class="fade tab-pane" id="german" role="tabpanel" aria-labelledby="german-tab">
 
-<p>Guten tag.</p>
+<p>Guten Tag.</p>
 </div>
 </div>
 </div>

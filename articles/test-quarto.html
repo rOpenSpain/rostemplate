@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Example of a precomputed vignette with Quarto • rostemplate</title>
+<title>Quarto vignettes • rostemplate</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
 <link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
@@ -17,9 +17,9 @@
 <script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.10/font.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><script src="test-precompute-quarto_files/libs/quarto-html/popper.min.js"></script><script src="test-precompute-quarto_files/libs/quarto-html/tippy.umd.min.js"></script><link href="test-precompute-quarto_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="test-precompute-quarto_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Example of a precomputed vignette with Quarto">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><script src="test-quarto_files/libs/quarto-html/popper.min.js"></script><script src="test-quarto_files/libs/quarto-html/tippy.umd.min.js"></script><link href="test-quarto_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="test-quarto_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Quarto vignettes">
 <meta property="og:image" content="https://ropenspain.github.io/rostemplate/logo.png">
 <meta property="og:image:alt" content="rOpenSpain logo">
 <meta name="twitter:card" content="summary_large_image">
@@ -55,7 +55,7 @@
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Menú de pruebas</h6></li>
     <li><a class="dropdown-item" href="../articles/menu/ggplot2.html">ggplot2 example</a></li>
-    <li><a class="dropdown-item" href="../articles/menu/highlight.html">Testing syntax highlighting</a></li>
+    <li><a class="dropdown-item" href="../articles/menu/highlight.html">Testing syntax highlighter</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="../articles/index.html">Más artículos...</a></li>
   </ul>
@@ -83,12 +83,12 @@
 </nav><div class="container template-quarto">
     <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="../logo.png" class="logo" alt=""><h1>Example of a precomputed vignette with Quarto</h1>
+      <img src="../logo.png" class="logo" alt=""><h1>Quarto vignettes</h1>
 
 
 
 
-      <small class="dont-index">Código: <a href="https://github.com/ropenspain/rostemplate/blob/main/vignettes/test-precompute-quarto.qmd" class="external-link"><code>vignettes/test-precompute-quarto.qmd</code></a></small>
+      <small class="dont-index">Código: <a href="https://github.com/ropenspain/rostemplate/blob/main/vignettes/test-quarto.qmd" class="external-link"><code>vignettes/test-quarto.qmd</code></a></small>
       <div class="d-none name"><code></code></div>
     </div>
 
@@ -97,33 +97,103 @@
 
 
 
-    <p>This is an example of a precomputed vignette in Quarto.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://ggplot2.tidyverse.org" class="external-link">"ggplot2"</a></span><span class="op">)</span></span>
+    <p><strong>pkgdown</strong> uses Quarto only to generate HTML and then supplies its own CSS and JS. This means that when Quarto introduces new features, <strong>pkgdown</strong> may lag behind in their support. If you try something that does not work and is not mentioned explicitly below, please <a href="https://github.com/r-lib/pkgdown/issues" class="external-link">file an issue</a> so we can look into it.</p>
+<section class="level2"><h2 id="operation">Operation<a class="anchor" aria-label="anchor" href="#operation"></a>
+</h2>
+<p><strong>pkgdown</strong> turns your articles directory into a Quarto project by temporarily adding a <code>_quarto.yml</code> to your articles. You can also add your own if you want to control options for all Quarto articles. If you do so and have a mix of <code>.qmd</code> and <code>.Rmd</code> files, you need to include the following YAML so that R Markdown can continue to handle the <code>.Rmd</code> files:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">render</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">'*.qmd'</span><span class="kw">]</span></span></code></pre></div>
+<section class="level3"><h3 id="github-actions">GitHub Actions<a class="anchor" aria-label="anchor" href="#github-actions"></a>
+</h3>
+<p>The <code>setup-r-dependencies</code> action will <a href="https://github.com/r-lib/actions/tree/v2-branch/setup-r-dependencies#usage" class="external-link">automatically</a> install Quarto in GitHub Actions if a <code>.qmd</code> file is present in your repository (see the <code>install-quarto</code> parameter for more details).</p>
+</section></section><section class="level2"><h2 id="limitations">Limitations<a class="anchor" aria-label="anchor" href="#limitations"></a>
+</h2>
+<ul>
+<li><p>Callouts are not currently supported (<a href="https://github.com/quarto-dev/quarto-cli/issues/9963" class="external-link uri">https://github.com/quarto-dev/quarto-cli/issues/9963</a>).</p></li>
+<li><p><strong>pkgdown</strong> assumes that you are using <a href="https://quarto-dev.github.io/quarto-r/articles/hello.html" class="external-link">Quarto vignette style</a>, or more generally an HTML format with <a href="https://quarto.org/docs/output-formats/html-basics.html#minimal-html" class="external-link"><code>minimal: true</code></a>. Specifically, only HTML vignettes are currently supported.</p></li>
+<li><p>You cannot customize Mermaid styles with Quarto Mermaid themes. If you want to change the colors, provide your own custom CSS as shown in <a href="https://quarto.org/docs/authoring/diagrams.html#customizing-mermaid" class="external-link">the Quarto docs</a>.</p></li>
+<li><p><strong>pkgdown</strong> passes the <code>lang</code> setting on to Quarto, but the set of available languages is not perfectly matched. Learn more in <a href="https://quarto.org/docs/authoring/language.html" class="external-link uri">https://quarto.org/docs/authoring/language.html</a>, including how to supply your own translations.</p></li>
+</ul></section><section class="level2"><h2 id="supported-features">Supported features<a class="anchor" aria-label="anchor" href="#supported-features"></a>
+</h2>
+<p>The following sections demonstrate useful Quarto features so that we can make sure they work.</p>
+<section class="level3"><h3 id="inline-formatting">Inline formatting<a class="anchor" aria-label="anchor" href="#inline-formatting"></a>
+</h3>
+<ul>
+<li><p><span class="smallcaps">Small caps</span></p></li>
+<li><p>Here is a footnote reference<a class="footnote-ref" role="doc-noteref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;And here is the footnote.&lt;/p&gt;"><sup>1</sup></a></p></li>
+</ul></section><section class="level3"><h3 id="code">Code<a class="anchor" aria-label="anchor" href="#code"></a>
+</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></span>
+<span><span class="co">#&gt; [1] 2</span></span>
+<span><span class="fl">2</span> <span class="op">+</span> <span class="fl">2</span></span>
+<span><span class="co">#&gt; [1] 4</span></span>
 <span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">faithfuld</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">waiting</span>, <span class="va">eruptions</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html" class="external-link">geom_raster</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">density</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<div class="figure">
-<img src="./plot_quarto-1.png" alt="A plot with a long caption here" width="100%"><p class="caption">
-A plot with a long caption here
-</p>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="test-quarto_files/figure-html/unnamed-chunk-1-1.png" alt="A plot of the numbers 1, 2, and 3" width="672"></p>
+</figure>
 </div>
-<p>The following text is placeholder prose for checking rendered output:</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur massa risus, eu tincidunt magna finibus id. Donec quis tincidunt est, sed commodo leo. Donec nec varius lacus. Mauris tempor nisi ipsum, id tincidunt ipsum porta vel. Sed blandit est sit amet bibendum egestas. Integer facilisis tortor viverra pellentesque efficitur. Sed non magna placerat, volutpat felis ac, iaculis mauris. Morbi tempor nulla vel enim tristique tristique. Nam sed purus aliquet, facilisis ligula vitae, accumsan metus. Integer porta nisi iaculis massa consequat, quis mollis tellus ultricies. Vestibulum vehicula lacinia eros, eu aliquam neque. Pellentesque hendrerit metus et nulla tristique, non sollicitudin odio mollis. Mauris vel eros vitae ipsum viverra sollicitudin imperdiet sed nibh. Nullam vel metus luctus, maximus elit eu, feugiat lectus.</p>
-<p>Fusce ac massa sed lorem convallis suscipit sed vitae neque. Duis condimentum ante dolor, congue dictum ligula ullamcorper vitae. Praesent eros neque, dictum sit amet venenatis et, suscipit vitae diam. Praesent venenatis, dui sit amet euismod luctus, dolor velit tempus neque, at elementum ante sapien eget nisi. Fusce at tempus orci, et porttitor elit. Donec dapibus enim sem, at interdum ligula dapibus quis. In sit amet commodo arcu. Aliquam sit amet porta eros, at porta felis. Nullam consectetur hendrerit elit nec pulvinar. Praesent nec imperdiet nulla, sed pellentesque mi. Donec facilisis orci est, vitae aliquam tortor elementum id. Nunc nec porta dolor, id aliquet sem. Pellentesque ac elementum nisl. Donec faucibus arcu arcu, nec semper sapien interdum id. Curabitur a sollicitudin tortor.</p>
-<p>Mauris a nisi metus. Sed sollicitudin, nisi et condimentum facilisis, elit neque pretium mauris, et varius erat nulla vitae purus. Nullam sed tellus ac nulla laoreet cursus. In ultricies, leo ut pharetra egestas, purus enim placerat turpis, in gravida leo nisi non ligula. Aenean blandit ligula sit amet diam posuere, vestibulum euismod tortor dapibus. Pellentesque ligula purus, condimentum nec luctus vel, feugiat id leo. Quisque viverra a erat ac scelerisque. Nunc bibendum ac neque et congue.</p>
-<p>Vestibulum gravida, elit sit amet molestie luctus, enim arcu fringilla odio, at malesuada mauris purus sed metus. Nunc lorem tortor, fringilla quis maximus vel, aliquet ut orci. Aliquam pulvinar sodales magna, consequat fermentum arcu consectetur non. Donec et ligula leo. Vestibulum porttitor porttitor est id mattis. Phasellus non vulputate ante. Aenean maximus orci orci, et dignissim urna finibus in. Cras tortor est, feugiat et urna quis, interdum sodales metus. Pellentesque neque est, aliquet volutpat condimentum ac, gravida in mi.</p>
-<p>In hac habitasse platea dictumst. In hac habitasse platea dictumst. Maecenas finibus, enim ac tristique ornare, velit turpis gravida erat, sed mattis libero elit vel dolor. Phasellus sem tortor, mattis id efficitur eget, tristique ut odio. Sed bibendum vehicula lacus, non elementum magna tempor a. Phasellus id est pulvinar, porta arcu vel, venenatis urna. Suspendisse quis consequat arcu. Quisque auctor lacus in nisl tristique volutpat. Suspendisse non placerat leo. Praesent pellentesque velit at lectus malesuada, at convallis quam aliquam. Nullam sit amet sem risus. Sed maximus consectetur dui at lacinia. Suspendisse posuere accumsan vestibulum. Maecenas vel sem placerat mauris imperdiet placerat nec vel erat. Duis accumsan felis sit amet purus efficitur, et lobortis urna feugiat. Curabitur tincidunt lectus eget enim efficitur, quis accumsan neque luctus.</p>
-<p>Generated 5 paragraphs, 523 words, 3547 bytes of Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur massa risus, eu tincidunt magna finibus id. Donec quis tincidunt est, sed commodo leo. Donec nec varius lacus. Mauris tempor nisi ipsum, id tincidunt ipsum porta vel. Sed blandit est sit amet bibendum egestas. Integer facilisis tortor viverra pellentesque efficitur. Sed non magna placerat, volutpat felis ac, iaculis mauris. Morbi tempor nulla vel enim tristique tristique. Nam sed purus aliquet, facilisis ligula vitae, accumsan metus. Integer porta nisi iaculis massa consequat, quis mollis tellus ultricies. Vestibulum vehicula lacinia eros, eu aliquam neque. Pellentesque hendrerit metus et nulla tristique, non sollicitudin odio mollis. Mauris vel eros vitae ipsum viverra sollicitudin imperdiet sed nibh. Nullam vel metus luctus, maximus elit eu, feugiat lectus.</p>
-<p>Fusce ac massa sed lorem convallis suscipit sed vitae neque. Duis condimentum ante dolor, congue dictum ligula ullamcorper vitae. Praesent eros neque, dictum sit amet venenatis et, suscipit vitae diam. Praesent venenatis, dui sit amet euismod luctus, dolor velit tempus neque, at elementum ante sapien eget nisi. Fusce at tempus orci, et porttitor elit. Donec dapibus enim sem, at interdum ligula dapibus quis. In sit amet commodo arcu. Aliquam sit amet porta eros, at porta felis. Nullam consectetur hendrerit elit nec pulvinar. Praesent nec imperdiet nulla, sed pellentesque mi. Donec facilisis orci est, vitae aliquam tortor elementum id. Nunc nec porta dolor, id aliquet sem. Pellentesque ac elementum nisl. Donec faucibus arcu arcu, nec semper sapien interdum id. Curabitur a sollicitudin tortor.</p>
-<p>Mauris a nisi metus. Sed sollicitudin, nisi et condimentum facilisis, elit neque pretium mauris, et varius erat nulla vitae purus. Nullam sed tellus ac nulla laoreet cursus. In ultricies, leo ut pharetra egestas, purus enim placerat turpis, in gravida leo nisi non ligula. Aenean blandit ligula sit amet diam posuere, vestibulum euismod tortor dapibus. Pellentesque ligula purus, condimentum nec luctus vel, feugiat id leo. Quisque viverra a erat ac scelerisque. Nunc bibendum ac neque et congue.</p>
-<p>Vestibulum gravida, elit sit amet molestie luctus, enim arcu fringilla odio, at malesuada mauris purus sed metus. Nunc lorem tortor, fringilla quis maximus vel, aliquet ut orci. Aliquam pulvinar sodales magna, consequat fermentum arcu consectetur non. Donec et ligula leo. Vestibulum porttitor porttitor est id mattis. Phasellus non vulputate ante. Aenean maximus orci orci, et dignissim urna finibus in. Cras tortor est, feugiat et urna quis, interdum sodales metus. Pellentesque neque est, aliquet volutpat condimentum ac, gravida in mi.</p>
-<p>In hac habitasse platea dictumst. In hac habitasse platea dictumst. Maecenas finibus, enim ac tristique ornare, velit turpis gravida erat, sed mattis libero elit vel dolor. Phasellus sem tortor, mattis id efficitur eget, tristique ut odio. Sed bibendum vehicula lacus, non elementum magna tempor a. Phasellus id est pulvinar, porta arcu vel, venenatis urna. Suspendisse quis consequat arcu. Quisque auctor lacus in nisl tristique volutpat. Suspendisse non placerat leo. Praesent pellentesque velit at lectus malesuada, at convallis quam aliquam. Nullam sit amet sem risus. Sed maximus consectetur dui at lacinia. Suspendisse posuere accumsan vestibulum. Maecenas vel sem placerat mauris imperdiet placerat nec vel erat. Duis accumsan felis sit amet purus efficitur, et lobortis urna feugiat. Curabitur tincidunt lectus eget enim efficitur, quis accumsan neque luctus.</p>
-<p><strong>Generated 5 paragraphs, 523 words, 3547 bytes of <a href="https://www.lipsum.com/" class="external-link">Lorem Ipsum</a></strong>.</p>
-
-
-
-<script id="quarto-html-after-body" type="application/javascript">
+</div>
+</div>
+</section><section class="level3"><h3 id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+</h3>
+<div id="fig-puppies" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig"><div aria-describedby="fig-puppies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-puppies" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-pitbull" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig"><div aria-describedby="fig-pitbull-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="pitbull.jpg" data-ref-parent="fig-puppies">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-pitbull-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) A sketch of a pitbull puppy
+</figcaption></figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-puppies" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-shar-pei" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig"><div aria-describedby="fig-shar-pei-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="shar-pei.jpg" data-ref-parent="fig-puppies">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-shar-pei-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) A sketch of a sharpei puppy
+</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-puppies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura 1: Cute puppies
+</figcaption></figure>
+</div>
+</section><section class="level3"><h3 id="equations">Equations<a class="anchor" aria-label="anchor" href="#equations"></a>
+</h3>
+<p><span id="eq-black-scholes"><span class="math display">
+\frac{\partial \mathrm C}{ \partial \mathrm t } + \frac{1}{2}\sigma^{2} \mathrm S^{2}
+\frac{\partial^{2} \mathrm C}{\partial \mathrm C^2}
+  + \mathrm r \mathrm S \frac{\partial \mathrm C}{\partial \mathrm S}\ =
+  \mathrm r \mathrm C
+\tag{1}</span></span></p>
+</section><section class="level3"><h3 id="cross-references">Cross references<a class="anchor" aria-label="anchor" href="#cross-references"></a>
+</h3>
+<p>See <a href="#fig-puppies" class="quarto-xref">Figura 1</a> for two cute puppies.</p>
+<p>Black-Scholes (<a href="#eq-black-scholes" class="quarto-xref">Ecuación 1</a>) is a mathematical model that seeks to explain the behavior of financial derivatives, most commonly options.</p>
+</section></section><section class="level2"><h2 id="to-do">To-do<a class="anchor" aria-label="anchor" href="#to-do"></a>
+</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Code annotations</label></li>
+<li><label><input type="checkbox">Tabsets</label></li>
+<li><label><input type="checkbox" checked>Citations</label></li>
+<li><label><input type="checkbox" checked>Task/to do lists</label></li>
+<li><label><input type="checkbox" checked>Figures</label></li>
+<li><label><input type="checkbox" checked>Equations</label></li>
+<li><label><input type="checkbox" checked>Cross-references</label></li>
+<li><label><input type="checkbox" checked>Footnotes</label></li>
+<li><label><input type="checkbox" checked>Callouts</label></li>
+</ul></section><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -206,7 +276,8 @@ A plot with a long caption here
       }
     }
   });
-  </script></main>
+  </script></main><aside class="col-md-3"><nav id="toc" aria-label="Índice de contenidos"><h2>En esta página</h2>
+    </nav></aside>
 </div>
 
   </div>

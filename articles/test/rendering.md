@@ -1,10 +1,10 @@
 # Output rendering
 
-This vignette tests pkgdown output rendering for several use cases.
+This vignette tests **pkgdown** output rendering for several use cases.
 
 ## Footnotes
 
-Yay.[^1]
+This paragraph checks footnote rendering.[^1]
 
 ## Figures
 
@@ -34,9 +34,9 @@ This should only be shown when required
 
 Multiple paragraphs
 
-First paragraph.
+First paragraph
 
-Second paragraph.
+Second paragraph
 
 Some R code
 
@@ -118,7 +118,7 @@ R code in `r` block:
 mean(a + 1)
 ```
 
-YAML.
+YAML
 
 ``` yaml
 yaml: [a, 1]
@@ -126,7 +126,7 @@ yaml: [a, 1]
 
 ### Shouldn’t be highlighted
 
-Non-R code in `\preformatted{}`
+Non-R code in `\preformatted{}`:
 
     yaml: [a, b, c]
 
@@ -136,7 +136,7 @@ Testing margins and copy buttons on small screens.
 
 ``` r
 
-txt <- "Not wrapped, check the copy button behavior."
+txt <- "Not wrapped; check the copy button behavior."
 ```
 
 Wrapped in a `<section>` (e.g. `section > div > pre`)
@@ -151,7 +151,7 @@ txt <- "Wrapped in section"
 >
 > ``` r
 >
-> txt <- "Wrapped in blockquote, margins are preserved."
+> txt <- "Wrapped in blockquote; margins are preserved."
 > ```
 >
 > Continue…
@@ -161,7 +161,7 @@ txt <- "Wrapped in section"
 
   ``` r
 
-  txt <- "Wrapped in li, margins are preserved."
+  txt <- "Wrapped in li; margins are preserved."
   ```
 
 - Another bullet.
@@ -173,7 +173,7 @@ txt <- "Wrapped in section"
 
       ``` r
 
-      txt <- "Wrapped in li, margins are preserved."
+      txt <- "Wrapped in li; margins are preserved."
       ```
 
   3.  Nested list continues.
@@ -202,7 +202,7 @@ warning(cli::style_bold("This is bold"))
 #> Warning: This is bold
 ```
 
-Some text.
+Some text
 
 ``` r
 
@@ -211,13 +211,13 @@ stop(cli::style_italic("This is italic"))
 #> ! This is italic
 ```
 
-Some more text.
+Some more text
 
 ## Quoted text
 
 > Single-line quote about something miscellaneous.
 
-> A Boostrap 5 blockquote with footer.
+> A Bootstrap 5 blockquote with footer.
 
 Someone famous in Source Title
 
@@ -228,7 +228,7 @@ Flush
 
 ## This section is unnumbered
 
-There should however be no bug here!
+There should be no bug here.
 
 ## Tabsets
 
@@ -237,7 +237,7 @@ There should however be no bug here!
 - Tab 1
 - Tab 2
 
-Placeholder text.
+Tab content.
 
 ``` r
 
@@ -248,16 +248,16 @@ The heading below should be “cool”.
 
 ##### cool
 
-Content.
+More tab content.
 
-Placeholder text.
+More tab content.
 
 ### Tabset without pills
 
 - Tab 1
 - Tab 2
 
-Something nice.
+More tab content.
 
 ``` r
 
@@ -278,7 +278,7 @@ Hello!
 
 Bonjour!
 
-Guten tag.
+Guten Tag.
 
 ## Deep headings
 
@@ -295,4 +295,4 @@ making the page scroll horizontally:
 
 Ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss
 
-[^1]: Including **footnotes**! 😁
+[^1]: Including **footnotes**.

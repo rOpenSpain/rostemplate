@@ -47,3 +47,10 @@ Insignias y paletas de colores de rOpenSpain.
   :
 
   Paletas de colores de **rOpenSpain**
+
+## Sobre el paquete
+
+- [`rostemplate`](https://ropenspain.github.io/rostemplate/reference/rostemplate-package.md)
+  [`rostemplate-package`](https://ropenspain.github.io/rostemplate/reference/rostemplate-package.md)
+  : rostemplate: Plantilla Para Sitios 'pkgdown' De Paquetes De
+  'rOpenSpain'

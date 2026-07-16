@@ -1,6 +1,6 @@
-# Testing syntax highlighting
+# Testing syntax highlighter
 
-Test how pkgdown highlights **R** code:
+Test how **pkgdown** highlights R code:
 
 ``` r
 
@@ -58,7 +58,7 @@ testmap <- ne_countries(50,
   select(ISO_3166_3 = adm0_a3) |>
   full_join(df_org)
 
-# Add tiny countries.
+# Add tiny countries too.
 tiny <- ne_countries(50,
   "tiny_countries",
   returnclass = "sf"
@@ -66,7 +66,7 @@ tiny <- ne_countries(50,
   select(ISO_3166_3 = adm0_a3) |>
   full_join(df_org)
 
-# Identify dependencies
+# Identify dependencies.
 ISOCommon <- df_org |>
   filter(!is.na(C)) |>
   select(
@@ -77,11 +77,11 @@ tiny <- left_join(tiny, ISOCommon)
 tiny$C <- coalesce(tiny$C, tiny$C_sov)
 
 
-# Projecting the map
+# Project the map.
 testmap_rob <- st_transform(testmap, "+proj=robin")
 tiny_rob <- st_transform(tiny, "+proj=robin")
 
-# Bounding box
+# Compute the bounding box.
 bbox <- st_linestring(rbind(
   c(-180, 90),
   c(180, 90),
@@ -94,7 +94,7 @@ bbox <- st_linestring(rbind(
   st_sfc(crs = 4326) |>
   st_transform(crs = "+proj=robin")
 
-# Plotting
+# Plot the map.
 par(mar = c(0, 0, 0, 0), bg = NA)
 plot(bbox,
   col = "#FFFFFF",
@@ -118,8 +118,7 @@ plot(
   add = TRUE
 )
 
-# Add tiny countries last.
-# All tiny countries.
+# Add all tiny countries.
 plot(
   st_geometry(tiny_rob),
   col = "#000000",
@@ -127,7 +126,7 @@ plot(
   add = TRUE,
   pch = 21
 )
-# Dependencies.
+# Add dependent tiny countries.
 plot(
   st_geometry(tiny_rob |>
     filter(!is.na(C)) |>
@@ -137,7 +136,7 @@ plot(
   pch = 21,
   add = TRUE
 )
-# Independent countries.
+# Add independent tiny countries.
 plot(
   st_geometry(tiny_rob |>
     filter(!is.na(C)) |>

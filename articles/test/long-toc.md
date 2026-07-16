@@ -1,8 +1,8 @@
 # Long table of contents
 
 This vignette has a very long table of contents. You should be able to
-navigate to a heading near the bottom of the document without scrolling
-all the way down.
+navigate to a heading near the bottom of the page without scrolling all
+the way down.
 
 ## Heading a1
 

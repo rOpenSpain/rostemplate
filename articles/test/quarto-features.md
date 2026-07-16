@@ -38,8 +38,8 @@ plt.show()
 
 Note
 
-Note that there are five types of callouts: `note`, `tip`, `warning`,
-`caution` and `important`.
+Callout types include `note`, `tip`, `warning`, `caution` and
+`important`.
 
 Warning
 
@@ -49,7 +49,7 @@ warning.
 Important
 
 The callout heading is provided by the callout type, with the expected
-heading (i.e., Note, Warning, Important, Tip or Caution).
+heading, such as Note, Warning, Important, Tip or Caution.
 
 Tip With Title
 
@@ -82,7 +82,7 @@ flowchart LR
 
 ## Keyboard
 
-- Keyboard shortcut: Shift-Ctrl-PShift-Ctrl-P.
+- Keyboard shortcut: Shift-Ctrl-PShift-Ctrl-P
 
 ## Lists
 
@@ -124,9 +124,9 @@ Here is an inline note.[^3]
 
 ## Equations
 
-inline math: E = mc^{2}
+Inline math: E = mc^{2}.
 
-display math:
+Display math:
 
 E = mc^{2}
 
@@ -142,9 +142,9 @@ THIS TEXT IS SMALLCAPS
 
 This text is highlighted
 
-endash: –
+Endash: –
 
-emdash: —
+Emdash: —
 
 ## Shortcodes
 
@@ -175,7 +175,7 @@ Here we define a plot.
 
 We will define some values here.
 
-The output of that inline code cell is some code. Etc.
+The output of that inline code cell is some code.
 
 ## Figures
 
@@ -189,10 +189,11 @@ The output of that inline code cell is some code. Etc.
 
 ![](data:image/png;base64,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)
 
-\(c\) This is a placeholder
+\(c\) This is a placeholder.
 
 Figura 1: Cute puppies ([Figura 1 (a)](#fig-pitbull) and [Figura 1
-(b)](#fig-shar-pei)) and placeholder ([Figura 1 (c)](#fig-placeholder)).
+(b)](#fig-shar-pei)) and a placeholder ([Figura 1
+(c)](#fig-placeholder)).
 
 ## Video
 
@@ -218,8 +219,8 @@ Articles* 59 (10): 1-23. <https://doi.org/10.18637/jss.v059.i10>.
 
         { some.code }
 
-    The whole paragraph or just the first line can be indented. This
+    The whole paragraph can be indented, or just the first line. In this
     way, multi-paragraph footnotes work like multi-paragraph list items.
 
-[^3]: Inlines notes are easier to write, since you don’t have to pick an
+[^3]: Inline notes are easier to write, since you do not have to pick an
     identifier and move down to type the note.

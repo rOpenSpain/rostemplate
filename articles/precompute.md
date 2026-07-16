@@ -1,6 +1,6 @@
-# Example of a precomputed vignette with Quarto
+# Precomputed R Markdown vignette
 
-This is an example of a precomputed vignette in Quarto.
+This is an example of a precomputed R Markdown vignette.
 
 ``` r
 
@@ -10,11 +10,12 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
   geom_raster(aes(fill = density))
 ```
 
-![A plot with a long caption here](./plot_quarto-1.png)
+![Waiting time and eruption duration density.](plot-1.png)
 
-A plot with a long caption here
+Waiting time and eruption duration density.
 
-The following text is placeholder prose for checking rendered output:
+The remaining text is filler content used to test long article
+rendering.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
 efficitur massa risus, eu tincidunt magna finibus id. Donec quis
