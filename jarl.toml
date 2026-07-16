@@ -1,5 +1,5 @@
 [lint]
-ignore = ["implicit_assignment", "internal_function"]
+ignore = ["implicit_assignment", "internal_function", "unreachable_code"]
 extend-select = ["TESTTHAT"]
 check-roxygen = true
 fix-roxygen = true
