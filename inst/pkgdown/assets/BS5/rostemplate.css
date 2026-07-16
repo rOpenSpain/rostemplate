@@ -127,7 +127,7 @@ caption {
 
 /* Dev version badge in navbar: fixed vivid red outside brand tokens. */
 .navbar .text-danger {
-	color: var(--bs-danger-text-emphasis) !important;
+	color: #ea868f !important;
 }
 
 #navbar .nav-link {
