@@ -1,5 +1,6 @@
 ---
 title: "Long table of contents"
+description: "Checks navigation behavior for articles with long tables of contents."
 ---
 
 ```{r}

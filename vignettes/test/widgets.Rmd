@@ -1,5 +1,6 @@
 ---
 title: "HTML widgets"
+description: "Tests spacing and rendering for embedded HTML widgets."
 ---
 
 ```{r}

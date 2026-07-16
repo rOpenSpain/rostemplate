@@ -1,5 +1,6 @@
 ---
 title: "Testing syntax highlighting"
+description: "Exercises syntax highlighting for R code and related examples."
 ---
 
 ```{r}

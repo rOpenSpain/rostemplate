@@ -1,5 +1,6 @@
 ---
 title: "ggplot2 example"
+description: "Tests rendering of a ggplot2 figure inside the articles menu."
 ---
 
 ```{r}

@@ -1,5 +1,6 @@
 ---
 title: "reactable example"
+description: "Checks styling and interaction for reactable tables."
 ---
 
 ```{r}

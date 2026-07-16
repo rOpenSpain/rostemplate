@@ -1,5 +1,6 @@
 ---
 title: "A short page"
+description: "Checks footer placement on pages with little content."
 ---
 
 The footer should hug the bottom of the viewport.

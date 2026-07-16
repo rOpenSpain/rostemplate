@@ -1,5 +1,6 @@
 ---
 title: "Bullets"
+description: "Checks list rendering for simple, ordered and paragraph bullets."
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Bullets}

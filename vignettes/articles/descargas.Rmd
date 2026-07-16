@@ -1,5 +1,6 @@
 ---
 title: "Descargas de paquetes de rOpenSpain"
+description: "Resumen de descargas de paquetes de rOpenSpain en CRAN y R-Universe."
 ---
 
 *Fecha de actualización: `r format(Sys.Date(),"%d %b %Y")`*

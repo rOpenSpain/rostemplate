@@ -1,5 +1,6 @@
 ---
 title: "Ejemplo de rostemplate"
+description: "Plantilla mínima para comprobar la carga y renderización de rostemplate."
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Ejemplo de rostemplate}
