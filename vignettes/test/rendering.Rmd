@@ -269,6 +269,8 @@ Something nice.
 
 ```{r}
 #| fig.alt: Another test plot
+#| jarl-ignore-chunk:
+#|   - unreachable_code: This chunk intentionally tests rendering after previous example errors.
 plot(1:42)
 ```
 
