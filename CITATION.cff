@@ -7,9 +7,11 @@ cff-version: 1.2.0
 message: 'To cite package "rostemplate" in publications use:'
 type: software
 license: MIT
-title: 'rostemplate: Plantilla ''pkgdown'' para paquetes de ''rOpenSpain'''
+title: 'rostemplate: Plantilla Para Sitios ''pkgdown'' De Paquetes De ''rOpenSpain'''
 version: 0.2.0.9000
-abstract: Plantilla privada para crear sitios pkgdown de los paquetes de rOpenSpain.
+abstract: Plantilla privada para crear sitios 'pkgdown' de los paquetes de 'rOpenSpain'.
+  Incluye estilos, recursos estáticos y workflows de 'GitHub Actions' para publicar
+  documentación con una identidad visual coherente.
 authors:
 - family-names: Hernangómez
   given-names: Diego
@@ -18,7 +20,7 @@ authors:
   affiliation: rOpenSpain
 preferred-citation:
   type: manual
-  title: 'rostemplate: Plantilla pkgdown para paquetes de rOpenSpain'
+  title: 'rostemplate: Plantilla Para Sitios pkgdown De Paquetes De rOpenSpain'
   authors:
   - family-names: Hernangómez
     given-names: Diego
@@ -28,6 +30,8 @@ preferred-citation:
   year: '2026'
   url: https://ropenspain.github.io/rostemplate/
   abstract: Plantilla privada para crear sitios pkgdown de los paquetes de rOpenSpain.
+    Incluye estilos, recursos estáticos y workflows de GitHub Actions para publicar
+    documentación con una identidad visual coherente.
 repository-code: https://github.com/ropenspain/rostemplate
 url: https://ropenspain.github.io/rostemplate/
 contact:
@@ -97,7 +101,7 @@ references:
     orcid: https://orcid.org/0000-0002-5329-5987
   year: '2026'
   doi: 10.32614/CRAN.package.pkgdown
-  version: '>= 2.0.8'
+  version: '>= 2.2.1'
 - type: software
   title: styler
   abstract: 'styler: Non-Invasive Pretty Printing of R Code'
@@ -262,4 +266,29 @@ references:
   year: '2026'
   doi: 10.32614/CRAN.package.testthat
   version: '>= 3.0.0'
+- type: software
+  title: withr
+  abstract: 'withr: Run Code ''With'' Temporarily Modified Global State'
+  notes: Suggests
+  url: https://withr.r-lib.org
+  repository: https://CRAN.R-project.org/package=withr
+  authors:
+  - family-names: Hester
+    given-names: Jim
+  - family-names: Henry
+    given-names: Lionel
+    email: lionel@posit.co
+  - family-names: Müller
+    given-names: Kirill
+    email: krlmlr+r@mailbox.org
+  - family-names: Ushey
+    given-names: Kevin
+    email: kevinushey@gmail.com
+  - family-names: Wickham
+    given-names: Hadley
+    email: hadley@posit.co
+  - family-names: Chang
+    given-names: Winston
+  year: '2026'
+  doi: 10.32614/CRAN.package.withr
 

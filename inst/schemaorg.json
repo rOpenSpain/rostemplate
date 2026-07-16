@@ -14,9 +14,9 @@
         "familyName": "Hernangómez",
         "givenName": "Diego"
       },
-      "description": "Plantilla privada para crear sitios pkgdown de los paquetes de rOpenSpain.",
+      "description": "Plantilla privada para crear sitios 'pkgdown' de los paquetes de 'rOpenSpain'. Incluye estilos, recursos estáticos y workflows de 'GitHub Actions' para publicar documentación con una identidad visual coherente.",
       "license": "https://spdx.org/licenses/MIT",
-      "name": "rostemplate: Plantilla 'pkgdown' para paquetes de 'rOpenSpain'",
+      "name": "rostemplate: Plantilla Para Sitios 'pkgdown' De Paquetes De 'rOpenSpain'",
       "programmingLanguage": {
         "type": "ComputerLanguage",
         "name": "R",
@@ -32,7 +32,7 @@
         "familyName": "Hernangómez",
         "givenName": "Diego"
       },
-      "name": "{rostemplate}: Plantilla {pkgdown} para paquetes de {rOpenSpain}"
+      "name": "{rostemplate}: Plantilla Para Sitios {pkgdown} De Paquetes De {rOpenSpain}"
     }
   ]
 }

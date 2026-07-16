@@ -2,8 +2,8 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "rostemplate",
-  "description": "Plantilla privada para crear sitios pkgdown de los paquetes de rOpenSpain.",
-  "name": "rostemplate: Plantilla 'pkgdown' para paquetes de 'rOpenSpain'",
+  "description": "Plantilla privada para crear sitios 'pkgdown' de los paquetes de 'rOpenSpain'. Incluye estilos, recursos estáticos y workflows de 'GitHub Actions' para publicar documentación con una identidad visual coherente.",
+  "name": "rostemplate: Plantilla Para Sitios 'pkgdown' De Paquetes De 'rOpenSpain'",
   "relatedLink": "https://ropenspain.github.io/rostemplate/",
   "codeRepository": "https://github.com/ropenspain/rostemplate",
   "issueTracker": "https://github.com/ropenspain/rostemplate/issues",
@@ -103,6 +103,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=testthat"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "withr",
+      "name": "withr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=withr"
     }
   ],
   "softwareRequirements": {
@@ -128,7 +140,7 @@
       "@type": "SoftwareApplication",
       "identifier": "pkgdown",
       "name": "pkgdown",
-      "version": ">= 2.0.8",
+      "version": ">= 2.2.1",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -171,7 +183,7 @@
   },
   "isPartOf": "https://ropenspain.es/",
   "keywords": ["github-actions", "pkgdown", "r", "r-package", "ropenspain", "rstats", "template", "yaml"],
-  "fileSize": "485.343KB",
+  "fileSize": "494.046KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -183,7 +195,7 @@
           "familyName": "Hernangómez"
         }
       ],
-      "name": "{rostemplate}: Plantilla {pkgdown} para paquetes de {rOpenSpain}",
+      "name": "{rostemplate}: Plantilla Para Sitios {pkgdown} De Paquetes De {rOpenSpain}",
       "url": "https://ropenspain.github.io/rostemplate/"
     }
   ],
