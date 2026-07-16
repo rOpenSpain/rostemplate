@@ -24,6 +24,9 @@
 #'
 #' @export
 #' @encoding UTF-8
+#'
+#' @examplesIf interactive()
+#' ros_build()
 ros_build <- function(pkg = ".", ...) {
   # nocov start
   # Ensure .Rbuildignore exists.
@@ -56,7 +59,11 @@ ros_build <- function(pkg = ".", ...) {
     stop("Execution halted")
   }
 
-  pkgdown::build_site(pkg = ".", ...)
+  ros_pkgdown_build_site(pkg = pkg, ...)
   invisible()
   # nocov end
+}
+
+ros_pkgdown_build_site <- function(pkg = ".", ...) {
+  pkgdown::build_site(pkg = pkg, ...)
 }

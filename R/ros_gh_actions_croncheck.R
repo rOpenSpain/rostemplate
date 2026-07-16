@@ -25,6 +25,13 @@
 #'
 #' @export
 #' @encoding UTF-8
+#'
+#' @examples
+#' pkg <- file.path(tempdir(), "pkgdown-cron")
+#' if (!dir.exists(pkg)) {
+#'   dir.create(pkg)
+#' }
+#' ros_actions_check_cron(pkg)
 ros_actions_check_cron <- function(pkg = ".", overwrite = TRUE) {
   # Ensure the workflow directory exists.
 
@@ -65,7 +72,7 @@ ros_actions_check_cron <- function(pkg = ".", overwrite = TRUE) {
 
   # Locate the workflow template.
   filepath <- system.file(
-    "yaml/roscron-check-standard.yml",
+    "yaml/roscron-check-standard.yaml",
     package = "rostemplate"
   )
 

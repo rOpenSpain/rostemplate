@@ -24,6 +24,13 @@ carpeta \code{docs} de tu repositorio.
 El resultado final es equivalente a ejecutar \code{\link[=ros_build]{ros_build()}}, con la diferencia
 de que este comando se ejecuta en GitHub en lugar de ejecutarse localmente.
 }
+\examples{
+pkg <- file.path(tempdir(), "pkgdown-docs")
+if (!dir.exists(pkg)) {
+  dir.create(pkg)
+}
+ros_actions_pkgdown_docs(pkg)
+}
 \seealso{
 Sitios pkgdown:
 \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}},

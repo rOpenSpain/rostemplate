@@ -17,6 +17,13 @@
 #'
 #' @export
 #' @encoding UTF-8
+#'
+#' @examples
+#' pkg <- file.path(tempdir(), "pkgdown-docs")
+#' if (!dir.exists(pkg)) {
+#'   dir.create(pkg)
+#' }
+#' ros_actions_pkgdown_docs(pkg)
 ros_actions_pkgdown_docs <- function(pkg = ".", overwrite = TRUE) {
   # Ensure the workflow directory exists.
 
@@ -53,7 +60,7 @@ ros_actions_pkgdown_docs <- function(pkg = ".", overwrite = TRUE) {
   usethis::write_union(gitignore, c("*.html", "R-version", "depends.Rds"))
 
   # Locate the workflow template.
-  filepath <- system.file("yaml/rostemplate-docs.yml", package = "rostemplate")
+  filepath <- system.file("yaml/rostemplate-docs.yaml", package = "rostemplate")
 
   # Copy the workflow template.
   result <- file.copy(filepath, destdir, overwrite = overwrite)

@@ -8,7 +8,8 @@ on:
 
 
 name: rostemplate-gh-pages
-permissions: write-all
+permissions:
+  contents: write
 # This will cancel running jobs once a new run is triggered
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref }}
@@ -20,7 +21,7 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
 
     - uses: r-lib/actions/setup-pandoc@v2
 

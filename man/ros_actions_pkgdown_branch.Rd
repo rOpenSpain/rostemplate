@@ -20,6 +20,13 @@ invisible.
 Instala un workflow de GitHub Actions que crea el sitio \CRANpkg{pkgdown}
 de tu paquete en la rama \code{gh-pages} de tu repositorio.
 }
+\examples{
+pkg <- file.path(tempdir(), "pkgdown-branch")
+if (!dir.exists(pkg)) {
+  dir.create(pkg)
+}
+ros_actions_pkgdown_branch(pkg)
+}
 \seealso{
 Sitios pkgdown:
 \code{\link[=ros_actions_pkgdown_docs]{ros_actions_pkgdown_docs()}},

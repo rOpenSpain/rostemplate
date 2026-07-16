@@ -35,6 +35,7 @@ Un vector de colores.
 Paletas de colores basadas en el tema de \strong{rOpenSpain}.
 }
 \examples{
+\dontshow{if (requireNamespace("scales", quietly = TRUE)) withAutoprint(\{ # examplesIf}
 scales::show_col(ros_green_pal(9))
 
 scales::show_col(ros_violet_pal(9))
@@ -44,5 +45,6 @@ scales::show_col(ros_gradient_pal(9))
 scales::show_col(ros_qualitative_pal(9))
 
 scales::show_col(ros_metro_madrid_pal(9))
+\dontshow{\}) # examplesIf}
 }
 \concept{palettes}

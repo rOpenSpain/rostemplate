@@ -32,15 +32,39 @@ library(tidyverse)
 library(rostemplate)
 
 Sys.setenv("R_CRAN_WEB" = "https://cloud.r-project.org")
-crandb <- unique(tools::CRAN_package_db()$Package)
+options(download.file.method = if (.Platform$OS.type == "windows") {
+  "wininet"
+} else {
+  getOption("download.file.method")
+})
+
+read_json_url <- function(url) {
+  tmp <- tempfile(fileext = ".json")
+  api_res <- suppressWarnings(try(download.file(
+    url,
+    tmp,
+    mode = "wb",
+    quiet = TRUE
+  ), silent = TRUE))
+
+  if (inherits(api_res, "try-error")) {
+    return(NULL)
+  }
+
+  jsonlite::read_json(tmp)
+}
+
+crandb <- rownames(available.packages(repos = Sys.getenv("R_CRAN_WEB")))
 
 
-mypaks <- jsonlite::read_json(
+mypaks <- read_json_url(
   paste0(
     "https://raw.githubusercontent.com/rOpenSpain/rOpenSpain.",
     "r-universe.dev/master/packages.json"
   )
-) |>
+)
+
+mypaks <- mypaks |>
   lapply(function(x) {
     x[["package"]]
   }) |>
@@ -308,24 +332,17 @@ Descargas de paquetes de [rOpenSpain](https://ropenspain.es/) y metadatos desde
 #| label: data-posit
 #| echo: false
 res <- lapply(mypaks, function(x) {
-  tmp <- tempfile(fileext = ".json")
-  api_res <- suppressWarnings(try(download.file(
-    paste0("https://packagemanager.posit.co/__api__/repos/1/packages/", x),
-    tmp,
-    mode = "wb",
-    quiet = TRUE
-  ), silent = TRUE))
+  info <- read_json_url(
+    paste0("https://packagemanager.posit.co/__api__/repos/1/packages/", x)
+  )
 
-  if (inherits(api_res, "try-error")) {
+  if (is.null(info)) {
     return(NULL)
   }
-
-  info <- jsonlite::read_json(tmp)
 
   df_init <- as_tibble(
     info[c("name", "date_publication", "package_size", "version")]
   )
-
 
   df_prep <- df_init |>
     mutate(

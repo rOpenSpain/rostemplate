@@ -19,7 +19,7 @@
 #' @export
 #' @encoding UTF-8
 #'
-#' @examples
+#' @examplesIf requireNamespace("scales", quietly = TRUE)
 #' scales::show_col(ros_green_pal(9))
 #'
 #' scales::show_col(ros_violet_pal(9))

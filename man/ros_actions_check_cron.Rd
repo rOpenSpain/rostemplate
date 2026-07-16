@@ -32,3 +32,10 @@ cada mes").
 Usa \href{https://crontab.guru/#30_08_1_*_*}{crontab.guru} para crear tu propia
 configuración cron.
 }
+\examples{
+pkg <- file.path(tempdir(), "pkgdown-cron")
+if (!dir.exists(pkg)) {
+  dir.create(pkg)
+}
+ros_actions_check_cron(pkg)
+}

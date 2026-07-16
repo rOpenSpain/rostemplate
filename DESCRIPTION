@@ -1,11 +1,13 @@
 Package: rostemplate
-Title: Plantilla 'pkgdown' para paquetes de 'rOpenSpain'
+Title: Plantilla Para Sitios 'pkgdown' De Paquetes De 'rOpenSpain'
 Version: 0.2.0.9000
 Authors@R: 
     person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0001-8457-4658", affiliation = "rOpenSpain"))
-Description: Plantilla privada para crear sitios pkgdown de los paquetes
-    de rOpenSpain.
+Description: Plantilla privada para crear sitios 'pkgdown' de los paquetes
+    de 'rOpenSpain'. Incluye estilos, recursos estáticos y workflows de
+    'GitHub Actions' para publicar documentación con una identidad visual
+    coherente.
 License: MIT + file LICENSE
 URL: https://ropenspain.github.io/rostemplate/,
     https://github.com/ropenspain/rostemplate
@@ -14,7 +16,7 @@ Depends:
     R (>= 4.1.0)
 Imports: 
     brand.yml,
-    pkgdown (>= 2.0.8),
+    pkgdown (>= 2.2.1),
     styler,
     usethis (>= 2.0.0),
     utils
@@ -23,7 +25,8 @@ Suggests:
     quarto,
     rmarkdown,
     scales,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    withr
 VignetteBuilder: 
     quarto
 Config/Needs/website: ropenspain/rostemplate, ggplot2, devtools, remotes,

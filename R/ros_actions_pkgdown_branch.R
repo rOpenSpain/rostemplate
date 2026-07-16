@@ -12,6 +12,13 @@
 #'
 #' @export
 #' @encoding UTF-8
+#'
+#' @examples
+#' pkg <- file.path(tempdir(), "pkgdown-branch")
+#' if (!dir.exists(pkg)) {
+#'   dir.create(pkg)
+#' }
+#' ros_actions_pkgdown_branch(pkg)
 ros_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
   # Ensure the workflow directory exists.
 
@@ -48,7 +55,7 @@ ros_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
 
   # Locate the workflow template.
   filepath <- system.file(
-    "yaml/rostemplate-gh-pages.yml",
+    "yaml/rostemplate-gh-pages.yaml",
     package = "rostemplate"
   )
 

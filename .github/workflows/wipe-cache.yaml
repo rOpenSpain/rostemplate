@@ -1,5 +1,7 @@
 name: Clear GHA caches manually
-permissions: write-all
+permissions:
+  actions: write
+  contents: read
 # This will cancel running jobs once a new run is triggered
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref }}

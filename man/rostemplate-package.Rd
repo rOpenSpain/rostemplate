@@ -5,11 +5,11 @@
 \name{rostemplate-package}
 \alias{rostemplate}
 \alias{rostemplate-package}
-\title{rostemplate: Plantilla 'pkgdown' para paquetes de 'rOpenSpain'}
+\title{rostemplate: Plantilla Para Sitios 'pkgdown' De Paquetes De 'rOpenSpain'}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Plantilla privada para crear sitios pkgdown de los paquetes de rOpenSpain.
+Plantilla privada para crear sitios 'pkgdown' de los paquetes de 'rOpenSpain'. Incluye estilos, recursos estáticos y workflows de 'GitHub Actions' para publicar documentación con una identidad visual coherente.
 }
 \seealso{
 Useful links:

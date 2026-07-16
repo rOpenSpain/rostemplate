@@ -61,6 +61,11 @@ ejecutar \code{\link[pkgdown:build_site]{pkgdown::build_site()}}. El resultado s
 Al contrario que \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}, este workflow se ejecuta
 localmente.
 }
+\examples{
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
+ros_build()
+\dontshow{\}) # examplesIf}
+}
 \seealso{
 \code{\link[pkgdown:build_site]{pkgdown::build_site()}}.
 

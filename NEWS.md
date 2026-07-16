@@ -1,5 +1,6 @@
 # rostemplate (development version)
 
+- Corrige la instalación de workflows desde `ros_actions_check_cron()`, `ros_actions_pkgdown_branch()` y `ros_actions_pkgdown_docs()`, y hace que `ros_build()` respete el argumento `pkg`.
 - Añade una nueva paleta de colores `ros_metro_madrid_pal()`.
 - Nuevo modo oscuro.
 

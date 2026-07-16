@@ -5,7 +5,8 @@ on:
 
 
 name: update-docs
-permissions: write-all
+permissions:
+  contents: write
 # This will cancel running jobs once a new run is triggered
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref }}
