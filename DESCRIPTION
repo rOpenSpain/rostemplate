@@ -26,7 +26,8 @@ Suggests:
     rmarkdown,
     scales,
     testthat (>= 3.0.0),
-    withr
+    withr,
+    yaml
 VignetteBuilder: 
     quarto
 Config/Needs/website: ropenspain/rostemplate, ggplot2, devtools, remotes,
