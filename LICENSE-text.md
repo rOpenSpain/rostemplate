@@ -1,4 +1,4 @@
 # Licencia
 
-    YEAR: 2021
+    YEAR: 2026
     COPYRIGHT HOLDER: project authors

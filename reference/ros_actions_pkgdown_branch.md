@@ -30,3 +30,18 @@ invisible.
 Sitios pkgdown:
 [`ros_actions_pkgdown_docs()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_docs.md),
 [`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)
+
+## Ejemplos
+
+``` r
+pkg <- file.path(tempdir(), "pkgdown-branch")
+if (!dir.exists(pkg)) {
+  dir.create(pkg)
+}
+ros_actions_pkgdown_branch(pkg)
+#> ✔ Adding "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$", "^\\.github$", and
+#>   "^pkgdown$" to /tmp/Rtmp9gTUbq/pkgdown-branch/.Rbuildignore.
+#> ✔ Adding "*.html", "R-version", and "depends.Rds" to
+#>   /tmp/Rtmp9gTUbq/pkgdown-branch/.github/.gitignore.
+#> Success!
+```

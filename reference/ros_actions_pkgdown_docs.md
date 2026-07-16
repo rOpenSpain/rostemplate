@@ -37,3 +37,18 @@ ejecutarse localmente.
 Sitios pkgdown:
 [`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md),
 [`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)
+
+## Ejemplos
+
+``` r
+pkg <- file.path(tempdir(), "pkgdown-docs")
+if (!dir.exists(pkg)) {
+  dir.create(pkg)
+}
+ros_actions_pkgdown_docs(pkg)
+#> ✔ Adding "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$", "^\\.github$", and
+#>   "^pkgdown$" to /tmp/Rtmp9gTUbq/pkgdown-docs/.Rbuildignore.
+#> ✔ Adding "*.html", "R-version", and "depends.Rds" to
+#>   /tmp/Rtmp9gTUbq/pkgdown-docs/.github/.gitignore.
+#> Success!
+```

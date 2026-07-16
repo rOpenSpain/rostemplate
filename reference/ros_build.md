@@ -107,3 +107,11 @@ este workflow se ejecuta localmente.
 Sitios pkgdown:
 [`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md),
 [`ros_actions_pkgdown_docs()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_docs.md)
+
+## Ejemplos
+
+``` r
+if (FALSE) { # interactive()
+ros_build()
+}
+```

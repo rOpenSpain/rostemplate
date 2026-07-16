@@ -3,7 +3,7 @@
 La configuración por defecto ejecuta el check de manera mensual los días 1
 de cada mes a las 08:30."><meta property="og:description" content="El workflow de GitHub Actions creado ejecuta R CMD check para tu paquete.
 La configuración por defecto ejecuta el check de manera mensual los días 1
-de cada mes a las 08:30."><meta property="og:image" content="https://ropenspain.github.io/rostemplate/logo.png"><meta property="og:image:alt" content="rOpenSpain logo"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@dhernangomez"><meta name="twitter:site" content="@rOpenSpain"><!-- rogtemplate style sheet --><link href="../BS5/rostemplate.min.css" rel="stylesheet"></head><body>
+de cada mes a las 08:30."><meta property="og:image" content="https://ropenspain.github.io/rostemplate/logo.png"><meta property="og:image:alt" content="rOpenSpain logo"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@dhernangomez"><meta name="twitter:site" content="@rOpenSpain"><!-- rostemplate style sheet --><link href="../BS5/rostemplate.min.css" rel="stylesheet"></head><body>
   <a href="#main" class="visually-hidden-focusable">Ir al contenido</a>
 
 
@@ -93,6 +93,20 @@ cada mes").</p>
 configuración cron.</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Ejemplos<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">pkg</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">"pkgdown-cron"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/files2.html" class="external-link">dir.exists</a></span><span class="op">(</span><span class="va">pkg</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/files2.html" class="external-link">dir.create</a></span><span class="op">(</span><span class="va">pkg</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-in"><span><span class="fu">ros_actions_check_cron</span><span class="op">(</span><span class="va">pkg</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">"^docs$"</span>, <span style="color: #0000BB;">"^_pkgdown\\.yml$"</span>, <span style="color: #0000BB;">"^_pkgdown\\.yaml$"</span>, <span style="color: #0000BB;">"^\\.github$"</span>, and</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   <span style="color: #0000BB;">"^pkgdown$"</span> to <span style="color: #0000BB;">/tmp/Rtmp9gTUbq/pkgdown-cron/.Rbuildignore</span>.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">"*.html"</span>, <span style="color: #0000BB;">"R-version"</span>, and <span style="color: #0000BB;">"depends.Rds"</span> to</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   <span style="color: #0000BB;">/tmp/Rtmp9gTUbq/pkgdown-cron/.github/.gitignore</span>.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Success!</span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Índice de contenidos"><h2>En esta página</h2>
     </nav></aside></div>
 
