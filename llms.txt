@@ -216,9 +216,6 @@ Markdown y Quarto.
 
 - [Example of a precomputed
   vignette](https://ropenspain.github.io/rostemplate/articles/test-precompute.md):
-
-  Checks how precomputed vignette content and figures are rendered.
-
 - [Example of a precomputed vignette with
   Quarto](https://ropenspain.github.io/rostemplate/articles/test-precompute-quarto.md):
 
