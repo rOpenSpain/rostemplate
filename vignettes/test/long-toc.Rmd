@@ -1,6 +1,7 @@
 ---
 title: "Long table of contents"
-description: "Checks navigation behavior for articles with long tables of contents."
+description: >
+  Check navigation and layout behavior for long article tables of contents.
 ---
 
 ```{r}
@@ -9,11 +10,10 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 ```
 
 This vignette has a very long table of contents. You should be able to navigate
-to a heading near the bottom of the document without scrolling all the way down.
+to a heading near the bottom of the page without scrolling all the way down.
 
 ```{r}
 #| echo: false
 h2 <- paste0("## Heading ", t(outer(letters, 1:9, paste0)))
 knitr::asis_output(paste(h2, collapse = "\n\n"))
 ```
-

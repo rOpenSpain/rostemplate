@@ -1,9 +1,10 @@
 ---
 title: "Output rendering"
-description: "Tests pkgdown output rendering across common article elements."
-subtitle: "Subtitle is skipped from the TOC"
-author: "Author is skipped from the TOC"
-date: "Date is skipped from the TOC"
+description: >
+  Check rendered output blocks, metadata display and article layout.
+subtitle: "Subtitle is skipped from the table of contents"
+author: "Author is skipped from the table of contents"
+date: "Date is skipped from the table of contents"
 ---
 
 ```{r}
@@ -11,13 +12,13 @@ date: "Date is skipped from the TOC"
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 ```
 
-This vignette tests pkgdown output rendering for several use cases.
+This vignette tests **pkgdown** output rendering for several use cases.
 
 ## Footnotes
 
-Yay.[^1]
+This paragraph checks footnote rendering.[^1]
 
-[^1]: Including **footnotes**! 😁
+[^1]: Including **footnotes**.
 
 ## Figures
 
@@ -43,9 +44,9 @@ x
 
 <summary>Multiple paragraphs</summary>
 
-First paragraph.
+First paragraph
 
-Second paragraph.
+Second paragraph
 
 </details>
 
@@ -62,7 +63,7 @@ Second paragraph.
 ## Tables
 
 | col 1 | col 2 | col 3 | col 4 |
-|:--------------------|:-------------------|:------------------:|:------------------:|
+|:---|:---|:--:|:--:|
 | Brightness | Total brightness, total reflectance, spectral intensity | $$y = x^2$$ | test |
 
 ## Math
@@ -109,7 +110,7 @@ cat(rep("xy", 100), sep = "")
 
 Valid R code in `\preformatted{}`:
 
-```
+```         
 mean(a + 1)
 ```
 
@@ -125,7 +126,7 @@ R code in `r` block:
 mean(a + 1)
 ```
 
-YAML.
+YAML
 
 ``` yaml
 yaml: [a, 1]
@@ -133,9 +134,9 @@ yaml: [a, 1]
 
 ### Shouldn't be highlighted
 
-Non-R code in `\preformatted{}`
+Non-R code in `\preformatted{}`:
 
-```
+```         
 yaml: [a, b, c]
 ```
 
@@ -144,7 +145,7 @@ yaml: [a, b, c]
 Testing margins and copy buttons on small screens.
 
 ``` r
-txt <- "Not wrapped, check the copy button behavior."
+txt <- "Not wrapped; check the copy button behavior."
 ```
 
 <section>
@@ -161,7 +162,7 @@ txt <- "Wrapped in section"
 > verify whether it aligns with the paragraph width.
 >
 > ``` r
-> txt <- "Wrapped in blockquote, margins are preserved."
+> txt <- "Wrapped in blockquote; margins are preserved."
 > ```
 >
 > Continue…
@@ -170,7 +171,7 @@ txt <- "Wrapped in section"
     check whether it matches the paragraph width.
 
     ``` r
-    txt <- "Wrapped in li, margins are preserved."
+    txt <- "Wrapped in li; margins are preserved."
     ```
 
 -   Another bullet.
@@ -181,7 +182,7 @@ txt <- "Wrapped in section"
         and confirm alignment with the paragraph.
 
         ``` r
-        txt <- "Wrapped in li, margins are preserved."
+        txt <- "Wrapped in li; margins are preserved."
         ```
 
     3.  Nested list continues.
@@ -207,14 +208,14 @@ message(cli::col_green("This is green"))
 warning(cli::style_bold("This is bold"))
 ```
 
-Some text.
+Some text
 
 ```{r}
 #| error: TRUE
 stop(cli::style_italic("This is italic"))
 ```
 
-Some more text.
+Some more text
 
 ## Quoted text
 
@@ -222,7 +223,7 @@ Some more text.
 
 <figure>
 
-> A Boostrap 5 blockquote with footer.
+> A Bootstrap 5 blockquote with footer.
 
 ```{=html}
 <figcaption class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
@@ -238,7 +239,7 @@ Some more text.
 
 ## This section is unnumbered {.unnumbered}
 
-There should however be no bug here!
+There should be no bug here.
 
 ## Tabsets
 
@@ -246,7 +247,7 @@ There should however be no bug here!
 
 #### Tab 1
 
-Placeholder text.
+Tab content.
 
 ``` r
 1 + 1
@@ -256,17 +257,17 @@ The heading below should be "cool".
 
 ##### cool
 
-Content.
+More tab content.
 
 #### Tab 2
 
-Placeholder text.
+More tab content.
 
 ### Tabset without pills {.tabset}
 
 #### Tab 1
 
-Something nice.
+More tab content.
 
 ```{r}
 #| fig.alt: Another test plot
@@ -289,7 +290,7 @@ Bonjour!
 
 #### German
 
-Guten tag.
+Guten Tag.
 
 ## Deep headings
 

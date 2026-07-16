@@ -1,6 +1,7 @@
 ---
 title: "ggplot2 example"
-description: "Tests rendering of a ggplot2 figure inside the articles menu."
+description: >
+  Check how pkgdown renders ggplot2 figures in article pages.
 ---
 
 ```{r}
@@ -12,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-Example using a **ggplot2** image.
+Example of a **ggplot2** image.
 
 ```{r}
 #| label: setup
@@ -20,7 +21,7 @@ Example using a **ggplot2** image.
 #| fig-cap: A ggplot2 image
 library(ggplot2)
 
-# Counts or sums of weights.
+# Count rows or sums of weights.
 g <- ggplot(mpg, aes(class))
 # Number of cars in each class.
 g + geom_bar()

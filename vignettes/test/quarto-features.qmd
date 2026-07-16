@@ -1,5 +1,7 @@
 ---
 title: Quarto features
+description: >
+  Check Quarto-specific article features such as citations and shortcodes.
 subtitle: Using this for shortcodes
 output: html
 knitr:
@@ -47,8 +49,7 @@ plt.show()
 <div class="callout-body-container callout-body">
 ```
 
-Note that there are five types of callouts: `note`, `tip`, `warning`, `caution`
-and `important`.
+Callout types include `note`, `tip`, `warning`, `caution` and `important`.
 
 ```{=html}
 </div>
@@ -81,8 +82,8 @@ warning.
 <div class="callout-body-container callout-body">
 ```
 
-The callout heading is provided by the callout type, with the expected heading
-(i.e., Note, Warning, Important, Tip or Caution).
+The callout heading is provided by the callout type, with the expected heading,
+such as Note, Warning, Important, Tip or Caution.
 
 ```{=html}
 </div>
@@ -179,7 +180,7 @@ diffviewer::visual_diff(path1, path2)
 
 ## Keyboard
 
--   Keyboard shortcut: {{< kbd Shift-Ctrl-P >}}.
+-   Keyboard shortcut: {{< kbd Shift-Ctrl-P >}}
 
 ## Lists
 
@@ -221,25 +222,25 @@ Here is a footnote reference,[^1] and another.[^2]
     Subsequent paragraphs are indented to show that they belong to the previous
     footnote.
 
-    ```
+    ```         
     { some.code }
     ```
 
-    The whole paragraph or just the first line can be indented. This way,
+    The whole paragraph can be indented, or just the first line. In this way,
     multi-paragraph footnotes work like multi-paragraph list items.
 
 This paragraph won't be part of the note, because it isn't indented.
 
 Here is an inline note.[^3]
 
-[^3]: Inlines notes are easier to write, since you don't have to pick an
+[^3]: Inline notes are easier to write, since you do not have to pick an
     identifier and move down to type the note.
 
 ## Equations
 
-inline math: $E = mc^{2}$
+Inline math: $E = mc^{2}$.
 
-display math:
+Display math:
 
 $$E = mc^{2}$$
 
@@ -255,9 +256,9 @@ $$E = mc^{2}$$
 
 [This text is highlighted]{.mark}
 
-endash: --
+Endash: --
 
-emdash: ---
+Emdash: ---
 
 ## Shortcodes
 
@@ -288,7 +289,7 @@ plot(c(1, 2, 3))
 
 We will define some values here. [`{r} "some code"`]{#a-span}
 
-The output of that inline code cell is {{< contents a-span >}}. Etc.
+The output of that inline code cell is {{< contents a-span >}}.
 
 ## Figures
 
@@ -300,10 +301,10 @@ The output of that inline code cell is {{< contents a-span >}}. Etc.
 ::: {#fig-placeholder}
 {{< placeholder 1000 200>}}
 
-This is a placeholder
+This is a placeholder.
 :::
 
-Cute puppies (@fig-pitbull and @fig-shar-pei) and placeholder
+Cute puppies (@fig-pitbull and @fig-shar-pei) and a placeholder
 (@fig-placeholder).
 ::::
 

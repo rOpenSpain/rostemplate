@@ -1,6 +1,7 @@
 ---
 title: "HTML widgets"
-description: "Tests spacing and rendering for embedded HTML widgets."
+description: >
+  Check HTML widget rendering and layout inside pkgdown articles.
 ---
 
 ```{r}

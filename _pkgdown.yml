@@ -31,7 +31,7 @@ reference:
   - ros_badge_ropenspain
   - has_concept("palettes")
 
-- title: internal
+- title: Sobre el paquete
   contents:
   - rostemplate-package
 
@@ -54,26 +54,17 @@ articles:
     Artículos de ejemplo para comprobar vignettes precomputadas en R Markdown
     y Quarto.
   contents:
-  - test-precompute
-  - test-precompute-quarto
+  - starts_with("precompute")
 
 - title: Menú de pruebas
   navbar: Menú de pruebas
   desc: >
     Artículos de prueba para comprobar el menú de navegación.
   contents:
-  - menu/ggplot2
-  - menu/highlight
+  - starts_with("menu")
 
 - title: Test
   desc: >
     Artículos de prueba para comprobar la salida de pkgdown.
   contents:
-  - test/long-toc
-  - test/quarto-features
-  - test/reactable
-  - test/rendering
-  - test/short
-  - test/test-bullets
-  - test/test-quarto
-  - test/widgets
+  - starts_with("test")

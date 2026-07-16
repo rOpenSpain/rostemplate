@@ -16,23 +16,26 @@ Depends:
     R (>= 4.1.0)
 Imports: 
     brand.yml,
+    grDevices,
     pkgdown (>= 2.2.1),
     styler,
     usethis (>= 2.0.0),
     utils
 Suggests: 
+    cli,
     knitr,
     quarto,
     rmarkdown,
     scales,
+    stats,
     testthat (>= 3.0.0),
     withr,
     yaml
 VignetteBuilder: 
     quarto
-Config/Needs/website: ropenspain/rostemplate, ggplot2, devtools, remotes,
-    pkgsearch, htmltools, cranlogs, tidyverse, jsonlite, lubridate,
-    reactable, diffviewer
+Config/Needs/website: ropenspain/rostemplate, ggplot2, pak, pkgsearch,
+    htmltools, cranlogs, tidyverse, jsonlite, lubridate, reactable,
+    diffviewer, dplyr, tidyr, tibble, MASS
 Config/roxygen2/markdown: TRUE
 Config/roxygen2/version: 8.0.0
 Config/testthat/edition: 3

@@ -94,6 +94,9 @@ install.packages(
   repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
 )
 
+# O usando pak.
+pak::pak("ropenspain/rostemplate")
+
 # Publicar en la rama gh-pages
 rostemplate::ros_actions_pkgdown_branch()
 

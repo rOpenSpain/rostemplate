@@ -38,9 +38,8 @@ Esta plantilla es una plantilla privada para uso exclusivo de los paquetes de
 
 La plantilla de **pkgdown** está adaptada a la empleada por la comunidad
 [rOpenSpain](https://ropenspain.es/), que a su vez es una adaptación de la
-plantilla
-[Universal](https://devcows.github.io/hugo-universal-theme/) creada por
-[DevCows](https://github.com/devcows) con la variación de color **violet**.
+plantilla [Universal](https://devcows.github.io/hugo-universal-theme/) creada
+por [DevCows](https://github.com/devcows) con la variación de color **violet**.
 
 ## Configuración previa
 
@@ -94,11 +93,10 @@ carpeta.
 
 Aunque el uso del paquete **rostemplate** en sí no es necesario con GitHub
 Actions, se han desarrollado dos funciones que automatizan esta configuración.
-Estas funciones crean el directorio
-`.github/workflows` si no existiera previamente y copian los archivos
-solicitados en la ruta correspondiente. Adicionalmente, crean los archivos
-`.Rbuildignore` y `.github/.gitignore`, que ignoran ciertos archivos cuando se
-compila el paquete:
+Estas funciones crean el directorio `.github/workflows` si no existiera
+previamente y copian los archivos solicitados en la ruta correspondiente.
+Adicionalmente, crean los archivos `.Rbuildignore` y `.github/.gitignore`, que
+ignoran ciertos archivos cuando se compila el paquete:
 
 ```{r}
 #| eval: false
@@ -107,6 +105,9 @@ install.packages(
   "rostemplate",
   repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
 )
+
+# O usando pak.
+pak::pak("ropenspain/rostemplate")
 
 # Publicar en la rama gh-pages
 rostemplate::ros_actions_pkgdown_branch()
@@ -155,8 +156,8 @@ Una vez instalado, se ha de ejecutar este script:
 rostemplate::ros_build()
 ```
 
-La función `rostemplate::ros_build()` es un alias de `pkgdown::build_site()`
-que añade un control sobre la configuración del archivo `_pkgdown.yaml`.
+La función `rostemplate::ros_build()` es un alias de `pkgdown::build_site()` que
+añade un control sobre la configuración del archivo `_pkgdown.yaml`.
 
 Una vez generado el sitio, es necesario actualizar el repositorio remoto en
 GitHub mediante un *commit*.
@@ -165,5 +166,5 @@ GitHub mediante un *commit*.
 
 Una vez generado el sitio estático y subido al repositorio en GitHub, el último
 paso es activar el sitio web a través de los *Settings* del repositorio
-(*Settings > GitHub Pages*) y seleccionar el origen deseado (`gh-pages`,
+(*Settings \> GitHub Pages*) y seleccionar el origen deseado (`gh-pages`,
 `main/docs`, etc.).

@@ -1,0 +1,27 @@
+path.n: NAMESPACE
+path.d: DESCRIPTION
+dir.r: R
+dir.v: vignettes
+dir.t: tests
+extra.suggests: ~
+pkg_ignore:
+- cranlogs
+- devtools
+- diffviewer
+- ggplot2
+- htmltools
+- jsonlite
+- lubridate
+- pkgsearch
+- reactable
+- remotes
+- tidyverse
+- dplyr
+- tidyr
+- tibble
+- MASS
+document: yes
+normalize: yes
+inside_rmd: ~
+must.exist: yes
+check_if_suggests_is_installed: yes

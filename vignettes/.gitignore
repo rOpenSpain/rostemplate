@@ -1,8 +1,8 @@
 *.html
 *.R
+*_files
 /.quarto/
 **/*.quarto_ipynb
-*_files
 _quarto.yaml
 _quarto.yml
 *.rmarkdown

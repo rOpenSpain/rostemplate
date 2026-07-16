@@ -1,17 +1,16 @@
 ---
-title: "Example of a precomputed vignette with Quarto"
-description: "Checks how precomputed Quarto vignette content and figures are rendered."
+title: "Precomputed Quarto vignette"
+description: >
+  Check how pkgdown handles a precomputed Quarto vignette.
 vignette: >
-  %\VignetteIndexEntry{Example of a precomputed vignette with Quarto}
+  %\VignetteIndexEntry{Precomputed Quarto vignette}
   %\VignetteEngine{quarto::html}
   %\VignetteEncoding{UTF-8}
 ---
 
 
 
-
-
-This is an example of a precomputed vignette in Quarto.
+This is an example of a precomputed Quarto vignette.
 
 
 ``` r
@@ -22,11 +21,11 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
 ```
 
 <div class="figure">
-<img src="./plot_quarto-1.png" alt="A plot with a long caption here" width="100%" />
-<p class="caption">A plot with a long caption here</p>
+<img src="./plot_quarto-1.png" alt="Waiting time and eruption duration density." width="100%" />
+<p class="caption">Waiting time and eruption duration density.</p>
 </div>
 
-The following text is placeholder prose for checking rendered output:
+The remaining text is filler content used to test long article rendering.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur massa
 risus, eu tincidunt magna finibus id. Donec quis tincidunt est, sed commodo leo.

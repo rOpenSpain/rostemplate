@@ -56,3 +56,4 @@
 ^\.gitattributes$
 ^index\.Rmd$
 ^AGENTS\.md$
+^dev$
