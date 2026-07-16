@@ -9,7 +9,7 @@
 	--ros-gray-600: #999999;
 	--ros-gray-700: var(--brand-ros_gray, #555555);
 	--ros-gray-800: #444444;
-	--ros-gray-850: #383838;
+	--ros-gray-850: #2f2f2f;
 	--ros-gray-900: var(--brand-ros_black, #333333);
 	--ros-violet: var(--brand-ros_violet, #986dbd);
 	--ros-violet-rgb: 152, 109, 189;
@@ -52,7 +52,7 @@
 /* --- Dark theme tokens --- */
 [data-bs-theme="dark"] {
 	--bs-body-bg: var(--ros-gray-850);
-	--bs-body-bg-rgb: 56, 56, 56;
+	--bs-body-bg-rgb: 47, 47, 47;
 	--bs-body-color: rgb(180, 180, 180);
 	--bs-body-color-rgb: 180, 180, 180;
 
