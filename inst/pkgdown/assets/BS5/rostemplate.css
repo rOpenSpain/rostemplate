@@ -111,7 +111,7 @@ caption {
 	margin-right: auto;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	font-size: 0.875rem;
+	font-size: calc(var(--bs-body-font-size) * 0.875);
 	width: 100%;
 }
 /* ---Navbar tweaks--- */
@@ -151,7 +151,7 @@ caption {
 
 /* Spacing and borders */
 .navbar small {
-	font-size: 0.75rem;
+	font-size: calc(var(--bs-body-font-size) * 0.875);
 }
 
 #navbar .dropdown-menu {
@@ -369,7 +369,7 @@ mark,
 }
 
 #footer h4 {
-	font-size: 14px;
+	font-size: calc(var(--bs-body-font-size) * 0.875);
 	font-weight: 800;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
@@ -380,8 +380,8 @@ mark,
 	background: var(--ros-copyright-bg);
 	color: var(--ros-copyright-fg);
 	padding: 50px 0;
-	font-size: 12px;
-	line-height: 28px;
+	font-size: calc(var(--bs-body-font-size) * 0.875);
+	line-height: 1.75;
 }
 
 /* ---Misc--- */
@@ -393,35 +393,6 @@ mark,
 	font-size: var(--bs-body-font-size);
 	font-weight: var(--bs-body-font-weight);
 	margin-bottom: 0.5rem;
-}
-
-/* Typography */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	line-height: 1.1;
-}
-
-h1,
-h2 {
-	font-size: 1.875rem;
-}
-h3 {
-	font-size: 1.5rem;
-}
-
-h4 {
-	font-size: 1.125rem;
-}
-h5 {
-	font-size: 0.875rem;
-}
-h6 {
-	font-size: 0.75rem;
 }
 
 /* Hack to reduce color in dark mode */
@@ -477,7 +448,7 @@ img.logo {
 #ROS-heading-breadcrumbs {
 	padding-top: 10px;
 	padding-bottom: 1px;
-	font-size: 14px;
+	font-size: calc(var(--bs-body-font-size) * 0.875);
 	text-decoration: none;
 	text-transform: none;
 	letter-spacing: 0;
@@ -504,7 +475,6 @@ blockquote,
 	margin: 0 0 1rem;
 	border-left: 5px solid var(--brand-ros_violet);
 	margin-bottom: 1rem;
-	font-size: 1.09375rem;
 }
 
 .pkg {
@@ -530,7 +500,6 @@ a > code {
 
 code {
 	padding: 2px 4px;
-	font-size: 90%;
 	border-radius: 4px;
 	word-wrap: break-word;
 }
@@ -593,8 +562,6 @@ pre {
 	display: block;
 	padding: 9.5px;
 	margin: 0 0 10px;
-	font-size: 13px;
-	line-height: 1.42857143;
 	color: var(--ros-syntax-fg);
 	word-break: break-all;
 	word-wrap: break-word;

@@ -47,24 +47,18 @@ template:
         base:
           family: Roboto
           weight: 400
-          size: 0.875rem
-          line-height: 1.42857143
         headings:
           family: Roboto
           weight: 800
           color: ros-black
-          line-height: 1.1
         monospace:
           family: Menlo, Monaco, Consolas, 'Courier New', monospace
-          size: 0.9em
         monospace-inline:
           color: ros-code
           background-color: ros-code-bg
-          size: 90%
         monospace-block:
           color: ros-black
           background-color: ros-pre-bg
-          line-height: 1.42857143
         link:
           color: ros-violet
           decoration: "none"
@@ -81,12 +75,10 @@ template:
             enable-negative-margins: true
             enable-rounded: false
             link-decoration: none
-            font-size-base: 0.875rem
             body-color: $brand-ros_gray
             body-bg: $brand-ros_white
             code-color: $brand-ros_code
             code-bg: $brand-ros_code_bg
-            code-font-size: 90%
             code-color-dark: "#ff94a7"
             # Navbar
             pkgdown-nav-height: 62px
