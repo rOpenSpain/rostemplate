@@ -5,7 +5,7 @@ testthat::test_that("portable brand matches pkgdown brand", {
     mustWork = TRUE
   )
   brand_path <- system.file(
-    "brand_yml/_brand.yaml",
+    "brand_yml/_brand.yml",
     package = "rostemplate",
     mustWork = TRUE
   )
