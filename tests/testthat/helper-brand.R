@@ -63,7 +63,7 @@ css_resolve_var <- function(value, variables) {
   while (grepl(pattern, value, perl = TRUE)) {
     variable <- sub(paste0(".*", pattern, ".*"), "\\1", value, perl = TRUE)
     fallback <- sub(paste0(".*", pattern, ".*"), "\\2", value, perl = TRUE)
-    replacement <- variables[[variable]]
+    replacement <- variables[variable][[1]]
 
     if (is.null(replacement) || is.na(replacement)) {
       replacement <- fallback

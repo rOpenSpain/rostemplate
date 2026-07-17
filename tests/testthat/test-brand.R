@@ -48,6 +48,7 @@ testthat::test_that("dark theme colors pass contrast checks", {
     css_variables(css, ":root"),
     css_variables(css, '[data-bs-theme="dark"]')
   )
+  css_vars <- css_vars[!duplicated(names(css_vars), fromLast = TRUE)]
 
   contrast_pairs <- list(
     "body text" = c("--bs-body-color", "--bs-body-bg"),
@@ -59,12 +60,12 @@ testthat::test_that("dark theme colors pass contrast checks", {
     "footer link" = c("--ros-footer-link", "--ros-footer-bg"),
     "copyright text" = c("--ros-copyright-fg", "--ros-copyright-bg"),
     "inline code" = c("--ros-code-dark-fg", "--ros-code-dark-bg"),
-    "syntax base" = c("--ros-syntax-dark-fg", "--ros-code-dark-bg"),
-    "syntax comment" = c("--ros-syntax-dark-comment", "--ros-code-dark-bg"),
-    "syntax string" = c("--ros-syntax-dark-string", "--ros-code-dark-bg"),
-    "syntax number" = c("--ros-syntax-dark-number", "--ros-code-dark-bg"),
-    "syntax keyword" = c("--ros-syntax-dark-keyword", "--ros-code-dark-bg"),
-    "syntax variable" = c("--ros-syntax-dark-variable", "--ros-code-dark-bg")
+    "syntax base" = c("--ros-syntax-dark-fg", "--ros-pre-dark-bg"),
+    "syntax comment" = c("--ros-syntax-dark-comment", "--ros-pre-dark-bg"),
+    "syntax string" = c("--ros-syntax-dark-string", "--ros-pre-dark-bg"),
+    "syntax number" = c("--ros-syntax-dark-number", "--ros-pre-dark-bg"),
+    "syntax keyword" = c("--ros-syntax-dark-keyword", "--ros-pre-dark-bg"),
+    "syntax variable" = c("--ros-syntax-dark-variable", "--ros-pre-dark-bg")
   )
 
   contrast <- vapply(
