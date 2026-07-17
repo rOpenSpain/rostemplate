@@ -217,7 +217,7 @@
   },
   "isPartOf": "https://ropenspain.es/",
   "keywords": ["github-actions", "pkgdown", "r", "r-package", "ropenspain", "rstats", "template", "yaml"],
-  "fileSize": "605.915KB",
+  "fileSize": "606.026KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -236,5 +236,5 @@
   "releaseNotes": "https://github.com/ropenspain/rostemplate/blob/main/NEWS.md",
   "readme": "https://github.com/rOpenSpain/rostemplate/blob/main/README.md",
   "contIntegration": ["https://github.com/ropenspain/rostemplate/actions", "https://app.codecov.io/gh/ropenspain/rostemplate"],
-  "developmentStatus": "https://lifecycle.r-lib.org/articles/stages.html#experimental"
+  "developmentStatus": "https://www.repostatus.org/#concept"
 }
