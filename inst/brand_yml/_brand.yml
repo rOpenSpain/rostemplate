@@ -126,7 +126,7 @@ defaults:
       dropdown-dark-bg: "#333"
       dropdown-dark-border-color: rgba($brand-ros_violet_light, .35)
       dropdown-dark-divider-bg: transparent
-      dropdown-dark-link-hover-color: $brand-ros_violet_light
-      dropdown-dark-link-hover-bg: rgba($brand-ros_violet, .18)
-      dropdown-dark-link-active-color: $brand-ros_violet_light
-      dropdown-dark-link-active-bg: rgba($brand-ros_violet, .18)
+      dropdown-dark-link-hover-color: $brand-ros_violet_lighter
+      dropdown-dark-link-hover-bg: "#494051"
+      dropdown-dark-link-active-color: $brand-ros_white
+      dropdown-dark-link-active-bg: $brand-ros_violet_dark
