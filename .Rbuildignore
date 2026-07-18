@@ -71,3 +71,5 @@
 ^\.positai/
 ^\.claude/
 ^index_files/
+^\.codex$
+^\.codex/
