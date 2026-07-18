@@ -34,19 +34,17 @@ la plantilla
 
 ## Configuración previa
 
-En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al
+En la raíz del proyecto ha de existir un archivo `_pkgdown.yml` con al
 menos las siguientes líneas:
 
 ``` yaml
 template:
   bootstrap: 5
   package: rostemplate
-  # No pongas la siguiente línea!
-  default_assets: false
 ```
 
 Puedes encontrar información sobre cómo configurar otras opciones en
-`_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
+`_pkgdown.yml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
 Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las
 siguientes líneas:
@@ -54,6 +52,7 @@ siguientes líneas:
 ``` default
 ^\.github$
 ^docs$
+^_pkgdown\.yml$
 ^_pkgdown\.yaml$
 ```
 
@@ -117,11 +116,11 @@ on:
       - main
       - master
 
-# Actualiza cuando se modifica un archivo específico: _pkgdown.yaml
+# Actualiza cuando se modifica un archivo específico: _pkgdown.yml
 on:
   push:
     paths:
-      - '_pkgdown.yaml'
+      - '_pkgdown.yml'
 ```
 
 Más información sobre cómo adaptar los *triggers* del workflow
@@ -147,7 +146,7 @@ rostemplate::ros_build()
 
 La función `rostemplate::ros_build()` es un alias de
 `pkgdown::build_site()` que añade un control sobre la configuración del
-archivo `_pkgdown.yaml`.
+archivo `_pkgdown.yml`.
 
 Una vez generado el sitio, es necesario actualizar el repositorio remoto
 en GitHub mediante un *commit*.

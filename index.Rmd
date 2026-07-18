@@ -43,27 +43,25 @@ por [DevCows](https://github.com/devcows) con la variación de color **violet**.
 
 ## Configuración previa
 
-En la raíz del proyecto ha de existir un archivo `_pkgdown.yaml` con al menos
+En la raíz del proyecto ha de existir un archivo `_pkgdown.yml` con al menos
 las siguientes líneas:
 
 :::: code-with-filename
 ::: code-with-filename-file
 ```{=html}
-<pre><strong>_pkgdown.yaml</strong></pre>
+<pre><strong>_pkgdown.yml</strong></pre>
 ```
 
 ``` yaml
 template:
   bootstrap: 5
   package: rostemplate
-  # No pongas la siguiente línea!
-  default_assets: false
 ```
 :::
 ::::
 
 Puedes encontrar información sobre cómo configurar otras opciones en
-`_pkgdown.yaml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
+`_pkgdown.yml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
 Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las siguientes
 líneas:
@@ -77,6 +75,7 @@ líneas:
 ``` default
 ^\.github$
 ^docs$
+^_pkgdown\.yml$
 ^_pkgdown\.yaml$
 ```
 :::
@@ -148,11 +147,11 @@ on:
       - main
       - master
 
-# Actualiza cuando se modifica un archivo específico: _pkgdown.yaml
+# Actualiza cuando se modifica un archivo específico: _pkgdown.yml
 on:
   push:
     paths:
-      - '_pkgdown.yaml'
+      - '_pkgdown.yml'
 ```
 :::
 ::::
@@ -181,7 +180,7 @@ rostemplate::ros_build()
 ```
 
 La función `rostemplate::ros_build()` es un alias de `pkgdown::build_site()` que
-añade un control sobre la configuración del archivo `_pkgdown.yaml`.
+añade un control sobre la configuración del archivo `_pkgdown.yml`.
 
 Una vez generado el sitio, es necesario actualizar el repositorio remoto en
 GitHub mediante un *commit*.
@@ -192,4 +191,3 @@ Una vez generado el sitio estático y subido al repositorio en GitHub, el últim
 paso es activar el sitio web a través de los *Settings* del repositorio
 (*Settings \> GitHub Pages*) y seleccionar el origen deseado (`gh-pages`,
 `main/docs`, etc.).
-

@@ -135,9 +135,9 @@ ros_metro_madrid_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 
   if (n > length(cols)) {
     warning(
-      "ros_metropal_color() has ",
+      "ros_metro_madrid_pal() only has ",
       length(cols),
-      ", less than requested (",
+      " colors, less than requested (",
       n,
       ")"
     )

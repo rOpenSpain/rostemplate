@@ -8,7 +8,7 @@
 #' ejecutar [pkgdown::build_site()]. El resultado se genera en la carpeta
 #' `/docs`.
 #'
-#' Al contrario que [ros_actions_pkgdown_branch()], este workflow se ejecuta
+#' Al contrario que [ros_actions_pkgdown_branch()], este proceso se ejecuta
 #' localmente.
 #'
 #' @inheritParams pkgdown::build_site

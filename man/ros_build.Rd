@@ -58,7 +58,7 @@ a seguir para configurar \code{rostemplate} y pide confirmación antes de
 ejecutar \code{\link[pkgdown:build_site]{pkgdown::build_site()}}. El resultado se genera en la carpeta
 \verb{/docs}.
 
-Al contrario que \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}, este workflow se ejecuta
+Al contrario que \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}, este proceso se ejecuta
 localmente.
 }
 \examples{

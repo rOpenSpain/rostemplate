@@ -152,7 +152,7 @@ ggplot(dwn_m, aes(x = m)) +
   labs(
     fill = "Paquete",
     x = "",
-    y = "# descargas semanales"
+    y = "# descargas mensuales"
   ) +
   theme(axis.title = element_text(size = 8))
 ```
@@ -348,7 +348,7 @@ res <- lapply(mypaks, function(x) {
   df_prep <- df_init |>
     mutate(
       date_in_cran = as.Date(date_publication),
-      psize = paste(round(package_size / (1024^2), 2), "Mb"),
+      psize = paste(round(package_size / (1024^2), 2), "MB"),
       mdown = as.integer(info$downloads)
     ) |>
     select(
@@ -365,7 +365,7 @@ res_all <- bind_rows(res) |>
   arrange(desc(mdown))
 
 names(res_all) <- c(
-  "paquete", "Última version", "en CRAN",
+  "paquete", "Última versión", "en CRAN",
   "Tamaño", "Descargas (último mes)"
 )
 
