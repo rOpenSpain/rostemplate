@@ -57,3 +57,17 @@
 ^index\.Rmd$
 ^AGENTS\.md$
 ^dev$
+^revdep/
+^pkgdown/
+^data-raw/
+^\.github/
+^docs/
+^\.vscode/
+^dev/
+^\.quarto/
+^vignettes/\.quarto/
+^vignettes/articles/\.quarto/
+^vignettes/articles/
+^\.positai/
+^\.claude/
+^index_files/
