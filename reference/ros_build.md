@@ -98,7 +98,7 @@ El resultado se genera en la carpeta `/docs`.
 
 Al contrario que
 [`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md),
-este workflow se ejecuta localmente.
+este proceso se ejecuta localmente.
 
 ## Ver también
 

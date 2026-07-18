@@ -2,21 +2,20 @@
 
 ## rostemplate (development version)
 
-- Corrige la instalación de workflows desde
-  [`ros_actions_check_cron()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_check_cron.md),
+- Nuevo modo oscuro.
+- [`ros_actions_check_cron()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_check_cron.md),
   [`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md)
   y
-  [`ros_actions_pkgdown_docs()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_docs.md),
-  y hace que
-  [`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)
-  respete el argumento `pkg`.
-- Añade una nueva paleta de colores
-  [`ros_metro_madrid_pal()`](https://ropenspain.github.io/rostemplate/reference/ros_pals.md).
-- Nuevo modo oscuro.
+  [`ros_actions_pkgdown_docs()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_docs.md)
+  corrigen la instalación de workflows.
+- [`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)
+  respeta el argumento `pkg`.
+- [`ros_metro_madrid_pal()`](https://ropenspain.github.io/rostemplate/reference/ros_pals.md)
+  añade una nueva paleta de colores.
 
 ## rostemplate 0.2.0
 
-**Importante:** la configuración mínima en `_pkgdown.yaml` ha de ser:
+**Importante:** la configuración mínima en `_pkgdown.yml` ha de ser:
 
 ``` yaml
 template:

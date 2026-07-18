@@ -100,25 +100,24 @@
 <div class="section level2">
 <h2 id="configuración-previa">Configuración previa<a class="anchor" aria-label="anchor" href="#configuraci%C3%B3n-previa"></a>
 </h2>
-<p>En la raíz del proyecto ha de existir un archivo <code>_pkgdown.yaml</code> con al menos las siguientes líneas:</p>
+<p>En la raíz del proyecto ha de existir un archivo <code>_pkgdown.yml</code> con al menos las siguientes líneas:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>_pkgdown.yaml</strong></pre>
+<pre><strong>_pkgdown.yml</strong></pre>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">template</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="at">  </span><span class="fu">bootstrap</span><span class="kw">:</span><span class="at"> </span><span class="dv">5</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rostemplate</span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co">  # No pongas la siguiente línea!</span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="at">  </span><span class="fu">default_assets</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code></pre></div>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rostemplate</span></span></code></pre></div>
 </div>
 </div>
-<p>Puedes encontrar información sobre cómo configurar otras opciones en <code>_pkgdown.yaml</code> <a href="https://pkgdown.r-lib.org/articles/pkgdown.html" class="external-link">aquí</a>.</p>
+<p>Puedes encontrar información sobre cómo configurar otras opciones en <code>_pkgdown.yml</code> <a href="https://pkgdown.r-lib.org/articles/pkgdown.html" class="external-link">aquí</a>.</p>
 <p>Adicionalmente, es necesario añadir al archivo <code>.Rbuildignore</code> las siguientes líneas:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>.Rbuildignore</strong></pre>
 <div class="sourceCode" id="cb2"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>^\.github$</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>^docs$</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>^_pkgdown\.yaml$</span></code></pre></div>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>^_pkgdown\.yml$</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>^_pkgdown\.yaml$</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -162,11 +161,11 @@
 <span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> main</span></span>
 <span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> master</span></span>
 <span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co"># Actualiza cuando se modifica un archivo específico: _pkgdown.yaml</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co"># Actualiza cuando se modifica un archivo específico: _pkgdown.yml</span></span>
 <span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
 <span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
 <span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
-<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">'_pkgdown.yaml'</span></span></code></pre></div>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">'_pkgdown.yml'</span></span></code></pre></div>
 </div>
 </div>
 <p>Más información sobre cómo adaptar los <em>triggers</em> del workflow <a href="https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows" class="external-link">aquí</a>.</p>
@@ -184,7 +183,7 @@
 <p>Una vez instalado, se ha de ejecutar este script:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="reference/ros_build.html">ros_build</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>La función <code><a href="reference/ros_build.html">rostemplate::ros_build()</a></code> es un alias de <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code> que añade un control sobre la configuración del archivo <code>_pkgdown.yaml</code>.</p>
+<p>La función <code><a href="reference/ros_build.html">rostemplate::ros_build()</a></code> es un alias de <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code> que añade un control sobre la configuración del archivo <code>_pkgdown.yml</code>.</p>
 <p>Una vez generado el sitio, es necesario actualizar el repositorio remoto en GitHub mediante un <em>commit</em>.</p>
 </div>
 </div>
