@@ -47,8 +47,8 @@ if (!dir.exists(pkg)) {
 }
 ros_actions_pkgdown_docs(pkg)
 #> ✔ Adding "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$", "^\\.github$", and
-#>   "^pkgdown$" to /tmp/Rtmpd9hDk8/pkgdown-docs/.Rbuildignore.
+#>   "^pkgdown$" to /tmp/RtmpGE8LCL/pkgdown-docs/.Rbuildignore.
 #> ✔ Adding "*.html", "R-version", and "depends.Rds" to
-#>   /tmp/Rtmpd9hDk8/pkgdown-docs/.github/.gitignore.
+#>   /tmp/RtmpGE8LCL/pkgdown-docs/.github/.gitignore.
 #> Success!
 ```
