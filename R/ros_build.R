@@ -56,7 +56,7 @@ ros_build <- function(pkg = ".", ...) {
     )
   )
   if (sel != 1) {
-    stop("Execution halted")
+    stop("Execution halted", call. = FALSE)
   }
 
   ros_pkgdown_build_site(pkg = pkg, ...)
