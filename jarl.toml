@@ -1,6 +1,6 @@
 [lint]
-ignore = ["implicit_assignment", "internal_function", "unreachable_code"]
-extend-select = ["TESTTHAT"]
+select = ["ALL"]
+exclude = ["data-raw/"]
 check-roxygen = true
 fix-roxygen = true
 
