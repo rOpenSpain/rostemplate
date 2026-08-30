@@ -81,6 +81,18 @@
     },
     {
       "@type": "SoftwareApplication",
+      "identifier": "sass",
+      "name": "sass",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=sass"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "scales",
       "name": "scales",
       "provider": {
@@ -100,7 +112,7 @@
       "@type": "SoftwareApplication",
       "identifier": "testthat",
       "name": "testthat",
-      "version": ">= 3.0.0",
+      "version": ">= 3.2.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -217,7 +229,7 @@
   },
   "isPartOf": "https://ropenspain.es/",
   "keywords": ["github-actions", "pkgdown", "r", "r-package", "ropenspain", "rstats", "template", "yaml"],
-  "fileSize": "619.813KB",
+  "fileSize": "626.355KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",

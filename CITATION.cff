@@ -261,6 +261,33 @@ references:
   year: '2026'
   doi: 10.32614/CRAN.package.rmarkdown
 - type: software
+  title: sass
+  abstract: 'sass: Syntactically Awesome Style Sheets (''Sass'')'
+  notes: Suggests
+  url: https://rstudio.github.io/sass/
+  repository: https://CRAN.R-project.org/package=sass
+  authors:
+  - family-names: Cheng
+    given-names: Joe
+    email: joe@rstudio.com
+  - family-names: Mastny
+    given-names: Timothy
+    email: tim.mastny@gmail.com
+  - family-names: Iannone
+    given-names: Richard
+    email: rich@rstudio.com
+    orcid: https://orcid.org/0000-0003-3925-190X
+  - family-names: Schloerke
+    given-names: Barret
+    email: barret@rstudio.com
+    orcid: https://orcid.org/0000-0001-9986-114X
+  - family-names: Sievert
+    given-names: Carson
+    email: carson@rstudio.com
+    orcid: https://orcid.org/0000-0002-4958-2844
+  year: '2026'
+  doi: 10.32614/CRAN.package.sass
+- type: software
   title: scales
   abstract: 'scales: Scale Functions for Visualization'
   notes: Suggests
@@ -303,7 +330,7 @@ references:
     email: hadley@posit.co
   year: '2026'
   doi: 10.32614/CRAN.package.testthat
-  version: '>= 3.0.0'
+  version: '>= 3.2.0'
 - type: software
   title: withr
   abstract: 'withr: Run Code ''With'' Temporarily Modified Global State'
