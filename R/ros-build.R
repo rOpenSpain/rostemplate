@@ -26,7 +26,6 @@
 #' @examplesIf interactive()
 #' ros_build()
 ros_build <- function(pkg = ".", ...) {
-  # nocov start
   # Comprueba que .Rbuildignore exista.
 
   rbuildignore <- file.path(pkg, ".Rbuildignore")
@@ -47,9 +46,9 @@ ros_build <- function(pkg = ".", ...) {
   )
 
   sel <- menu(
-    c("Sí", "No"),
+    c("S\u00ed", "No"),
     title = paste0(
-      "¿Has incluido \n\ntemplate:\n  bootstrap: 5\n  package: ",
+      "\u00bfHas incluido \n\ntemplate:\n  bootstrap: 5\n  package: ",
       "rostemplate\n\nen el archivo _pkgdown.yml?"
     )
   )
@@ -59,9 +58,8 @@ ros_build <- function(pkg = ".", ...) {
 
   ros_pkgdown_build_site(pkg = pkg, ...)
   invisible()
-  # nocov end
 }
 
 ros_pkgdown_build_site <- function(pkg = ".", ...) {
-  pkgdown::build_site(pkg = pkg, ...)
+  pkgdown::build_site(pkg = pkg, ...) # nocov
 }
