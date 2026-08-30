@@ -83,10 +83,6 @@ ros_qualitative_pal <- function(n = 6, alpha = 0.9, rev = FALSE) {
   cols <- cols[seq_len(n)]
   cols[cols > 1] <- cols[cols > 1] - 1
   colors <- hsv(cols, sat, val)
-  if (startsWith(color, "#") && nchar(color) == 9) {
-    alpha <- substr(color, 8, 9)
-    colors <- paste(colors, alpha, sep = "")
-  }
 
   if (rev) {
     colors <- rev(colors)

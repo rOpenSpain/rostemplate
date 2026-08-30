@@ -1,3 +1,31 @@
+template_file <- function(...) {
+  system.file(..., package = "rostemplate", mustWork = TRUE)
+}
+
+pkgdown_file <- function(...) {
+  template_file("pkgdown", ...)
+}
+
+brand_file <- function(...) {
+  template_file("brand_yml", ...)
+}
+
+read_pkgdown_css <- function() {
+  readLines(
+    pkgdown_file("assets", "BS5", "rostemplate.css"),
+    warn = FALSE
+  )
+}
+
+read_pkgdown_brand <- function() {
+  yaml::read_yaml(pkgdown_file("_pkgdown.yml"))$template$bslib$brand
+}
+
+extract_css_vars <- function(css, pattern) {
+  matches <- regmatches(css, gregexpr(pattern, css, perl = TRUE))
+  unique(unlist(matches, use.names = FALSE))
+}
+
 brand_css_variables <- function(palette) {
   stats::setNames(
     unlist(palette, use.names = FALSE),

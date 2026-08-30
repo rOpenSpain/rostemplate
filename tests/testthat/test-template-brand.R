@@ -1,14 +1,6 @@
 testthat::test_that("la identidad portable coincide con la plantilla pkgdown", {
-  pkgdown_path <- system.file(
-    "pkgdown/_pkgdown.yml",
-    package = "rostemplate",
-    mustWork = TRUE
-  )
-  brand_path <- system.file(
-    "brand_yml/_brand.yml",
-    package = "rostemplate",
-    mustWork = TRUE
-  )
+  pkgdown_path <- pkgdown_file("_pkgdown.yml")
+  brand_path <- brand_file("_brand.yml")
 
   pkgdown_brand <- yaml::read_yaml(pkgdown_path)$template$bslib$brand
   portable_brand <- yaml::read_yaml(brand_path)
@@ -30,16 +22,8 @@ testthat::test_that("la identidad portable coincide con la plantilla pkgdown", {
 })
 
 testthat::test_that("el tema oscuro mantiene un contraste accesible", {
-  css_path <- system.file(
-    "pkgdown/assets/BS5/rostemplate.css",
-    package = "rostemplate",
-    mustWork = TRUE
-  )
-  pkgdown_path <- system.file(
-    "pkgdown/_pkgdown.yml",
-    package = "rostemplate",
-    mustWork = TRUE
-  )
+  css_path <- pkgdown_file("assets", "BS5", "rostemplate.css")
+  pkgdown_path <- pkgdown_file("_pkgdown.yml")
 
   css <- paste(readLines(css_path), collapse = "\n")
   brand <- yaml::read_yaml(pkgdown_path)$template$bslib$brand
