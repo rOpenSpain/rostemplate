@@ -45,18 +45,6 @@
   "softwareSuggestions": [
     {
       "@type": "SoftwareApplication",
-      "identifier": "cli",
-      "name": "cli",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=cli"
-    },
-    {
-      "@type": "SoftwareApplication",
       "identifier": "knitr",
       "name": "knitr",
       "provider": {
@@ -167,10 +155,22 @@
     },
     "3": {
       "@type": "SoftwareApplication",
+      "identifier": "cli",
+      "name": "cli",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=cli"
+    },
+    "4": {
+      "@type": "SoftwareApplication",
       "identifier": "grDevices",
       "name": "grDevices"
     },
-    "4": {
+    "5": {
       "@type": "SoftwareApplication",
       "identifier": "pkgdown",
       "name": "pkgdown",
@@ -183,7 +183,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=pkgdown"
     },
-    "5": {
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "styler",
       "name": "styler",
@@ -195,7 +195,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=styler"
     },
-    "6": {
+    "7": {
       "@type": "SoftwareApplication",
       "identifier": "usethis",
       "name": "usethis",
@@ -208,7 +208,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=usethis"
     },
-    "7": {
+    "8": {
       "@type": "SoftwareApplication",
       "identifier": "utils",
       "name": "utils"
@@ -217,7 +217,7 @@
   },
   "isPartOf": "https://ropenspain.es/",
   "keywords": ["github-actions", "pkgdown", "r", "r-package", "ropenspain", "rstats", "template", "yaml"],
-  "fileSize": "614.922KB",
+  "fileSize": "620.459KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",

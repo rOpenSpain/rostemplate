@@ -15,12 +15,14 @@
 #'
 #' @param install Valor lógico. Si es `TRUE`, la insignia se instala en
 #'   `README.md` o `README.Rmd`. Si es `FALSE`, muestra un mensaje con el
-#'   código markdown correspondiente.
+#'   código Markdown correspondiente.
 #'
 #' @returns Se llama por sus efectos secundarios. Si `install` es `FALSE`,
-#'   muestra el código markdown de la insignia.
+#'   muestra el código Markdown de la insignia.
 #'
 #' @seealso [usethis::use_badge()]
+#'
+#' @family branding
 #'
 #' @export
 #' @encoding UTF-8
@@ -30,7 +32,7 @@
 ros_badge_ropenspain <- function(install = TRUE) {
   stopifnot(is.logical(install))
 
-  # Prepare badge URLs.
+  # Prepara las URL de la insignia.
   badge <- paste0(
     "https://ropenspain.github.io/rostemplate/reference/",
     "figures/ropenspain-badge.svg"
@@ -43,6 +45,9 @@ ros_badge_ropenspain <- function(install = TRUE) {
     usethis::use_badge("rOS-badge", href = href, src = badge)
     # nocov end
   } else {
-    message("Badge URL is ", "\n", "[![rOS-badge](", badge, ")](", href, ")")
+    cli::cli_inform(c(
+      "i" = "URL de la insignia:",
+      "*" = paste0("[![rOS-badge](", badge, ")](", href, ")")
+    ))
   }
 }

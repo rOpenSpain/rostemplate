@@ -1,4 +1,4 @@
-## code to prepare `logo` dataset goes here
+## Prepara aquí el conjunto de datos `logo`.
 
 library(ggplot2)
 library(hexSticker)
@@ -14,7 +14,6 @@ l <- st_cast(st_linestring(path), "POLYGON")
 sp <- ggplot(l) +
   geom_sf(fill = "#97bf13", color = "black", size = 1.5) +
   theme_void()
-
 
 sticker(
   sp,

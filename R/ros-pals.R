@@ -10,25 +10,15 @@
 #' @param n Número de colores.
 #' @param alpha Valor alfa (transparencia) de los colores. `alpha = 1` es opaco
 #'   y `alpha = 0` es totalmente transparente.
-#' @param rev Valor lógico. Si es `TRUE`, muestra los colores en orden inverso.
+#' @param rev Valor lógico. Si es `TRUE`, devuelve los colores en orden inverso.
 #'
 #' @returns Un vector de colores.
 #'
 #' @family palettes
+#' @family branding
 #'
 #' @export
 #' @encoding UTF-8
-#'
-#' @examplesIf requireNamespace("scales", quietly = TRUE)
-#' scales::show_col(ros_green_pal(9))
-#'
-#' scales::show_col(ros_violet_pal(9))
-#'
-#' scales::show_col(ros_gradient_pal(9))
-#'
-#' scales::show_col(ros_qualitative_pal(9))
-#'
-#' scales::show_col(ros_metro_madrid_pal(9))
 ros_green_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   cols <- c("#98c00b", "#e0ecb5")
   if (rev) {
@@ -117,6 +107,17 @@ ros_qualitative_pal <- function(n = 6, alpha = 0.9, rev = FALSE) {
 #'
 #' @export
 #' @encoding UTF-8
+#'
+#' @examplesIf requireNamespace("scales", quietly = TRUE)
+#' scales::show_col(ros_green_pal(9))
+#'
+#' scales::show_col(ros_violet_pal(9))
+#'
+#' scales::show_col(ros_gradient_pal(9))
+#'
+#' scales::show_col(ros_qualitative_pal(9))
+#'
+#' scales::show_col(ros_metro_madrid_pal(9))
 ros_metro_madrid_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   cols <- c(
     "#39b5e6",
@@ -134,12 +135,11 @@ ros_metro_madrid_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   )
 
   if (n > length(cols)) {
-    warning(
-      "ros_metro_madrid_pal() only has ",
-      length(cols),
-      " colors, less than requested (",
-      n,
-      ")"
+    cli::cli_warn(
+      paste(
+        "{.fn ros_metro_madrid_pal} solo dispone de {length(cols)} colores,",
+        "menos de los solicitados ({n})."
+      )
     )
     n <- length(cols)
   }

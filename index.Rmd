@@ -31,19 +31,19 @@ status](https://github.com/ropenspain/rostemplate/workflows/R-CMD-check/badge.sv
 Este paquete proporciona una plantilla **pkgdown** adaptada al sitio web de
 [rOpenSpain](https://ropenspain.es/).
 
-Esta plantilla es una plantilla privada para uso exclusivo de los paquetes de
-**rOpenSpain**. Por favor, no la uses para otros paquetes.
+Esta plantilla es privada y de uso exclusivo para los paquetes de
+**rOpenSpain**. No la uses para otros paquetes.
 
 ## Introducción
 
-La plantilla de **pkgdown** está adaptada a la empleada por la comunidad
+La plantilla de **pkgdown** se basa en la que emplea la comunidad
 [rOpenSpain](https://ropenspain.es/), que a su vez es una adaptación de la
-plantilla [Universal](https://devcows.github.io/hugo-universal-theme/) creada
+plantilla [**Universal**](https://devcows.github.io/hugo-universal-theme/) creada
 por [DevCows](https://github.com/devcows) con la variación de color **violet**.
 
 ## Configuración previa
 
-En la raíz del proyecto ha de existir un archivo `_pkgdown.yml` con al menos
+En la raíz del proyecto debe existir un archivo `_pkgdown.yml` con al menos
 las siguientes líneas:
 
 :::: code-with-filename
@@ -63,8 +63,7 @@ template:
 Puedes encontrar información sobre cómo configurar otras opciones en
 `_pkgdown.yml` [aquí](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
-Adicionalmente, es necesario añadir al archivo `.Rbuildignore` las siguientes
-líneas:
+Además, es necesario añadir al archivo `.Rbuildignore` las siguientes líneas:
 
 :::: code-with-filename
 ::: code-with-filename-file
@@ -88,30 +87,29 @@ el formato definido por esta plantilla. El resultado es un sitio estático
 compuesto por archivos `html`, `css` y otros recursos basados en el paquete de
 **R** correspondiente.
 
-### Con workflows de GitHub Actions
+### Con flujos de trabajo de GitHub Actions
 
-GitHub Actions permite automatizar procesos cuando se activa un *trigger*. En
-este caso se han preparado dos workflows que actualizan el sitio **pkgdown**
-cada vez que se añade un *commit* al repositorio.
+**GitHub Actions** permite automatizar procesos cuando se activa un evento. En
+este caso se han preparado dos flujos de trabajo que actualizan el sitio
+**pkgdown** cada vez que se añade un *commit* al repositorio.
 
-Los workflows son archivos con extensión `.yaml`. El workflow
+Los flujos de trabajo son archivos con extensión `.yaml`. El flujo
 [rostemplate-docs.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-docs.yaml)
 crea el sitio **pkgdown** en la carpeta `./docs`, mientras que
 [rostemplate-gh-pages.yaml](https://github.com/ropenspain/rostemplate/blob/main/inst/yaml/rostemplate-gh-pages.yaml)
 crea el sitio **pkgdown** en la rama `gh-pages`.
 
-Para configurar esta opción, es necesario disponer en el repositorio de una
-carpeta en la ruta `.github/workflows` y copiar el workflow deseado en dicha
-carpeta.
+Para configurar esta opción, crea la carpeta `.github/workflows` en el
+repositorio y copia en ella el flujo de trabajo deseado.
 
 #### Alternativa usando las funciones de rostemplate
 
-Aunque el uso del paquete **rostemplate** en sí no es necesario con GitHub
-Actions, se han desarrollado dos funciones que automatizan esta configuración.
-Estas funciones crean el directorio `.github/workflows` si no existiera
-previamente y copian los archivos solicitados en la ruta correspondiente.
-Adicionalmente, crean los archivos `.Rbuildignore` y `.github/.gitignore`, que
-ignoran ciertos archivos cuando se compila el paquete:
+Aunque el uso del paquete **rostemplate** no es necesario con **GitHub
+Actions**, se han desarrollado dos funciones que automatizan esta
+configuración. Estas funciones crean el directorio `.github/workflows` si no
+existe y copian los archivos solicitados en la ruta correspondiente. Además,
+crean los archivos `.Rbuildignore` y `.github/.gitignore`, que ignoran ciertos
+archivos cuando se compila el paquete:
 
 ```{r}
 #| eval: false
@@ -156,10 +154,10 @@ on:
 :::
 ::::
 
-Más información sobre cómo adaptar los *triggers* del workflow
+Más información sobre cómo adaptar los eventos del flujo de trabajo
 [aquí](https://docs.github.com/es/free-pro-team@latest/actions/reference/events-that-trigger-workflows).
 
-### RStudio - manual
+### Generación manual con RStudio
 
 El sitio estático se puede generar igualmente desde una sesión local en
 **RStudio**. Para ello, es necesario instalar este paquete:
@@ -172,7 +170,7 @@ install.packages(
 )
 ```
 
-Una vez instalado, se ha de ejecutar este script:
+Una vez instalado, debes ejecutar este código:
 
 ```{r}
 #| eval: false
@@ -183,11 +181,11 @@ La función `rostemplate::ros_build()` es un alias de `pkgdown::build_site()` qu
 añade un control sobre la configuración del archivo `_pkgdown.yml`.
 
 Una vez generado el sitio, es necesario actualizar el repositorio remoto en
-GitHub mediante un *commit*.
+**GitHub** mediante un *commit*.
 
 ## GitHub Pages
 
-Una vez generado el sitio estático y subido al repositorio en GitHub, el último
-paso es activar el sitio web a través de los *Settings* del repositorio
-(*Settings \> GitHub Pages*) y seleccionar el origen deseado (`gh-pages`,
+Una vez generado el sitio estático y subido al repositorio en **GitHub**, el
+último paso es activar el sitio web a través de los *Settings* del repositorio
+(*Settings* \> **GitHub Pages**) y seleccionar el origen deseado (`gh-pages`,
 `main/docs`, etc.).

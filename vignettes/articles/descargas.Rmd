@@ -104,9 +104,11 @@ first_date_on_cran <- function(pkg) {
 fechas <- lapply(unique(dwn$package), first_date_on_cran) |>
   bind_rows()
 
+fechas_cran <- fechas |>
+  select(package, d_cran = date)
 
 dwn <- dwn |>
-  left_join(fechas |> select(package, d_cran = date)) |>
+  left_join(fechas_cran) |>
   filter(date >= d_cran) |>
   select(-d_cran) |>
   tidyr::replace_na(list(count = 0)) |>
@@ -291,7 +293,7 @@ reactable(
   ),
   paginationType = "jump",
   elementId = "cran-dwn",
-  columns <- list(
+  columns = list(
     paquete = colDef(
       cell = function(value) {
         # Render as a link
@@ -327,7 +329,7 @@ reactable(
 ## En Posit Package Manager
 
 Descargas de paquetes de [rOpenSpain](https://ropenspain.es/) y metadatos desde
-[Posit Package Manager](https://packagemanager.posit.co/client/#/).
+[**Posit Package Manager**](https://packagemanager.posit.co/client/#/).
 
 ```{r}
 #| label: data-posit

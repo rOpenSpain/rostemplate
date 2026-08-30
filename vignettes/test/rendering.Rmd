@@ -100,6 +100,8 @@ This text too.
 ### Line width
 
 ```{r}
+#| jarl-ignore-chunk:
+#|   - internal_function: This tests pkgdown's internal ruler rendering.
 pkgdown:::ruler()
 
 cat(rep("x ", 100), sep = "")
@@ -108,19 +110,19 @@ cat(rep("xy", 100), sep = "")
 
 ### Should be highlighted
 
-Valid R code in `\preformatted{}`:
+Valid **R** code in `\preformatted{}`:
 
 ```         
 mean(a + 1)
 ```
 
-R code in `R` block:
+**R** code in `R` block:
 
 ``` r
 mean(a + 1)
 ```
 
-R code in `r` block:
+**R** code in `r` block:
 
 ``` r
 mean(a + 1)
@@ -134,7 +136,7 @@ yaml: [a, 1]
 
 ### Shouldn't be highlighted
 
-Non-R code in `\preformatted{}`:
+Non-**R** code in `\preformatted{}`:
 
 ```         
 yaml: [a, b, c]
@@ -212,7 +214,7 @@ Some text
 
 ```{r}
 #| error: TRUE
-stop(cli::style_italic("This is italic"))
+stop(cli::style_italic("This is italic"), call. = FALSE)
 ```
 
 Some more text
@@ -223,7 +225,7 @@ Some more text
 
 <figure>
 
-> A Bootstrap 5 blockquote with footer.
+> A **Bootstrap** 5 blockquote with footer.
 
 ```{=html}
 <figcaption class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
@@ -271,6 +273,8 @@ More tab content.
 
 ```{r}
 #| fig.alt: Another test plot
+#| jarl-ignore-chunk:
+#|   - unreachable_code: This chunk follows an intentional error example.
 plot(1:42)
 ```
 

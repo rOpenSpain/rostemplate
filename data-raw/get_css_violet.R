@@ -9,8 +9,7 @@ paste0(
   resp_body_string() |>
   writeLines(con = "data-raw/style.violet.css")
 
-
-# Compress with sass
+# Comprime con sass.
 library(sass)
 
 lns <- readLines("inst/pkgdown/assets/BS5/rostemplate.css")

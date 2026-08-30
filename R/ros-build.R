@@ -8,15 +8,13 @@
 #' ejecutar [pkgdown::build_site()]. El resultado se genera en la carpeta
 #' `/docs`.
 #'
-#' Al contrario que [ros_actions_pkgdown_branch()], este proceso se ejecuta
-#' localmente.
+#' A diferencia de [ros_actions_pkgdown_branch()], este proceso se ejecuta de
+#' forma local.
 #'
-#' @inheritParams pkgdown::build_site
+#' @inheritParams ros_actions_pkgdown_docs pkg
+#' @param ... Argumentos adicionales que se pasan a [pkgdown::build_site()].
 #'
-#' @inheritDotParams pkgdown::build_site
-#'
-#' @returns Se llama por sus efectos secundarios y devuelve `NULL` de forma
-#'   invisible.
+#' @inherit ros_actions_pkgdown_docs return
 #'
 #' @seealso [pkgdown::build_site()].
 #'
@@ -29,14 +27,14 @@
 #' ros_build()
 ros_build <- function(pkg = ".", ...) {
   # nocov start
-  # Ensure .Rbuildignore exists.
+  # Comprueba que .Rbuildignore exista.
 
   rbuildignore <- file.path(pkg, ".Rbuildignore")
   if (!file.exists(rbuildignore)) {
     file.create(rbuildignore)
   }
 
-  # Add pkgdown paths to .Rbuildignore.
+  # Añade las rutas de pkgdown a .Rbuildignore.
   usethis::write_union(
     rbuildignore,
     c(
@@ -49,14 +47,14 @@ ros_build <- function(pkg = ".", ...) {
   )
 
   sel <- menu(
-    c("Yes", "No"),
+    c("Sí", "No"),
     title = paste0(
-      "Have you included \n\ntemplate:\n  bootstrap: 5\n  package: ",
-      "rostemplate\n\nin your _pkgdown.yml file?"
+      "¿Has incluido \n\ntemplate:\n  bootstrap: 5\n  package: ",
+      "rostemplate\n\nen el archivo _pkgdown.yml?"
     )
   )
   if (sel != 1) {
-    stop("Execution halted", call. = FALSE)
+    cli::cli_abort("Ejecuci\u00f3n detenida.", call = NULL)
   }
 
   ros_pkgdown_build_site(pkg = pkg, ...)

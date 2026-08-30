@@ -16,13 +16,13 @@ Depends:
     R (>= 4.1.0)
 Imports: 
     brand.yml,
+    cli,
     grDevices,
     pkgdown (>= 2.2.1),
     styler,
     usethis (>= 2.0.0),
     utils
 Suggests: 
-    cli,
     knitr,
     quarto,
     rmarkdown,

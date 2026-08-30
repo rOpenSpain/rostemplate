@@ -1,7 +1,8 @@
-# rostemplate (development version)
+# rostemplate (versión de desarrollo)
 
+- Los mensajes dirigidos al usuario usan **cli** y se han revisado y traducido al español.
 - Nuevo modo oscuro.
-- `ros_actions_check_cron()`, `ros_actions_pkgdown_branch()` y `ros_actions_pkgdown_docs()` corrigen la instalación de workflows.
+- `ros_actions_check_cron()`, `ros_actions_pkgdown_branch()` y `ros_actions_pkgdown_docs()` corrigen la instalación de flujos de trabajo.
 - `ros_build()` respeta el argumento `pkg`.
 - `ros_metro_madrid_pal()` añade una nueva paleta de colores.
 
@@ -17,14 +18,14 @@ template:
 
 Otros cambios:
 
-- Adaptación a Bootstrap 5 con la nueva versión de **pkgdown**.
+- Adaptación a **Bootstrap** 5 con la nueva versión de **pkgdown**.
 - Añade paletas de colores.
-- Documentación en castellano.
+- Documentación en español.
 
 # rostemplate 0.0.4
 
 - Actualiza el logo y los favicons, creados con **hexSticker**.
-- Actualiza los workflows de GitHub Actions.
+- Actualiza los flujos de trabajo de **GitHub Actions**.
 - Renombra las funciones principales.
 - Usa el paquete **testthat**.
 

@@ -1,19 +1,20 @@
-#' Instala un workflow de GitHub Actions que crea tu sitio en `/docs`
+#' Crea un sitio en `/docs` mediante GitHub Actions
 #'
-#' Este workflow de GitHub Actions genera tu sitio \CRANpkg{pkgdown} en la
-#' carpeta `docs` de tu repositorio.
+#' Este flujo de trabajo de GitHub Actions genera el sitio \CRANpkg{pkgdown} en
+#' la carpeta `docs` del repositorio.
 #'
 #' @details
-#' El resultado final es equivalente a ejecutar [ros_build()], con la diferencia
-#' de que este comando se ejecuta en GitHub en lugar de ejecutarse localmente.
+#' El resultado final es equivalente a ejecutar [ros_build()], pero este comando
+#' se ejecuta en GitHub, no localmente.
 #'
 #' @param pkg Ruta a la raíz del paquete.
-#' @param overwrite Sobrescribe el workflow si ya se encuentra instalado.
+#' @param overwrite Sobrescribe el flujo de trabajo si ya está instalado.
 #'
 #' @returns Se llama por sus efectos secundarios y devuelve `NULL` de forma
 #'   invisible.
 #'
 #' @family pkgdown
+#' @family github_actions
 #'
 #' @export
 #' @encoding UTF-8
@@ -25,7 +26,7 @@
 #' }
 #' ros_actions_pkgdown_docs(pkg)
 ros_actions_pkgdown_docs <- function(pkg = ".", overwrite = TRUE) {
-  # Ensure the workflow directory exists.
+  # Comprueba que el directorio del flujo de trabajo exista.
 
   destdir <- file.path(pkg, ".github", "workflows")
   checkdir <- dir.exists(destdir)
@@ -33,14 +34,14 @@ ros_actions_pkgdown_docs <- function(pkg = ".", overwrite = TRUE) {
     dir.create(destdir, recursive = TRUE)
   }
 
-  # Ensure .Rbuildignore exists.
+  # Comprueba que .Rbuildignore exista.
 
   rbuildignore <- file.path(pkg, ".Rbuildignore")
   if (!file.exists(rbuildignore)) {
     file.create(rbuildignore)
   }
 
-  # Add pkgdown paths to .Rbuildignore.
+  # Añade las rutas de pkgdown a .Rbuildignore.
   usethis::write_union(
     rbuildignore,
     c(
@@ -52,22 +53,22 @@ ros_actions_pkgdown_docs <- function(pkg = ".", overwrite = TRUE) {
     )
   )
 
-  # Ensure the workflow .gitignore exists.
+  # Comprueba que el archivo .gitignore del flujo de trabajo exista.
   gitignore <- file.path(pkg, ".github", ".gitignore")
   if (!file.exists(gitignore)) {
     file.create(gitignore)
   }
   usethis::write_union(gitignore, c("*.html", "R-version", "depends.Rds"))
 
-  # Locate the workflow template.
+  # Localiza la plantilla del flujo de trabajo.
   filepath <- system.file("yaml/rostemplate-docs.yaml", package = "rostemplate")
 
-  # Copy the workflow template.
+  # Copia la plantilla del flujo de trabajo.
   result <- file.copy(filepath, destdir, overwrite = overwrite)
   if (result) {
-    message("Success!")
+    cli::cli_alert_success("\u00a1Proceso completado!")
   } else {
-    message("File not updated")
+    cli::cli_alert_warning("Archivo no actualizado.")
   }
 
   invisible()

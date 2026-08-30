@@ -1,6 +1,6 @@
 library(brand.yml)
 
-# Validate in JSON format
+# Valida en formato JSON.
 json_brand <- yaml::read_yaml("inst/brand_yml/_brand.yml") |>
   jsonlite::toJSON(pretty = TRUE, auto_unbox = TRUE)
 

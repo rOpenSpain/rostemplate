@@ -1,4 +1,4 @@
-# Compress with sass
+# Comprime con sass.
 library(sass)
 
 lns <- readLines("inst/pkgdown/assets/BS5/rostemplate.css")
@@ -10,4 +10,4 @@ sass(
   options = sass_options(output_style = "compressed")
 )
 
-message("OK, compressed")
+message("Compresión completada.")

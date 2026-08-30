@@ -1,4 +1,4 @@
-testthat::test_that("portable brand matches pkgdown brand", {
+testthat::test_that("la identidad portable coincide con la plantilla pkgdown", {
   pkgdown_path <- system.file(
     "pkgdown/_pkgdown.yml",
     package = "rostemplate",
@@ -29,7 +29,7 @@ testthat::test_that("portable brand matches pkgdown brand", {
   )
 })
 
-testthat::test_that("dark theme colors pass contrast checks", {
+testthat::test_that("el tema oscuro mantiene un contraste accesible", {
   css_path <- system.file(
     "pkgdown/assets/BS5/rostemplate.css",
     package = "rostemplate",
@@ -102,5 +102,8 @@ testthat::test_that("dark theme colors pass contrast checks", {
     logical(1)
   )
 
-  testthat::expect_true(all(yiq_polarity))
+  testthat::expect_equal(
+    yiq_polarity,
+    stats::setNames(rep(TRUE, length(yiq_polarity)), names(yiq_polarity))
+  )
 })
