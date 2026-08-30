@@ -1,8 +1,8 @@
-# Crea un workflow de GitHub Actions que comprueba tu paquete regularmente
+# Crea un flujo de trabajo de GitHub Actions para comprobar tu paquete
 
-El workflow de GitHub Actions creado ejecuta `R CMD check` para tu
-paquete. La configuración por defecto ejecuta el check de manera mensual
-los días 1 de cada mes a las 08:30.
+El flujo de trabajo de GitHub Actions creado ejecuta `R CMD check` para
+tu paquete. La configuración por defecto ejecuta la comprobación el día
+1 de cada mes a las 08:30.
 
 ## Uso
 
@@ -18,7 +18,7 @@ ros_actions_check_cron(pkg = ".", overwrite = TRUE)
 
 - overwrite:
 
-  Sobrescribe el workflow si ya se encuentra instalado.
+  Sobrescribe el flujo de trabajo si ya está instalado.
 
 ## Valor
 
@@ -27,7 +27,7 @@ invisible.
 
 ## Detalles
 
-Puedes aprender cómo configurar la acción cron en el siguiente enlace:
+Consulta cómo configurar la ejecución programada en el siguiente enlace:
 
 <https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule>
 
@@ -36,6 +36,12 @@ de cada mes").
 
 Usa [crontab.guru](https://crontab.guru/#30_08_1_*_*) para crear tu
 propia configuración cron.
+
+## Ver también
+
+Flujos de trabajo de GitHub Actions:
+[`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md),
+[`ros_actions_pkgdown_docs()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_docs.md)
 
 ## Ejemplos
 
@@ -46,8 +52,8 @@ if (!dir.exists(pkg)) {
 }
 ros_actions_check_cron(pkg)
 #> ✔ Adding "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$", "^\\.github$", and
-#>   "^pkgdown$" to /tmp/RtmpiMYbaq/pkgdown-cron/.Rbuildignore.
+#>   "^pkgdown$" to /tmp/RtmpwKExIJ/pkgdown-cron/.Rbuildignore.
 #> ✔ Adding "*.html", "R-version", and "depends.Rds" to
-#>   /tmp/RtmpiMYbaq/pkgdown-cron/.github/.gitignore.
-#> Success!
+#>   /tmp/RtmpwKExIJ/pkgdown-cron/.github/.gitignore.
+#> ✔ ¡Proceso completado!
 ```

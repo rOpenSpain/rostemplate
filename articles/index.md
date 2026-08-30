@@ -1,6 +1,8 @@
 # Artículos
 
-### Artículos
+### Comunidad rOpenSpain
+
+Artículos sobre los paquetes y la actividad de **rOpenSpain**.
 
 - [Descargas de paquetes de
   rOpenSpain](https://ropenspain.github.io/rostemplate/articles/descargas.md):
@@ -9,8 +11,8 @@
 
 ### Ejemplos precomputados
 
-Artículos de ejemplo para comprobar vignettes precomputadas en R
-Markdown y Quarto.
+Artículos de ejemplo para comprobar viñetas precomputadas en **R
+Markdown** y **Quarto**.
 
 - [Precomputed Quarto
   vignette](https://ropenspain.github.io/rostemplate/articles/precompute-quarto.md):
@@ -36,9 +38,9 @@ Artículos de prueba para comprobar el menú de navegación.
 
   Check how pkgdown highlights R code blocks and inline syntax.
 
-### Test
+### Pruebas de renderizado
 
-Artículos de prueba para comprobar la salida de pkgdown.
+Artículos de prueba para comprobar la salida de **pkgdown**.
 
 - [Bullets](https://ropenspain.github.io/rostemplate/articles/test/bullets.md):
 

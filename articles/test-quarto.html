@@ -21,7 +21,7 @@
 <link href="test-quarto_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Quarto vignettes">
 <meta property="og:image" content="https://ropenspain.github.io/rostemplate/logo.png">
-<meta property="og:image:alt" content="rOpenSpain logo">
+<meta property="og:image:alt" content="Logo de rOpenSpain">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@dhernangomez">
 <meta name="twitter:site" content="@rOpenSpain">
@@ -97,25 +97,25 @@
 
 
 
-    <p><strong>pkgdown</strong> uses Quarto only to generate HTML and then supplies its own CSS and JS. This means that when Quarto introduces new features, <strong>pkgdown</strong> may lag behind in their support. If you try something that does not work and is not mentioned explicitly below, please <a href="https://github.com/r-lib/pkgdown/issues" class="external-link">file an issue</a> so we can look into it.</p>
+    <p><strong>pkgdown</strong> uses <strong>Quarto</strong> only to generate HTML and then supplies its own CSS and JS. This means that when <strong>Quarto</strong> introduces new features, <strong>pkgdown</strong> may lag behind in their support. If you try something that does not work and is not mentioned explicitly below, please <a href="https://github.com/r-lib/pkgdown/issues" class="external-link">file an issue</a> so we can look into it.</p>
 <section class="level2"><h2 id="operation">Operation<a class="anchor" aria-label="anchor" href="#operation"></a>
 </h2>
-<p><strong>pkgdown</strong> turns your articles directory into a Quarto project by temporarily adding a <code>_quarto.yml</code> to your articles. You can also add your own if you want to control options for all Quarto articles. If you do so and have a mix of <code>.qmd</code> and <code>.Rmd</code> files, you need to include the following YAML so that R Markdown can continue to handle the <code>.Rmd</code> files:</p>
+<p><strong>pkgdown</strong> turns your articles directory into a <strong>Quarto</strong> project by temporarily adding a <code>_quarto.yml</code> to your articles. You can also add your own if you want to control options for all <strong>Quarto</strong> articles. If you do so and have a mix of <code>.qmd</code> and <code>.Rmd</code> files, you need to include the following YAML so that <strong>R Markdown</strong> can continue to handle the <code>.Rmd</code> files:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">render</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">'*.qmd'</span><span class="kw">]</span></span></code></pre></div>
 <section class="level3"><h3 id="github-actions">GitHub Actions<a class="anchor" aria-label="anchor" href="#github-actions"></a>
 </h3>
-<p>The <code>setup-r-dependencies</code> action will <a href="https://github.com/r-lib/actions/tree/v2-branch/setup-r-dependencies#usage" class="external-link">automatically</a> install Quarto in GitHub Actions if a <code>.qmd</code> file is present in your repository (see the <code>install-quarto</code> parameter for more details).</p>
+<p>The <code>setup-r-dependencies</code> action will <a href="https://github.com/r-lib/actions/tree/v2-branch/setup-r-dependencies#usage" class="external-link">automatically</a> install <strong>Quarto</strong> in <strong>GitHub Actions</strong> if a <code>.qmd</code> file is present in your repository (see the <code>install-quarto</code> parameter for more details).</p>
 </section></section><section class="level2"><h2 id="limitations">Limitations<a class="anchor" aria-label="anchor" href="#limitations"></a>
 </h2>
 <ul>
 <li><p>Callouts are not currently supported (<a href="https://github.com/quarto-dev/quarto-cli/issues/9963" class="external-link uri">https://github.com/quarto-dev/quarto-cli/issues/9963</a>).</p></li>
-<li><p><strong>pkgdown</strong> assumes that you are using <a href="https://quarto-dev.github.io/quarto-r/articles/hello.html" class="external-link">Quarto vignette style</a>, or more generally an HTML format with <a href="https://quarto.org/docs/output-formats/html-basics.html#minimal-html" class="external-link"><code>minimal: true</code></a>. Specifically, only HTML vignettes are currently supported.</p></li>
-<li><p>You cannot customize Mermaid styles with Quarto Mermaid themes. If you want to change the colors, provide your own custom CSS as shown in <a href="https://quarto.org/docs/authoring/diagrams.html#customizing-mermaid" class="external-link">the Quarto docs</a>.</p></li>
-<li><p><strong>pkgdown</strong> passes the <code>lang</code> setting on to Quarto, but the set of available languages is not perfectly matched. Learn more in <a href="https://quarto.org/docs/authoring/language.html" class="external-link uri">https://quarto.org/docs/authoring/language.html</a>, including how to supply your own translations.</p></li>
+<li><p><strong>pkgdown</strong> assumes that you are using <a href="https://quarto-dev.github.io/quarto-r/articles/hello.html" class="external-link"><strong>Quarto</strong> vignette style</a>, or more generally an HTML format with <a href="https://quarto.org/docs/output-formats/html-basics.html#minimal-html" class="external-link"><code>minimal: true</code></a>. Specifically, only HTML vignettes are currently supported.</p></li>
+<li><p>You cannot customize <strong>Mermaid</strong> styles with <strong>Quarto</strong> <strong>Mermaid</strong> themes. If you want to change the colors, provide your own custom CSS as shown in the <a href="https://quarto.org/docs/authoring/diagrams.html#customizing-mermaid" class="external-link"><strong>Quarto</strong> documentation</a>.</p></li>
+<li><p><strong>pkgdown</strong> passes the <code>lang</code> setting on to <strong>Quarto</strong>, but the set of available languages is not perfectly matched. Learn more in <a href="https://quarto.org/docs/authoring/language.html" class="external-link uri">https://quarto.org/docs/authoring/language.html</a>, including how to supply your own translations.</p></li>
 </ul></section><section class="level2"><h2 id="supported-features">Supported features<a class="anchor" aria-label="anchor" href="#supported-features"></a>
 </h2>
-<p>The following sections demonstrate useful Quarto features so that we can make sure they work.</p>
+<p>The following sections demonstrate useful <strong>Quarto</strong> features so that we can make sure they work.</p>
 <section class="level3"><h3 id="inline-formatting">Inline formatting<a class="anchor" aria-label="anchor" href="#inline-formatting"></a>
 </h3>
 <ul>

@@ -1,6 +1,6 @@
 # Descargas de paquetes de rOpenSpain
 
-*Fecha de actualización: 28 ago 2026*
+*Fecha de actualización: 30 ago 2026*
 
 ## En CRAN
 
@@ -20,5 +20,5 @@ CRAN.
 ## En Posit Package Manager
 
 Descargas de paquetes de [rOpenSpain](https://ropenspain.es/) y
-metadatos desde [Posit Package
-Manager](https://packagemanager.posit.co/client/#/).
+metadatos desde [**Posit Package
+Manager**](https://packagemanager.posit.co/client/#/).

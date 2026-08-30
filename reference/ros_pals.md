@@ -29,11 +29,16 @@ ros_metro_madrid_pal(n = 4, alpha = 0.9, rev = FALSE)
 
 - rev:
 
-  Valor lógico. Si es `TRUE`, muestra los colores en orden inverso.
+  Valor lógico. Si es `TRUE`, devuelve los colores en orden inverso.
 
 ## Valor
 
 Un vector de colores.
+
+## Ver también
+
+Recursos de identidad visual:
+[`ros_badge_ropenspain()`](https://ropenspain.github.io/rostemplate/reference/ros_badge_ropenspain.md)
 
 ## Ejemplos
 

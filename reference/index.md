@@ -2,19 +2,18 @@
 
 ## Sitios pkgdown
 
-Funciones para crear sitios pkgdown localmente o con workflows de GitHub
-Actions.
+Funciones para crear sitios **pkgdown** localmente o mediante flujos de
+trabajo de **GitHub Actions**.
 
 - [`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md)
   :
 
-  Instala un workflow de GitHub Actions que genera tu sitio en
-  `gh-pages`
+  Crea un sitio en `gh-pages` mediante GitHub Actions
 
 - [`ros_actions_pkgdown_docs()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_docs.md)
   :
 
-  Instala un workflow de GitHub Actions que crea tu sitio en `/docs`
+  Crea un sitio en `/docs` mediante GitHub Actions
 
 - [`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)
   :
@@ -24,15 +23,15 @@ Actions.
 
 ## Comprobaciones con GitHub Actions
 
-Workflows de GitHub Actions para comprobar paquetes de forma periódica.
+Funciones para comprobar paquetes periódicamente mediante flujos de
+trabajo de **GitHub Actions**.
 
 - [`ros_actions_check_cron()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_check_cron.md)
-  : Crea un workflow de GitHub Actions que comprueba tu paquete
-  regularmente
+  : Crea un flujo de trabajo de GitHub Actions para comprobar tu paquete
 
 ## Identidad visual
 
-Insignias y paletas de colores de rOpenSpain.
+Insignias y paletas de colores de **rOpenSpain**.
 
 - [`ros_badge_ropenspain()`](https://ropenspain.github.io/rostemplate/reference/ros_badge_ropenspain.md)
   :
@@ -49,6 +48,8 @@ Insignias y paletas de colores de rOpenSpain.
   Paletas de colores de **rOpenSpain**
 
 ## Sobre el paquete
+
+Información general, autoría y enlaces del paquete.
 
 - [`rostemplate`](https://ropenspain.github.io/rostemplate/reference/rostemplate-package.md)
   [`rostemplate-package`](https://ropenspain.github.io/rostemplate/reference/rostemplate-package.md)

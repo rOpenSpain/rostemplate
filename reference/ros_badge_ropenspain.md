@@ -14,13 +14,13 @@ ros_badge_ropenspain(install = TRUE)
 - install:
 
   Valor lógico. Si es `TRUE`, la insignia se instala en `README.md` o
-  `README.Rmd`. Si es `FALSE`, muestra un mensaje con el código markdown
+  `README.Rmd`. Si es `FALSE`, muestra un mensaje con el código Markdown
   correspondiente.
 
 ## Valor
 
 Se llama por sus efectos secundarios. Si `install` es `FALSE`, muestra
-el código markdown de la insignia.
+el código Markdown de la insignia.
 
 ## Detalles
 
@@ -30,10 +30,13 @@ el código markdown de la insignia.
 
 [`usethis::use_badge()`](https://usethis.r-lib.org/reference/badges.html)
 
+Recursos de identidad visual:
+[`ros_pals`](https://ropenspain.github.io/rostemplate/reference/ros_pals.md)
+
 ## Ejemplos
 
 ``` r
 ros_badge_ropenspain(install = FALSE)
-#> Badge URL is 
-#> [![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
+#> ℹ URL de la insignia:
+#> • [![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
 ```

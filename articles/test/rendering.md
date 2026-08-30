@@ -100,18 +100,18 @@ cat(rep("xy", 100), sep = "")
 
 ### Should be highlighted
 
-Valid R code in `\preformatted{}`:
+Valid **R** code in `\preformatted{}`:
 
     mean(a + 1)
 
-R code in `R` block:
+**R** code in `R` block:
 
 ``` r
 
 mean(a + 1)
 ```
 
-R code in `r` block:
+**R** code in `r` block:
 
 ``` r
 
@@ -126,7 +126,7 @@ yaml: [a, 1]
 
 ### Shouldn’t be highlighted
 
-Non-R code in `\preformatted{}`:
+Non-**R** code in `\preformatted{}`:
 
     yaml: [a, b, c]
 
@@ -206,7 +206,7 @@ Some text
 
 ``` r
 
-stop(cli::style_italic("This is italic"))
+stop(cli::style_italic("This is italic"), call. = FALSE)
 #> Error:
 #> ! This is italic
 ```
@@ -217,7 +217,7 @@ Some more text
 
 > Single-line quote about something miscellaneous.
 
-> A Bootstrap 5 blockquote with footer.
+> A **Bootstrap** 5 blockquote with footer.
 
 Someone famous in Source Title
 

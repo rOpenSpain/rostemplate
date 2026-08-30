@@ -1,8 +1,8 @@
-# Instala un workflow de GitHub Actions que genera tu sitio en `gh-pages`
+# Crea un sitio en `gh-pages` mediante GitHub Actions
 
-Instala un workflow de GitHub Actions que crea el sitio
-[pkgdown](https://CRAN.R-project.org/package=pkgdown) de tu paquete en
-la rama `gh-pages` de tu repositorio.
+Instala un flujo de trabajo de GitHub Actions que genera el sitio
+[pkgdown](https://CRAN.R-project.org/package=pkgdown) del paquete en la
+rama `gh-pages` del repositorio.
 
 ## Uso
 
@@ -18,7 +18,7 @@ ros_actions_pkgdown_branch(pkg = ".", overwrite = TRUE)
 
 - overwrite:
 
-  Sobrescribe el workflow si ya se encuentra instalado.
+  Sobrescribe el flujo de trabajo si ya está instalado.
 
 ## Valor
 
@@ -31,6 +31,10 @@ Sitios pkgdown:
 [`ros_actions_pkgdown_docs()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_docs.md),
 [`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)
 
+Flujos de trabajo de GitHub Actions:
+[`ros_actions_check_cron()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_check_cron.md),
+[`ros_actions_pkgdown_docs()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_docs.md)
+
 ## Ejemplos
 
 ``` r
@@ -40,8 +44,8 @@ if (!dir.exists(pkg)) {
 }
 ros_actions_pkgdown_branch(pkg)
 #> ✔ Adding "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$", "^\\.github$", and
-#>   "^pkgdown$" to /tmp/RtmpiMYbaq/pkgdown-branch/.Rbuildignore.
+#>   "^pkgdown$" to /tmp/RtmpwKExIJ/pkgdown-branch/.Rbuildignore.
 #> ✔ Adding "*.html", "R-version", and "depends.Rds" to
-#>   /tmp/RtmpiMYbaq/pkgdown-branch/.github/.gitignore.
-#> Success!
+#>   /tmp/RtmpwKExIJ/pkgdown-branch/.github/.gitignore.
+#> ✔ ¡Proceso completado!
 ```
