@@ -5,14 +5,17 @@
 
 <!-- badges: start -->
 
-[![Part of rOpenSpain](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
+[![Part of
+rOpenSpain](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
 [![r-universe](https://ropenspain.r-universe.dev/badges/rostemplate)](https://ropenspain.r-universe.dev/rostemplate)
 [![R build
 status](https://github.com/ropenspain/rostemplate/workflows/R-CMD-check/badge.svg)](https://github.com/ropenspain/rostemplate/actions)
-[![Test coverage on Codecov](https://codecov.io/gh/ropenspain/rostemplate/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ropenspain/rostemplate)
+[![Test coverage on
+Codecov](https://codecov.io/gh/ropenspain/rostemplate/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ropenspain/rostemplate)
 [![Project status: Concept – Minimal or no implementation has been done
 yet, or the repository is only intended to be a limited example, demo or
-proof of concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
+proof of
+concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
 
 <!-- badges: end -->
 
@@ -173,8 +176,9 @@ Una vez instalado, debes ejecutar este código:
 rostemplate::ros_build()
 ```
 
-La función `rostemplate::ros_build()` envuelve `pkgdown::build_site()` y pide
-confirmar la configuración de `_pkgdown.yml` antes de generar el sitio.
+La función `rostemplate::ros_build()` envuelve `pkgdown::build_site()` y
+pide confirmar la configuración de `_pkgdown.yml` antes de generar el
+sitio.
 
 Una vez generado el sitio, es necesario actualizar el repositorio remoto
 en **GitHub** mediante un *commit* y un *push*.
