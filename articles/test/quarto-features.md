@@ -18,11 +18,11 @@ library(palmerpenguins)
 
 - 1:
 
-  Take `penguins`, then,
+  Start with `penguins`.
 
 - 2:
 
-  add new columns for the bill ratio and bill area.
+  Add columns for the bill ratio and bill area.
 
 ## Code filename
 
@@ -48,8 +48,8 @@ warning.
 
 Important
 
-The callout heading is provided by the callout type, with the expected
-heading, such as Note, Warning, Important, Tip or Caution.
+The default callout heading matches the type: Note, Warning, Important,
+Tip or Caution.
 
 Tip With Title
 
@@ -86,21 +86,21 @@ flowchart LR
 
 ## Lists
 
-- item 2
+- Item 2
 
   Continued (indent 4 spaces)
 
 Another example.
 
-1.  ordered list
+1.  Ordered list
 
-2.  item 2
+2.  Item 2
 
     ``` python
     print("Hello, World!")
     ```
 
-    1.  sub-sub-item 1
+    1.  Sub-sub-item 1
 
 A task list.
 
@@ -116,9 +116,9 @@ A definition.
 
 ## Footnotes
 
-Here is a footnote reference,[^1] and another.[^2]
+Here is a footnote reference[^1] and another.[^2]
 
-This paragraph won’t be part of the note, because it isn’t indented.
+This paragraph is not part of the footnote because it is not indented.
 
 Here is an inline note.[^3]
 
@@ -142,9 +142,9 @@ THIS TEXT IS SMALLCAPS
 
 This text is highlighted
 
-Endash: –
+En dash: –
 
-Emdash: —
+Em dash: —
 
 ## Shortcodes
 
@@ -169,7 +169,9 @@ Here we define a plot.
 
 #### Note the following plot
 
-![](quarto-features_files/figure-html/a-cell-1.png)
+![Scatter chart of values 1 through 3 against their index. Both axes
+range from 1 to 3, with points on a straight ascending
+diagonal.](quarto-features_files/figure-html/a-cell-1.png)
 
 ### Another example
 
@@ -181,11 +183,11 @@ The output of that inline code cell is some code.
 
 ![](pitbull.jpg)
 
-\(a\) A sketch of a pitbull puppy
+\(a\) A sketch of a pit bull puppy
 
 ![](shar-pei.jpg)
 
-\(b\) A sketch of a sharpei puppy
+\(b\) A sketch of a shar-pei puppy
 
 ![](data:image/png;base64,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AAAIINABAAAggEAHAACAAAIdAAAAAgh0AAAACCDQAQAAIIBABwAAgAACHQAAAAIIdAAAAAgg0AEAACCAQAcAAIAAAh0AAAACCHQAAAAIINABAAAggEAHAACAAAIdAAAAAgh0AAAACCDQAQAAIIBABwAAgAACHQAAAAIIdAAAAAgg0AEAACCAQAcAAIAAAh0AAAACCHQAAAAIINABAAAggEAHAACAAAIdAAAAAgh0AAAACCDQAQAAIIBABwAAgAACHQAAAAIIdAAAAAgg0AEAACCAQAcAAIAAAh0AAAACCHQAAAAIINABAAAggEAHAACAAAIdAAAAAgh0AAAACCDQAQAAIIBABwAAgAACHQAAAAIIdAAAAAgg0AEAACCAQAcAAIAAAh0AAAACCHQAAAAIINABAAAggEAHAACAAAIdAAAAAgh0AAAACCDQAQAAIIBABwAAgAACHQAAAAIIdAAAAAgg0AEAACCAQAcAAIAAAh0AAAACCHQAAAAIINABAAAggEAHAACAAAIdAAAAAgh0AAAACCDQAQAAIIBABwAAgAACHQAAAAIIdAAAAAgg0AEAACCAQAcAAIAAAh0AAAACCHQAAAAIINABAAAggEAHAACAAAIdAAAAut/vb5MEZUyIR1zHAAAAAElFTkSuQmCC)
 

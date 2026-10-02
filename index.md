@@ -47,7 +47,7 @@ líneas:
 
 Esta sección detalla diferentes opciones para generar un sitio
 **pkgdown** con el formato definido por esta plantilla. El resultado es
-un sitio estático compuesto por archivos `html`, `css` y otros recursos
+un sitio estático compuesto por archivos HTML, CSS y otros recursos
 basados en el paquete de **R** correspondiente.
 
 ### Con flujos de trabajo de GitHub Actions
@@ -72,9 +72,9 @@ Aunque el uso del paquete **rostemplate** no es necesario con **GitHub
 Actions**, se han desarrollado dos funciones que automatizan esta
 configuración. Estas funciones crean el directorio `.github/workflows`
 si no existe y copian los archivos solicitados en la ruta
-correspondiente. Además, crean los archivos `.Rbuildignore` y
-`.github/.gitignore`, que ignoran ciertos archivos cuando se compila el
-paquete:
+correspondiente. Además, actualizan `.Rbuildignore` y
+`.github/.gitignore` para excluir los archivos generados de la
+compilación del paquete y del control de versiones:
 
 ``` r
 
@@ -138,12 +138,13 @@ rostemplate::ros_build()
 
 La función
 [`rostemplate::ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)
-es un alias de
+envuelve
 [`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html)
-que añade un control sobre la configuración del archivo `_pkgdown.yml`.
+y pide confirmar la configuración de `_pkgdown.yml` antes de generar el
+sitio.
 
 Una vez generado el sitio, es necesario actualizar el repositorio remoto
-en **GitHub** mediante un *commit*.
+en **GitHub** mediante un *commit* y un *push*.
 
 ## GitHub Pages
 

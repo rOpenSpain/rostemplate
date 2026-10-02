@@ -1,8 +1,8 @@
 # Crea un sitio en `/docs` mediante GitHub Actions
 
-Este flujo de trabajo de GitHub Actions genera el sitio
-[pkgdown](https://CRAN.R-project.org/package=pkgdown) en la carpeta
-`docs` del repositorio.
+Instala un flujo de trabajo de GitHub Actions que genera el sitio
+[pkgdown](https://CRAN.R-project.org/package=pkgdown) del paquete en la
+carpeta `docs` del repositorio.
 
 ## Uso
 
@@ -22,8 +22,8 @@ ros_actions_pkgdown_docs(pkg = ".", overwrite = TRUE)
 
 ## Valor
 
-Se llama por sus efectos secundarios y devuelve `NULL` de forma
-invisible.
+Devuelve [NULL](https://rdrr.io/r/base/NULL.html) de forma invisible. Se
+llama por sus efectos secundarios.
 
 ## Detalles
 
@@ -31,15 +31,27 @@ El resultado final es equivalente a ejecutar
 [`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md),
 pero este comando se ejecuta en GitHub, no localmente.
 
-## Ver también
+Para publicar el sitio en la rama `gh-pages` en lugar de la carpeta
+`docs`, usa
+[`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md).
 
-Sitios pkgdown:
-[`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md),
+## Generación del sitio
+
+Usa
 [`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)
+para generar el sitio de forma local. Consulta
+[`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html)
+para las opciones de generación.
+
+## Ver también
 
 Flujos de trabajo de GitHub Actions:
 [`ros_actions_check_cron()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_check_cron.md),
 [`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md)
+
+Sitios pkgdown:
+[`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md),
+[`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)
 
 ## Ejemplos
 
@@ -50,8 +62,8 @@ if (!dir.exists(pkg)) {
 }
 ros_actions_pkgdown_docs(pkg)
 #> ✔ Adding "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$", "^\\.github$", and
-#>   "^pkgdown$" to /tmp/RtmpQtoXsV/pkgdown-docs/.Rbuildignore.
+#>   "^pkgdown$" to /tmp/RtmpG8v2Xp/pkgdown-docs/.Rbuildignore.
 #> ✔ Adding "*.html", "R-version", and "depends.Rds" to
-#>   /tmp/RtmpQtoXsV/pkgdown-docs/.github/.gitignore.
+#>   /tmp/RtmpG8v2Xp/pkgdown-docs/.github/.gitignore.
 #> ✔ ¡Proceso completado!
 ```

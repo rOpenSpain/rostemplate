@@ -9,11 +9,20 @@ CRAN.
 
 ### Historial de descargas
 
-![](descargas_files/figure-html/unnamed-chunk-3-1.png)
+![Gráfico de barras apiladas de descargas mensuales desde CRAN. El eje
+horizontal representa los meses y el vertical el número de descargas. El
+color identifica cada paquete de rOpenSpain. Una curva gris resume la
+tendencia del total mensual, con una banda de
+incertidumbre.](descargas_files/figure-html/unnamed-chunk-3-1.png)
 
 ### Descargas semanales
 
-![](descargas_files/figure-html/unnamed-chunk-4-1.png)
+![Gráfico de áreas de descargas semanales desde CRAN durante el último
+año, con un panel por paquete en tres columnas. El eje horizontal
+representa las semanas y el vertical el número de descargas, con una
+escala propia para cada panel. El área verde muestra las descargas y la
+curva violeta resume su
+tendencia.](descargas_files/figure-html/unnamed-chunk-4-1.png)
 
 ### Datos sobre descargas
 

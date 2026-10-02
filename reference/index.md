@@ -2,24 +2,24 @@
 
 ## Sitios pkgdown
 
-Funciones para crear sitios **pkgdown** localmente o mediante flujos de
-trabajo de **GitHub Actions**.
+Genera el sitio de forma local o instala un flujo de trabajo de **GitHub
+Actions** para publicarlo en `docs` o `gh-pages`.
 
-- [`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md)
+- [`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)
   :
 
-  Crea un sitio en `gh-pages` mediante GitHub Actions
+  Genera tu sitio [pkgdown](https://CRAN.R-project.org/package=pkgdown)
+  de forma local
 
 - [`ros_actions_pkgdown_docs()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_docs.md)
   :
 
   Crea un sitio en `/docs` mediante GitHub Actions
 
-- [`ros_build()`](https://ropenspain.github.io/rostemplate/reference/ros_build.md)
+- [`ros_actions_pkgdown_branch()`](https://ropenspain.github.io/rostemplate/reference/ros_actions_pkgdown_branch.md)
   :
 
-  Genera tu sitio [pkgdown](https://CRAN.R-project.org/package=pkgdown)
-  en local
+  Crea un sitio en `gh-pages` mediante GitHub Actions
 
 ## Comprobaciones con GitHub Actions
 

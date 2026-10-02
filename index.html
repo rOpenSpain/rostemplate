@@ -124,7 +124,7 @@
 <div class="section level2">
 <h2 id="uso-de-la-plantilla">Uso de la plantilla<a class="anchor" aria-label="anchor" href="#uso-de-la-plantilla"></a>
 </h2>
-<p>Esta sección detalla diferentes opciones para generar un sitio <strong>pkgdown</strong> con el formato definido por esta plantilla. El resultado es un sitio estático compuesto por archivos <code>html</code>, <code>css</code> y otros recursos basados en el paquete de <strong>R</strong> correspondiente.</p>
+<p>Esta sección detalla diferentes opciones para generar un sitio <strong>pkgdown</strong> con el formato definido por esta plantilla. El resultado es un sitio estático compuesto por archivos HTML, CSS y otros recursos basados en el paquete de <strong>R</strong> correspondiente.</p>
 <div class="section level3">
 <h3 id="con-flujos-de-trabajo-de-github-actions">Con flujos de trabajo de GitHub Actions<a class="anchor" aria-label="anchor" href="#con-flujos-de-trabajo-de-github-actions"></a>
 </h3>
@@ -134,7 +134,7 @@
 <div class="section level4">
 <h4 id="alternativa-usando-las-funciones-de-rostemplate">Alternativa usando las funciones de rostemplate<a class="anchor" aria-label="anchor" href="#alternativa-usando-las-funciones-de-rostemplate"></a>
 </h4>
-<p>Aunque el uso del paquete <strong>rostemplate</strong> no es necesario con <strong>GitHub Actions</strong>, se han desarrollado dos funciones que automatizan esta configuración. Estas funciones crean el directorio <code>.github/workflows</code> si no existe y copian los archivos solicitados en la ruta correspondiente. Además, crean los archivos <code>.Rbuildignore</code> y <code>.github/.gitignore</code>, que ignoran ciertos archivos cuando se compila el paquete:</p>
+<p>Aunque el uso del paquete <strong>rostemplate</strong> no es necesario con <strong>GitHub Actions</strong>, se han desarrollado dos funciones que automatizan esta configuración. Estas funciones crean el directorio <code>.github/workflows</code> si no existe y copian los archivos solicitados en la ruta correspondiente. Además, actualizan <code>.Rbuildignore</code> y <code>.github/.gitignore</code> para excluir los archivos generados de la compilación del paquete y del control de versiones:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Instalación vía r-universe</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span></span>
@@ -183,8 +183,8 @@
 <p>Una vez instalado, debes ejecutar este código:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rostemplate</span><span class="fu">::</span><span class="fu"><a href="reference/ros_build.html">ros_build</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>La función <code><a href="reference/ros_build.html">rostemplate::ros_build()</a></code> es un alias de <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code> que añade un control sobre la configuración del archivo <code>_pkgdown.yml</code>.</p>
-<p>Una vez generado el sitio, es necesario actualizar el repositorio remoto en <strong>GitHub</strong> mediante un <em>commit</em>.</p>
+<p>La función <code><a href="reference/ros_build.html">rostemplate::ros_build()</a></code> envuelve <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code> y pide confirmar la configuración de <code>_pkgdown.yml</code> antes de generar el sitio.</p>
+<p>Una vez generado el sitio, es necesario actualizar el repositorio remoto en <strong>GitHub</strong> mediante un <em>commit</em> y un <em>push</em>.</p>
 </div>
 </div>
 <div class="section level2">
@@ -239,11 +239,11 @@
 <div class="estado-de-desarrollo">
 <h2 data-toc-skip>Estado de desarrollo</h2>
 <ul class="list-unstyled">
-<li><a href="https://ropenspain.es/" class="external-link"><img src="https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg" alt="rOS-badge"></a></li>
+<li><a href="https://ropenspain.es/" class="external-link"><img src="https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg" alt="Part of rOpenSpain"></a></li>
 <li><a href="https://ropenspain.r-universe.dev/rostemplate" class="external-link"><img src="https://ropenspain.r-universe.dev/badges/rostemplate" alt="r-universe"></a></li>
 <li><a href="https://github.com/ropenspain/rostemplate/actions" class="external-link"><img src="https://github.com/ropenspain/rostemplate/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://app.codecov.io/gh/ropenspain/rostemplate" class="external-link"><img src="https://codecov.io/gh/ropenspain/rostemplate/branch/main/graph/badge.svg" alt="codecov"></a></li>
-<li><a href="https://www.repostatus.org/#concept" class="external-link"><img src="https://www.repostatus.org/badges/latest/concept.svg" alt="Project Status: Concept – Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo, or proof-of-concept."></a></li>
+<li><a href="https://app.codecov.io/gh/ropenspain/rostemplate" class="external-link"><img src="https://codecov.io/gh/ropenspain/rostemplate/branch/main/graph/badge.svg" alt="Test coverage on Codecov"></a></li>
+<li><a href="https://www.repostatus.org/#concept" class="external-link"><img src="https://www.repostatus.org/badges/latest/concept.svg" alt="Project status: Concept – Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo or proof of concept."></a></li>
 </ul>
 </div>
 
@@ -268,7 +268,7 @@
 <footer id="footer"><div class="container">
     <div class="row">
       <div class="col-md">
-        <h4 data-toc-skip>About <img src="logo.png" alt="rostemplate Logo" height="24" class="round-logo">
+        <h4 data-toc-skip>About <img src="logo.png" alt="rostemplate logo" height="24" class="round-logo">
           rostemplate</h4>
         <p>Desarrollado por <a href="https://github.com/dieghernan/" class="external-link">Diego Hernangómez</a>. <br>Part of the <span class="ROS-light">rOpenSpain</span> project.
 </p>
@@ -279,7 +279,7 @@
             rOpenSpain</span>
 </h4>
         <p><a href="https://ropenspain.es/" class="external-link"><span class="ROS-light">rOpenSpain</span></a> is a community of
-          enthusiasts of <strong>R</strong>, open data and reproducibility that
+          <strong>R</strong>, open data and reproducibility enthusiasts that
           works together to create high-quality <strong>R</strong> packages for
           the analysis and use of Spanish data of general interest.
         </p>

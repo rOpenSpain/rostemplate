@@ -13,7 +13,9 @@ This paragraph checks footnote rendering.[^1]
 plot(1:10)
 ```
 
-![Test plot](rendering_files/figure-html/unnamed-chunk-2-1.png)
+![Scatter chart of values 1 through 10 against their index. Both axes
+range from 1 to 10, with points on a straight ascending
+diagonal.](rendering_files/figure-html/unnamed-chunk-2-1.png)
 
 ## External files
 
@@ -34,9 +36,9 @@ This should only be shown when required
 
 Multiple paragraphs
 
-First paragraph
+First paragraph.
 
-Second paragraph
+Second paragraph.
 
 Some R code
 
@@ -56,7 +58,7 @@ Some R code
 
 f(x) = \dfrac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu^2)}{2\sigma^2}}
 
-Inline equations: y=x^2
+Inline equations: y=x^2.
 
 ## Search
 
@@ -139,7 +141,7 @@ Testing margins and copy buttons on small screens.
 txt <- "Not wrapped; check the copy button behavior."
 ```
 
-Wrapped in a `<section>` (e.g. `section > div > pre`)
+Wrapped in a `<section>` (e.g., `section > div > pre`).
 
 ``` r
 
@@ -168,7 +170,7 @@ txt <- "Wrapped in section"
 
   1.  Nested list.
 
-  2.  Second level item with enough text to test the width of the code
+  2.  Second-level item with enough text to test the width of the code
       block and confirm alignment with the paragraph.
 
       ``` r
@@ -202,7 +204,7 @@ warning(cli::style_bold("This is bold"))
 #> Warning: This is bold
 ```
 
-Some text
+Some text.
 
 ``` r
 
@@ -211,7 +213,7 @@ stop(cli::style_italic("This is italic"), call. = FALSE)
 #> ! This is italic
 ```
 
-Some more text
+Some more text.
 
 ## Quoted text
 
@@ -264,7 +266,9 @@ More tab content.
 plot(1:42)
 ```
 
-![Another test plot](rendering_files/figure-html/unnamed-chunk-8-1.png)
+![Scatter chart of values 1 through 42 against their index. Both axes
+range from 1 to 42, with points on a straight ascending diagonal.
+](rendering_files/figure-html/unnamed-chunk-8-1.png)
 
 This tab should be active.
 

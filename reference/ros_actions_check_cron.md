@@ -22,8 +22,8 @@ ros_actions_check_cron(pkg = ".", overwrite = TRUE)
 
 ## Valor
 
-Se llama por sus efectos secundarios y devuelve `NULL` de forma
-invisible.
+Devuelve [NULL](https://rdrr.io/r/base/NULL.html) de forma invisible. Se
+llama por sus efectos secundarios.
 
 ## Detalles
 
@@ -52,8 +52,8 @@ if (!dir.exists(pkg)) {
 }
 ros_actions_check_cron(pkg)
 #> ✔ Adding "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$", "^\\.github$", and
-#>   "^pkgdown$" to /tmp/RtmpQtoXsV/pkgdown-cron/.Rbuildignore.
+#>   "^pkgdown$" to /tmp/RtmpG8v2Xp/pkgdown-cron/.Rbuildignore.
 #> ✔ Adding "*.html", "R-version", and "depends.Rds" to
-#>   /tmp/RtmpQtoXsV/pkgdown-cron/.github/.gitignore.
+#>   /tmp/RtmpG8v2Xp/pkgdown-cron/.github/.gitignore.
 #> ✔ ¡Proceso completado!
 ```

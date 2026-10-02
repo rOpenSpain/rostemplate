@@ -19,8 +19,12 @@ ros_badge_ropenspain(install = TRUE)
 
 ## Valor
 
-Se llama por sus efectos secundarios. Si `install` es `FALSE`, muestra
-el código Markdown de la insignia.
+Si `install` es `TRUE`, devuelve un [valor
+lógico](https://rdrr.io/r/base/logical.html) de forma invisible que
+indica si se ha añadido la insignia. Si `install` es `FALSE`, muestra el
+código Markdown de la insignia y devuelve
+[NULL](https://rdrr.io/r/base/NULL.html) de forma invisible. Se llama
+por sus efectos secundarios.
 
 ## Detalles
 
@@ -29,6 +33,9 @@ el código Markdown de la insignia.
 ## Ver también
 
 [`usethis::use_badge()`](https://usethis.r-lib.org/reference/badges.html)
+para añadir otras insignias al archivo `README` y
+[ros_pals](https://ropenspain.github.io/rostemplate/reference/ros_pals.md)
+para las paletas de colores de **rOpenSpain**.
 
 Recursos de identidad visual:
 [`ros_pals`](https://ropenspain.github.io/rostemplate/reference/ros_pals.md)

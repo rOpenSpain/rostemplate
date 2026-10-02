@@ -77,17 +77,29 @@ pkgdown del paquete en la rama gh-pages del repositorio."><meta property="og:ima
 </dl></div>
     <div class="section level2">
     <h2 id="valor">Valor<a class="anchor" aria-label="anchor" href="#valor"></a></h2>
-    <p>Se llama por sus efectos secundarios y devuelve <code>NULL</code> de forma
-invisible.</p>
+    <p>Devuelve <a href="https://rdrr.io/r/base/NULL.html" class="external-link">NULL</a> de forma invisible. Se llama por sus
+efectos secundarios.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="detalles">Detalles<a class="anchor" aria-label="anchor" href="#detalles"></a></h2>
+    <p>Para publicar el sitio en la carpeta <code>docs</code> en lugar de la rama <code>gh-pages</code>,
+usa <code><a href="ros_actions_pkgdown_docs.html">ros_actions_pkgdown_docs()</a></code>.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="generaci-n-del-sitio">Generación del sitio<a class="anchor" aria-label="anchor" href="#generaci-n-del-sitio"></a></h2>
+
+
+<p>Usa <code><a href="ros_build.html">ros_build()</a></code> para generar el sitio de forma local. Consulta
+<code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code> para las opciones de generación.</p>
     </div>
     <div class="section level2">
     <h2 id="ver-tambi-n">Ver también<a class="anchor" aria-label="anchor" href="#ver-tambi-n"></a></h2>
-    <div class="dont-index"><p>Sitios pkgdown:
-<code><a href="ros_actions_pkgdown_docs.html">ros_actions_pkgdown_docs()</a></code>,
-<code><a href="ros_build.html">ros_build()</a></code></p>
-<p>Flujos de trabajo de GitHub Actions:
+    <div class="dont-index"><p>Flujos de trabajo de GitHub Actions:
 <code><a href="ros_actions_check_cron.html">ros_actions_check_cron()</a></code>,
-<code><a href="ros_actions_pkgdown_docs.html">ros_actions_pkgdown_docs()</a></code></p></div>
+<code><a href="ros_actions_pkgdown_docs.html">ros_actions_pkgdown_docs()</a></code></p>
+<p>Sitios pkgdown:
+<code><a href="ros_actions_pkgdown_docs.html">ros_actions_pkgdown_docs()</a></code>,
+<code><a href="ros_build.html">ros_build()</a></code></p></div>
     </div>
 
     <div class="section level2">
@@ -98,9 +110,9 @@ invisible.</p>
 <span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-in"><span><span class="fu">ros_actions_pkgdown_branch</span><span class="op">(</span><span class="va">pkg</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">"^docs$"</span>, <span style="color: #0000BB;">"^_pkgdown\\.yml$"</span>, <span style="color: #0000BB;">"^_pkgdown\\.yaml$"</span>, <span style="color: #0000BB;">"^\\.github$"</span>, and</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   <span style="color: #0000BB;">"^pkgdown$"</span> to <span style="color: #0000BB;">/tmp/RtmpQtoXsV/pkgdown-branch/.Rbuildignore</span>.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   <span style="color: #0000BB;">"^pkgdown$"</span> to <span style="color: #0000BB;">/tmp/RtmpG8v2Xp/pkgdown-branch/.Rbuildignore</span>.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">"*.html"</span>, <span style="color: #0000BB;">"R-version"</span>, and <span style="color: #0000BB;">"depends.Rds"</span> to</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   <span style="color: #0000BB;">/tmp/RtmpQtoXsV/pkgdown-branch/.github/.gitignore</span>.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   <span style="color: #0000BB;">/tmp/RtmpG8v2Xp/pkgdown-branch/.github/.gitignore</span>.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">✔</span> ¡Proceso completado!</span>
 </code></pre></div>
     </div>
@@ -113,7 +125,7 @@ invisible.</p>
 <footer id="footer"><div class="container">
     <div class="row">
       <div class="col-md">
-        <h4 data-toc-skip>About <img src="../logo.png" alt="rostemplate Logo" height="24" class="round-logo">
+        <h4 data-toc-skip>About <img src="../logo.png" alt="rostemplate logo" height="24" class="round-logo">
           rostemplate</h4>
         <p>Desarrollado por <a href="https://github.com/dieghernan/" class="external-link">Diego Hernangómez</a>. <br>Part of the <span class="ROS-light">rOpenSpain</span> project.
 </p>
@@ -122,7 +134,7 @@ invisible.</p>
         <h4 data-toc-skip>About <img src="../ROS-logo.png" alt="rOpenSpain logo" height="24" class="round-logo"><span class="ROS-light">
             rOpenSpain</span></h4>
         <p><a href="https://ropenspain.es/" class="external-link"><span class="ROS-light">rOpenSpain</span></a> is a community of
-          enthusiasts of <strong>R</strong>, open data and reproducibility that
+          <strong>R</strong>, open data and reproducibility enthusiasts that
           works together to create high-quality <strong>R</strong> packages for
           the analysis and use of Spanish data of general interest.
         </p>
