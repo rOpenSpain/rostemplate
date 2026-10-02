@@ -17,10 +17,14 @@
 #'   `README.md` o `README.Rmd`. Si es `FALSE`, muestra un mensaje con el
 #'   código Markdown correspondiente.
 #'
-#' @returns Se llama por sus efectos secundarios. Si `install` es `FALSE`,
-#'   muestra el código Markdown de la insignia.
+#' @returns Si `install` es `TRUE`, devuelve un [valor lógico][base::logical] de
+#'   forma invisible que indica si se ha añadido la insignia. Si `install` es
+#'   `FALSE`, muestra el código Markdown de la insignia y devuelve
+#'   [NULL][base::NULL] de forma invisible. Se llama por sus efectos
+#'   secundarios.
 #'
-#' @seealso [usethis::use_badge()]
+#' @seealso [usethis::use_badge()] para añadir otras insignias al archivo
+#'   `README` y [ros_pals] para las paletas de colores de **rOpenSpain**.
 #'
 #' @family branding
 #'

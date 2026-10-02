@@ -3,12 +3,18 @@
 #' Instala un flujo de trabajo de GitHub Actions que genera el sitio
 #' \CRANpkg{pkgdown} del paquete en la rama `gh-pages` del repositorio.
 #'
+#' @details
+#' Para publicar el sitio en la carpeta `docs` en lugar de la rama `gh-pages`,
+#' usa [ros_actions_pkgdown_docs()].
+#'
 #' @inheritParams ros_actions_pkgdown_docs pkg overwrite
 #'
 #' @inherit ros_actions_pkgdown_docs return
 #'
-#' @family pkgdown
+#' @inheritSection ros_actions_pkgdown_docs Generación del sitio
+#'
 #' @family github_actions
+#' @family pkgdown
 #'
 #' @export
 #' @encoding UTF-8

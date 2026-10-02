@@ -1,12 +1,12 @@
-#' Genera tu sitio \CRANpkg{pkgdown} en local
+#' Genera tu sitio \CRANpkg{pkgdown} de forma local
 #'
 #' Esta función envuelve [pkgdown::build_site()].
 #'
 #' @details
 #' La única diferencia con [pkgdown::build_site()] es que te recuerda los pasos
-#' a seguir para configurar `rostemplate` y pide confirmación antes de
+#' a seguir para configurar \pkg{rostemplate} y pide confirmación antes de
 #' ejecutar [pkgdown::build_site()]. El resultado se genera en la carpeta
-#' `/docs`.
+#' `docs`.
 #'
 #' A diferencia de [ros_actions_pkgdown_branch()], este proceso se ejecuta de
 #' forma local.
@@ -16,7 +16,9 @@
 #'
 #' @inherit ros_actions_pkgdown_docs return
 #'
-#' @seealso [pkgdown::build_site()].
+#' @seealso [pkgdown::build_site()] para las opciones de generación,
+#'   [ros_actions_pkgdown_docs()] y [ros_actions_pkgdown_branch()] para generar
+#'   y publicar el sitio mediante GitHub Actions.
 #'
 #' @family pkgdown
 #'

@@ -29,7 +29,8 @@ y \code{alpha = 0} es totalmente transparente.}
 \item{rev}{Valor lógico. Si es \code{TRUE}, devuelve los colores en orden inverso.}
 }
 \value{
-Un vector de colores.
+Devuelve un \link[base:character]{vector de caracteres} con los colores
+en formato hexadecimal.
 }
 \description{
 Paletas de colores basadas en el tema de \strong{rOpenSpain}.
@@ -48,6 +49,10 @@ scales::show_col(ros_metro_madrid_pal(9))
 \dontshow{\}) # examplesIf}
 }
 \seealso{
+\code{\link[grDevices:colorRampPalette]{grDevices::colorRampPalette()}} para interpolar colores,
+\code{\link[grDevices:adjustcolor]{grDevices::adjustcolor()}} para ajustar la transparencia y
+\code{\link[scales:show_col]{scales::show_col()}} para visualizar una paleta.
+
 Recursos de identidad visual:
 \code{\link[=ros_badge_ropenspain]{ros_badge_ropenspain()}}
 }

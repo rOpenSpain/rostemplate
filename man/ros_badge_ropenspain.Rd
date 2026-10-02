@@ -13,8 +13,11 @@ ros_badge_ropenspain(install = TRUE)
 código Markdown correspondiente.}
 }
 \value{
-Se llama por sus efectos secundarios. Si \code{install} es \code{FALSE},
-muestra el código Markdown de la insignia.
+Si \code{install} es \code{TRUE}, devuelve un \link[base:logical]{valor lógico} de
+forma invisible que indica si se ha añadido la insignia. Si \code{install} es
+\code{FALSE}, muestra el código Markdown de la insignia y devuelve
+\link[base:NULL]{NULL} de forma invisible. Se llama por sus efectos
+secundarios.
 }
 \description{
 Añade una insignia de \strong{rOpenSpain} que redirige a \url{https://ropenspain.es/}
@@ -27,7 +30,8 @@ en tu archivo \code{README}:
 ros_badge_ropenspain(install = FALSE)
 }
 \seealso{
-\code{\link[usethis:use_badge]{usethis::use_badge()}}
+\code{\link[usethis:use_badge]{usethis::use_badge()}} para añadir otras insignias al archivo
+\code{README} y \link{ros_pals} para las paletas de colores de \strong{rOpenSpain}.
 
 Recursos de identidad visual:
 \code{\link{ros_pals}}

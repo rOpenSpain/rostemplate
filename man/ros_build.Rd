@@ -3,7 +3,7 @@
 \encoding{UTF-8}
 \name{ros_build}
 \alias{ros_build}
-\title{Genera tu sitio \CRANpkg{pkgdown} en local}
+\title{Genera tu sitio \CRANpkg{pkgdown} de forma local}
 \usage{
 ros_build(pkg = ".", ...)
 }
@@ -13,17 +13,17 @@ ros_build(pkg = ".", ...)
 \item{...}{Argumentos adicionales que se pasan a \code{\link[pkgdown:build_site]{pkgdown::build_site()}}.}
 }
 \value{
-Se llama por sus efectos secundarios y devuelve \code{NULL} de forma
-invisible.
+Devuelve \link[base:NULL]{NULL} de forma invisible. Se llama por sus
+efectos secundarios.
 }
 \description{
 Esta función envuelve \code{\link[pkgdown:build_site]{pkgdown::build_site()}}.
 }
 \details{
 La única diferencia con \code{\link[pkgdown:build_site]{pkgdown::build_site()}} es que te recuerda los pasos
-a seguir para configurar \code{rostemplate} y pide confirmación antes de
+a seguir para configurar \pkg{rostemplate} y pide confirmación antes de
 ejecutar \code{\link[pkgdown:build_site]{pkgdown::build_site()}}. El resultado se genera en la carpeta
-\verb{/docs}.
+\code{docs}.
 
 A diferencia de \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}, este proceso se ejecuta de
 forma local.
@@ -34,7 +34,9 @@ ros_build()
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-\code{\link[pkgdown:build_site]{pkgdown::build_site()}}.
+\code{\link[pkgdown:build_site]{pkgdown::build_site()}} para las opciones de generación,
+\code{\link[=ros_actions_pkgdown_docs]{ros_actions_pkgdown_docs()}} y \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}} para generar
+y publicar el sitio mediante GitHub Actions.
 
 Sitios pkgdown:
 \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}},

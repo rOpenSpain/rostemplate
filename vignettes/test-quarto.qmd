@@ -14,16 +14,16 @@ knitr:
 ---
 
 **pkgdown** uses **Quarto** only to generate HTML and then supplies its own CSS
-and JS. This means that when **Quarto** introduces new features, **pkgdown**
-may lag behind in their support. If you try something that does not work and
+and JavaScript. When **Quarto** introduces new features, **pkgdown** may lag
+behind in supporting them. If you try something that does not work and
 is not mentioned explicitly below, please [file an
 issue](https://github.com/r-lib/pkgdown/issues) so we can look into it.
 
 ## Operation
 
 **pkgdown** turns your articles directory into a **Quarto** project by
-temporarily adding a `_quarto.yml` to your articles. You can also add your own
-if you want to control options for all **Quarto** articles. If you do so and
+temporarily adding a `_quarto.yml` file to that directory. You can also add your
+own to control options for all **Quarto** articles. If you do so and
 have a mix of `.qmd` and `.Rmd` files, you need to include the following YAML
 so that **R Markdown** can continue to handle the `.Rmd` files:
 
@@ -41,6 +41,9 @@ repository (see the `install-quarto` parameter for more details).
 
 ## Limitations
 
+<!-- FIXME: Verify callout support, this limitation conflicts with the completed
+callout item below and the examples in test/quarto-features.qmd. -->
+
 -   Callouts are not currently supported
     (<https://github.com/quarto-dev/quarto-cli/issues/9963>).
 
@@ -56,9 +59,8 @@ repository (see the `install-quarto` parameter for more details).
     documentation](https://quarto.org/docs/authoring/diagrams.html#customizing-mermaid).
 
 -   **pkgdown** passes the `lang` setting on to **Quarto**, but the set of
-    available languages is not perfectly matched. Learn more in
-    <https://quarto.org/docs/authoring/language.html>, including how to supply
-    your own translations.
+    available languages is not perfectly matched. Learn how to supply your own
+    translations in the [Quarto documentation](https://quarto.org/docs/authoring/language.html).
 
 ## Supported features
 
@@ -76,7 +78,9 @@ make sure they work.
 ### Code
 
 ```{r}
-#| fig.alt: A plot of the numbers 1, 2, and 3
+#| fig-alt: >
+#|   Scatter chart of values 1 through 3 against their index. Both axes
+#|   range from 1 to 3, with points on a straight ascending diagonal.
 1 + 1
 2 + 2
 
@@ -86,9 +90,9 @@ plot(1:3)
 ### Figures
 
 ::: {#fig-puppies layout-ncol="2"}
-![A sketch of a pitbull puppy](pitbull.jpg){#fig-pitbull}
+![A sketch of a pit bull puppy](pitbull.jpg){#fig-pitbull}
 
-![A sketch of a sharpei puppy](shar-pei.jpg){#fig-shar-pei}
+![A sketch of a shar-pei puppy](shar-pei.jpg){#fig-shar-pei}
 
 Cute puppies
 :::
@@ -102,7 +106,7 @@ $$
   \mathrm r \mathrm C
 $$ {#eq-black-scholes}
 
-### Cross references
+### Cross-references
 
 See @fig-puppies for two cute puppies.
 
@@ -114,7 +118,7 @@ the behavior of financial derivatives, most commonly options.
 -   [ ] Code annotations
 -   [ ] Tabsets
 -   [x] Citations
--   [x] Task/to do lists
+-   [x] Task lists
 -   [x] Figures
 -   [x] Equations
 -   [x] Cross-references

@@ -15,16 +15,16 @@ knitr::opts_chunk$set(
 )
 ```
 
-# rostemplate <img src="man/figures/logo.png" align="right" width="120"/>
+# rostemplate <img src="man/figures/logo.png" align="right" width="120" alt="rostemplate package logo"/>
 
 <!-- badges: start -->
 
-[![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
+[![Part of rOpenSpain](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
 [![r-universe](https://ropenspain.r-universe.dev/badges/rostemplate)](https://ropenspain.r-universe.dev/rostemplate)
 [![R build
 status](https://github.com/ropenspain/rostemplate/workflows/R-CMD-check/badge.svg)](https://github.com/ropenspain/rostemplate/actions)
-[![codecov](https://codecov.io/gh/ropenspain/rostemplate/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ropenspain/rostemplate)
-[![Project Status: Concept – Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo, or proof-of-concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
+[![Test coverage on Codecov](https://codecov.io/gh/ropenspain/rostemplate/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ropenspain/rostemplate)
+[![Project status: Concept – Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo or proof of concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
 
 <!-- badges: end -->
 
@@ -68,7 +68,7 @@ Además, es necesario añadir al archivo `.Rbuildignore` las siguientes líneas:
 
 Esta sección detalla diferentes opciones para generar un sitio **pkgdown** con
 el formato definido por esta plantilla. El resultado es un sitio estático
-compuesto por archivos `html`, `css` y otros recursos basados en el paquete de
+compuesto por archivos HTML, CSS y otros recursos basados en el paquete de
 **R** correspondiente.
 
 ### Con flujos de trabajo de GitHub Actions
@@ -92,8 +92,8 @@ Aunque el uso del paquete **rostemplate** no es necesario con **GitHub
 Actions**, se han desarrollado dos funciones que automatizan esta
 configuración. Estas funciones crean el directorio `.github/workflows` si no
 existe y copian los archivos solicitados en la ruta correspondiente. Además,
-crean los archivos `.Rbuildignore` y `.github/.gitignore`, que ignoran ciertos
-archivos cuando se compila el paquete:
+actualizan `.Rbuildignore` y `.github/.gitignore` para excluir los
+archivos generados de la compilación del paquete y del control de versiones:
 
 ```{r}
 #| eval: false
@@ -153,11 +153,11 @@ Una vez instalado, debes ejecutar este código:
 rostemplate::ros_build()
 ```
 
-La función `rostemplate::ros_build()` es un alias de `pkgdown::build_site()` que
-añade un control sobre la configuración del archivo `_pkgdown.yml`.
+La función `rostemplate::ros_build()` envuelve `pkgdown::build_site()` y pide
+confirmar la configuración de `_pkgdown.yml` antes de generar el sitio.
 
 Una vez generado el sitio, es necesario actualizar el repositorio remoto en
-**GitHub** mediante un *commit*.
+**GitHub** mediante un *commit* y un *push*.
 
 ## GitHub Pages
 

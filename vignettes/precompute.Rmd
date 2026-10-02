@@ -22,7 +22,7 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
 ```
 
 <div class="figure">
-<img src="./plot-1.png" alt="Waiting time and eruption duration density." width="100%" />
+<img src="./plot-1.png" alt="Heatmap of Old Faithful eruptions. Waiting time between eruptions in minutes is on the horizontal axis and eruption duration in minutes is on the vertical axis. Fill color encodes estimated density. Two clusters correspond to shorter eruptions after shorter waits and longer eruptions after longer waits." width="100%" />
 <p class="caption">Waiting time and eruption duration density.</p>
 </div>
 

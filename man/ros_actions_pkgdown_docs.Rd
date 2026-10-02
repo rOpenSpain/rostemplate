@@ -13,17 +13,26 @@ ros_actions_pkgdown_docs(pkg = ".", overwrite = TRUE)
 \item{overwrite}{Sobrescribe el flujo de trabajo si ya está instalado.}
 }
 \value{
-Se llama por sus efectos secundarios y devuelve \code{NULL} de forma
-invisible.
+Devuelve \link[base:NULL]{NULL} de forma invisible. Se llama por sus
+efectos secundarios.
 }
 \description{
-Este flujo de trabajo de GitHub Actions genera el sitio \CRANpkg{pkgdown} en
-la carpeta \code{docs} del repositorio.
+Instala un flujo de trabajo de GitHub Actions que genera el sitio
+\CRANpkg{pkgdown} del paquete en la carpeta \code{docs} del repositorio.
 }
 \details{
 El resultado final es equivalente a ejecutar \code{\link[=ros_build]{ros_build()}}, pero este comando
 se ejecuta en GitHub, no localmente.
+
+Para publicar el sitio en la rama \code{gh-pages} en lugar de la carpeta \code{docs},
+usa \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}.
 }
+\section{Generación del sitio}{
+
+Usa \code{\link[=ros_build]{ros_build()}} para generar el sitio de forma local. Consulta
+\code{\link[pkgdown:build_site]{pkgdown::build_site()}} para las opciones de generación.
+}
+
 \examples{
 pkg <- file.path(tempdir(), "pkgdown-docs")
 if (!dir.exists(pkg)) {
@@ -32,13 +41,13 @@ if (!dir.exists(pkg)) {
 ros_actions_pkgdown_docs(pkg)
 }
 \seealso{
-Sitios pkgdown:
-\code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}},
-\code{\link[=ros_build]{ros_build()}}
-
 Flujos de trabajo de GitHub Actions:
 \code{\link[=ros_actions_check_cron]{ros_actions_check_cron()}},
 \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}}
+
+Sitios pkgdown:
+\code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}},
+\code{\link[=ros_build]{ros_build()}}
 }
 \concept{github_actions}
 \concept{pkgdown}

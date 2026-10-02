@@ -1,4 +1,4 @@
-## Prepara aquí el conjunto de datos `logo`.
+## Genera el logotipo del paquete.
 
 library(ggplot2)
 library(hexSticker)

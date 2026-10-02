@@ -23,7 +23,9 @@ This paragraph checks footnote rendering.[^1]
 ## Figures
 
 ```{r}
-#| fig.alt: Test plot
+#| fig.alt: >
+#|   Scatter chart of values 1 through 10 against their index. Both axes
+#|   range from 1 to 10, with points on a straight ascending diagonal.
 plot(1:10)
 ```
 
@@ -44,9 +46,9 @@ x
 
 <summary>Multiple paragraphs</summary>
 
-First paragraph
+First paragraph.
 
-Second paragraph
+Second paragraph.
 
 </details>
 
@@ -70,7 +72,7 @@ Second paragraph
 
 $$f(x) = \dfrac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu^2)}{2\sigma^2}}$$
 
-Inline equations: $y=x^2$
+Inline equations: $y=x^2$.
 
 ## Search
 
@@ -152,7 +154,7 @@ txt <- "Not wrapped; check the copy button behavior."
 
 <section>
 
-Wrapped in a `<section>` (e.g. `section > div > pre`)
+Wrapped in a `<section>` (e.g., `section > div > pre`).
 
 ``` r
 txt <- "Wrapped in section"
@@ -180,7 +182,7 @@ txt <- "Wrapped in section"
 
     1.  Nested list.
 
-    2.  Second level item with enough text to test the width of the code block
+    2.  Second-level item with enough text to test the width of the code block
         and confirm alignment with the paragraph.
 
         ``` r
@@ -210,14 +212,14 @@ message(cli::col_green("This is green"))
 warning(cli::style_bold("This is bold"))
 ```
 
-Some text
+Some text.
 
 ```{r}
 #| error: TRUE
 stop(cli::style_italic("This is italic"), call. = FALSE)
 ```
 
-Some more text
+Some more text.
 
 ## Quoted text
 
@@ -272,7 +274,9 @@ More tab content.
 More tab content.
 
 ```{r}
-#| fig.alt: Another test plot
+#| fig.alt: >
+#|   Scatter chart of values 1 through 42 against their index. Both axes
+#|   range from 1 to 42, with points on a straight ascending diagonal.
 #| jarl-ignore-chunk:
 #|   - unreachable_code: This chunk follows an intentional error example.
 plot(1:42)

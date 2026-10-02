@@ -13,8 +13,8 @@ ros_actions_check_cron(pkg = ".", overwrite = TRUE)
 \item{overwrite}{Sobrescribe el flujo de trabajo si ya está instalado.}
 }
 \value{
-Se llama por sus efectos secundarios y devuelve \code{NULL} de forma
-invisible.
+Devuelve \link[base:NULL]{NULL} de forma invisible. Se llama por sus
+efectos secundarios.
 }
 \description{
 El flujo de trabajo de GitHub Actions creado ejecuta \verb{R CMD check} para tu

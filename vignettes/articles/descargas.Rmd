@@ -1,6 +1,6 @@
 ---
 title: "Descargas de paquetes de rOpenSpain"
-description: "Resumen de descargas de paquetes de rOpenSpain en CRAN y R-Universe."
+description: "Resumen de descargas de paquetes de rOpenSpain en CRAN y Posit Package Manager."
 ---
 
 *Fecha de actualización: `r format(Sys.Date(),"%d %b %Y")`*
@@ -139,6 +139,11 @@ dwn_m$package <- factor(dwn_m$package, levels = unique(fact))
 
 ```{r}
 #| echo: false
+#| fig.alt: >
+#|   Gráfico de barras apiladas de descargas mensuales desde CRAN. El eje
+#|   horizontal representa los meses y el vertical el número de descargas.
+#|   El color identifica cada paquete de rOpenSpain. Una curva gris resume
+#|   la tendencia del total mensual, con una banda de incertidumbre.
 tot <- dwn_m |>
   group_by(m) |>
   summarise(ntot = sum(downloads))
@@ -163,6 +168,12 @@ ggplot(dwn_m, aes(x = m)) +
 
 ```{r}
 #| echo: false
+#| fig.alt: >
+#|   Gráfico de áreas de descargas semanales desde CRAN durante el último
+#|   año, con un panel por paquete en tres columnas. El eje horizontal
+#|   representa las semanas y el vertical el número de descargas, con una
+#|   escala propia para cada panel. El área verde muestra las descargas y
+#|   la curva violeta resume su tendencia.
 # Exclude the current week.
 thisw <- lubridate::ceiling_date(Sys.Date(), "week", week_start = 1)
 

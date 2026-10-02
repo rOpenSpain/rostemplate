@@ -12,13 +12,16 @@
 Plantilla privada para crear sitios 'pkgdown' de los paquetes de 'rOpenSpain'. Incluye estilos, recursos estáticos y workflows de 'GitHub Actions' para publicar documentación con una identidad visual coherente.
 }
 \seealso{
-Useful links:
 \itemize{
-  \item \url{https://ropenspain.github.io/rostemplate/}
-  \item \url{https://github.com/ropenspain/rostemplate}
-  \item Report bugs at \url{https://github.com/ropenspain/rostemplate/issues}
+\item \code{\link[=ros_build]{ros_build()}} para generar el sitio de forma local.
+\item \code{\link[=ros_actions_pkgdown_docs]{ros_actions_pkgdown_docs()}} y \code{\link[=ros_actions_pkgdown_branch]{ros_actions_pkgdown_branch()}} para generar
+y publicar el sitio mediante GitHub Actions.
+\item \code{\link[=ros_actions_check_cron]{ros_actions_check_cron()}} para programar comprobaciones del paquete.
+\item \code{\link[=ros_badge_ropenspain]{ros_badge_ropenspain()}} y \link{ros_pals} para la identidad visual.
+\item \href{https://ropenspain.github.io/rostemplate/}{Sitio del paquete}.
+\item \href{https://github.com/ropenspain/rostemplate}{Repositorio}.
+\item \href{https://github.com/ropenspain/rostemplate/issues}{Incidencias}.
 }
-
 }
 \author{
 \strong{Maintainer}: Diego Hernangómez \email{diego.hernangomezherrero@gmail.com} (\href{https://orcid.org/0000-0001-8457-4658}{ORCID}) (affiliation: rOpenSpain) [copyright holder]

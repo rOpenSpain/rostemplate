@@ -1,20 +1,27 @@
 #' Crea un sitio en `/docs` mediante GitHub Actions
 #'
-#' Este flujo de trabajo de GitHub Actions genera el sitio \CRANpkg{pkgdown} en
-#' la carpeta `docs` del repositorio.
+#' Instala un flujo de trabajo de GitHub Actions que genera el sitio
+#' \CRANpkg{pkgdown} del paquete en la carpeta `docs` del repositorio.
 #'
 #' @details
 #' El resultado final es equivalente a ejecutar [ros_build()], pero este comando
 #' se ejecuta en GitHub, no localmente.
 #'
+#' Para publicar el sitio en la rama `gh-pages` en lugar de la carpeta `docs`,
+#' usa [ros_actions_pkgdown_branch()].
+#'
 #' @param pkg Ruta a la raíz del paquete.
 #' @param overwrite Sobrescribe el flujo de trabajo si ya está instalado.
 #'
-#' @returns Se llama por sus efectos secundarios y devuelve `NULL` de forma
-#'   invisible.
+#' @returns Devuelve [NULL][base::NULL] de forma invisible. Se llama por sus
+#'   efectos secundarios.
 #'
-#' @family pkgdown
+#' @section Generación del sitio:
+#' Usa [ros_build()] para generar el sitio de forma local. Consulta
+#' [pkgdown::build_site()] para las opciones de generación.
+#'
 #' @family github_actions
+#' @family pkgdown
 #'
 #' @export
 #' @encoding UTF-8

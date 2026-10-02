@@ -17,8 +17,11 @@ Example of a **ggplot2** image.
 
 ```{r}
 #| label: setup
-#| fig-alt: A ggplot2 image
-#| fig-cap: A ggplot2 image
+#| fig.alt: >
+#|   Bar chart of vehicle counts by class in the mpg dataset. Vehicle class
+#|   is on the horizontal axis and count is on the vertical axis. SUVs are
+#|   the most common class and two-seaters are the least common.
+#| fig.cap: A ggplot2 image
 library(ggplot2)
 
 # Count rows or sums of weights.
