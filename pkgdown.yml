@@ -17,7 +17,7 @@ articles:
   test/short: test/short.html
   test-quarto: test-quarto.html
   test/widgets: test/widgets.html
-last_built: 2026-10-01T17:09Z
+last_built: 2026-10-02T09:25Z
 urls:
   reference: https://ropenspain.github.io/rostemplate/reference
   article: https://ropenspain.github.io/rostemplate/articles
