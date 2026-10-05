@@ -229,7 +229,7 @@
   },
   "isPartOf": "https://ropenspain.es/",
   "keywords": ["github-actions", "pkgdown", "r", "r-package", "ropenspain", "rstats", "template", "yaml"],
-  "fileSize": "639.905KB",
+  "fileSize": "640.297KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
