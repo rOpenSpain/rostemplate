@@ -1,5 +1,6 @@
 # rostemplate (versión de desarrollo)
 
+- El elemento activo de la barra de navegación usa el fondo violeta y la franja superior oscura del sitio de rOpenSpain.
 - Los mensajes dirigidos al usuario usan **cli** y se han revisado y traducido al español.
 - Nuevo modo oscuro.
 - `ros_actions_check_cron()`, `ros_actions_pkgdown_branch()` y `ros_actions_pkgdown_docs()` corrigen la instalación de flujos de trabajo.
