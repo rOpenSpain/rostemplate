@@ -1,5 +1,6 @@
 # rostemplate (versión de desarrollo)
 
+- El CSS se reorganiza por componentes siguiendo la estructura de **gitdevr**, con reglas compartidas para los temas claro y oscuro y sin cambios en la apariencia de la plantilla.
 - El elemento activo de la barra de navegación usa el fondo violeta y la franja superior oscura del sitio de rOpenSpain.
 - Los mensajes dirigidos al usuario usan **cli** y se han revisado y traducido al español.
 - Nuevo modo oscuro.
