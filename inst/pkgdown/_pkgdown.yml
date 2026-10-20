@@ -61,7 +61,7 @@ template:
           color: ros-black
           background-color: ros-pre-bg
         link:
-          color: ros-violet
+          color: ros-violet-dark
           decoration: "none"
       defaults:
         # For pkgdown see
