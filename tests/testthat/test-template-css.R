@@ -87,14 +87,16 @@ testthat::test_that("copy buttons and active pills preserve contrast", {
 
 testthat::test_that("callout masks use theme colors without embedded colors", {
   css <- paste(read_pkgdown_css(), collapse = "\n")
-  masks <- regmatches(css, gregexpr("\tmask-image: [^\n]+", css))[[1]]
-  webkit_masks <- regmatches(
-    css,
-    gregexpr("\t-webkit-mask-image: [^\n]+", css)
-  )[[1]]
+  masks <- regmatches(css, gregexpr("--ros-callout-mask: [^\n]+", css))[[1]]
 
   testthat::expect_length(masks, 6L)
-  testthat::expect_equal(sub("-webkit-", "", webkit_masks, fixed = TRUE), masks)
+  for (property in c("mask-image", "-webkit-mask-image")) {
+    testthat::expect_match(
+      css,
+      paste0(property, ": var(--ros-callout-mask);"),
+      fixed = TRUE
+    )
+  }
   testthat::expect_no_match(
     paste(masks, collapse = "\n"),
     "rgb\\(|style=| fill="
@@ -109,6 +111,30 @@ testthat::test_that("callout masks use theme colors without embedded colors", {
       paste0("color: var(--bs-", type, "-text-emphasis);"),
       fixed = TRUE
     )
+  }
+})
+
+testthat::test_that("shared Emacs rules retain the dark palette", {
+  css <- paste(read_pkgdown_css(), collapse = "\n")
+  variables <- c(
+    css_variables(css, '[data-bs-theme="dark"] pre {'),
+    css_variables(css, ":root")
+  )
+  expected <- c(
+    fg = "#b7b7b7",
+    comment = "#66c966",
+    string = "#ff9b9b",
+    number = "#ff9c9c",
+    muted = "#b7b7b7",
+    "function" = "#66c966",
+    keyword = "#cea4ff",
+    variable = "#e0ac52",
+    "alert-border" = "#ff9696"
+  )
+
+  for (name in names(expected)) {
+    value <- variables[[paste0("--ros-syntax-", name)]]
+    testthat::expect_equal(css_resolve_var(value, variables), expected[[name]])
   }
 })
 
