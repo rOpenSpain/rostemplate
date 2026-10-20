@@ -21,6 +21,67 @@ testthat::test_that("la identidad portable coincide con la plantilla pkgdown", {
   )
 })
 
+testthat::test_that("light theme text meets the 4.5:1 contrast target", {
+  css <- paste(read_pkgdown_css(), collapse = "\n")
+  brand <- read_pkgdown_brand()
+  variables <- c(
+    brand_css_variables(brand$color$palette),
+    css_variables(css, ":root")
+  )
+  pairs <- list(
+    "navbar active" = c("--ros-nav-active-fg", "--ros-navbar-active-bg"),
+    "navbar hover" = c("--ros-nav-hover-fg", "--ros-nav-hover-bg"),
+    "pills active" = c("--ros-nav-active-fg", "--ros-nav-active-bg"),
+    "copy button" = c("--ros-copy-fg", "--ros-copy-bg")
+  )
+
+  for (name in names(pairs)) {
+    colors <- vapply(
+      pairs[[name]],
+      \(variable) css_resolve_var(variables[[variable]], variables),
+      character(1)
+    )
+    testthat::expect_gte(
+      contrast_ratio(css_color(colors[[1]]), css_color(colors[[2]])),
+      4.5,
+      label = name
+    )
+  }
+
+  for (token in c(
+    "fg",
+    "comment",
+    "string",
+    "number",
+    "muted",
+    "function",
+    "keyword",
+    "variable"
+  )) {
+    foreground <- css_resolve_var(
+      variables[[paste0("--ros-syntax-", token)]],
+      variables
+    )
+    testthat::expect_gte(
+      contrast_ratio(
+        css_color(foreground),
+        css_color(brand$color$palette$`ros-pre-bg`)
+      ),
+      4.5,
+      label = token
+    )
+  }
+
+  link_color <- brand$color$palette[[brand$typography$link$color]]
+  testthat::expect_gte(
+    contrast_ratio(
+      css_color(link_color),
+      css_color(brand$color$palette$`ros-white`)
+    ),
+    4.5
+  )
+})
+
 testthat::test_that("el tema oscuro mantiene un contraste accesible", {
   css_path <- pkgdown_file("assets", "BS5", "rostemplate.css")
   pkgdown_path <- pkgdown_file("_pkgdown.yml")
@@ -38,7 +99,10 @@ testthat::test_that("el tema oscuro mantiene un contraste accesible", {
     "body text" = c("--bs-body-color", "--bs-body-bg"),
     "headings" = c("--bs-heading-color", "--bs-body-bg"),
     "links" = c("--bs-link-color", "--bs-body-bg"),
-    "navbar active" = c("--ros-nav-active-fg", "--ros-nav-active-bg"),
+    "links hover" = c("--bs-link-hover-color", "--bs-body-bg"),
+    "navbar active" = c("--ros-nav-active-fg", "--ros-navbar-active-bg"),
+    "pills active" = c("--ros-nav-active-fg", "--ros-nav-active-bg"),
+    "copy button" = c("--ros-copy-fg", "--ros-copy-bg"),
     "navbar hover" = c("--ros-nav-hover-fg", "--ros-nav-hover-bg"),
     "footer text" = c("--ros-footer-fg", "--ros-footer-bg"),
     "footer link" = c("--ros-footer-link", "--ros-footer-bg"),
