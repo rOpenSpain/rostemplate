@@ -80,7 +80,7 @@ template:
             body-bg: $brand-ros_white
             code-color: $brand-ros_code
             code-bg: $brand-ros_code_bg
-            code-color-dark: "#ff94a7"
+            code-color-dark: "#ff9dcc"
             pre-color: $brand-ros_black
             pre-bg: $brand-ros_pre_bg
             # Navbar
@@ -100,17 +100,17 @@ template:
             navbar-light-hover-color: $brand-ros_gray
             navbar-light-active-color: $brand-ros_white
             # Dark
-            navbar-dark-bg: "#333"
-            navbar-dark-color: $brand-ros_violet_light # pkgdown overrides this
-            navbar-dark-toggler-border-color: rgba($brand-ros_violet_light, .75)
+            navbar-dark-bg: "#282731"
+            navbar-dark-color: "#e5e9ef" # pkgdown overrides this
+            navbar-dark-toggler-border-color: "#4d4c55"
             navbar-dark-toggler-icon-bg: >
               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 30 30'><path stroke='#cab3dd'
+              viewBox='0 0 30 30'><path stroke='#e5e9ef'
               stroke-linecap='round' stroke-miterlimit='10' stroke-width='2'
               d='M4 7h22M4 15h22M4 23h22'/></svg>")
-            navbar-dark-brand-color: $brand-ros_violet_light
-            navbar-dark-brand-hover-color: $brand-ros_violet_lighter
-            navbar-dark-hover-color: $brand-ros_violet_lighter
+            navbar-dark-brand-color: "#ffffff"
+            navbar-dark-brand-hover-color: "#ffffff"
+            navbar-dark-hover-color: "#ffffff"
             navbar-dark-active-color: "#ffffff"
             # Footer
             pkgdown-footer-color: "#555555"
@@ -123,13 +123,13 @@ template:
             dropdown-link-hover-bg: rgba($brand-ros_violet, .1)
             dropdown-link-active-color: $brand-ros_violet
             dropdown-link-active-bg: rgba($brand-ros_violet, .1)
-            dropdown-dark-bg: "#333"
-            dropdown-dark-border-color: rgba($brand-ros_violet_light, .35)
+            dropdown-dark-bg: "#282731"
+            dropdown-dark-border-color: "#4d4c55"
             dropdown-dark-divider-bg: transparent
-            dropdown-dark-link-hover-color: $brand-ros_violet_lighter
-            dropdown-dark-link-hover-bg: "#494051"
+            dropdown-dark-link-hover-color: "#ffffff"
+            dropdown-dark-link-hover-bg: "#4d4c55"
             dropdown-dark-link-active-color: $brand-ros_white
-            dropdown-dark-link-active-bg: $brand-ros_violet_dark
+            dropdown-dark-link-active-bg: "#4d4c55"
 
 home:
   links:
