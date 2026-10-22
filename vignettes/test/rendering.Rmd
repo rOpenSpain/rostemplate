@@ -277,8 +277,6 @@ More tab content.
 #| fig.alt: >
 #|   Scatter chart of values 1 through 42 against their index. Both axes
 #|   range from 1 to 42, with points on a straight ascending diagonal.
-#| jarl-ignore-chunk:
-#|   - unreachable_code: This chunk follows an intentional error example.
 plot(1:42)
 ```
 
