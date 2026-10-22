@@ -267,8 +267,8 @@ plot(1:42)
 ```
 
 ![Scatter chart of values 1 through 42 against their index. Both axes
-range from 1 to 42, with points on a straight ascending diagonal.
-](rendering_files/figure-html/unnamed-chunk-8-1.png)
+range from 1 to 42, with points on a straight ascending
+diagonal.](rendering_files/figure-html/unnamed-chunk-8-1.png)
 
 This tab should be active.
 
