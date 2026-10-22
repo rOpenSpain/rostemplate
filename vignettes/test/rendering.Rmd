@@ -102,9 +102,12 @@ This text too.
 ### Line width
 
 ```{r}
-#| jarl-ignore-chunk:
-#|   - internal_function: This tests pkgdown's internal ruler rendering.
-pkgdown:::ruler()
+positions <- seq_len(getOption("width"))
+marks <- rep("-", length(positions))
+marks[positions %% 5 == 0] <- "+"
+marks[positions %% 10 == 0] <- (positions[positions %% 10 == 0] %/% 10) %% 10
+cat(marks, "\n", sep = "")
+cat(positions %% 10, "\n", sep = "")
 
 cat(rep("x ", 100), sep = "")
 cat(rep("xy", 100), sep = "")

@@ -1,11 +1,12 @@
 testthat::test_that("ros_build() reenvía la ruta y los argumentos a pkgdown", {
+  state <- new.env(parent = emptyenv())
   pkg <- withr::local_tempdir()
-  called <- NULL
+  state$called <- NULL
 
   testthat::local_mocked_bindings(
     menu = \(...) 1,
     ros_pkgdown_build_site = function(pkg = ".", ...) {
-      called <<- list(pkg = pkg, dots = list(...))
+      state$called <- list(pkg = pkg, dots = list(...))
       invisible()
     }
   )
@@ -14,7 +15,7 @@ testthat::test_that("ros_build() reenvía la ruta y los argumentos a pkgdown", {
 
   testthat::expect_equal(result, list(value = NULL, visible = FALSE))
   testthat::expect_equal(
-    called,
+    state$called,
     list(pkg = pkg, dots = list(preview = TRUE))
   )
   testthat::expect_setequal(
