@@ -148,3 +148,30 @@ testthat::test_that("reduced motion disables callout toggle transitions", {
     fixed = TRUE
   )
 })
+
+testthat::test_that("narrow navbars retain compact title and version sizing", {
+  testthat::skip_if_not_installed("sass")
+
+  css <- as.character(sass::sass(
+    readLines(pkgdown_file("assets", "BS5", "rostemplate.css"), warn = FALSE),
+    cache = NULL,
+    options = sass::sass_options(output_style = "expanded")
+  ))
+  narrow <- regmatches(
+    css,
+    regexpr(
+      "@media \\(max-width: 375px\\) \\{[\\s\\S]*?\n\\}",
+      css,
+      perl = TRUE
+    )
+  )
+
+  testthat::expect_match(
+    narrow,
+    "\\.navbar-brand\\s*\\{\\s*font-size: 1\\.125rem;"
+  )
+  testthat::expect_match(
+    narrow,
+    "\\.navbar \\.nav-text\\s*\\{\\s*font-size: 0?\\.65rem;"
+  )
+})

@@ -155,3 +155,21 @@ testthat::test_that("el tema oscuro mantiene un contraste accesible", {
     stats::setNames(rep(TRUE, length(yiq_polarity)), names(yiq_polarity))
   )
 })
+
+testthat::test_that("metadata colors remain readable in both modes", {
+  css <- paste(read_pkgdown_css(), collapse = "\n")
+  light <- css_variables(css, ":root")
+  dark <- css_variables(css, '[data-bs-theme="dark"]')
+
+  testthat::expect_gte(
+    contrast_ratio(css_color(light[["--ros-muted-fg"]]), css_color("#fff")),
+    4.5
+  )
+  testthat::expect_gte(
+    contrast_ratio(
+      css_color(dark[["--ros-muted-fg"]]),
+      css_color(dark[["--bs-body-bg"]])
+    ),
+    4.5
+  )
+})
