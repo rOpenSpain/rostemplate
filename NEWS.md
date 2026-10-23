@@ -1,7 +1,7 @@
 # rostemplate (versión de desarrollo)
 
 - Los metadatos y los roles de autor tienen contraste suficiente en ambos modos. Los enlaces del contenido y del footer permanecen subrayados, el foco de teclado es visible y se mejora el contraste de diffviewer (#38).
-- Los bloques de código contienen las líneas largas y conservan los colores de los tokens enlazados. El diseño móvil unifica el espaciado del código y mantiene los controles de navegación en una fila sin desbordar el sidebar.
+- Los bloques de código contienen las líneas largas y conservan los colores de los tokens enlazados. El diseño móvil unifica el espaciado del código y mantiene los controles de navegación en una fila sin desbordar el sidebar (#38).
 - El CSS se reorganiza por componentes siguiendo la estructura de **gitdevr**, con reglas compartidas para los temas claro y oscuro y sin cambios en la apariencia de la plantilla.
 - El elemento activo de la barra de navegación usa el fondo violeta y la franja superior oscura del sitio de rOpenSpain.
 - Los mensajes dirigidos al usuario usan **cli** y se han revisado y traducido al español.
