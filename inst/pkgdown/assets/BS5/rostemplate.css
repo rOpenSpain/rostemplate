@@ -18,6 +18,7 @@
 /* --- 1. Theme variables --- */
 
 :root {
+	--ros-muted-fg: #707070;
 	--ros-white: #ffffff;
 	--ros-gray-100: #eeeeee;
 	--ros-gray-200: #dddddd;
@@ -75,6 +76,7 @@
  * https://github.com/dieghernan/chulapa/blob/c2996a87e31e9922151a9e206f04283e6ed857aa/test/fixtures/dark-skin-pilot/universal-dark.scss
  * Adapt Bootstrap 4 component variables to Bootstrap 5 color modes. */
 [data-bs-theme="dark"] {
+	--ros-muted-fg: #adb5bd;
 	--bs-body-bg: #1b1a25;
 	--bs-body-bg-rgb: 27, 26, 37;
 	--bs-body-color: #e5e9ef;
@@ -141,7 +143,7 @@ main img {
 .figcaption,
 figcaption,
 caption {
-	color: var(--bs-secondary);
+	color: var(--ros-muted-fg);
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1rem;
@@ -153,10 +155,14 @@ caption {
 /* Keep author and date metadata consistent between R Markdown and Quarto. */
 .author,
 .date {
-	color: var(--bs-secondary);
+	color: var(--ros-muted-fg);
 	font-size: var(--bs-body-font-size);
 	font-weight: var(--bs-body-font-weight);
 	margin-bottom: 0.5rem;
+}
+
+aside .roles {
+	color: var(--ros-muted-fg);
 }
 
 /* Preserve the dark-mode image adjustment and logo exceptions. */
@@ -1119,7 +1125,6 @@ div.callout-body-container.callout-body .btn-copy-ex {
 
 /* --- 7. Buttons --- */
 
-
 .btn-copy-ex {
 	color: var(--ros-white);
 	background-color: var(--ros-violet-dark);
@@ -1347,7 +1352,6 @@ div.callout-body-container.callout-body .btn-copy-ex {
 		--bs-pagination-disabled-border-color: #4d4c55;
 	}
 }
-
 
 /* Universal dark button and alert colors, including interaction states. */
  [data-bs-theme="dark"] {
@@ -1679,4 +1683,38 @@ div.callout-body-container.callout-body .btn-copy-ex {
   --bs-alert-link-color: #797d81;
   background-color: var(--bs-alert-bg);
   color: var(--bs-alert-color);
+}
+
+/* Keep inline links identifiable without relying on color. */
+main a:not(.anchor, .nav-link, .btn),
+footer a,
+#footer a,
+#copyright a {
+	text-decoration: underline;
+	text-underline-offset: 0.15em;
+}
+
+:is(a, button, input, select, textarea, [tabindex]):focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 3px;
+}
+
+.navbar-toggler:focus-visible {
+	box-shadow: none;
+}
+
+/* diffviewer supplies its own light surfaces in either site theme. */
+:is(.visual_diff, .diffviewer) .d2h-tag {
+	color: #6b5700;
+}
+
+:is(.visual_diff, .diffviewer) .d2h-code-linenumber,
+:is(.visual_diff, .diffviewer) .d2h-code-side-linenumber,
+:is(.visual_diff, .diffviewer) .d2h-info {
+	color: #595959;
+}
+
+/* Override the inline color emitted by diffviewer. */
+:is(.visual_diff, .diffviewer) .link {
+	color: #595959 !important;
 }
