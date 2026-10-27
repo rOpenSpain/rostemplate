@@ -175,3 +175,26 @@ testthat::test_that("narrow navbars retain compact title and version sizing", {
     "\\.navbar \\.nav-text\\s*\\{\\s*font-size: 0?\\.65rem;"
   )
 })
+
+testthat::test_that("Leaflet widgets fit columns and dim images once", {
+  css <- paste(
+    readLines(pkgdown_file("assets", "BS5", "rostemplate.css")),
+    collapse = "\n"
+  )
+
+  testthat::expect_match(
+    css,
+    "\\.leaflet\\.html-widget\\s*\\{\\s*max-width: 100%;"
+  )
+  testthat::expect_match(css, "img.r-plt:not(.leaflet img)", fixed = TRUE)
+  testthat::expect_match(
+    css,
+    ".cell-output-display img:not(.leaflet img)",
+    fixed = TRUE
+  )
+  testthat::expect_match(
+    css,
+    "[data-bs-theme=\"dark\"] .leaflet.html-widget",
+    fixed = TRUE
+  )
+})
