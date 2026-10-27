@@ -62,6 +62,11 @@ de **R Markdown** en **pkgdown**.
 
   Check code blocks, copy buttons and package code rendering.
 
+- [Leaflet
+  example](https://ropenspain.github.io/rostemplate/articles/test/leaflet.md):
+
+  Check **leaflet** widgets styling inside **pkgdown** articles.
+
 - [Long table of
   contents](https://ropenspain.github.io/rostemplate/articles/test/long-toc.md):
 
