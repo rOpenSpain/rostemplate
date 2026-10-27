@@ -2,17 +2,17 @@
 
 /* Sections (organization follows gitdevr.css)
  * Reference: https://github.com/dieghernan/gitdevr/blob/main/inst/pkgdown/assets/BS5/gitdevr.css
- * 1. Theme variables
- * 2. Typography, images, and metadata
- * 3. Navigation and search
- * 4. Code blocks and syntax highlighting
- * 5. Quarto callouts
- * 6. Tables and Reactable
- * 7. Buttons
- * 8. Footer
- * 9. rOpenSpain components
- * 10. Accessibility and motion
- * Keep component overrides after shared rules to preserve the cascade.
+ * 1.  Theme variables
+ * 2.  Typography, images, and metadata
+ * 3.  Navigation, search, and tooltips
+ * 4.  Code blocks and syntax highlighting
+ * 5.  Quarto callouts
+ * 6.  Tables and Reactable
+ * 7.  Buttons
+ * 8.  Footer
+ * 9.  Accessibility and motion
+ * 10. Leaflet
+ * Keep component overrides after their shared rules to preserve the cascade.
  */
 
 /* --- 1. Theme variables --- */
@@ -1716,4 +1716,16 @@ footer a,
 /* Override the inline color emitted by diffviewer. */
 :is(.visual_diff, .diffviewer) .link {
 	color: #595959 !important;
+}
+
+/* --- 10. Leaflet --- */
+
+/* No underline in zoom buttons. */
+.leaflet-control-zoom a {
+	text-decoration: none !important;
+}
+
+/* Preserve image brightness adjustment in dark mode for leaflet. */
+[data-bs-theme="dark"] .leaflet.html-widget {
+  filter: brightness(80%) !important;
 }

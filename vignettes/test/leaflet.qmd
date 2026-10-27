@@ -1,0 +1,56 @@
+---
+title: "Leaflet example"
+description: >
+  Check **leaflet** widgets styling inside **pkgdown** articles.
+---
+
+```{r}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r}
+#| label: setup
+library(leaflet)
+
+data(quakes)
+outline <- quakes[chull(quakes$long, quakes$lat),]
+
+leaflet(quakes) |> 
+  # Base groups
+  addTiles(group = "OSM (default)")  |> 
+  addProviderTiles(providers$Esri.WorldImagery, group = "World Imagery (satellite)") |> 
+  # Overlay groups
+  addCircles(
+    ~ long,
+    ~ lat,
+    ~ 10 ^ mag / 5,
+    stroke = FALSE,
+    group = "Quakes",
+    fillColor = "tomato"
+  ) |> 
+  addPolygons(
+    data = outline,
+    lng = ~ long,
+    lat = ~ lat,
+    fill = FALSE,
+    weight = 2,
+    color = "#FFFFCC",
+    group = "Outline"
+  ) |> 
+    addMarkers(~long, ~lat, popup = ~as.character(mag), label = ~as.character(mag), group = "Marker") |> 
+  # Layers control
+  addLayersControl(
+    baseGroups = c(
+      "OSM (default)",
+      "World Imagery (satellite)"
+    ),
+    overlayGroups = c("Quakes", "Outline", "Marker"),
+    options = layersControlOptions(collapsed = FALSE)
+  )
+
+
+```
