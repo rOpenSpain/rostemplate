@@ -141,13 +141,3 @@ home:
 figures:
   dpi: 300
   fig.retina: 2
-
-footer:
-  structure:
-    left:
-    - developed_by
-    - partof
-    right: built_with
-  components:
-    partof: >
-      <br>Part of the <span class="ROS-light">rOpenSpain</span> project.</p>
