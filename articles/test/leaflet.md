@@ -7,7 +7,7 @@ library(leaflet)
 data(quakes)
 outline <- quakes[chull(quakes$long, quakes$lat), ]
 
-leaflet(quakes) |>
+leaflet(quakes, elementId = "example-leaflet") |>
   # Base groups
   addTiles(group = "OSM (default)") |>
   addProviderTiles(providers$Esri.WorldImagery, group = "World Imagery (satellite)") |>
