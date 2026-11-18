@@ -52,8 +52,8 @@ if (!dir.exists(pkg)) {
 }
 ros_actions_check_cron(pkg)
 #> ✔ Adding "^docs$", "^_pkgdown\\.yml$", "^_pkgdown\\.yaml$", "^\\.github$", and
-#>   "^pkgdown$" to /tmp/Rtmpu26Is7/pkgdown-cron/.Rbuildignore.
+#>   "^pkgdown$" to /tmp/RtmpzVA55X/pkgdown-cron/.Rbuildignore.
 #> ✔ Adding "*.html", "R-version", and "depends.Rds" to
-#>   /tmp/Rtmpu26Is7/pkgdown-cron/.github/.gitignore.
+#>   /tmp/RtmpzVA55X/pkgdown-cron/.github/.gitignore.
 #> ✔ ¡Proceso completado!
 ```
